@@ -20,6 +20,18 @@
 			xsi:noNamespaceSchemaLocation="items.xsd">
 
 	<itemtypes>
+		<itemtype code="Product" autocreate="false" generate="false">
+			<attributes>
+				<attribute qualifier="blocked" type="java.lang.Boolean">
+					<description>Indicator if item is blocked for sale</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<defaultvalue>Boolean.FALSE</defaultvalue>
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+	
 <!--
 		<itemtype generate="true"
 		   code="MyProduct"

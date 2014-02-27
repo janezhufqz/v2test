@@ -1,2 +1,3 @@
 sapmodel/.settings/org.eclipse*
 *.class
+sapmodel/gensrc/*
