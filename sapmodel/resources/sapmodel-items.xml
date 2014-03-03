@@ -31,6 +31,33 @@
 				</attribute>
 			</attributes>
 		</itemtype>
+		
+		
+		<itemtype code="BaseStore"
+			autocreate="false" generate="false">
+		<attributes>
+			<attribute qualifier="salesOrganization" generate="true" autocreate="true"
+					type="java.lang.String">
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />
+				</attribute>	
+				
+				
+				<attribute qualifier="distributionChannel" generate="true" autocreate="true"
+					type="java.lang.String">
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />
+				</attribute>	
+				
+				<attribute qualifier="division" generate="true" autocreate="true"
+					type="java.lang.String">
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />
+				</attribute>	
+				
+		</attributes>
+				
+	   </itemtype>
 	
 <!--
 		<itemtype generate="true"

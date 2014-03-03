@@ -2,5 +2,6 @@
 <testclasses>
   <sapmodel>
     <testclass>sap.hybris.integration.models.jalo.SapmodelTest</testclass>
+    <testclass>sap.hybris.integration.models.jalo.BlockedAttributeTest</testclass>
   </sapmodel>
 </testclasses>
