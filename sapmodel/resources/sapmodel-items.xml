@@ -32,6 +32,7 @@
 			</attributes>
 		</itemtype>
 		
+<<<<<<< Upstream, based on origin/master
 		
 		<itemtype code="BaseStore"
 			autocreate="false" generate="false">
@@ -58,6 +59,29 @@
 		</attributes>
 				
 	   </itemtype>
+=======
+		<itemtype code="BaseStore" autocreate="false" generate="false">
+			<attributes>
+				<attribute qualifier="salesorg" type="java.lang.String">
+					<description>Sales Organization</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+		
+		<itemtype code="BaseStore" autocreate="false" generate="false">
+			<attributes>
+				<attribute qualifier="dcmaterial" type="java.lang.String">
+					<description>Distribution Channel for material replication</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+>>>>>>> 17a3bd4 added sales org field to basestore
 	
 <!--
 		<itemtype generate="true"
