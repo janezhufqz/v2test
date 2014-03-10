@@ -29,6 +29,13 @@
 					<defaultvalue>Boolean.FALSE</defaultvalue>
 					<persistence type="property" />
 				</attribute>
+				<attribute qualifier="blockedFrom" type="java.util.Date">
+					<description>Indicates the date the product is blocked from</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					
+					<persistence type="property" />
+				</attribute>
 			</attributes>
 		</itemtype>
 		
