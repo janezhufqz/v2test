@@ -47,18 +47,6 @@
 
 		</itemtype>
 
-		<itemtype code="DeliveryMode" autocreate="false" generate="false">
-			<attributes>
-				<attribute qualifier="sapShippingCondition" generate="true" autocreate="true" type="java.lang.String">
-					<modifiers read="true" write="true" search="true" optional="true" />
-					<persistence type="property" />
-				</attribute>
-
-			</attributes>
-
-		</itemtype>
-
-
 		<!-- <itemtype generate="true" code="MyProduct" jaloclass="sap.hybris.integration.models.jalo.MyProduct" extends="Product" autocreate="true" 
 			> <attributes> <attribute qualifier="myExampleInitialStringField" type="java.lang.String"> <description>My Example Initial String Value</description> 
 			<modifiers initial="true"/> <persistence type="property"/> </attribute> <attribute qualifier="myExampleBooleanField" type="java.lang.Boolean"> 

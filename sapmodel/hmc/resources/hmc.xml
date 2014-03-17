@@ -24,18 +24,4 @@
 		</organizer>
 	</type>
 
-	<type name="DeliveryMode" mode="append">
-		<organizer>
-			<editor>
-				<tab name="properties">
-					<section name="section.orderprocessing.sap" mode="append">
-						<listlayout>
-							<attribute name="sapShippingCondition" width="300" />
-						</listlayout>
-					</section>
-				</tab>
-			</editor>
-		</organizer>
-	</type>	
-
 </configuration>
