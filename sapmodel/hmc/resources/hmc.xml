@@ -18,7 +18,22 @@
 							<attribute name="division" width="300" />
 						</listlayout>
 					</section>
+					<section name="section.baseStore.sap.dynamicpricing" mode="append">
+						<listlayout>
+							<attribute name="externalCatalogPricingEnabled" width="300"/>
+							<attribute name="externalOrderPricingEnabled" width="300"/>
+							<attribute name="fallbackToLocalPricingEnabled" width="300"/>
+							<attribute name="priceSubtotalProcedure" width="300"/>
+							<attribute name="discountsSubtotalProcedure" width="300"/>
+							<attribute name="taxesSubtotalProcedure" width="300"/>
+							<attribute name="deliverySubtotalProcedure" width="300"/>
+							<attribute name="paymentCostSubtotalProcedure" width="300"/>
+							
+						</listlayout>
+					</section>
 				</tab>
+				
+				
 
 			</editor>
 		</organizer>
