@@ -100,6 +100,21 @@
 
 		</itemtype>
 
+		<itemtype code="Address" generate="false" autocreate="false">
+			<attributes>
+				<attribute qualifier="sapCustomerID" type="java.lang.String">
+					<description>Unique identifier of SAP customer</description>
+					<modifiers initial="true" read="true" write="true" optional="true"/>
+					<persistence type="property" />
+				</attribute>			
+				<attribute qualifier="sapContactID" type="java.lang.String">
+					<description>Unique identifier of SAP contact</description>
+					<modifiers initial="true" read="true" write="true" optional="true"/>
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
 		<!-- <itemtype generate="true" code="MyProduct" jaloclass="sap.hybris.integration.models.jalo.MyProduct" extends="Product" autocreate="true" 
 			> <attributes> <attribute qualifier="myExampleInitialStringField" type="java.lang.String"> <description>My Example Initial String Value</description> 
 			<modifiers initial="true"/> <persistence type="property"/> </attribute> <attribute qualifier="myExampleBooleanField" type="java.lang.Boolean"> 
