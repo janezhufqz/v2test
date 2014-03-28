@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- [y] hybris Platform Copyright (c) 2000-2013 hybris AG All rights reserved. This software is the confidential and proprietary information 
-	of hybris ("Confidential Information"). You shall not disclose such Confidential Information and shall use it only in accordance with 
-	the terms of the license agreement you entered into with hybris. -->
-<!-- ATTENTION: This is just an example file. You have to edit it according to your needs. -->
+<!-- [y] hybris Platform Copyright (c) 2000-2013 hybris AG All rights reserved. 
+	This software is the confidential and proprietary information of hybris ("Confidential 
+	Information"). You shall not disclose such Confidential Information and shall 
+	use it only in accordance with the terms of the license agreement you entered 
+	into with hybris. -->
+<!-- ATTENTION: This is just an example file. You have to edit it according 
+	to your needs. -->
 
-<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="items.xsd">
 	<enumtypes>
-	<enumtype code="PricingProceduresSubtotal" generate="true" autocreate="true"
-				dynamic="false">
-				<description>This enumeration denotes Pricing procedures</description>
-				<value code="subtotal1" />
-				<value code="subtotal2" />
-				<value code="subtotal3" />
-				<value code="subtotal4" />
-				<value code="subtotal5" />
-				<value code="subtotal6" />
-			</enumtype>
-	
+		<enumtype code="PricingProceduresSubtotal" generate="true"
+			autocreate="true" dynamic="false">
+			<description>This enumeration denotes Pricing procedures</description>
+			<value code="subtotal1" />
+			<value code="subtotal2" />
+			<value code="subtotal3" />
+			<value code="subtotal4" />
+			<value code="subtotal5" />
+			<value code="subtotal6" />
+		</enumtype>
+
 	</enumtypes>
 
 	<itemtypes>
@@ -24,13 +28,15 @@
 			<attributes>
 				<attribute qualifier="blocked" type="java.lang.Boolean">
 					<description>Indicator if item is blocked for sale</description>
-					<modifiers read="true" write="true" search="true" optional="true" />
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<defaultvalue>Boolean.FALSE</defaultvalue>
 					<persistence type="property" />
 				</attribute>
 				<attribute qualifier="blockedFrom" type="java.util.Date">
 					<description>Indicates the date the product is blocked from</description>
-					<modifiers read="true" write="true" search="true" optional="true" />
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
 
 					<persistence type="property" />
 				</attribute>
@@ -40,22 +46,28 @@
 
 		<itemtype code="BaseStore" autocreate="false" generate="false">
 			<attributes>
-				<attribute qualifier="salesOrganization" generate="true" autocreate="true" type="java.lang.String">
-					<modifiers read="true" write="true" search="true" optional="true" />
+				<attribute qualifier="salesOrganization" generate="true"
+					autocreate="true" type="java.lang.String">
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<persistence type="property" />
 				</attribute>
 
 
-				<attribute qualifier="distributionChannel" generate="true" autocreate="true" type="java.lang.String">
-					<modifiers read="true" write="true" search="true" optional="true" />
+				<attribute qualifier="distributionChannel" generate="true"
+					autocreate="true" type="java.lang.String">
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<persistence type="property" />
 				</attribute>
 
-				<attribute qualifier="division" generate="true" autocreate="true" type="java.lang.String">
-					<modifiers read="true" write="true" search="true" optional="true" />
+				<attribute qualifier="division" generate="true"
+					autocreate="true" type="java.lang.String">
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<persistence type="property" />
 				</attribute>
-				
+
 				<attribute type="java.lang.Boolean" qualifier="externalCatalogPricingEnabled">
 					<persistence type="property" />
 					<modifiers optional="false" />
@@ -76,26 +88,26 @@
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="priceSubtotalProcedure">
 					<description>Assigned procedure for price.</description>
-					<persistence type="property"/>
+					<persistence type="property" />
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="discountsSubtotalProcedure">
 					<description>Assigned procedure for discounts.</description>
-					<persistence type="property"/>
+					<persistence type="property" />
 				</attribute>
-				
+
 				<attribute type="PricingProceduresSubtotal" qualifier="taxesSubtotalProcedure">
 					<description>Assigned procedure for taxes.</description>
-					<persistence type="property"/>
+					<persistence type="property" />
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="deliverySubtotalProcedure">
 					<description>Assigned procedure for delivery.</description>
-					<persistence type="property"/>
+					<persistence type="property" />
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="paymentCostSubtotalProcedure">
 					<description>Assigned procedure for payment.</description>
-					<persistence type="property"/>
+					<persistence type="property" />
 				</attribute>
-			
+
 			</attributes>
 
 		</itemtype>
@@ -104,21 +116,140 @@
 			<attributes>
 				<attribute qualifier="sapCustomerID" type="java.lang.String">
 					<description>Unique identifier of SAP customer</description>
-					<modifiers initial="true" read="true" write="true" optional="true"/>
+					<modifiers initial="true" read="true" write="true"
+						optional="true" />
 					<persistence type="property" />
-				</attribute>			
+				</attribute>
 				<attribute qualifier="sapContactID" type="java.lang.String">
 					<description>Unique identifier of SAP contact</description>
-					<modifiers initial="true" read="true" write="true" optional="true"/>
+					<modifiers initial="true" read="true" write="true"
+						optional="true" />
 					<persistence type="property" />
 				</attribute>
 			</attributes>
 		</itemtype>
 
-		<!-- <itemtype generate="true" code="MyProduct" jaloclass="sap.hybris.integration.models.jalo.MyProduct" extends="Product" autocreate="true" 
-			> <attributes> <attribute qualifier="myExampleInitialStringField" type="java.lang.String"> <description>My Example Initial String Value</description> 
-			<modifiers initial="true"/> <persistence type="property"/> </attribute> <attribute qualifier="myExampleBooleanField" type="java.lang.Boolean"> 
-			<description>Example Initial Boolean Field</description> <persistence type="property"/> </attribute> <attribute qualifier="media" type="Media"> 
-			<persistence type="property"/> </attribute> </attributes> </itemtype> -->
+		<itemtype code="ReferenceDistributionChannelMapping"
+			generate="true" autocreate="true">
+			<description>Distribution Channel per Sales Organization - Assign Master Data. Filled from ERP view V_TVKOV_ST</description>
+			<attributes>
+				<attribute autocreate="true" qualifier="salesOrganization"
+					type="java.lang.String">
+					<description>Sales Organization</description>
+					<persistence type="property" />
+					<modifiers read="true" write="true" search="true"
+						initial="true" optional="false"/>
+				</attribute>
+				<attribute autocreate="true" qualifier="distChannel" type="java.lang.String">
+					<description>Distribution Channel</description>
+					<persistence type="property" />
+					<modifiers read="true" write="true" search="true"
+						initial="true" optional="false"/>
+				</attribute>
+				<attribute autocreate="true" qualifier="distChannelName"
+					type="localized:java.lang.String">
+					<description>Distribution Channel Name</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute autocreate="true" qualifier="refDistChannelConditions"
+					type="java.lang.String">
+					<description>Reference distribution channel for conditions</description>
+					<persistence type="property" />
+					<modifiers read="true" write="true" search="true"
+						initial="true" optional="false"/>
+				</attribute>
+				<attribute autocreate="true" qualifier="refDistChannelConditionsName"
+					type="localized:java.lang.String">
+					<description>Reference distribution channel name for conditions</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute autocreate="true" qualifier="refDistChannelCustMat"
+					type="java.lang.String">
+					<description>Reference distribution channel for customer and material masters</description>
+					<persistence type="property" />
+					<modifiers read="true" write="true" search="true"
+						initial="true" optional="false" />
+				</attribute>
+				<attribute autocreate="true" qualifier="refDistChannelCustMatName"
+					type="localized:java.lang.String">
+					<description>Reference distribution channel name for customer and material masters</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<persistence type="property" />
+				</attribute>
+
+			</attributes>
+		</itemtype>
+
+		<itemtype code="ReferenceDivisionMapping" generate="true"
+			autocreate="true">
+					<description>Divisions per Sales Organization - Assign Master Data. Filled from ERP view V_TVKOS_ST</description>
+			<attributes>
+				<attribute autocreate="true" qualifier="salesOrganization"
+					type="java.lang.String">
+					<description>Sales Organization</description>
+					<persistence type="property" />
+					<modifiers read="true" write="true" search="true"
+						initial="true" optional="false"/>
+				</attribute>
+				<attribute autocreate="true" qualifier="division" type="java.lang.String">
+					<description>Division</description>
+					<persistence type="property" />
+					<modifiers read="true" write="true" search="true"
+						initial="true" optional="false"/>
+				</attribute>
+				<attribute autocreate="true" qualifier="divisionName"
+					type="localized:java.lang.String">
+					<description>Division Name</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute autocreate="true" qualifier="refDivisionConditions"
+					type="java.lang.String">
+					<description>Reference division for conditions</description>
+					<persistence type="property" />
+					<modifiers read="true" write="true" search="true"
+						initial="true" optional="false"/>
+				</attribute>
+				<attribute autocreate="true" qualifier="refDivisionConditionsName"
+					type="localized:java.lang.String">
+					<description>Reference division name for conditions</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute autocreate="true" qualifier="refDivisionCustomer"
+					type="java.lang.String">
+					<description>Reference division for customer</description>
+					<persistence type="property" />
+					<modifiers read="true" write="true" search="true"
+						initial="true" optional="false" />
+				</attribute>
+				<attribute autocreate="true" qualifier="refDivisionCustomerName"
+					type="localized:java.lang.String">
+					<description>Reference division name for customer</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<persistence type="property" />
+				</attribute>
+
+			</attributes>
+		</itemtype>
+
+
+
+		<!-- <itemtype generate="true" code="MyProduct" jaloclass="sap.hybris.integration.models.jalo.MyProduct" 
+			extends="Product" autocreate="true" > <attributes> <attribute qualifier="myExampleInitialStringField" 
+			type="java.lang.String"> <description>My Example Initial String Value</description> 
+			<modifiers initial="true"/> <persistence type="property"/> </attribute> <attribute 
+			qualifier="myExampleBooleanField" type="java.lang.Boolean"> <description>Example 
+			Initial Boolean Field</description> <persistence type="property"/> </attribute> 
+			<attribute qualifier="media" type="Media"> <persistence type="property"/> 
+			</attribute> </attributes> </itemtype> -->
 	</itemtypes>
 </items>
