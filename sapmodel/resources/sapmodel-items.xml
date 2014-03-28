@@ -70,40 +70,53 @@
 
 				<attribute type="java.lang.Boolean" qualifier="externalCatalogPricingEnabled">
 					<persistence type="property" />
-					<modifiers optional="false" />
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<defaultvalue>java.lang.Boolean.FALSE</defaultvalue>
 					<description>Determines whether the site should use external external catalog pricing</description>
 				</attribute>
 				<attribute type="java.lang.Boolean" qualifier="externalOrderPricingEnabled">
 					<persistence type="property" />
-					<modifiers optional="false" />
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<defaultvalue>java.lang.Boolean.FALSE</defaultvalue>
 					<description>Determines whether the site should use external external order pricing</description>
 				</attribute>
 				<attribute type="java.lang.Boolean" qualifier="fallbackToLocalPricingEnabled">
 					<persistence type="property" />
-					<modifiers optional="false" />
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<defaultvalue>java.lang.Boolean.FALSE</defaultvalue>
 					<description>Determines whether the site should allow fallback to local pricing</description>
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="priceSubtotalProcedure">
+				<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<description>Assigned procedure for price.</description>
 					<persistence type="property" />
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="discountsSubtotalProcedure">
+				<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<description>Assigned procedure for discounts.</description>
 					<persistence type="property" />
 				</attribute>
 
 				<attribute type="PricingProceduresSubtotal" qualifier="taxesSubtotalProcedure">
+				<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<description>Assigned procedure for taxes.</description>
 					<persistence type="property" />
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="deliverySubtotalProcedure">
+				<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<description>Assigned procedure for delivery.</description>
 					<persistence type="property" />
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="paymentCostSubtotalProcedure">
+				<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<description>Assigned procedure for payment.</description>
 					<persistence type="property" />
 				</attribute>
