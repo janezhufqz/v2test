@@ -11,14 +11,14 @@
 	xsi:noNamespaceSchemaLocation="items.xsd">
 	<enumtypes>
 		<enumtype code="PricingProceduresSubtotal" generate="true"
-			autocreate="true" dynamic="false">
+			autocreate="true" dynamic="true">
 			<description>This enumeration denotes Pricing procedures</description>
-			<value code="subtotal1" />
-			<value code="subtotal2" />
-			<value code="subtotal3" />
-			<value code="subtotal4" />
-			<value code="subtotal5" />
-			<value code="subtotal6" />
+			<value code="KZWI1" />
+			<value code="KZWI2" />
+			<value code="KZWI3" />
+			<value code="KZWI4" />
+			<value code="KZWI5" />
+			<value code="KZWI6" />
 		</enumtype>
 
 	</enumtypes>
