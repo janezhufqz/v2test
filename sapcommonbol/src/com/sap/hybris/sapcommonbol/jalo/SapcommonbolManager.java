@@ -11,7 +11,7 @@
  * 
  *  
  */
-package sap.hybris.integration.models.jalo;
+package com.sap.hybris.sapcommonbol.jalo;
 
 import de.hybris.platform.core.Registry;
 import de.hybris.platform.util.JspContext;
@@ -20,17 +20,17 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import sap.hybris.integration.models.constants.SapmodelConstants;
+import com.sap.hybris.sapcommonbol.constants.SapcommonbolConstants;
 
 
 
 /**
- * This is the extension manager of the Sapmodel extension.
+ * This is the extension manager of the Sapcommonbol extension.
  */
-public class SapmodelManager extends GeneratedSapmodelManager
+public class SapcommonbolManager extends GeneratedSapcommonbolManager
 {
 	/** Edit the local|project.properties to change logging behavior (properties 'log4j.*'). */
-	private static final Logger LOG = Logger.getLogger(SapmodelManager.class.getName());
+	private static final Logger LOG = Logger.getLogger(SapcommonbolManager.class.getName());
 
 	/*
 	 * Some important tips for development:
@@ -48,10 +48,10 @@ public class SapmodelManager extends GeneratedSapmodelManager
 	 * 
 	 * @return the current instance of this manager
 	 */
-	public static SapmodelManager getInstance()
+	public static SapcommonbolManager getInstance()
 	{
-		return (SapmodelManager) Registry.getCurrentTenant().getJaloConnection().getExtensionManager().getExtension(
-				SapmodelConstants.EXTENSIONNAME);
+		return (SapcommonbolManager) Registry.getCurrentTenant().getJaloConnection().getExtensionManager().getExtension(
+				SapcommonbolConstants.EXTENSIONNAME);
 	}
 
 
@@ -59,11 +59,11 @@ public class SapmodelManager extends GeneratedSapmodelManager
 	 * Never call the constructor of any manager directly, call getInstance() You can place your business logic here -
 	 * like registering a jalo session listener. Each manager is created once for each tenant.
 	 */
-	public SapmodelManager() // NOPMD 
+	public SapcommonbolManager() // NOPMD 
 	{
 		if (LOG.isDebugEnabled())
 		{
-			LOG.debug("constructor of SapmodelManager called.");
+			LOG.debug("constructor of SapcommonbolManager called.");
 		}
 	}
 
@@ -77,7 +77,7 @@ public class SapmodelManager extends GeneratedSapmodelManager
 	{
 		if (LOG.isDebugEnabled())
 		{
-			LOG.debug("init() of SapmodelManager called. " + getTenant().getTenantID());
+			LOG.debug("init() of SapcommonbolManager called. " + getTenant().getTenantID());
 		}
 	}
 
@@ -91,7 +91,7 @@ public class SapmodelManager extends GeneratedSapmodelManager
 	{
 		if (LOG.isDebugEnabled())
 		{
-			LOG.debug("destroy() of SapmodelManager called, current tenant: " + getTenant().getTenantID());
+			LOG.debug("destroy() of SapcommonbolManager called, current tenant: " + getTenant().getTenantID());
 		}
 	}
 
