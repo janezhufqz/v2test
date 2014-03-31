@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testclasses>
+  <sapcommonbol>
+    <testclass>com.sap.hybris.sapcommonbol.jalo.SapcommonbolTest</testclass>
+  </sapcommonbol>
+</testclasses>
