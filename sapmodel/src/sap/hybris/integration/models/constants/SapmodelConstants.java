@@ -19,6 +19,11 @@ package sap.hybris.integration.models.constants;
 public final class SapmodelConstants extends GeneratedSapmodelConstants
 {
 	public static final String EXTENSIONNAME = "sapmodel";
+	
+	public static final String CONFIGURATION_PROPERTY_SALES_ORG = "salesOrganization";
+	public static final String CONFIGURATION_PROPERTY_DISTRIBUTION_CHANNEL = "distributionChannel";
+	public static final String CONFIGURATION_PROPERTY_DIVISION = "division";
+	public static final String CONFIGURATION_PROPERTY_CURRENCY = "currency";
 
 	private SapmodelConstants()
 	{
