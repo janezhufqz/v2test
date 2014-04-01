@@ -38,5 +38,20 @@
 			</editor>
 		</organizer>
 	</type>
+	
+	
+	<type name="SAPConfiguration" mode="append" >
+		<organizer>
+			<editor>
+				<tab name="tab.sapmodel">
+					<section name="section.sapmodel">
+						<listlayout>
+								<attribute name="sapmodel_transactionType" ></attribute>
+						</listlayout>
+					</section>
+				</tab>
+			</editor>
+		</organizer>
+	</type>
 
 </configuration>

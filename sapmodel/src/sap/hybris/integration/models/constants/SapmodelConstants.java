@@ -24,6 +24,8 @@ public final class SapmodelConstants extends GeneratedSapmodelConstants
 	public static final String CONFIGURATION_PROPERTY_DISTRIBUTION_CHANNEL = "distributionChannel";
 	public static final String CONFIGURATION_PROPERTY_DIVISION = "division";
 	public static final String CONFIGURATION_PROPERTY_CURRENCY = "currency";
+	
+	public static final String CONFIGURATION_PROPERTY_TRANSACTION_TYPE = "sapmodel_transactionType";
 
 	private SapmodelConstants()
 	{
