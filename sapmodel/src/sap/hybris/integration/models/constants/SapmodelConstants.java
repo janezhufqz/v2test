@@ -27,6 +27,13 @@ public final class SapmodelConstants extends GeneratedSapmodelConstants
 	
 	public static final String CONFIGURATION_PROPERTY_TRANSACTION_TYPE = "sapmodel_transactionType";
 
+	/** SAP PRICING CONSTANT ATTRIBURES **/
+	public static final String CONFIGURATION_PROPERTY_PRICE_SUBTOTAL_PROCEDURE = "priceSubtotalProcedure";
+	public static final String CONFIGURATION_PROPERTY_DISCOUNTS_SUBTOTAL_PROCEDURE = "discountsSubtotalProcedure";
+	public static final String CONFIGURATION_PROPERTY_TAXES_SUBTOTAL_PROCEDURE = "taxesSubtotalProcedure";
+	public static final String CONFIGURATION_PROPERTY_DELIVERY_SUBTOTAL_PROCEDURE = "deliverySubtotalProcedure";
+	public static final String CONFIGURATION_PROPERTY_PAYMENT_COST_SUBTOTAL_PROCEDURE = "paymentCostSubtotalProcedure";
+
 	private SapmodelConstants()
 	{
 		//empty to avoid instantiating this constant class
