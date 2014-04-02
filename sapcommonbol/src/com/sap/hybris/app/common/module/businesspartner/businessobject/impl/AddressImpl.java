@@ -9,15 +9,15 @@
  *****************************************************************************/
 package com.sap.hybris.app.common.module.businesspartner.businessobject.impl;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
-
 import com.sap.hybris.app.common.module.businesspartner.businessobject.interf.Address;
 import com.sap.hybris.app.common.module.businesspartner.businessobject.interf.County;
 import com.sap.hybris.core.businessobject.BusinessObjectBase;
 import com.sap.hybris.core.common.TechKey;
 import com.sap.hybris.core.common.exceptions.ApplicationBaseRuntimeException;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -176,6 +176,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	 * @param id
 	 *           the id
 	 */
+	@Override
 	public void setId(final String id)
 	{
 		this.id = id;
@@ -186,6 +187,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	 * 
 	 * @return id
 	 */
+	@Override
 	public String getId()
 	{
 		return id;
@@ -197,6 +199,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	 * @param type
 	 *           the type
 	 */
+	@Override
 	public void setType(final String type)
 	{
 		this.type = type;
@@ -207,11 +210,13 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	 * 
 	 * @return type
 	 */
+	@Override
 	public String getType()
 	{
 		return type;
 	}
 
+	@Override
 	public String getCategory()
 	{
 		return category;
@@ -223,6 +228,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	 * @param origin
 	 *           the origin
 	 */
+	@Override
 	public void setOrigin(final String origin)
 	{
 		this.origin = origin;
@@ -233,6 +239,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	 * 
 	 * @return origin
 	 */
+	@Override
 	public String getOrigin()
 	{
 		return origin;
@@ -244,6 +251,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	 * @param personNumber
 	 *           the peron number
 	 */
+	@Override
 	public void setPersonNumber(final String personNumber)
 	{
 		this.personNumber = personNumber;
@@ -254,12 +262,14 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	 * 
 	 * @return personNumber
 	 */
+	@Override
 	public String getPersonNumber()
 	{
 		return personNumber;
 	}
 
 	// setter methods
+	@Override
 	public void setTitleKey(final String titleKey)
 	{
 		// cut spaces from ui
@@ -272,6 +282,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.titleKey = titleKey == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setTitle(final String title)
 	{
 		// cut spaces from ui
@@ -284,6 +295,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.title = title == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setTitleAca1Key(final String titleAca1Key)
 	{
 		if (!getTitleAca1Key().equals(titleAca1Key))
@@ -293,11 +305,13 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.titleAca1Key = titleAca1Key == null ? INITIAL_STRING : titleAca1Key;
 	}
 
+	@Override
 	public void setTitleAca1(final String titleAca1)
 	{
 		this.titleAca1 = titleAca1;
 	}
 
+	@Override
 	public void setFirstName(final String firstName)
 	{
 		// cut spaces from ui
@@ -310,6 +324,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.firstName = firstName == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setLastName(final String lastName)
 	{
 		// cut spaces from ui
@@ -323,6 +338,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	}
 
+	@Override
 	public void setName1(final String name1)
 	{
 		final String newValue = name1 != null ? name1.trim() : null;
@@ -334,6 +350,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.name1 = name1 == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setName2(final String name2)
 	{
 		final String newValue = name2 != null ? name2.trim() : null;
@@ -346,16 +363,19 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	}
 
+	@Override
 	public void setBirthName(final String birthName)
 	{
 		this.birthName = birthName;
 	}
 
+	@Override
 	public void setSecondName(final String secondName)
 	{
 		this.secondName = secondName;
 	}
 
+	@Override
 	public void setMiddleName(final String middleName)
 	{
 		// cut spaces from ui
@@ -368,16 +388,19 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.middleName = middleName == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setNickName(final String nickName)
 	{
 		this.nickName = nickName;
 	}
 
+	@Override
 	public void setInitials(final String initials)
 	{
 		this.initials = initials;
 	}
 
+	@Override
 	public void setCoName(final String coName)
 	{
 		// cut spaces from ui
@@ -390,6 +413,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.coName = coName == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setCity(final String city)
 	{
 		// cut spaces from ui
@@ -403,6 +427,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.city = city == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setDistrict(final String district)
 	{
 		// cut spaces from ui
@@ -416,11 +441,13 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.district = district == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public boolean getDistrict_X()
 	{
 		return district_X;
 	}
 
+	@Override
 	public void setPostlCod1(final String postlCod1)
 	{
 		// cut spaces from ui
@@ -440,6 +467,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		return postlCod1_X;
 	}
 
+	@Override
 	public void setPostlCod2(final String postlCod2)
 	{
 		// cut spaces from ui
@@ -452,26 +480,31 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.postlCod2 = postlCod2 == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setPostlCod3(final String postlCod3)
 	{
 		this.postlCod3 = postlCod3;
 	}
 
+	@Override
 	public void setPcode1Ext(final String pcode1Ext)
 	{
 		this.pcode1Ext = pcode1Ext;
 	}
 
+	@Override
 	public void setPcode2Ext(final String pcode2Ext)
 	{
 		this.pcode2Ext = pcode2Ext;
 	}
 
+	@Override
 	public void setPcode3Ext(final String pcode3Ext)
 	{
 		this.pcode3Ext = pcode3Ext;
 	}
 
+	@Override
 	public void setPoBox(final String poBox)
 	{
 		// cut spaces from ui
@@ -484,31 +517,37 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.poBox = poBox == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setPoWoNo(final String poWoNo)
 	{
 		this.poWoNo = poWoNo;
 	}
 
+	@Override
 	public void setPoBoxCit(final String poBoxCit)
 	{
 		this.poBoxCit = poBoxCit;
 	}
 
+	@Override
 	public void setPoBoxReg(final String poBoxReg)
 	{
 		this.poBoxReg = poBoxReg;
 	}
 
+	@Override
 	public void setPoBoxCtry(final String poBoxCtry)
 	{
 		this.poBoxCtry = poBoxCtry;
 	}
 
+	@Override
 	public void setPoCtryISO(final String poCtryISO)
 	{
 		this.poCtryISO = poCtryISO;
 	}
 
+	@Override
 	public void setStreet(final String street)
 	{
 		// cut spaces from ui
@@ -521,6 +560,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.street = street == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setStrSuppl1(final String strSuppl1)
 	{
 		// cut spaces from ui
@@ -533,21 +573,25 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.strSuppl1 = strSuppl1 == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setStrSuppl2(final String strSuppl2)
 	{
 		this.strSuppl2 = strSuppl2;
 	}
 
+	@Override
 	public void setStrSuppl3(final String strSuppl3)
 	{
 		this.strSuppl3 = strSuppl3;
 	}
 
+	@Override
 	public void setLocation(final String location)
 	{
 		this.location = location;
 	}
 
+	@Override
 	public void setHouseNo(final String houseNo)
 	{
 		// cut spaces from ui
@@ -560,31 +604,37 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.houseNo = houseNo == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setHouseNo2(final String houseNo2)
 	{
 		this.houseNo2 = houseNo2;
 	}
 
+	@Override
 	public void setHouseNo3(final String houseNo3)
 	{
 		this.houseNo3 = houseNo3;
 	}
 
+	@Override
 	public void setBuilding(final String building)
 	{
 		this.building = building;
 	}
 
+	@Override
 	public void setFloor(final String floor)
 	{
 		this.floor = floor;
 	}
 
+	@Override
 	public void setRoomNo(final String roomNo)
 	{
 		this.roomNo = roomNo;
 	}
 
+	@Override
 	public void setCountry(final String country)
 	{
 		// cut spaces from ui
@@ -598,11 +648,13 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.country = country == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setCountryISO(final String countryISO)
 	{
 		this.countryISO = countryISO;
 	}
 
+	@Override
 	public void setRegion(final String region)
 	{
 		// cut spaces from ui
@@ -616,11 +668,13 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.region = region == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setHomeCity(final String homeCity)
 	{
 		this.homeCity = homeCity;
 	}
 
+	@Override
 	public void setTaxJurCode(final String taxJurCode)
 	{
 		// cut spaces from ui
@@ -633,6 +687,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.taxJurCode = taxJurCode == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setTel1Numbr(final String tel1Numbr)
 	{
 		// cut spaces from ui
@@ -645,6 +700,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.tel1Numbr = tel1Numbr == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setTel1Ext(final String tel1Ext)
 	{
 		// cut spaces from ui
@@ -657,6 +713,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.tel1Ext = tel1Ext == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setFaxNumber(final String faxNumber)
 	{
 		// cut spaces from ui
@@ -669,11 +726,13 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.faxNumber = faxNumber == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public boolean getFaxNumber_X()
 	{
 		return faxNumber_X;
 	}
 
+	@Override
 	public void setFaxExtens(final String faxExtens)
 	{
 		// cut spaces from ui
@@ -686,277 +745,332 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.faxExtens = faxExtens == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public void setAddressPartner(final String partner)
 	{
 		addressPartner = partner;
 	}
 
 	// getter methods
+	@Override
 	public String getTitleKey()
 	{
 		return titleKey;
 	}
 
+	@Override
 	public String getTitle()
 	{
 		return title;
 	}
 
+	@Override
 	public String getTitleAca1Key()
 	{
 		return titleAca1Key;
 	}
 
+	@Override
 	public String getTitleAca1()
 	{
 		return titleAca1;
 	}
 
+	@Override
 	public String getFirstName()
 	{
 		return firstName;
 	}
 
+	@Override
 	public String getLastName()
 	{
 		return lastName;
 	}
 
+	@Override
 	public String getBirthName()
 	{
 		return birthName;
 	}
 
+	@Override
 	public String getSecondName()
 	{
 		return secondName;
 	}
 
+	@Override
 	public String getMiddleName()
 	{
 		return middleName;
 	}
 
+	@Override
 	public String getNickName()
 	{
 		return nickName;
 	}
 
+	@Override
 	public String getInitials()
 	{
 		return initials;
 	}
 
+	@Override
 	public String getName1()
 	{
 		return name1;
 	}
 
+	@Override
 	public String getName2()
 	{
 		return name2;
 	}
 
+	@Override
 	public String getName3()
 	{
 		return name3;
 	}
 
+	@Override
 	public String getName4()
 	{
 		return name4;
 	}
 
+	@Override
 	public String getCoName()
 	{
 		return coName;
 	}
 
+	@Override
 	public String getCity()
 	{
 		return city;
 	}
 
+	@Override
 	public String getDistrict()
 	{
 		return district;
 	}
 
+	@Override
 	public String getPostlCod1()
 	{
 		return postlCod1;
 	}
 
+	@Override
 	public String getPostlCod2()
 	{
 		return postlCod2;
 	}
 
+	@Override
 	public String getPostlCod3()
 	{
 		return postlCod3;
 	}
 
+	@Override
 	public String getPcode1Ext()
 	{
 		return pcode1Ext;
 	}
 
+	@Override
 	public String getPcode2Ext()
 	{
 		return pcode2Ext;
 	}
 
+	@Override
 	public String getPcode3Ext()
 	{
 		return pcode3Ext;
 	}
 
+	@Override
 	public String getPoBox()
 	{
 		return poBox;
 	}
 
+	@Override
 	public String getPoWoNo()
 	{
 		return poWoNo;
 	}
 
+	@Override
 	public String getPoBoxCit()
 	{
 		return poBoxCit;
 	}
 
+	@Override
 	public String getPoBoxReg()
 	{
 		return poBoxReg;
 	}
 
+	@Override
 	public String getPoBoxCtry()
 	{
 		return poBoxCtry;
 	}
 
+	@Override
 	public String getPoCtryISO()
 	{
 		return poCtryISO;
 	}
 
+	@Override
 	public String getStreet()
 	{
 		return street;
 	}
 
+	@Override
 	public String getStrSuppl1()
 	{
 		return strSuppl1;
 	}
 
+	@Override
 	public boolean getStrSuppl1_X()
 	{
 		return strSuppl1_X;
 	}
 
+	@Override
 	public String getStrSuppl2()
 	{
 		return strSuppl2;
 	}
 
+	@Override
 	public String getStrSuppl3()
 	{
 		return strSuppl3;
 	}
 
+	@Override
 	public String getLocation()
 	{
 		return location;
 	}
 
+	@Override
 	public String getHouseNo()
 	{
 		return houseNo;
 	}
 
+	@Override
 	public String getHouseNo2()
 	{
 		return houseNo2;
 	}
 
+	@Override
 	public String getHouseNo3()
 	{
 		return houseNo3;
 	}
 
+	@Override
 	public String getBuilding()
 	{
 		return building;
 	}
 
+	@Override
 	public String getFloor()
 	{
 		return floor;
 	}
 
+	@Override
 	public String getRoomNo()
 	{
 		return roomNo;
 	}
 
+	@Override
 	public String getCountry()
 	{
 		return country;
 	}
 
+	@Override
 	public String getCountryISO()
 	{
 		return countryISO;
 	}
 
+	@Override
 	public String getRegion()
 	{
 		return region;
 	}
 
+	@Override
 	public String getHomeCity()
 	{
 		return homeCity;
 	}
 
+	@Override
 	public String getTaxJurCode()
 	{
 		return taxJurCode;
 	}
 
+	@Override
 	public String getTel1Numbr()
 	{
 		return tel1Numbr;
 	}
 
+	@Override
 	public String getTel1Ext()
 	{
 		return tel1Ext;
 	}
 
+	@Override
 	public String getFaxNumber()
 	{
 		return faxNumber;
 	}
 
+	@Override
 	public void setDialingCode(final String dialingCode)
 	{
 		this.dialingCode = dialingCode;
 	}
 
+	@Override
 	public String getDialingCode()
 	{
 		return dialingCode;
 	}
 
+	@Override
 	public String getFaxExtens()
 	{
 		return faxExtens;
 	}
 
+	@Override
 	public String getAddressPartner()
 	{
 		return addressPartner;
@@ -968,6 +1082,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	 * @param email
 	 *           the email address
 	 */
+	@Override
 	public void setEmail(final String email)
 	{
 		// cut spaces from ui
@@ -985,46 +1100,55 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	 * 
 	 * @return email
 	 */
+	@Override
 	public String getEmail()
 	{
 		return email;
 	}
 
+	@Override
 	public String getName()
 	{
 		return lastName.length() > 0 ? lastName : name1;
 	}
 
+	@Override
 	public void setCountryText(final String countryText)
 	{
 		this.countryText = countryText;
 	}
 
+	@Override
 	public String getCountryText()
 	{
 		return countryText;
 	}
 
+	@Override
 	public void setRegionText50(final String regionText50)
 	{
 		this.regionText50 = regionText50;
 	}
 
+	@Override
 	public String getRegionText50()
 	{
 		return regionText50;
 	}
 
+	@Override
 	public void setRegionText15(final String regionText15)
 	{
 		this.regionText15 = regionText15;
 	}
 
+	@Override
 	public String getRegionText15()
 	{
 		return regionText15;
 	}
 
+	@Override
 	public void setCategory(final String category)
 	{
 		this.category = category;
@@ -1067,11 +1191,13 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.operation = operation == null ? Operation.NONE : operation;
 	}
 
+	@Override
 	public Operation getOperation()
 	{
 		return operation;
 	}
 
+	@Override
 	public boolean isStdAddress_X()
 	{
 		return stdAddress_X;
@@ -1088,6 +1214,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.stdAddress_X = stdAddress_X;
 	}
 
+	@Override
 	public String getTelmob1()
 	{
 		return telmob1;
@@ -1180,46 +1307,55 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.countyList = countyList;
 	}
 
+	@Override
 	public boolean getFirstName_X()
 	{
 		return firstName_X;
 	}
 
+	@Override
 	public boolean getMiddleName_X()
 	{
 		return middleName_X;
 	}
 
+	@Override
 	public boolean getName1_X()
 	{
 		return name1_X;
 	}
 
+	@Override
 	public boolean getName2_X()
 	{
 		return name2_X;
 	}
 
+	@Override
 	public boolean getCity_X()
 	{
 		return city_X;
 	}
 
+	@Override
 	public boolean getPoBox_X()
 	{
 		return poBox_X;
 	}
 
+	@Override
 	public boolean getCountry_X()
 	{
 		return country_X;
 	}
 
+	@Override
 	public boolean getStreet_X()
 	{
 		return street_X;
 	}
 
+	@Override
 	public boolean getRegion_X()
 	{
 		return region_X;
@@ -1279,21 +1415,25 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.addrText = addrText;
 	}
 
+	@Override
 	public void setTelmob1Seq(final String telmob1_seq)
 	{
 		this.telmob1Seq = telmob1_seq;
 	}
 
+	@Override
 	public String getTelmob1Seq()
 	{
 		return telmob1Seq;
 	}
 
+	@Override
 	public String getCompanyName()
 	{
 		return companyName;
 	}
 
+	@Override
 	public void setCompanyName(final String companyName)
 	{
 		// cut spaces from ui
@@ -1306,26 +1446,31 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		this.companyName = companyName == null ? INITIAL_STRING : newValue;
 	}
 
+	@Override
 	public boolean getCompanyName_X()
 	{
 		return companyName_X;
 	}
 
+	@Override
 	public String getAddressString()
 	{
 		return addressString;
 	}
 
+	@Override
 	public void setAddressString(final String addressString)
 	{
 		this.addressString = addressString;
 	}
 
+	@Override
 	public String getAddressString_C()
 	{
 		return addressString_C;
 	}
 
+	@Override
 	public void setAddressString_C(final String addressString_C)
 	{
 		this.addressString_C = addressString_C;
@@ -1334,6 +1479,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	/**
 	 * <b>clear_X</b> This method is to clear the values of all the <i>"_X"</i> variables
 	 */
+	@Override
 	public void clear_X()
 	{
 		this.firstName_X = false;
@@ -1375,6 +1521,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	 * 
 	 * @return boolean - changed or not
 	 */
+	@Override
 	public boolean isChanged()
 	{
 		changed = false;
@@ -1393,6 +1540,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 
 
+	@Override
 	public void setAllXFields()
 	{
 		this.firstName_X = true;
@@ -1453,31 +1601,37 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		return coName_X;
 	}
 
+	@Override
 	public String getFaxNumberSeq()
 	{
 		return faxNumberSeq;
 	}
 
+	@Override
 	public void setFaxNumberSeq(final String faxNumberSeq)
 	{
 		this.faxNumberSeq = faxNumberSeq;
 	}
 
+	@Override
 	public String getTel1NumbrSeq()
 	{
 		return tel1NumbrSeq;
 	}
 
+	@Override
 	public void setTel1NumbrSeq(final String tel1NumbrSeq)
 	{
 		this.tel1NumbrSeq = tel1NumbrSeq;
 	}
 
+	@Override
 	public boolean isDocumentAddress()
 	{
 		return documentAddress;
 	}
 
+	@Override
 	public void setDocumentAddress(final boolean documentAddress)
 	{
 		this.documentAddress = documentAddress;

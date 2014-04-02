@@ -1,5 +1,8 @@
 package com.sap.hybris.app.common.module.transaction.util.impl;
 
+import com.sap.hybris.core.common.exceptions.ApplicationBaseRuntimeException;
+import com.sap.hybris.core.common.util.LocaleUtil;
+
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -11,13 +14,10 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import com.sap.hybris.core.common.exceptions.ApplicationBaseRuntimeException;
-import com.sap.hybris.core.common.util.LocaleUtil;
-
 
 /**
  * Helper class for the data conversion for the Jco calls. <br>
- * 
+ *
  * @author SAP
  */
 public class ConversionHelper
@@ -124,7 +124,7 @@ public class ConversionHelper
 
 	/**
 	 * Converts the ABAP type DEC (length 14) to a date. The expected format is YYYYMMDDHHMMSS.
-	 * 
+	 *
 	 * @param decAsString
 	 *           decimal input used in ABAP system for date
 	 * @return date date format
@@ -171,7 +171,7 @@ public class ConversionHelper
 
 	/**
 	 * Converts date format to ABAP decimal for the date.<br>
-	 * 
+	 *
 	 * @param date
 	 *           date in date format
 	 * @return string contains decimal format of date
@@ -194,7 +194,7 @@ public class ConversionHelper
 
 	/**
 	 * Converts the ABAP type DATS (length 10) to a date. The expected format is YYYY-MM-DD.
-	 * 
+	 *
 	 * @param datsAsString
 	 *           decimal input used in ABAP system for date
 	 * @return date date in date format
@@ -211,7 +211,7 @@ public class ConversionHelper
 
 	/**
 	 * Converts a date string in format yyyyMMdd to a date.
-	 * 
+	 *
 	 * @param datsAsString
 	 *           date string in format yyyyMMdd
 	 * @return date
@@ -227,7 +227,7 @@ public class ConversionHelper
 
 	/**
 	 * Converts a date into a date string in format yyyyMMdd .
-	 * 
+	 *
 	 * @param date
 	 *           in date string format
 	 * @return date string in format yyyyMMdd
@@ -240,7 +240,7 @@ public class ConversionHelper
 
 	/**
 	 * Converts a date into a localized date string (which is formatted according to the session locale)
-	 * 
+	 *
 	 * @param date
 	 *           Date in date format
 	 * @return localised date string
@@ -253,7 +253,7 @@ public class ConversionHelper
 
 	/**
 	 * Converts the ABAP type DATS (length 10) to a date. The expected format is yyyy-MM-dd.
-	 * 
+	 *
 	 * @param date
 	 *           Date in date format
 	 * @return string date as string
@@ -276,7 +276,7 @@ public class ConversionHelper
 	/**
 	 * Converts a BigDecimal to a String using the Locale defined in LocaleUtil. The fraction length is kept from the
 	 * BigDecimal.
-	 * 
+	 *
 	 * @param bd
 	 *           Big decimal
 	 * @return String like "0.00"
@@ -295,7 +295,7 @@ public class ConversionHelper
 	/**
 	 * Converts a BigDecimal to a string in ABAP commercial notation. That is an uninterrupted sequence of numbers with a
 	 * maximum of one period (.) as a decimal separator.
-	 * 
+	 *
 	 * @param bd
 	 *           the BigDecimal to be converted.
 	 * @return String in APAP commercial notation like "2342.15".
@@ -311,30 +311,11 @@ public class ConversionHelper
 		return TL_ABAP_COMMERCIAL_FORMAT.get().format(bd);
 	}
 
-	/**
-	 * Converts BIg Decimal to string with out grouping.<br>
-	 * 
-	 * @param bd
-	 *           Big Decimal
-	 * @return string contains Big decimal as string
-	 */
-	@Deprecated
-	public static String convertBigDecimalToStringWithoutGrouping(final BigDecimal bd)
-	{
-		if (bd == null)
-		{
-			return null;
-		}
-		final NumberFormat format = NumberFormat.getNumberInstance(LocaleUtil.getLocale());
-		format.setMinimumFractionDigits(bd.scale());
-		// don't use any grouping separator
-		format.setGroupingUsed(false);
-		return format.format(bd);
-	}
+
 
 	/**
 	 * Converts a String to a BigDecimal. In case the String is empty or null, the BigDecimal value is set to 0.
-	 * 
+	 *
 	 * @param number
 	 *           Big decimal as string
 	 * @return Big decimal
@@ -367,7 +348,7 @@ public class ConversionHelper
 
 	/**
 	 * Converts a String to a BigDecimal with the given format.
-	 * 
+	 *
 	 * @param number
 	 *           Big decimal as string
 	 * @parem numberFormat format to use
@@ -423,7 +404,7 @@ public class ConversionHelper
 
 	/**
 	 * Adjusts the BigDecimal from JCo value to the correct customized one.<br>
-	 * 
+	 *
 	 * @param value
 	 *           BigDecimal from JCO
 	 * @param decimal

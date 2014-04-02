@@ -1,12 +1,12 @@
 package com.sap.hybris.app.common.module.transaction.item.businessobject.impl;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 import com.sap.hybris.app.common.module.transaction.businessobject.transfer.interf.TransferItem;
 import com.sap.hybris.app.common.module.transaction.util.impl.PrettyPrinter;
 import com.sap.hybris.core.businessobject.BusinessObjectBase;
-import com.sap.hybris.core.common.exceptions.PanicException;
+import com.sap.hybris.core.common.exceptions.ApplicationBaseRuntimeException;
+
+import java.math.BigDecimal;
+import java.util.List;
 
 
 
@@ -15,7 +15,7 @@ import com.sap.hybris.core.common.exceptions.PanicException;
  * SalesDocument using the OCI-Interface or from an existing order. An instance is provided by
  * SalesDocument.createTransferItem. Always use this method to retrieve a new instance and use the interface for
  * consumption of the TransferItem's functionality.
- * 
+ *
  * @author SAP AG
  * @version 1.0
  */
@@ -53,7 +53,7 @@ public class TransferItemImpl extends BusinessObjectBase implements TransferItem
 
 	/**
 	 * Retrieves the Unique key of the item.
-	 * 
+	 *
 	 * @return In the case of CRM scenario the GUID is returned. In the case of ERP scenario the ID is returned.
 	 */
 	@Override
@@ -237,7 +237,7 @@ public class TransferItemImpl extends BusinessObjectBase implements TransferItem
 	@Override
 	public List<TransferItem> getAccessories()
 	{
-		throw new PanicException("NOT implemented");
+		throw new ApplicationBaseRuntimeException("NOT implemented");
 	}
 
 	@Override

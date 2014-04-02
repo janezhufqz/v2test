@@ -1,5 +1,8 @@
 package com.sap.hybris.app.common.module.transaction.util;
 
+import com.sap.hybris.app.common.module.transaction.util.impl.ConversionHelper;
+import com.sap.hybris.core.common.util.LocaleUtil;
+
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.Calendar;
@@ -9,9 +12,6 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 import junit.framework.TestCase;
-
-import com.sap.hybris.app.common.module.transaction.util.impl.ConversionHelper;
-import com.sap.hybris.core.common.util.LocaleUtil;
 
 
 public class ConversionHelperTest extends TestCase
@@ -86,15 +86,7 @@ public class ConversionHelperTest extends TestCase
 
 	}
 
-	public void testConvertBigDecimalToStringWithoutGrouping()
-	{
-		final BigDecimal bd = BigDecimal.TEN;
-		LocaleUtil.setLocale(Locale.ENGLISH);
 
-		final String string = ConversionHelper.convertBigDecimalToStringWithoutGrouping(bd);
-
-		assertEquals("10", string);
-	}
 
 	public void testConvertDateStringToDate()
 	{

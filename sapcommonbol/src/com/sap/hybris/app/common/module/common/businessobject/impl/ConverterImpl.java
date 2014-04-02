@@ -10,26 +10,25 @@ package com.sap.hybris.app.common.module.common.businessobject.impl;
  *****************************************************************************/
 
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import com.sap.hybris.app.common.module.common.backendobject.interf.ConverterBackend;
 import com.sap.hybris.app.common.module.common.businessobject.interf.Converter;
 import com.sap.hybris.core.backend.BackendException;
-import com.sap.hybris.core.backend.BackendObjectManager;
 import com.sap.hybris.core.businessobject.BackendInterface;
 import com.sap.hybris.core.businessobject.BusinessObjectBase;
 import com.sap.hybris.core.businessobject.BusinessObjectException;
 import com.sap.hybris.core.businessobject.BusinessObjectHelper;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
 
 /**
  * Converter implementation. For details see the specifying interface
  * {@link com.sap.wec.app.common.module.common.businessobject.interf.Converter Converter}<br>
- * 
+ *
  * @author SAP
  */
 @BackendInterface(ConverterBackend.class)
@@ -67,20 +66,7 @@ public class ConverterImpl extends BusinessObjectBase implements Converter
 
 
 
-	/**
-	 * Sets the BackendObjectManager for the basket object. This method is used by the object manager to allow the user
-	 * object interaction with the backend logic. This method is normally not called by classes other than
-	 * BusinessObjectManager.
-	 * 
-	 * @param bem
-	 *           BackendObjectManager to be used
-	 */
-	@Override
-	@Deprecated
-	public void setBackendObjectManager(final BackendObjectManager bem)
-	{
-		this.bem = bem;
-	}
+
 
 	@Override
 	public String convertUnitID2UnitKey(final String unitID) throws BusinessObjectException
@@ -153,6 +139,7 @@ public class ConverterImpl extends BusinessObjectBase implements Converter
 		}
 	}
 
+	@Override
 	@Deprecated
 	public String getDescriptionForUnit(final String unitKey) throws BusinessObjectException
 	{
@@ -167,6 +154,7 @@ public class ConverterImpl extends BusinessObjectBase implements Converter
 		}
 	}
 
+	@Override
 	@Deprecated
 	public String getDescriptionForCurrency(final String currencyCode) throws BusinessObjectException
 	{
