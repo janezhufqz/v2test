@@ -1,12 +1,13 @@
 package com.sap.hybris.app.common.module.transaction.item.businessobject.impl;
 
-import com.sap.hybris.app.common.module.transaction.businessobject.transfer.interf.TransferItem;
-import com.sap.hybris.app.common.module.transaction.util.impl.PrettyPrinter;
-import com.sap.hybris.core.businessobject.BusinessObjectBase;
-import com.sap.hybris.core.common.exceptions.ApplicationBaseRuntimeException;
-
 import java.math.BigDecimal;
 import java.util.List;
+
+import com.sap.hybris.app.common.module.transaction.businessobject.transfer.interf.TransferItem;
+import com.sap.hybris.app.common.module.transaction.util.impl.PrettyPrinter;
+
+import de.hybris.platform.sap.core.bol.businessobject.BusinessObjectBase;
+import de.hybris.platform.sap.core.common.exceptions.ApplicationBaseRuntimeException;
 
 
 

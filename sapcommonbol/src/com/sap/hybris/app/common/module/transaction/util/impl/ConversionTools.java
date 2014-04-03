@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import com.sap.hybris.core.common.TechKey;
+import de.hybris.platform.sap.core.common.TechKey;
 
 
 

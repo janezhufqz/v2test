@@ -2,10 +2,10 @@ package com.sap.hybris.app.common.module.transaction.businessobject.transfer.int
 
 import java.util.List;
 
-import com.sap.hybris.core.businessobject.BusinessObject;
-import com.sap.hybris.core.businessobject.BusinessObjectException;
-import com.sap.hybris.core.businessobject.CommunicationException;
-import com.sap.hybris.core.businessobject.LogonException;
+import de.hybris.platform.sap.core.bol.businessobject.BusinessObject;
+import de.hybris.platform.sap.core.bol.businessobject.BusinessObjectException;
+import de.hybris.platform.sap.core.bol.businessobject.CommunicationException;
+import de.hybris.platform.sap.core.bol.businessobject.LogonException;
 
 
 

@@ -1,7 +1,7 @@
 package com.sap.hybris.app.common.module.common.backendobject.interf;
 
-import com.sap.hybris.core.backend.BackendBusinessObject;
-import com.sap.hybris.core.backend.BackendException;
+import de.hybris.platform.sap.core.bol.backend.BackendBusinessObject;
+import de.hybris.platform.sap.core.bol.backend.BackendException;
 
 
 

@@ -1,7 +1,8 @@
 package com.sap.hybris.app.common.module.businesspartner.businessobject.impl;
 
 import com.sap.hybris.app.common.module.businesspartner.businessobject.interf.County;
-import com.sap.hybris.core.common.exceptions.ApplicationBaseRuntimeException;
+
+import de.hybris.platform.sap.core.common.exceptions.ApplicationBaseRuntimeException;
 
 
 /**

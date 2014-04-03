@@ -10,18 +10,19 @@ package com.sap.hybris.app.common.module.common.businessobject.impl;
  *****************************************************************************/
 
 
-import com.sap.hybris.app.common.module.common.backendobject.interf.ConverterBackend;
-import com.sap.hybris.app.common.module.common.businessobject.interf.Converter;
-import com.sap.hybris.core.backend.BackendException;
-import com.sap.hybris.core.businessobject.BackendInterface;
-import com.sap.hybris.core.businessobject.BusinessObjectBase;
-import com.sap.hybris.core.businessobject.BusinessObjectException;
-import com.sap.hybris.core.businessobject.BusinessObjectHelper;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import com.sap.hybris.app.common.module.common.backendobject.interf.ConverterBackend;
+import com.sap.hybris.app.common.module.common.businessobject.interf.Converter;
+
+import de.hybris.platform.sap.core.bol.backend.BackendException;
+import de.hybris.platform.sap.core.bol.businessobject.BackendInterface;
+import de.hybris.platform.sap.core.bol.businessobject.BusinessObjectBase;
+import de.hybris.platform.sap.core.bol.businessobject.BusinessObjectException;
+import de.hybris.platform.sap.core.bol.businessobject.BusinessObjectHelper;
 
 
 

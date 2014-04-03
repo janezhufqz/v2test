@@ -12,7 +12,7 @@ package com.sap.hybris.app.common.module.common.businessobject.interf;
 
 import java.math.BigDecimal;
 
-import com.sap.hybris.core.businessobject.BusinessObjectException;
+import de.hybris.platform.sap.core.bol.businessobject.BusinessObjectException;
 
 
 

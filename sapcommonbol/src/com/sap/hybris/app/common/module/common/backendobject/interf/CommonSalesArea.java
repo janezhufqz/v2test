@@ -2,11 +2,12 @@ package com.sap.hybris.app.common.module.common.backendobject.interf;
 
 import java.util.Map;
 
-import com.sap.hybris.core.backend.BackendException;
 import com.sap.wec.app.common.module.common.salesarea.businessobject.interf.DistChannelMapping;
 import com.sap.wec.app.common.module.common.salesarea.businessobject.interf.DistChannelMappingKey;
 import com.sap.wec.app.common.module.common.salesarea.businessobject.interf.DivisionMapping;
 import com.sap.wec.app.common.module.common.salesarea.businessobject.interf.DivisionMappingKey;
+
+import de.hybris.platform.sap.core.bol.backend.BackendException;
 
 
 /**

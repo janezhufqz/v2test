@@ -9,15 +9,16 @@
  *****************************************************************************/
 package com.sap.hybris.app.common.module.businesspartner.businessobject.impl;
 
-import com.sap.hybris.app.common.module.businesspartner.businessobject.interf.Address;
-import com.sap.hybris.app.common.module.businesspartner.businessobject.interf.County;
-import com.sap.hybris.core.businessobject.BusinessObjectBase;
-import com.sap.hybris.core.common.TechKey;
-import com.sap.hybris.core.common.exceptions.ApplicationBaseRuntimeException;
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.sap.hybris.app.common.module.businesspartner.businessobject.interf.Address;
+import com.sap.hybris.app.common.module.businesspartner.businessobject.interf.County;
+
+import de.hybris.platform.sap.core.bol.businessobject.BusinessObjectBase;
+import de.hybris.platform.sap.core.common.TechKey;
+import de.hybris.platform.sap.core.common.exceptions.ApplicationBaseRuntimeException;
 
 
 /**

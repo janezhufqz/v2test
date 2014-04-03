@@ -3,13 +3,15 @@ package com.sap.hybris.app.common.module.businesspartner.businessobject.interf;
 import java.io.Serializable;
 import java.util.List;
 
+import de.hybris.platform.sap.core.bol.businessobject.BusinessObject;
+
 
 /**
  * BO representation of an address.
  * 
  * @author SAP
  */
-public interface Address extends com.sap.hybris.core.businessobject.BusinessObject, Cloneable, Comparable<Address>, Serializable
+public interface Address extends BusinessObject, Cloneable, Comparable<Address>, Serializable
 {
 
 	public final static String TYPE_ORGANISATION = "1";

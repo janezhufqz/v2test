@@ -6,13 +6,14 @@ import java.util.Map.Entry;
 
 import com.sap.hybris.app.common.module.common.backendobject.interf.ConverterBackend;
 import com.sap.hybris.app.common.module.transaction.util.impl.ConversionTools;
-import com.sap.hybris.core.backend.BackendException;
-import com.sap.hybris.core.backend.jco.BackendBusinessObjectBaseJCo;
-import com.sap.hybris.core.common.exceptions.ApplicationBaseRuntimeException;
-import com.sap.hybris.core.common.util.LocaleUtil;
-import com.sap.hybris.core.logging.Log4JWrapper;
-import com.sap.hybris.core.logging.LogCategories;
 import com.sap.tc.logging.Severity;
+
+import de.hybris.platform.sap.core.bol.backend.BackendException;
+import de.hybris.platform.sap.core.bol.backend.jco.BackendBusinessObjectBaseJCo;
+import de.hybris.platform.sap.core.bol.logging.Log4JWrapper;
+import de.hybris.platform.sap.core.bol.logging.LogCategories;
+import de.hybris.platform.sap.core.common.exceptions.ApplicationBaseRuntimeException;
+import de.hybris.platform.sap.core.common.util.LocaleUtil;
 
 
 /**

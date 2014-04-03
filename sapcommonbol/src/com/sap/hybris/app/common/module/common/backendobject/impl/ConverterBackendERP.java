@@ -8,8 +8,9 @@ import java.util.Map;
 import com.sap.conn.jco.JCoFunction;
 import com.sap.conn.jco.JCoParameterList;
 import com.sap.conn.jco.JCoTable;
-import com.sap.hybris.core.backend.BackendException;
-import com.sap.hybris.core.backend.BackendType;
+
+import de.hybris.platform.sap.core.bol.backend.BackendException;
+import de.hybris.platform.sap.core.bol.backend.BackendType;
 
 
 /**
