@@ -75,7 +75,7 @@ public interface Converter
 	 * @return number of decimal places
 	 * @throws BusinessObjectException
 	 */
-	public int getCurrencyScale(String sapCurrencyCode) throws BusinessObjectException;
+	public Integer getCurrencyScale(String sapCurrencyCode) throws BusinessObjectException;
 
 	/**
 	 * Retrieves the number of decimal places for units according to ERP/CRM customizing. This is relevant for UI display

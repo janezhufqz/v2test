@@ -113,11 +113,11 @@ public class ConverterImpl extends BusinessObjectBase implements Converter
 	}
 
 	@Override
-	public int getCurrencyScale(final String sapCurrencyCode) throws BusinessObjectException
+	public Integer getCurrencyScale(final String sapCurrencyCode) throws BusinessObjectException
 	{
 		try
 		{
-			return getBackendService().getCurrencyScale(sapCurrencyCode);
+			return new Integer(getBackendService().getCurrencyScale(sapCurrencyCode));
 		}
 		catch (final BackendException e)
 		{
