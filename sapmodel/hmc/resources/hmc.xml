@@ -8,10 +8,10 @@
 	<type name="SAPConfiguration" mode="append" >
 		<organizer>
 			<editor>
-				<tab name="tab.sapmodel">
-					<section name="section.sapmodel">
+				<tab name="tab.sapcommon">
+					<section name="section.sapcommon">
 						<listlayout>
-								<attribute name="sapmodel_transactionType" ></attribute>
+								<attribute name="sapcommon_transactionType" ></attribute>
 								<attribute name="referenceCustomer" width="300" />
 								<attribute name="salesOrganization" width="300" />
 								<attribute name="distributionChannel" width="300" />

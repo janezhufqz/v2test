@@ -182,8 +182,8 @@
 					<description>reference customer used in rfc call</description>
 				    <persistence type="property" />
 				</attribute>
-				<attribute qualifier="sapmodel_transactionType" type="java.lang.String" generate="true">
-					<description>sapmodel_transactionType</description>
+				<attribute qualifier="sapcommon_transactionType" type="java.lang.String" generate="true">
+					<description>sapcommon_transactionType</description>
 				    <persistence type="property" />
 				</attribute>
 				<attribute qualifier="salesOrganization" generate="true"

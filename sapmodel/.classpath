@@ -7,6 +7,7 @@
 	<classpathentry kind="src" path="gensrc"/>
 	<classpathentry kind="src" output="eclipsebin/web/classes" path="web/src"/>
 	<classpathentry kind="src" output="eclipsebin/classes" path="testsrc"/>
+	<classpathentry kind="src" path="hmc/src"/>
 	<classpathentry kind="src" path="/basecommerce"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/sapcoreconfiguration"/>
 	<classpathentry kind="output" path="eclipsebin/notused"/>
