@@ -5,41 +5,6 @@
 <configuration xmlns="hybris.de/schemas/hmc/generic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="hybris.de/schemas/hmc/generic hmc.xsd">
 
-	<type name="BaseStore" mode="append">
-		<organizer>
-
-			<editor>
-
-				<tab name="properties" position="2" mode="append">
-					<section name="section.basecommerce.sap" mode="append">
-						<listlayout>
-							<attribute name="salesOrganization" width="300" />
-							<attribute name="distributionChannel" width="300" />
-							<attribute name="division" width="300" />
-						</listlayout>
-					</section>
-					<section name="section.baseStore.sap.dynamicpricing" mode="append">
-						<listlayout>
-							<attribute name="externalCatalogPricingEnabled" width="300"/>
-							<attribute name="externalOrderPricingEnabled" width="300"/>
-							<attribute name="fallbackToLocalPricingEnabled" width="300"/>
-							<attribute name="priceSubtotalProcedure" width="300"/>
-							<attribute name="discountsSubtotalProcedure" width="300"/>
-							<attribute name="taxesSubtotalProcedure" width="300"/>
-							<attribute name="deliverySubtotalProcedure" width="300"/>
-							<attribute name="paymentCostSubtotalProcedure" width="300"/>
-							
-						</listlayout>
-					</section>
-				</tab>
-				
-				
-
-			</editor>
-		</organizer>
-	</type>
-	
-	
 	<type name="SAPConfiguration" mode="append" >
 		<organizer>
 			<editor>
@@ -47,11 +12,31 @@
 					<section name="section.sapmodel">
 						<listlayout>
 								<attribute name="sapmodel_transactionType" ></attribute>
+								<attribute name="referenceCustomer" width="300" />
+								<attribute name="salesOrganization" width="300" />
+								<attribute name="distributionChannel" width="300" />
+								<attribute name="division" width="300" />
+						</listlayout>
+					</section>
+				</tab>
+				<!-- sales area -->
+				<tab name="tab.sappricing">
+					<section name="section.sappricing" mode="append">
+						<listlayout>
+							<attribute name="externalCatalogPricingEnabled" width="300"/>
+							<attribute name="externalOrderPricingEnabled" width="300"/>
+							<attribute name="priceSubtotalProcedure" width="300"/>
+							<attribute name="discountsSubtotalProcedure" width="300"/>
+							<attribute name="taxesSubtotalProcedure" width="300"/>
+							<attribute name="deliverySubtotalProcedure" width="300"/>
+							<attribute name="paymentCostSubtotalProcedure" width="300"/>
 						</listlayout>
 					</section>
 				</tab>
 			</editor>
 		</organizer>
 	</type>
+	
+	
 
 </configuration>
