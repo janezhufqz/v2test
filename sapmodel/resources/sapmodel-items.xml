@@ -179,12 +179,14 @@
 		<itemtype code="SAPConfiguration" autocreate="false" generate="false">
 			<attributes>
 				<attribute qualifier="referenceCustomer" autocreate="true" type="java.lang.String" generate="true">
+					<persistence type="property" />
+					<modifiers optional="true" />
 					<description>reference customer used in rfc call</description>
-				    <persistence type="property" />
 				</attribute>
 				<attribute qualifier="sapcommon_transactionType" type="java.lang.String" generate="true">
+					<persistence type="property" />
+					<modifiers optional="true" />
 					<description>sapcommon_transactionType</description>
-				    <persistence type="property" />
 				</attribute>
 				<attribute qualifier="salesOrganization" generate="true"
 					autocreate="true" type="java.lang.String">
@@ -219,30 +221,30 @@
 					<description>Determines whether the site should use external external order pricing</description>
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="priceSubtotalProcedure">
-					<modifiers optional="false" />
-					<description>Assigned procedure for price.</description>
 					<persistence type="property" />
+					<modifiers optional="true" />
+					<description>Assigned procedure for price.</description>
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="discountsSubtotalProcedure">
-					<modifiers optional="false" />
+					<modifiers optional="true" />
 					<description>Assigned procedure for discounts.</description>
 					<persistence type="property" />
 				</attribute>
 
 				<attribute type="PricingProceduresSubtotal" qualifier="taxesSubtotalProcedure">
-					<modifiers optional="false" />
-					<description>Assigned procedure for taxes.</description>
 					<persistence type="property" />
+					<modifiers optional="true" />
+					<description>Assigned procedure for taxes.</description>
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="deliverySubtotalProcedure">
-					<modifiers optional="false" />
-					<description>Assigned procedure for delivery.</description>
 					<persistence type="property" />
+					<modifiers optional="true" />
+					<description>Assigned procedure for delivery.</description>
 				</attribute>
 				<attribute type="PricingProceduresSubtotal" qualifier="paymentCostSubtotalProcedure">
-					<modifiers optional="false" />
-					<description>Assigned procedure for payment.</description>
 					<persistence type="property" />
+					<modifiers optional="true" />
+					<description>Assigned procedure for payment.</description>
 				</attribute>
 			</attributes>
 		</itemtype>
