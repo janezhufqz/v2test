@@ -21,23 +21,23 @@
 	<!-- Standard Beans -->
 	<alias alias="sapcommonbolAddress" name="sapcommonbolDefaultAddress" />
 	<bean id="sapcommonbolDefaultAddress" scope="prototype"
-		class="com.sap.hybris.app.common.module.businesspartner.businessobject.impl.AddressImpl">
+		class="de.hybris.platform.sap.sapcommonbol.businesspartner.businessobject.impl.AddressImpl">
 	</bean>
 
 	<alias alias="sapTransferItem" name="sapDefaultTransferItem" />
 	<bean id="sapDefaultTransferItem" scope="prototype"
-		class="com.sap.hybris.app.common.module.transaction.item.businessobject.impl.TransferItemImpl">
+		class="de.hybris.platform.sap.sapcommonbol.transaction.item.businessobject.impl.TransferItemImpl">
 	</bean>
 
 	<!-- Business Objects (BO) -->
 	<alias alias="sapConverter" name="sapDefaultConverter" />
 	<bean id="sapDefaultConverter" parent="sapCoreBusinessObject"
-		class="com.sap.hybris.app.common.module.common.businessobject.impl.ConverterImpl">
+		class="de.hybris.platform.sap.sapcommonbol.common.businessobject.impl.ConverterImpl">
 		<property name="moduleConfigurationAccess" ref="sapCommonBolConfigurationAccess" />
 	</bean>
 	<!-- Backend Objects (BE) -->
 	<bean id="sapDefaultConverterBeERP"
-		class="com.sap.hybris.app.common.module.common.backendobject.impl.ConverterBackendERP"
+		class="de.hybris.platform.sap.sapcommonbol.common.backendobject.impl.ConverterBackendERP"
 		scope="sapSession" parent="sapCoreBackendObjectJCo">
 	</bean>
 

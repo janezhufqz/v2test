@@ -23,7 +23,7 @@
 <!--
 		<itemtype generate="true"
 		   code="MyProduct"
-		   jaloclass="com.sap.hybris.sapcommonbol.jalo.MyProduct"
+		   jaloclass="de.hybris.platform.sap.sapcommonbol.jalo.MyProduct"
 		   extends="Product"
 		   autocreate="true"
 	   >

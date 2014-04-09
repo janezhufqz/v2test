@@ -20,7 +20,7 @@
 	<!--
 		Example Data POJO
 	
-	<bean class="com.sap.hybris.sapcommonbol.data.MyPojo">
+	<bean class="de.hybris.platform.sap.sapcommonbol.data.MyPojo">
 		<property name="id" type="String"/>
 		<property name="flag" type="boolean"/>
 	</bean>

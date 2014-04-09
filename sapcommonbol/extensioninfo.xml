@@ -20,7 +20,8 @@
       <requires-extension name="sapcorebol"/>             
       
 
-      <coremodule generated="true" manager="com.sap.hybris.sapcommonbol.jalo.SapcommonbolManager" packageroot="com.sap.hybris.sapcommonbol"/>
+      <coremodule generated="true" manager="de.hybris.platform.sap.sapcommonbol.jalo.SapcommonbolManager" packageroot="de.hybris.platform.sap.sapcommonbol"/>
+      																									      
 
  
 					
