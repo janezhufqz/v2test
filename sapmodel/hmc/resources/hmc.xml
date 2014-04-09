@@ -11,7 +11,7 @@
 				<tab name="tab.sapcommon">
 					<section name="section.sapcommon">
 						<listlayout>
-								<attribute name="sapcommon_transactionType" ></attribute>
+								<attribute name="transactionType" width="300"></attribute>
 								<attribute name="referenceCustomer" width="300" />
 								<attribute name="salesOrganization" width="300" />
 								<attribute name="distributionChannel" width="300" />

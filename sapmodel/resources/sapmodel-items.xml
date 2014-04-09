@@ -183,10 +183,11 @@
 					<modifiers optional="true" />
 					<description>reference customer used in rfc call</description>
 				</attribute>
-				<attribute qualifier="sapcommon_transactionType" type="java.lang.String" generate="true">
+				<attribute qualifier="transactionType" generate="true"
+					autocreate="true" type="java.lang.String">
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
 					<persistence type="property" />
-					<modifiers optional="true" />
-					<description>sapcommon_transactionType</description>
 				</attribute>
 				<attribute qualifier="salesOrganization" generate="true"
 					autocreate="true" type="java.lang.String">

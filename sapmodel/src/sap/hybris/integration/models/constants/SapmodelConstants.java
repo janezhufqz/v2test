@@ -25,7 +25,7 @@ public final class SapmodelConstants extends GeneratedSapmodelConstants
 	public static final String CONFIGURATION_PROPERTY_DIVISION = "division";
 	public static final String CONFIGURATION_PROPERTY_CURRENCY = "defaultCurrency";
 
-	public static final String CONFIGURATION_PROPERTY_TRANSACTION_TYPE = "sapcommon_transactionType";
+	public static final String CONFIGURATION_PROPERTY_TRANSACTION_TYPE = "transactionType";
 
 	/** SAP PRICING CONSTANT ATTRIBURES **/
 	public static final String CONFIGURATION_PROPERTY_PRICE_SUBTOTAL_PROCEDURE = "priceSubtotalProcedure";
@@ -33,6 +33,7 @@ public final class SapmodelConstants extends GeneratedSapmodelConstants
 	public static final String CONFIGURATION_PROPERTY_TAXES_SUBTOTAL_PROCEDURE = "taxesSubtotalProcedure";
 	public static final String CONFIGURATION_PROPERTY_DELIVERY_SUBTOTAL_PROCEDURE = "deliverySubtotalProcedure";
 	public static final String CONFIGURATION_PROPERTY_PAYMENT_COST_SUBTOTAL_PROCEDURE = "paymentCostSubtotalProcedure";
+	public static final String CONFIGURATION_PROPERTY_REFERENCE_CUSTOMER = "referenceCustomer";
 
 	private SapmodelConstants()
 	{
