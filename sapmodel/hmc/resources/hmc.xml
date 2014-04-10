@@ -32,7 +32,17 @@
 							<attribute name="paymentCostSubtotalProcedure" width="300"/>
 						</listlayout>
 					</section>
+				</tab>	
+				<tab name="tab.saporder.asynchronous">	
+					<section name="section.sappricing.asynchronous" mode="append">
+						<listlayout>
+							<attribute name="itemPriceConditionType" width="300"/>
+							<attribute name="paymentCostConditionType" width="300"/>
+							<attribute name="deliveryCostConditionType" width="300"/>
+						</listlayout>
+					</section>
 				</tab>
+				
 			</editor>
 		</organizer>
 	</type>
