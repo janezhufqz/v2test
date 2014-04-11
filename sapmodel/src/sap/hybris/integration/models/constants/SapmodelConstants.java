@@ -20,20 +20,20 @@ public final class SapmodelConstants extends GeneratedSapmodelConstants
 {
 	public static final String EXTENSIONNAME = "sapmodel";
 
-	public static final String CONFIGURATION_PROPERTY_SALES_ORG = "salesOrganization";
-	public static final String CONFIGURATION_PROPERTY_DISTRIBUTION_CHANNEL = "distributionChannel";
-	public static final String CONFIGURATION_PROPERTY_DIVISION = "division";
-	public static final String CONFIGURATION_PROPERTY_CURRENCY = "defaultCurrency";
+	public static final String CONFIGURATION_PROPERTY_SALES_ORG = "sapcommon_salesOrganization";
+	public static final String CONFIGURATION_PROPERTY_DISTRIBUTION_CHANNEL = "sapcommon_distributionChannel";
+	public static final String CONFIGURATION_PROPERTY_DIVISION = "sapcommon_division";
+	public static final String CONFIGURATION_PROPERTY_CURRENCY = "sapcommon_defaultCurrency";
 
-	public static final String CONFIGURATION_PROPERTY_TRANSACTION_TYPE = "transactionType";
+	public static final String CONFIGURATION_PROPERTY_TRANSACTION_TYPE = "sapcommon_transactionType";
 
 	/** SAP PRICING CONSTANT ATTRIBURES **/
-	public static final String CONFIGURATION_PROPERTY_PRICE_SUBTOTAL_PROCEDURE = "priceSubtotalProcedure";
-	public static final String CONFIGURATION_PROPERTY_DISCOUNTS_SUBTOTAL_PROCEDURE = "discountsSubtotalProcedure";
-	public static final String CONFIGURATION_PROPERTY_TAXES_SUBTOTAL_PROCEDURE = "taxesSubtotalProcedure";
-	public static final String CONFIGURATION_PROPERTY_DELIVERY_SUBTOTAL_PROCEDURE = "deliverySubtotalProcedure";
-	public static final String CONFIGURATION_PROPERTY_PAYMENT_COST_SUBTOTAL_PROCEDURE = "paymentCostSubtotalProcedure";
-	public static final String CONFIGURATION_PROPERTY_REFERENCE_CUSTOMER = "referenceCustomer";
+	public static final String CONFIGURATION_PROPERTY_PRICE_SUBTOTAL_PROCEDURE = "sapcommon_priceSubtotalProcedure";
+	public static final String CONFIGURATION_PROPERTY_DISCOUNTS_SUBTOTAL_PROCEDURE = "sapcommon_discountsSubtotalProcedure";
+	public static final String CONFIGURATION_PROPERTY_TAXES_SUBTOTAL_PROCEDURE = "sapcommon_taxesSubtotalProcedure";
+	public static final String CONFIGURATION_PROPERTY_DELIVERY_SUBTOTAL_PROCEDURE = "sapcommon_deliverySubtotalProcedure";
+	public static final String CONFIGURATION_PROPERTY_PAYMENT_COST_SUBTOTAL_PROCEDURE = "sapcommon_paymentCostSubtotalProcedure";
+	public static final String CONFIGURATION_PROPERTY_REFERENCE_CUSTOMER = "sapcommon_referenceCustomer";
 
 	private SapmodelConstants()
 	{

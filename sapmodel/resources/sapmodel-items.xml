@@ -178,87 +178,87 @@
 
 		<itemtype code="SAPConfiguration" autocreate="false" generate="false">
 			<attributes>
-				<attribute qualifier="referenceCustomer" autocreate="true" type="java.lang.String" generate="true">
+				<attribute qualifier="sapcommon_referenceCustomer" autocreate="true" type="java.lang.String" generate="true">
 					<persistence type="property" />
 					<modifiers optional="true" />
 					<description>reference customer used in rfc call</description>
 				</attribute>
-				<attribute qualifier="transactionType" generate="true"
+				<attribute qualifier="sapcommon_transactionType" generate="true"
 					autocreate="true" type="java.lang.String">
 					<modifiers read="true" write="true" search="true"
 						optional="true" />
 					<persistence type="property" />
 				</attribute>
-				<attribute qualifier="salesOrganization" generate="true"
-					autocreate="true" type="java.lang.String">
-					<modifiers read="true" write="true" search="true"
-						optional="true" />
-					<persistence type="property" />
-				</attribute>
-
-				<attribute qualifier="distributionChannel" generate="true"
+				<attribute qualifier="sapcommon_salesOrganization" generate="true"
 					autocreate="true" type="java.lang.String">
 					<modifiers read="true" write="true" search="true"
 						optional="true" />
 					<persistence type="property" />
 				</attribute>
 
-				<attribute qualifier="division" generate="true"
+				<attribute qualifier="sapcommon_distributionChannel" generate="true"
 					autocreate="true" type="java.lang.String">
 					<modifiers read="true" write="true" search="true"
 						optional="true" />
 					<persistence type="property" />
 				</attribute>
-				<attribute type="java.lang.Boolean" qualifier="externalCatalogPricingEnabled">
+
+				<attribute qualifier="sapcommon_division" generate="true"
+					autocreate="true" type="java.lang.String">
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute type="java.lang.Boolean" qualifier="sapcommon_externalCatalogPricingEnabled">
 					<persistence type="property" />
 					<modifiers optional="false" />
 					<defaultvalue>java.lang.Boolean.FALSE</defaultvalue>
 					<description>Determines whether the site should use external external catalog pricing</description>
 				</attribute>
-				<attribute type="java.lang.Boolean" qualifier="externalOrderPricingEnabled">
+				<attribute type="java.lang.Boolean" qualifier="sapcommon_externalOrderPricingEnabled">
 					<persistence type="property" />
 					<modifiers optional="false" />
 					<defaultvalue>java.lang.Boolean.FALSE</defaultvalue>
 					<description>Determines whether the site should use external external order pricing</description>
 				</attribute>
-				<attribute type="PricingProceduresSubtotal" qualifier="priceSubtotalProcedure">
+				<attribute type="PricingProceduresSubtotal" qualifier="sapcommon_priceSubtotalProcedure">
 					<persistence type="property" />
 					<modifiers optional="true" />
 					<description>Assigned procedure for price.</description>
 				</attribute>
-				<attribute type="PricingProceduresSubtotal" qualifier="discountsSubtotalProcedure">
+				<attribute type="PricingProceduresSubtotal" qualifier="sapcommon_discountsSubtotalProcedure">
 					<modifiers optional="true" />
 					<description>Assigned procedure for discounts.</description>
 					<persistence type="property" />
 				</attribute>
 
-				<attribute type="PricingProceduresSubtotal" qualifier="taxesSubtotalProcedure">
+				<attribute type="PricingProceduresSubtotal" qualifier="sapcommon_taxesSubtotalProcedure">
 					<persistence type="property" />
 					<modifiers optional="true" />
 					<description>Assigned procedure for taxes.</description>
 				</attribute>
-				<attribute type="PricingProceduresSubtotal" qualifier="deliverySubtotalProcedure">
+				<attribute type="PricingProceduresSubtotal" qualifier="sapcommon_deliverySubtotalProcedure">
 					<persistence type="property" />
 					<modifiers optional="true" />
 					<description>Assigned procedure for delivery.</description>
 				</attribute>
-				<attribute type="PricingProceduresSubtotal" qualifier="paymentCostSubtotalProcedure">
+				<attribute type="PricingProceduresSubtotal" qualifier="sapcommon_paymentCostSubtotalProcedure">
 					<persistence type="property" />
 					<modifiers optional="true" />
 					<description>Assigned procedure for payment.</description>
 				</attribute>
 				
-				<attribute type="java.lang.String" qualifier="itemPriceConditionType">
+				<attribute type="java.lang.String" qualifier="sapcommon_itemPriceConditionType">
 					<persistence type="property" />
 					<modifiers optional="true" />
 					<description>Condition Type for item Price.</description>
 				</attribute>
-				<attribute type="java.lang.String" qualifier="paymentCostConditionType">
+				<attribute type="java.lang.String" qualifier="sapcommon_paymentCostConditionType">
 					<persistence type="property" />
 					<modifiers optional="true" />
 					<description>Condition Type for payment cost.</description>
 				</attribute>
-				<attribute type="java.lang.String" qualifier="deliveryCostConditionType">
+				<attribute type="java.lang.String" qualifier="sapcommon_deliveryCostConditionType">
 					<persistence type="property" />
 					<modifiers optional="true" />
 					<description>Condition Type for delivery cost.</description>
