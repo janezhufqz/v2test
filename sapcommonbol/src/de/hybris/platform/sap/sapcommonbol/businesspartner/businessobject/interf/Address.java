@@ -1,9 +1,9 @@
 package de.hybris.platform.sap.sapcommonbol.businesspartner.businessobject.interf;
 
+import de.hybris.platform.sap.core.bol.businessobject.BusinessObject;
+
 import java.io.Serializable;
 import java.util.List;
-
-import de.hybris.platform.sap.core.bol.businessobject.BusinessObject;
 
 
 /**
@@ -1205,11 +1205,6 @@ public interface Address extends BusinessObject, Cloneable, Comparable<Address>,
 	 */
 	public Address clone();
 
-	/**
-	 * Resets the field values of an address. This is used when the user changes the country as we the want to clear all
-	 * the fields.
-	 */
-	public void resetAddressData();
 
 	/**
 	 * @return has this address a deviating name
