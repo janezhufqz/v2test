@@ -131,7 +131,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	private boolean prefix2Key_X;
 	private boolean middleName_X;
 	private boolean email_X;
-	private boolean city_X;
+	boolean city_X;
 	private boolean poBox_X;
 	private boolean stdAddress_X;
 	private boolean strSuppl1_X;
@@ -151,7 +151,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	private boolean taxJurCode_X;
 	private boolean titleKey_X;
 	private boolean companyName_X;
-	private boolean coName_X;
+	boolean coName_X;
 	private boolean title_X;
 	private boolean titleAca1Key_X;
 	private boolean titleSupplKey_X;
@@ -1686,20 +1686,6 @@ public class AddressImpl extends BusinessObjectBase implements Address
 		return null;
 	}
 
-	@Override
-	public void resetAddressData()
-	{
-		this.setStreet("");
-		this.setCity("");
-		this.setPostlCod1("");
-		this.setHouseNo("");
-		this.setTaxJurCode("");
-		this.setDistrict("");
-		this.setTel1Numbr("");
-		this.setFaxNumber("");
-		this.setTelmob1("");
-
-	}
 
 	@Override
 	public boolean isDeviatingName()
