@@ -9,20 +9,20 @@
  *****************************************************************************/
 package de.hybris.platform.sap.sapcommonbol.businesspartner.businessobject.impl;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
-
 import de.hybris.platform.sap.core.bol.businessobject.BusinessObjectBase;
 import de.hybris.platform.sap.core.common.TechKey;
 import de.hybris.platform.sap.core.common.exceptions.ApplicationBaseRuntimeException;
 import de.hybris.platform.sap.sapcommonbol.businesspartner.businessobject.interf.Address;
 import de.hybris.platform.sap.sapcommonbol.businesspartner.businessobject.interf.County;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * BO representation of an address
- * 
+ *
  * @author SAP
  */
 public class AddressImpl extends BusinessObjectBase implements Address
@@ -123,7 +123,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	private boolean changed = false;
 	private boolean documentAddress = false;
 	private boolean deviatingName;
-	private boolean firstName_X;
+	boolean firstName_X;
 	private boolean lastName_X;
 	private boolean name1_X;
 	private boolean name2_X;
@@ -172,7 +172,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Set the property id
-	 * 
+	 *
 	 * @param id
 	 *           the id
 	 */
@@ -184,7 +184,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Returns the property id
-	 * 
+	 *
 	 * @return id
 	 */
 	@Override
@@ -195,7 +195,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Set the property type
-	 * 
+	 *
 	 * @param type
 	 *           the type
 	 */
@@ -207,7 +207,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Returns the property type
-	 * 
+	 *
 	 * @return type
 	 */
 	@Override
@@ -224,7 +224,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Set the property origin
-	 * 
+	 *
 	 * @param origin
 	 *           the origin
 	 */
@@ -236,7 +236,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Returns the property origin
-	 * 
+	 *
 	 * @return origin
 	 */
 	@Override
@@ -247,7 +247,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Set the property personNumber
-	 * 
+	 *
 	 * @param personNumber
 	 *           the peron number
 	 */
@@ -259,7 +259,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Returns the property personNumber
-	 * 
+	 *
 	 * @return personNumber
 	 */
 	@Override
@@ -1078,7 +1078,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Set the property eMail
-	 * 
+	 *
 	 * @param email
 	 *           the email address
 	 */
@@ -1097,7 +1097,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Returns the property email
-	 * 
+	 *
 	 * @return email
 	 */
 	@Override
@@ -1205,7 +1205,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Sets change indicator for standard address
-	 * 
+	 *
 	 * @param stdAddress_X
 	 *           std address changed flag
 	 */
@@ -1518,7 +1518,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * <b>getIs_changed</b> This method will check all the "_X" fields and see if the address has changed or not
-	 * 
+	 *
 	 * @return boolean - changed or not
 	 */
 	@Override
@@ -1791,7 +1791,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 
 	/**
 	 * Set the title supplement key changed flag
-	 * 
+	 *
 	 * @param titleSupplKeyX
 	 *           the changed flag
 	 */
