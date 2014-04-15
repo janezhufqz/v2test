@@ -17,6 +17,7 @@ public class AddressImplTest
 	private final String firstName = "Robby";
 	private final String value = "value";
 
+
 	@Test
 	public void testClear_X()
 	{
@@ -278,6 +279,122 @@ public class AddressImplTest
 		classUnderTest.setRegion(value);
 		assertTrue(classUnderTest.region_X);
 		assertEquals(value, classUnderTest.getRegion());
+	}
+
+	@Test
+	public void testAddrText()
+	{
+		classUnderTest.setAddrText(value);
+		assertEquals(value, classUnderTest.getAddrText());
+	}
+
+	@Test
+	public void testAddressPartner()
+	{
+		classUnderTest.setAddressPartner(value);
+		assertEquals(value, classUnderTest.getAddressPartner());
+	}
+
+	@Test
+	public void testAddressString()
+	{
+		classUnderTest.setAddressString(value);
+		assertEquals(value, classUnderTest.getAddressString());
+	}
+
+	@Test
+	public void testAddrguid()
+	{
+		classUnderTest.setAddrguid(value);
+		assertEquals(value, classUnderTest.getAddrguid());
+	}
+
+	@Test
+	public void testAddrnum()
+	{
+		classUnderTest.setAddrnum(value);
+		assertEquals(value, classUnderTest.getAddrnum());
+	}
+
+	@Test
+	public void testBirthName()
+	{
+		classUnderTest.setBirthName(value);
+		assertEquals(value, classUnderTest.getBirthName());
+	}
+
+	@Test
+	public void testBuilding()
+	{
+		classUnderTest.setBuilding(value);
+		assertEquals(value, classUnderTest.getBuilding());
+	}
+
+	@Test
+	public void testCategory()
+	{
+		classUnderTest.setCategory(value);
+		assertEquals(value, classUnderTest.getCategory());
+	}
+
+	@Test
+	public void testCountryISO()
+	{
+		classUnderTest.setCountryISO(value);
+		assertEquals(value, classUnderTest.getCountryISO());
+	}
+
+	@Test
+	public void testCountryText()
+	{
+		classUnderTest.setCountryText(value);
+		assertEquals(value, classUnderTest.getCountryText());
+	}
+
+	@Test
+	public void testDeviatingName()
+	{
+		assertFalse(classUnderTest.isDeviatingName());
+		classUnderTest.setDeviatingName(true);
+		assertTrue(classUnderTest.isDeviatingName());
+	}
+
+	@Test
+	public void testDocumentAddress()
+	{
+		assertFalse(classUnderTest.isDocumentAddress());
+		classUnderTest.setDocumentAddress(true);
+		assertTrue(classUnderTest.isDocumentAddress());
+	}
+
+	@Test
+	public void testDialingCode()
+	{
+		classUnderTest.setDialingCode(value);
+		assertEquals(value, classUnderTest.getDialingCode());
+	}
+
+	@Test
+	public void testStrSuppl1()
+	{
+		assertFalse(classUnderTest.strSuppl1_X);
+		classUnderTest.setStrSuppl1(value);
+		assertTrue(classUnderTest.strSuppl1_X);
+		assertEquals(value, classUnderTest.getStrSuppl1());
+	}
+
+	@Test
+	public void testStrSuppl2()
+	{
+		classUnderTest.setStrSuppl2(value);
+		assertEquals(value, classUnderTest.getStrSuppl2());
+	}
+
+	@Test
+	public void testStrSuppl3()
+	{
+		classUnderTest.setStrSuppl3(value);
+		assertEquals(value, classUnderTest.getStrSuppl3());
 	}
 
 

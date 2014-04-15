@@ -134,7 +134,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	boolean city_X;
 	boolean poBox_X;
 	private boolean stdAddress_X;
-	private boolean strSuppl1_X;
+	boolean strSuppl1_X;
 	private boolean country_X;
 	private boolean street_X;
 	boolean houseNo_X;
