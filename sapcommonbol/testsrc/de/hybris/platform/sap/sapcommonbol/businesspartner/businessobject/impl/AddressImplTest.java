@@ -15,6 +15,7 @@ public class AddressImplTest
 {
 	AddressImpl classUnderTest = new AddressImpl();
 	private final String firstName = "Robby";
+	private final String value = "value";
 
 	@Test
 	public void testClear_X()
@@ -104,11 +105,125 @@ public class AddressImplTest
 	}
 
 	@Test
-	public void testSetCoName()
+	public void testCoName()
 	{
 		assertFalse(classUnderTest.coName_X);
-		classUnderTest.setCoName("Name");
+		classUnderTest.setCoName(value);
 		assertTrue(classUnderTest.coName_X);
+		assertEquals(value, classUnderTest.getCoName());
+	}
+
+	@Test
+	public void testCompanyName()
+	{
+		assertFalse(classUnderTest.companyName_X);
+		classUnderTest.setCompanyName(value);
+		assertTrue(classUnderTest.companyName_X);
+		assertEquals(value, classUnderTest.getCompanyName());
+	}
+
+	@Test
+	public void testDistrict()
+	{
+		assertFalse(classUnderTest.district_X);
+		classUnderTest.setDistrict(value);
+		assertTrue(classUnderTest.district_X);
+		assertEquals(value, classUnderTest.getDistrict());
+	}
+
+	@Test
+	public void testEmail()
+	{
+		assertFalse(classUnderTest.email_X);
+		classUnderTest.setEmail(value);
+		assertTrue(classUnderTest.email_X);
+		assertEquals(value, classUnderTest.getEmail());
+	}
+
+	@Test
+	public void testFaxExtens()
+	{
+		assertFalse(classUnderTest.faxExtens_X);
+		classUnderTest.setFaxExtens(value);
+		assertTrue(classUnderTest.faxExtens_X);
+		assertEquals(value, classUnderTest.getFaxExtens());
+	}
+
+	@Test
+	public void testFaxNumber()
+	{
+		assertFalse(classUnderTest.faxNumber_X);
+		classUnderTest.setFaxNumber(value);
+		assertTrue(classUnderTest.faxNumber_X);
+		assertEquals(value, classUnderTest.getFaxNumber());
+	}
+
+	@Test
+	public void testFunction()
+	{
+		assertFalse(classUnderTest.function_X);
+		classUnderTest.setFunction(value);
+		assertTrue(classUnderTest.function_X);
+		assertEquals(value, classUnderTest.getFunction());
+	}
+
+	@Test
+	public void testHouseNo()
+	{
+		assertFalse(classUnderTest.houseNo_X);
+		classUnderTest.setHouseNo(value);
+		assertTrue(classUnderTest.houseNo_X);
+		assertEquals(value, classUnderTest.getHouseNo());
+	}
+
+	@Test
+	public void testLastName()
+	{
+		assertFalse(classUnderTest.lastName_X);
+		classUnderTest.setLastName(value);
+		assertTrue(classUnderTest.lastName_X);
+		assertEquals(value, classUnderTest.getLastName());
+	}
+
+	@Test
+	public void testName1()
+	{
+		assertFalse(classUnderTest.name1_X);
+		classUnderTest.setName1(value);
+		assertTrue(classUnderTest.name1_X);
+		assertEquals(value, classUnderTest.getName1());
+	}
+
+	@Test
+	public void testName2()
+	{
+		assertFalse(classUnderTest.name2_X);
+		classUnderTest.setName2(value);
+		assertTrue(classUnderTest.name2_X);
+		assertEquals(value, classUnderTest.getName2());
+	}
+
+	@Test
+	public void testName3()
+	{
+		classUnderTest.setName3(value);
+		assertEquals(value, classUnderTest.getName3());
+	}
+
+	@Test
+	public void testName4()
+	{
+		classUnderTest.setName4(value);
+		assertEquals(value, classUnderTest.getName4());
+	}
+
+	@Test
+	public void testPoBox()
+	{
+		assertFalse(classUnderTest.poBox_X);
+		classUnderTest.setPoBox(value);
+		assertTrue(classUnderTest.poBox_X);
+		assertEquals(value, classUnderTest.getPoBox());
 	}
 
 
