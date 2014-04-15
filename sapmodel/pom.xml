@@ -12,21 +12,22 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
   <build>
-    <pluginManagement>
-		<plugins>
-			<plugin>
-				<groupId>com.sap.ldi</groupId>
-				<artifactId>translation-plugin</artifactId>
-				<version>0.19.1</version>
-				<configuration>
+  <pluginManagement>
+     <plugins>
+         <plugin>
+             <groupId>com.sap.ldi</groupId>
+             <artifactId>translation-plugin</artifactId>
+             <version>0.19.1</version>
+             <configuration>
+                 <translationCollection>sap.hybris.model</translationCollection>
                  <translationResources>
-                     <translationResource>sapmodel\resources\localization</translationResource>
+                     <translationResource>resources\localization</translationResource>
                  </translationResources>
              </configuration>
-			</plugin>
-		</plugins>
-    </pluginManagement>
-
+         </plugin>
+     </plugins>
+ </pluginManagement>
+   
     <plugins>		
 		<plugin>
 			<artifactId>maven-assembly-plugin</artifactId>
