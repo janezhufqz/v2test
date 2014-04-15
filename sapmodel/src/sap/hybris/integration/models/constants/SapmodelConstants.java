@@ -20,10 +20,12 @@ public final class SapmodelConstants extends GeneratedSapmodelConstants
 {
 	public static final String EXTENSIONNAME = "sapmodel";
 
+	public static final String CONFIGURATION_PROPERTY_CURRENCY = "defaultCurrency";
+	
+	
 	public static final String CONFIGURATION_PROPERTY_SALES_ORG = "sapcommon_salesOrganization";
 	public static final String CONFIGURATION_PROPERTY_DISTRIBUTION_CHANNEL = "sapcommon_distributionChannel";
 	public static final String CONFIGURATION_PROPERTY_DIVISION = "sapcommon_division";
-	public static final String CONFIGURATION_PROPERTY_CURRENCY = "sapcommon_defaultCurrency";
 
 	public static final String CONFIGURATION_PROPERTY_TRANSACTION_TYPE = "sapcommon_transactionType";
 
