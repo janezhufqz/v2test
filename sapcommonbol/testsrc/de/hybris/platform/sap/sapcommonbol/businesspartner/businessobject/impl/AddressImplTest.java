@@ -226,5 +226,59 @@ public class AddressImplTest
 		assertEquals(value, classUnderTest.getPoBox());
 	}
 
+	@Test
+	public void testMiddleName()
+	{
+		assertFalse(classUnderTest.middleName_X);
+		classUnderTest.setMiddleName(value);
+		assertTrue(classUnderTest.middleName_X);
+		assertEquals(value, classUnderTest.getMiddleName());
+	}
+
+	@Test
+	public void testPostlCod1()
+	{
+		assertFalse(classUnderTest.postlCod1_X);
+		classUnderTest.setPostlCod1(value);
+		assertTrue(classUnderTest.postlCod1_X);
+		assertEquals(value, classUnderTest.getPostlCod1());
+	}
+
+	@Test
+	public void testPostlCod2()
+	{
+		assertFalse(classUnderTest.postlCod2_X);
+		classUnderTest.setPostlCod2(value);
+		assertTrue(classUnderTest.postlCod2_X);
+		assertEquals(value, classUnderTest.getPostlCod2());
+	}
+
+	@Test
+	public void testPrefix1Key()
+	{
+		assertFalse(classUnderTest.prefix1Key_X);
+		classUnderTest.setPrefix1Key(value);
+		assertTrue(classUnderTest.prefix1Key_X);
+		assertEquals(value, classUnderTest.getPrefix1Key());
+	}
+
+	@Test
+	public void testPrefix2Key()
+	{
+		assertFalse(classUnderTest.prefix2Key_X);
+		classUnderTest.setPrefix2Key(value);
+		assertTrue(classUnderTest.prefix2Key_X);
+		assertEquals(value, classUnderTest.getPrefix2Key());
+	}
+
+	@Test
+	public void testRegion()
+	{
+		assertFalse(classUnderTest.region_X);
+		classUnderTest.setRegion(value);
+		assertTrue(classUnderTest.region_X);
+		assertEquals(value, classUnderTest.getRegion());
+	}
+
 
 }
