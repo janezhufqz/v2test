@@ -127,9 +127,9 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	boolean lastName_X;
 	boolean name1_X;
 	boolean name2_X;
-	private boolean prefix1Key_X;
-	private boolean prefix2Key_X;
-	private boolean middleName_X;
+	boolean prefix1Key_X;
+	boolean prefix2Key_X;
+	boolean middleName_X;
 	boolean email_X;
 	boolean city_X;
 	boolean poBox_X;
@@ -138,9 +138,9 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	private boolean country_X;
 	private boolean street_X;
 	boolean houseNo_X;
-	private boolean region_X;
-	private boolean postlCod1_X;
-	private boolean postlCod2_X;
+	boolean region_X;
+	boolean postlCod1_X;
+	boolean postlCod2_X;
 	boolean district_X;
 	private boolean tel1Numbr_X;
 	private boolean tel1Ext_X;
