@@ -61,7 +61,7 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	private String prefix1 = INITIAL_STRING;
 	private String prefix2Key = INITIAL_STRING;
 	private String prefix2 = INITIAL_STRING;
-	private boolean stdAddress = false;
+	boolean stdAddress = false;
 	private String coName = INITIAL_STRING;
 	private String city = INITIAL_STRING;
 	private String district = INITIAL_STRING;
@@ -133,28 +133,28 @@ public class AddressImpl extends BusinessObjectBase implements Address
 	boolean email_X;
 	boolean city_X;
 	boolean poBox_X;
-	private boolean stdAddress_X;
+	boolean stdAddress_X;
 	boolean strSuppl1_X;
 	private boolean country_X;
-	private boolean street_X;
+	boolean street_X;
 	boolean houseNo_X;
 	boolean region_X;
 	boolean postlCod1_X;
 	boolean postlCod2_X;
 	boolean district_X;
 	private boolean tel1Numbr_X;
-	private boolean tel1Ext_X;
+	boolean tel1Ext_X;
 	boolean function_X;
-	private boolean telmob1_X;
+	boolean telmob1_X;
 	boolean faxNumber_X;
 	boolean faxExtens_X;
 	private boolean taxJurCode_X;
-	private boolean titleKey_X;
+	boolean titleKey_X;
 	boolean companyName_X;
 	boolean coName_X;
-	private boolean title_X;
-	private boolean titleAca1Key_X;
-	private boolean titleSupplKey_X;
+	boolean title_X;
+	boolean titleAca1Key_X;
+	boolean titleSupplKey_X;
 
 	private List<County> countyList = null;
 

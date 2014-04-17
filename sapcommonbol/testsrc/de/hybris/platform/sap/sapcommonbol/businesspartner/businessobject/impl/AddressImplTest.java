@@ -211,6 +211,8 @@ public class AddressImplTest
 		assertEquals(value, classUnderTest.getName3());
 		classUnderTest.setName4(value);
 		assertEquals(value, classUnderTest.getName4());
+		classUnderTest.setSecondName(value);
+		assertEquals(value, classUnderTest.getSecondName());
 	}
 
 
@@ -524,5 +526,102 @@ public class AddressImplTest
 		assertEquals(value, classUnderTest.getPrefix1());
 		classUnderTest.setPrefix2(value);
 		assertEquals(value, classUnderTest.getPrefix2());
+	}
+
+	@Test
+	public void testRegionTexts()
+	{
+		classUnderTest.setRegionText15(value);
+		assertEquals(value, classUnderTest.getRegionText15());
+		classUnderTest.setRegionText50(value);
+		assertEquals(value, classUnderTest.getRegionText50());
+	}
+
+	@Test
+	public void testBeanAttribs()
+	{
+		classUnderTest.setRoomNo(value);
+		assertEquals(value, classUnderTest.getRoomNo());
+		classUnderTest.setTel1NumbrSeq(value);
+		assertEquals(value, classUnderTest.getTel1NumbrSeq());
+		classUnderTest.setTelmob1Seq(value);
+		assertEquals(value, classUnderTest.getTelmob1Seq());
+		classUnderTest.setTitleAca1(value);
+		assertEquals(value, classUnderTest.getTitleAca1());
+		classUnderTest.setType(value);
+		assertEquals(value, classUnderTest.getType());
+	}
+
+	@Test
+	public void testStdAddress()
+	{
+		classUnderTest.setStdAddress(true);
+		assertTrue(classUnderTest.stdAddress);
+		classUnderTest.setStdAddress_X(true);
+		assertTrue(classUnderTest.stdAddress_X);
+	}
+
+	@Test
+	public void testStreet()
+	{
+		assertFalse(classUnderTest.street_X);
+		classUnderTest.setStreet(value);
+		assertTrue(classUnderTest.street_X);
+		assertEquals(value, classUnderTest.getStreet());
+	}
+
+	@Test
+	public void testTel1Ext()
+	{
+		assertFalse(classUnderTest.tel1Ext_X);
+		classUnderTest.setTel1Ext(value);
+		assertTrue(classUnderTest.tel1Ext_X);
+		assertEquals(value, classUnderTest.getTel1Ext());
+	}
+
+	@Test
+	public void testTelmob1()
+	{
+		assertFalse(classUnderTest.telmob1_X);
+		classUnderTest.setTelmob1(value);
+		assertTrue(classUnderTest.telmob1_X);
+		assertEquals(value, classUnderTest.getTelmob1());
+	}
+
+	@Test
+	public void testTitle()
+	{
+		assertFalse(classUnderTest.title_X);
+		classUnderTest.setTitle(value);
+		assertTrue(classUnderTest.title_X);
+		assertEquals(value, classUnderTest.getTitle());
+	}
+
+	@Test
+	public void testTitleAca1Key()
+	{
+		assertFalse(classUnderTest.titleAca1Key_X);
+		classUnderTest.setTitleAca1Key(value);
+		assertTrue(classUnderTest.titleAca1Key_X);
+		assertEquals(value, classUnderTest.getTitleAca1Key());
+	}
+
+	@Test
+	public void testTitleKey()
+	{
+		assertFalse(classUnderTest.titleKey_X);
+		classUnderTest.setTitleKey(value);
+		assertTrue(classUnderTest.titleKey_X);
+		assertEquals(value, classUnderTest.getTitleKey());
+	}
+
+	@Test
+	public void testTitleSupplKey()
+	{
+		classUnderTest.setTitleSupplKey_X(false);
+		assertFalse(classUnderTest.titleSupplKey_X);
+		classUnderTest.setTitleSupplKey(value);
+		assertTrue(classUnderTest.titleSupplKey_X);
+		assertEquals(value, classUnderTest.getTitleSupplKey());
 	}
 }
