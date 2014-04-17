@@ -205,18 +205,14 @@ public class AddressImplTest
 	}
 
 	@Test
-	public void testName3()
+	public void testName34()
 	{
 		classUnderTest.setName3(value);
 		assertEquals(value, classUnderTest.getName3());
-	}
-
-	@Test
-	public void testName4()
-	{
 		classUnderTest.setName4(value);
 		assertEquals(value, classUnderTest.getName4());
 	}
+
 
 	@Test
 	public void testPoBox()
@@ -397,5 +393,136 @@ public class AddressImplTest
 		assertEquals(value, classUnderTest.getStrSuppl3());
 	}
 
+	@Test
+	public void testEMailSeq()
+	{
+		classUnderTest.setEmailSeq(value);
+		assertEquals(value, classUnderTest.getEmailSeq());
+	}
 
+	@Test
+	public void testFaxNumberSeq()
+	{
+		classUnderTest.setFaxNumberSeq(value);
+		assertEquals(value, classUnderTest.getFaxNumberSeq());
+	}
+
+	@Test
+	public void testFloor()
+	{
+		classUnderTest.setFloor(value);
+		assertEquals(value, classUnderTest.getFloor());
+	}
+
+	@Test
+	public void testFullName()
+	{
+		classUnderTest.setFullName(value);
+		assertEquals(value, classUnderTest.getFullName());
+	}
+
+	@Test
+	public void testHomeCity()
+	{
+		classUnderTest.setHomeCity(value);
+		assertEquals(value, classUnderTest.getHomeCity());
+	}
+
+	@Test
+	public void testHouseNo2()
+	{
+		classUnderTest.setHouseNo2(value);
+		assertEquals(value, classUnderTest.getHouseNo2());
+	}
+
+	@Test
+	public void testHouseNo3()
+	{
+		classUnderTest.setHouseNo3(value);
+		assertEquals(value, classUnderTest.getHouseNo3());
+	}
+
+	@Test
+	public void testId()
+	{
+		classUnderTest.setId(value);
+		assertEquals(value, classUnderTest.getId());
+	}
+
+	@Test
+	public void testInitials()
+	{
+		classUnderTest.setInitials(value);
+		assertEquals(value, classUnderTest.getInitials());
+	}
+
+	@Test
+	public void testLocation()
+	{
+		classUnderTest.setLocation(value);
+		assertEquals(value, classUnderTest.getLocation());
+	}
+
+	@Test
+	public void testNickName()
+	{
+		classUnderTest.setNickName(value);
+		assertEquals(value, classUnderTest.getNickName());
+	}
+
+	@Test
+	public void testOrigin()
+	{
+		classUnderTest.setOrigin(value);
+		assertEquals(value, classUnderTest.getOrigin());
+	}
+
+	@Test
+	public void testPcodeExt()
+	{
+		classUnderTest.setPcode1Ext(value);
+		assertEquals(value, classUnderTest.getPcode1Ext());
+		classUnderTest.setPcode2Ext(value);
+		assertEquals(value, classUnderTest.getPcode2Ext());
+		classUnderTest.setPcode3Ext(value);
+		assertEquals(value, classUnderTest.getPcode3Ext());
+	}
+
+	@Test
+	public void testPersonNumber()
+	{
+		classUnderTest.setPersonNumber(value);
+		assertEquals(value, classUnderTest.getPersonNumber());
+	}
+
+	@Test
+	public void testPoBoxes()
+	{
+		classUnderTest.setPoBoxCit(value);
+		assertEquals(value, classUnderTest.getPoBoxCit());
+		classUnderTest.setPoBoxCtry(value);
+		assertEquals(value, classUnderTest.getPoBoxCtry());
+		classUnderTest.setPoBoxReg(value);
+		assertEquals(value, classUnderTest.getPoBoxReg());
+		classUnderTest.setPoCtryISO(value);
+		assertEquals(value, classUnderTest.getPoCtryISO());
+		classUnderTest.setPoWoNo(value);
+		assertEquals(value, classUnderTest.getPoWoNo());
+	}
+
+	@Test
+	public void testPostlCod3()
+	{
+		classUnderTest.setPostlCod3(value);
+		assertEquals(value, classUnderTest.getPostlCod3());
+	}
+
+	@Test
+	public void testPrefix()
+	{
+		classUnderTest.setPrefix1(value);
+		assertEquals(value, classUnderTest.getPrefix1());
+		classUnderTest.setPrefix2(value);
+		assertEquals(value, classUnderTest.getPrefix2());
+	}
 }
