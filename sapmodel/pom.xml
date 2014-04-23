@@ -18,11 +18,12 @@
              <groupId>com.sap.ldi</groupId>
              <artifactId>translation-plugin</artifactId>
              <version>0.19.1</version>
-             <configuration>
-                 <translationCollection>sap.hybris.model</translationCollection>
+             <configuration>             
+                 <translationCollection>de.hybris.platform.sapmodel</translationCollection>
+                 <translationDeveloper>I816040</translationDeveloper >
                  <translationResources>
                      <translationResource>resources\localization</translationResource>
-                 </translationResources>
+                 </translationResources>                 
              </configuration>
          </plugin>
      </plugins>
