@@ -19,20 +19,7 @@
 						</listlayout>
 					</section>
 				</tab>
-				<!-- sales area -->
-				<tab name="tab.sappricing">
-					<section name="section.sappricing" mode="append">
-						<listlayout>
-							<attribute name="sapcommon_externalCatalogPricingEnabled" width="300"/>
-							<attribute name="sapcommon_externalOrderPricingEnabled" width="300"/>
-							<attribute name="sapcommon_priceSubtotalProcedure" width="300"/>
-							<attribute name="sapcommon_discountsSubtotalProcedure" width="300"/>
-							<attribute name="sapcommon_taxesSubtotalProcedure" width="300"/>
-							<attribute name="sapcommon_deliverySubtotalProcedure" width="300"/>
-							<attribute name="sapcommon_paymentCostSubtotalProcedure" width="300"/>
-						</listlayout>
-					</section>
-				</tab>	
+				
 				</editor>
 		</organizer>
 	</type>
