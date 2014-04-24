@@ -29,18 +29,36 @@
 	<itemtypes>
 		<itemtype code="Product" autocreate="false" generate="false">
 			<attributes>
-				<attribute qualifier="blocked" type="java.lang.Boolean">
+				<attribute qualifier="sapBlocked" type="java.lang.Boolean">
 					<description>Indicator if item is blocked for sale</description>
 					<modifiers read="true" write="true" search="true"
 						optional="true" />
 					<defaultvalue>Boolean.FALSE</defaultvalue>
 					<persistence type="property" />
 				</attribute>
-				<attribute qualifier="blockedFrom" type="java.util.Date">
+				<attribute qualifier="sapBlockedDate" type="java.util.Date">
 					<description>Indicates the date the product is blocked from</description>
 					<modifiers read="true" write="true" search="true"
 						optional="true" />
-
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="sapConfigurable" type="java.lang.Boolean">
+					<description>Is the product configurable?</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<defaultvalue>Boolean.FALSE</defaultvalue>
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="sapEAN" type="java.lang.String">
+					<description>Product EAN</description>
+					<modifiers read="true" write="true" search="true"
+						optional="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="sapBaseUnitConversion" type="java.lang.Double">
+					<description>Factor for converting Sales Unit quantity to Base Unit quantity</description>
+					<modifiers read="true" write="true" search="false"
+						optional="true" />
 					<persistence type="property" />
 				</attribute>
 			</attributes>

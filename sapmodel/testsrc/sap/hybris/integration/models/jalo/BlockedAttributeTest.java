@@ -43,7 +43,7 @@ public class BlockedAttributeTest extends HybrisJUnit4TransactionalTest
 	public void testPresenceOfBlockedAttributeInAPI()
 	{
 		final ProductModel product = new ProductModel();
-		product.setBlocked(Boolean.TRUE);
-		assertTrue(product.getBlocked().booleanValue());
+		product.setSapBlocked(Boolean.TRUE);
+		assertTrue(product.getSapBlocked().booleanValue());
 	}
 }
