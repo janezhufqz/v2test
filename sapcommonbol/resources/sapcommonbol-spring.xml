@@ -14,31 +14,28 @@
 
 
 	<alias alias="sapCommonConfigurationAccess" name="sapCommonDefaultConfigurationAccess" />
-	<alias alias="sapCommonBolConfigurationAccess" name="sapCommonDefaultConfigurationAccess" />	
 	<bean id="sapCommonDefaultConfigurationAccess" parent="sapCoreModuleConfigurationAccess">
 		<property name="moduleId" value="common" />
 	</bean>
 
 	<!-- Standard Beans -->
 	<alias alias="sapCommonAddress" name="sapCommonDefaultAddress" />
-	<alias alias="sapcommonbolAddress" name="sapCommonDefaultAddress" />	
 	<bean id="sapCommonDefaultAddress" scope="prototype"
 		class="de.hybris.platform.sap.sapcommonbol.businesspartner.businessobject.impl.AddressImpl">
 	</bean>
 
 	<alias alias="sapCommonTransferItem" name="sapCommonDefaultTransferItem" />
-	<alias alias="sapTransferItem" name="sapCommonDefaultTransferItem" />	
 	<bean id="sapCommonDefaultTransferItem" scope="prototype"
 		class="de.hybris.platform.sap.sapcommonbol.transaction.item.businessobject.impl.TransferItemImpl">
 	</bean>
 
 	<!-- Business Objects (BO) -->
 	<alias alias="sapCommonConverter" name="sapCommonDefaultConverter" />
-	<alias alias="sapConverter" name="sapCommonDefaultConverter" />
 	<bean id="sapCommonDefaultConverter" parent="sapCoreBusinessObject"
 		class="de.hybris.platform.sap.sapcommonbol.common.businessobject.impl.ConverterImpl">
 		<property name="moduleConfigurationAccess" ref="sapCommonConfigurationAccess" />
 	</bean>
+	
 	<!-- Backend Objects (BE) -->
 	<bean id="sapCommonDefaultConverterBeERP"
 		class="de.hybris.platform.sap.sapcommonbol.common.backendobject.impl.ConverterBackendERP"

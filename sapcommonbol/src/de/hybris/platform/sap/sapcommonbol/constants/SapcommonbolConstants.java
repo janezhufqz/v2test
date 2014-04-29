@@ -32,7 +32,6 @@ public final class SapcommonbolConstants extends GeneratedSapcommonbolConstants
 	public static final String ALIAS_BEAN_TRANSFER_ITEM = "sapCommonTransferItem";
 
 
-	public static final String BEAN_ID_TRANSFER_ITEM = "sapCommonTransferItem";
 
 	public static final String BEAN_ID_DIVISION_MAPPING_KEY = "sapDivisionMappingKey";
 	public static final String BEAN_ID_DIST_CHANNEL_MAPPING_KEY = "sapDistChannelMappingKey";
