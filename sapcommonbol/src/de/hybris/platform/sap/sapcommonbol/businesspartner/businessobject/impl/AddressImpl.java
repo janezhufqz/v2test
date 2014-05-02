@@ -1,12 +1,16 @@
-/*****************************************************************************
-    Class:        AddressImpl
-    Copyright (c) 2001, SAPMarkets Europe GmbH, Germany, All rights reserved.
-    Created:      19.3.2001
-    Version:      1.0
-
-    $Revision: #3 $
-    $Date: 2002/05/23 $
- *****************************************************************************/
+/*
+ * [y] hybris Platform
+ *
+ * Copyright (c) 2000-2014 hybris AG
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of hybris
+ * ("Confidential Information"). You shall not disclose such Confidential
+ * Information and shall use it only in accordance with the terms of the
+ * license agreement you entered into with hybris.
+ *
+ *
+ */
 package de.hybris.platform.sap.sapcommonbol.businesspartner.businessobject.impl;
 
 import de.hybris.platform.sap.core.bol.businessobject.BusinessObjectBase;
@@ -23,7 +27,6 @@ import java.util.List;
 /**
  * BO representation of an address
  *
- * @author SAP
  */
 public class AddressImpl extends BusinessObjectBase implements Address
 {

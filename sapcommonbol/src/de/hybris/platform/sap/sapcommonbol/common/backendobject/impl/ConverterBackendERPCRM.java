@@ -1,3 +1,16 @@
+/*
+ * [y] hybris Platform
+ *
+ * Copyright (c) 2000-2014 hybris AG
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of hybris
+ * ("Confidential Information"). You shall not disclose such Confidential
+ * Information and shall use it only in accordance with the terms of the
+ * license agreement you entered into with hybris.
+ *
+ *
+ */
 package de.hybris.platform.sap.sapcommonbol.common.backendobject.impl;
 
 
@@ -20,7 +33,6 @@ import de.hybris.platform.sap.sapcommonbol.transaction.util.impl.ConversionTools
  * Converter backend implementation. Performs calls to ERP and CRM and caches results. <br>
  * Note this is a preliminary implementation. At the moment it is only used to retrieve currency customizing.<br>
  * 
- * @author SAP
  * @version 0.9
  */
 public abstract class ConverterBackendERPCRM extends BackendBusinessObjectBaseJCo implements ConverterBackend

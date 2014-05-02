@@ -1,3 +1,16 @@
+/*
+ * [y] hybris Platform
+ *
+ * Copyright (c) 2000-2014 hybris AG
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of hybris
+ * ("Confidential Information"). You shall not disclose such Confidential
+ * Information and shall use it only in accordance with the terms of the
+ * license agreement you entered into with hybris.
+ *
+ *
+ */
 package de.hybris.platform.sap.sapcommonbol.transaction.item.businessobject.impl;
 
 import java.math.BigDecimal;
@@ -16,7 +29,6 @@ import de.hybris.platform.sap.sapcommonbol.transaction.util.impl.PrettyPrinter;
  * SalesDocument.createTransferItem. Always use this method to retrieve a new instance and use the interface for
  * consumption of the TransferItem's functionality.
  *
- * @author SAP AG
  * @version 1.0
  */
 public class TransferItemImpl extends BusinessObjectBase implements TransferItem

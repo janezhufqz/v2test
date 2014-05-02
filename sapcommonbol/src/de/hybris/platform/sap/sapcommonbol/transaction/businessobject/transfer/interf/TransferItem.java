@@ -1,3 +1,16 @@
+/*
+ * [y] hybris Platform
+ *
+ * Copyright (c) 2000-2014 hybris AG
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of hybris
+ * ("Confidential Information"). You shall not disclose such Confidential
+ * Information and shall use it only in accordance with the terms of the
+ * license agreement you entered into with hybris.
+ *
+ *
+ */
 package de.hybris.platform.sap.sapcommonbol.transaction.businessobject.transfer.interf;
 
 import java.io.Serializable;
@@ -15,7 +28,6 @@ import de.hybris.platform.sap.core.bol.businessobject.BusinessObject;
  * it is important in the SalesDocument to determine where the item comes from. Use the setFrom...-methods to flag the
  * source of the implementation class.
  * 
- * @author SAP
  */
 public interface TransferItem extends BusinessObject, Serializable
 {

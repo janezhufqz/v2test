@@ -1,19 +1,22 @@
-/*****************************************************************************
-    Class:        TransferItemProvider.java
-    Copyright (c) 2010, SAP AG, Germany, All rights reserved.
-    Author:       SAP
-    Created:      Jul 11, 2011
-    Version:      1.0
-
- *****************************************************************************/
-
+/*
+ * [y] hybris Platform
+ *
+ * Copyright (c) 2000-2014 hybris AG
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of hybris
+ * ("Confidential Information"). You shall not disclose such Confidential
+ * Information and shall use it only in accordance with the terms of the
+ * license agreement you entered into with hybris.
+ *
+ *
+ */
 package de.hybris.platform.sap.sapcommonbol.transaction.businessobject.transfer.interf;
 
 /**
  * This interface indicates that the implementing object can be used to
  * Instantiate empty transfer items. <br>
  * 
- * @author SAP
  */
 public interface TransferItemProvider {
 
