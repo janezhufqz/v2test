@@ -5,6 +5,29 @@
 
 <items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
 
+	<relations>
+
+		<relation code="OrderEntry2SapPricingCondition" autocreate="true"
+			localized="false">
+			
+			<description>Relationship between order entries and SAP pricing conditions 
+			             filled when reading synchronous prices from SAP ERP</description>
+			             
+			<sourceElement type="AbstractOrderEntry" qualifier="orderEntry" cardinality="one">
+				<description>Order entry</description>
+				<modifiers read="true" write="false" initial="true" search="true"
+					optional="true" unique="true" />
+			</sourceElement>
+
+			<targetElement type="SapPricingCondition" qualifier="sapPricingConditions"
+				cardinality="many" collectiontype="set" ordered="false">
+				<description>SAP pricing conditions</description>
+				<modifiers read="true" write="true" search="true" optional="true" />
+			</targetElement>
+
+		</relation>
+
+	</relations>
 
 	<itemtypes>
 		<itemtype code="Product" autocreate="false" generate="false">
@@ -184,6 +207,69 @@
 				</attribute>
 			</attributes>
 		</itemtype>
+		
+		<itemtype code="SapPricingCondition" extends="GenericItem"
+			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SapPricingCondition"
+			autocreate="true" generate="true">
+
+			<deployment table="SapPricingConditions" typecode="10835" />
+
+			<attributes>
+			    <attribute qualifier="order" type="java.lang.String">
+			        <description>Order number</description>
+					<modifiers read="true" write="false" initial="true" search="true"
+						       optional="true" unique="true" />
+					<persistence type="property" />					
+				</attribute>
+			    <attribute qualifier="conditionType" type="java.lang.String">
+				    <description>KSCHL - Condition type</description>
+					<modifiers read="true" write="false" initial="true" search="true"
+						       optional="true" unique="true" />
+					<persistence type="property" />					
+				</attribute>
+				<attribute qualifier="stepNumber" type="java.lang.String">
+					<description>STUNR - Step number</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="conditionCounter" type="java.lang.String">
+				<description>ZAEHK - Condition counter</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />					
+				</attribute>			
+				<attribute qualifier="currencyKey" type="java.lang.String">
+				<description>WAERS - Currency key</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />					
+				</attribute>
+				<attribute qualifier="conditionPricingUnit" type="java.lang.String">
+					<description>KPEIN - Condition pricing unit</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="conditionUnit" type="java.lang.String">
+				    <description>KMEIN - Condition unit in the document</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />					
+				</attribute>
+				<attribute qualifier="conditionCalculationType" type="java.lang.String">
+				    <description>KRECH - Calculation type for condition</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />					
+				</attribute>
+				<attribute qualifier="conditionRate" type="java.lang.String">
+				    <description>KBETR - Rate (condition amount or percentage)</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />					
+				</attribute>
+				<attribute qualifier="conditionValue" type="java.lang.String">
+				    <description>KWERT - Condition value</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />					
+				</attribute>
+			</attributes>
+		</itemtype>
+		
 	</itemtypes>
 
 
