@@ -94,20 +94,7 @@ public class ConverterImpl extends BusinessObjectBase implements Converter
 		}
 	}
 
-	@Override
-	@Deprecated
-	public String convertUnitID2UnitKey(final String unitID, final String language) throws BusinessObjectException
-	{
-		try
-		{
-			return getBackendService().convertUnitID2UnitKey(unitID, language);
-		}
-		catch (final BackendException e)
-		{
-			BusinessObjectHelper.splitException(e);
-			return null;
-		}
-	}
+
 
 	@Override
 	public String convertUnitKey2UnitID(final String unitKey) throws BusinessObjectException
@@ -151,35 +138,7 @@ public class ConverterImpl extends BusinessObjectBase implements Converter
 		}
 	}
 
-	@Override
-	@Deprecated
-	public String getDescriptionForUnit(final String unitKey) throws BusinessObjectException
-	{
-		try
-		{
-			return getBackendService().getDescriptionForUnit(unitKey);
-		}
-		catch (final BackendException e)
-		{
-			BusinessObjectHelper.splitException(e);
-			return null;
-		}
-	}
 
-	@Override
-	@Deprecated
-	public String getDescriptionForCurrency(final String currencyCode) throws BusinessObjectException
-	{
-		try
-		{
-			return getBackendService().getDescriptionForCurrency(currencyCode);
-		}
-		catch (final BackendException e)
-		{
-			BusinessObjectHelper.splitException(e);
-			return null;
-		}
-	}
 
 	@Override
 	public BigDecimal getMinimumScaleValue(final String unitKey) throws BusinessObjectException

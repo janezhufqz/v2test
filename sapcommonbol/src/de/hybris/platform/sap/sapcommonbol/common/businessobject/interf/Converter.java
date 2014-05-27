@@ -65,17 +65,7 @@ public interface Converter
 	 */
 	public String convertUnitID2UnitKey(String unitID) throws BusinessObjectException;
 
-	/**
-	 * Converts the unit ID (example <code> PC </code> for en_US) into the unit key (example <code> ST </code>)
-	 * 
-	 * @param unitID
-	 *           language dependent unit ID
-	 * @param language
-	 *           language of the language dependent unit ID
-	 * @return unit key
-	 * @throws BusinessObjectException
-	 */
-	public String convertUnitID2UnitKey(String unitID, String language) throws BusinessObjectException;
+
 
 	/**
 	 * Retrieves the number of decimal places for a currency (which might be an ISO currency but doesn't need to be). <br>
@@ -100,25 +90,6 @@ public interface Converter
 	 */
 	public int getUnitScale(String unitKey) throws BusinessObjectException;
 
-	/**
-	 * Retrieves a description for a unit according ti ERP/CRM customizing. This is relevant for UI display.
-	 * 
-	 * @param unitKey
-	 *           the language-independent key available in customizing table T006
-	 * @return the language-dependent description for the unit.
-	 * @throws BusinessObjectException
-	 */
-	public String getDescriptionForUnit(String unitKey) throws BusinessObjectException;
-
-	/**
-	 * Retrieves a description for a currency according ti ERP/CRM customizing. This is relevant for UI display.
-	 * 
-	 * @param currencyCode
-	 *           the language-independent key available in customizing table TCURC
-	 * @return the language-dependent description for the currency.
-	 * @throws BusinessObjectException
-	 */
-	public String getDescriptionForCurrency(String currencyCode) throws BusinessObjectException;
 
 	/**
 	 * @param unitKey

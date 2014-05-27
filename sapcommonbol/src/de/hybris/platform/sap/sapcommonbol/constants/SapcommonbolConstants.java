@@ -37,6 +37,10 @@ public final class SapcommonbolConstants extends GeneratedSapcommonbolConstants
 	public static final String BEAN_ID_DIST_CHANNEL_MAPPING_KEY = "sapDistChannelMappingKey";
 	public static final String BEAN_ID_DIST_CHANNEL_MAPPING = "sapDistChannelMapping";
 	public static final String BEAN_ID_DIVISION_MAPPING = "sapDivisionMapping";
+	
+	public static final String BEAN_ID_CACHE_CURRENCIES = "sapCommonCurrencyCacheRegion";
+	public static final String BEAN_ID_CACHE_UNITS = "sapCommonUnitCacheRegion";
+
 
 
 }

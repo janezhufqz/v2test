@@ -17,16 +17,23 @@ package de.hybris.platform.sap.sapcommonbol.common.backendobject.impl;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import javax.annotation.Resource;
+
 import com.sap.tc.logging.Severity;
 
 import de.hybris.platform.sap.core.bol.backend.BackendException;
+import de.hybris.platform.sap.core.bol.backend.BackendRuntimeException;
 import de.hybris.platform.sap.core.bol.backend.jco.BackendBusinessObjectBaseJCo;
+import de.hybris.platform.sap.core.bol.cache.CacheAccess;
+import de.hybris.platform.sap.core.bol.cache.exceptions.SAPHybrisCacheException;
 import de.hybris.platform.sap.core.bol.logging.Log4JWrapper;
 import de.hybris.platform.sap.core.bol.logging.LogCategories;
 import de.hybris.platform.sap.core.common.exceptions.ApplicationBaseRuntimeException;
 import de.hybris.platform.sap.core.common.util.LocaleUtil;
 import de.hybris.platform.sap.sapcommonbol.common.backendobject.interf.ConverterBackend;
+import de.hybris.platform.sap.sapcommonbol.constants.SapcommonbolConstants;
 import de.hybris.platform.sap.sapcommonbol.transaction.util.impl.ConversionTools;
+
 
 
 /**
@@ -39,6 +46,14 @@ public abstract class ConverterBackendERPCRM extends BackendBusinessObjectBaseJC
 {
 
 	protected static final Log4JWrapper sapLogger = Log4JWrapper.getInstance(ConverterBackendERPCRM.class.getName());
+	private static final String CACHEKEY_CURRENCIES = "SAP_CURRENCIES";
+	private static final String CACHEKEY_UNITS = "SAP_UNITS";
+	
+	@Resource(name = SapcommonbolConstants.BEAN_ID_CACHE_CURRENCIES)
+	protected CacheAccess currencyCacheAccess;
+	
+	@Resource(name = SapcommonbolConstants.BEAN_ID_CACHE_UNITS)
+	protected CacheAccess unitCacheAccess;	
 
 	public ConverterBackendERPCRM()
 	{
@@ -115,85 +130,40 @@ public abstract class ConverterBackendERPCRM extends BackendBusinessObjectBaseJC
 	@Override
 	abstract public Object loadCurrenciesByLanguageFromBackend(String applicationID, String language) throws BackendException;
 
-	/**
-	 * Initializes the mapping for the given language.
-	 * 
-	 * @param language
-	 * @throws BackendException
-	 */
 
-	@Deprecated
-	public String getDescriptionForUnit(final String internalUnit) throws BackendException
-	{
-		final String sapLanguage = getSAPLanguage();
-		final UomLocalization ul = getNonNullUomLocalization(sapLanguage);
-		final String description = ul.getDescription(internalUnit);
-		if (!ConverterUtils.provided(description))
-		{
-			sapLogger.log(Severity.ERROR, LogCategories.APPLICATIONS,
-					"The description for unit {0} could not be found in the pricing converter data for language {1}.", new Object[]
-					{ internalUnit, sapLanguage });
-			throw new BackendException("The description for unit " + internalUnit + " could not be found in the pricing converter "
-					+ "data for langauge " + sapLanguage);
-		}
-		return description;
-	}
 
-	@Deprecated
-	public String getDescriptionForCurrency(final String internalUnit) throws BackendException
-	{
 
-		final String sapLanguage = getSAPLanguage();
-		final CurrencyLocalization ul = getNonNullCurrLocalization(sapLanguage);
-		final String description = ul.getDescription(internalUnit);
-		if (!ConverterUtils.provided(description))
-		{
-			sapLogger.log(Severity.ERROR, LogCategories.APPLICATIONS,
-					"The description for unit {0} could not be found in the pricing converter data for language {1}." + new Object[]
-					{ internalUnit, sapLanguage });
-			throw new BackendException("The description for unit " + internalUnit + " could not be found in the pricing converter "
-					+ "data for langauge " + sapLanguage);
-		}
-		return description;
-	}
 
-	// never returns null, but throws an exception instead
-	@Deprecated
-	private UomLocalization getNonNullUomLocalization(final String language) throws BackendException
-	{
-		try
-		{
-			final UomLocalization li = getUomLocalisation(getSAPLanguage());
-			if (li == null)
-			{
-				sapLogger.log(Severity.ERROR, LogCategories.APPLICATIONS,
-						"The language {0} could not be found in the pricing converter data." + new Object[]
-						{ language });
-				throw new BackendException("The language " + language + " could not be found in the pricing converter data.");
-			}
-			return li;
-		}
-		catch (final BackendException e)
-		{
-			// no need to log here as just forwarding
-			throw new BackendException("Could not initialze pricing converter data for language: ." + language, e);
-		}
-	}
 
 	private CurrencyLocalization getCurrencyLocalization(final String language) throws BackendException
 	{
-		//TODO re-introduce caching
-		return (CurrencyLocalization) loadCurrenciesByLanguageFromBackend("ID", language);
-		/*
-		 * CacheAccess access = null; try { access =
-		 * CacheProvider.getInstance().getCacheAccess(CommonCurrencyCacheLoader.CACHE_REGION); } catch (final
-		 * WCFCacheException e) { throw new BackendException("Cache access could not be retrieved", e); }
-		 * 
-		 * final CommonCurrencyCacheLoader.CurrencyCacheKey cacheKey = new CurrencyCacheKey(); cacheKey.language =
-		 * language; cacheKey.applicationID = this.getBackendObjectSupport().getBackendConfigKey();
-		 * 
-		 * final CurrencyLocalization li = (CurrencyLocalization) access.get(cacheKey, this); return li;
-		 */
+
+		synchronized (ConverterBackendERPCRM.class)
+		{
+			CurrencyLocalization currencies = null;
+			final String rfcCacheKey = CACHEKEY_CURRENCIES + LocaleUtil.getLocale().getLanguage();
+
+			currencies = (CurrencyLocalization) currencyCacheAccess.get(rfcCacheKey);
+			if (currencies == null)
+			{
+				try
+				{
+					currencies = (CurrencyLocalization) loadCurrenciesByLanguageFromBackend("ID", language);
+					currencyCacheAccess.put(rfcCacheKey, currencies);
+					if (sapLogger.isDebugEnabled())
+					{
+						sapLogger.debug("loaded from backend currencies {0}", new Object[]
+						{ currencies });
+					}
+				}
+				catch (final SAPHybrisCacheException e)
+				{
+					throw new BackendRuntimeException("Issue during cache access.");
+				}
+			}
+			return currencies;
+		}
+
 	}
 
 	// never returns null
@@ -226,31 +196,35 @@ public abstract class ConverterBackendERPCRM extends BackendBusinessObjectBaseJC
 		return sapLanguage;
 	}
 
-	@Deprecated
-	private String getSAPLanguage(final String language)
-	{
-		final String isoLanguage = language;
-		final String sapLanguage = ConversionTools.getR3LanguageCode(isoLanguage);
-		return sapLanguage;
-	}
+
 
 	private UomLocalization getUomLocalisation(final String sapLanguage) throws BackendException
 	{
-		//TODO re-introduce caching
-		return (UomLocalization) loadUOMsByLanguageFromBackend("ID", sapLanguage);
-		// first determine the SAP language
-		/*
-		 * CacheAccess access = null; try { access =
-		 * CacheProvider.getInstance().getCacheAccess(CommonUOMCacheLoader.CACHE_REGION); } catch (final WCFCacheException
-		 * e) { throw new BackendException("Cache access could not be retrieved", e); }
-		 * 
-		 * final CommonUOMCacheLoader.UOMCacheKey cacheKey = new UOMCacheKey(); cacheKey.language = sapLanguage;
-		 * cacheKey.applicationID = this.getBackendObjectSupport().getBackendConfigKey();
-		 * 
-		 * final UomLocalization uomLocalization = (UomLocalization) access.get(cacheKey, this);
-		 * 
-		 * return uomLocalization;
-		 */
+		synchronized (ConverterBackendERPCRM.class)
+		{
+			UomLocalization units = null;
+			final String rfcCacheKey = CACHEKEY_UNITS + sapLanguage;
+
+			units = (UomLocalization) unitCacheAccess.get(rfcCacheKey);
+			if (units == null)
+			{
+				try
+				{
+					units = (UomLocalization) loadUOMsByLanguageFromBackend("ID", sapLanguage);
+					unitCacheAccess.put(rfcCacheKey, units);
+					if (sapLogger.isDebugEnabled())
+					{
+						sapLogger.debug("loaded from backend units {0}", new Object[]
+						{ units });
+					}
+				}
+				catch (final SAPHybrisCacheException e)
+				{
+					throw new BackendRuntimeException("Issue during cache access.");
+				}
+			}
+			return units;
+		}		
 	}
 
 	@Override
@@ -260,13 +234,7 @@ public abstract class ConverterBackendERPCRM extends BackendBusinessObjectBaseJC
 		return (uomLocalization != null) ? uomLocalization.getInternalUom(unitID) : "";
 	}
 
-	@Override
-	@Deprecated
-	public String convertUnitID2UnitKey(final String unitID, final String language) throws BackendException
-	{
-		final UomLocalization uomLocalization = getUomLocalisation(getSAPLanguage(language));
-		return (uomLocalization != null) ? uomLocalization.getInternalUom(unitID) : "";
-	}
+
 
 	@Override
 	public String convertUnitKey2UnitID(final String unitKey) throws BackendException

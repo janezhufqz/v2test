@@ -54,17 +54,6 @@ public interface ConverterBackend extends BackendBusinessObject
 	public String convertUnitID2UnitKey(String unitID) throws BackendException;
 
 
-	/**
-	 * Converting language dependent unit ID to unit key
-	 * 
-	 * @param unitID
-	 *           language dependent unit ID e.g PC in English
-	 * @param language
-	 *           language of the language dependent unit ID
-	 * @return SAP unit key e.g. ST for piece
-	 * @throws BackendException
-	 */
-	public String convertUnitID2UnitKey(String unitID, String language) throws BackendException;
 
 	/**
 	 * Get currency scale. In standard e.g. <li>USD: 2 <li>EUR: 2 <li>JPY: 0
@@ -86,25 +75,7 @@ public interface ConverterBackend extends BackendBusinessObject
 	 */
 	public int getUnitScale(String unitKey) throws BackendException;
 
-	/**
-	 * Fetch language dependent string for currency code
-	 * 
-	 * @param currencyCode
-	 *           SAP currency code, note that depending on customizing also non-ISO codes may occur
-	 * @return language dependent currency description
-	 * @throws BackendException
-	 */
-	public String getDescriptionForCurrency(String currencyCode) throws BackendException;
 
-	/**
-	 * Fetch language dependent string for currency code
-	 * 
-	 * @param unitKey
-	 *           SAP unit key
-	 * @return language dependent unit description
-	 * @throws BackendException
-	 */
-	public String getDescriptionForUnit(String unitKey) throws BackendException;
 
 	/**
 	 * Loads UOM's per language. Called from cache loaders on BO level<br>
