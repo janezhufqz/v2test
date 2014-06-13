@@ -1,4 +1,4 @@
-package de.hybris.platform.sapmodel;
+package de.hybris.platform.sapmodelhmc;
 
 import de.hybris.platform.hmc.AbstractEditorMenuChip;
 import de.hybris.platform.hmc.AbstractExplorerMenuTreeNodeChip;
@@ -30,7 +30,7 @@ public class SapmodelHMCExtension extends HMCExtension
 	private static final Logger LOG = Logger.getLogger(SapmodelHMCExtension.class.getName());
 
 	/** Path to the resource bundles. */
-	public final static String RESOURCE_PATH = "de.hybris.platform.sapmodel.hmc.locales";
+	public final static String RESOURCE_PATH = "de.hybris.platform.sapmodelhmc.hmc.locales";
 
 	/**
 	 * @see HMCExtension#getTreeNodeChips(de.hybris.platform.hmc.webchips.DisplayState,

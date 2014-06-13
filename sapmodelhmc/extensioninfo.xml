@@ -13,17 +13,15 @@
   
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
-   <extension abstractclassprefix="Generated" classprefix="Sapmodel" managername="SapmodelManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="sapmodel">
+   <extension abstractclassprefix="Generated" classprefix="Sapmodelhmc" managername="SapmodelhmcManager" managersuperclass="de.hybris.platform.jalo.extension.Extension" name="sapmodelhmc">
                
       <!-- you should add all required extensions to this list, except platform extensions which are automatically required -->         
-      <!-- <requires-extension name="cms"/> -->         
-        <requires-extension name="basecommerce"/> 
-        <requires-extension name="sapcoreconfiguration" />
-	 
+      <requires-extension name="sapmodel"/>         
+      	<requires-extension name="hmc" />
 
-      <coremodule generated="true" manager="sap.hybris.integration.models.jalo.SapmodelManager" packageroot="sap.hybris.integration.models"/>
+      <coremodule generated="true" manager="de.hybris.platform.sapmodelhmc.jalo.SapmodelhmcManager" packageroot="de.hybris.platform.sapmodelhmc"/>
 
-      <webmodule jspcompile="false" webroot="/sapmodel"/>
+      <hmcmodule extensionclassname="de.hybris.platform.sapmodelhmc.SapmodelHMCExtension"/>
 					
 	
 

@@ -1,0 +1,8 @@
+#Ant properties
+#Fri May 30 19:17:33 CEST 2014
+builddate=20140530 1917
+description=sapmodelhmc
+name=sapmodelhmc
+vendor=hybris
+version=5.2.0.0
+version.api=5.2.0

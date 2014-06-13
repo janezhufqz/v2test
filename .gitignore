@@ -4,18 +4,18 @@ sapmodel/.settings/org.eclipse*
 /**/*.jar
  
 # Ignore Hybris project and settings files
-sapmodel/platformhome.properties
+sapmodel*/platformhome.properties
  
 # Ignore classes folders in projects
-sapmodel/notused
-sapmodel/classes
-sapmodel/eclipsebin
-sapmodel/bin
-sapmodel/target
-sapmodel/hmc/resources/hmc.xsd
+sapmodel*/notused
+sapmodel*/classes
+sapmodel*/eclipsebin
+sapmodel*/bin
+sapmodel*/target
+sapmodel*/hmc/resources/hmc.xsd
 *.class
-sapmodel/gensrc/*
-sapmodel/resources/beans.xsd
-sapmodel/resources/items.xsd
-sapmodel/extensioninfo.xsd
-sapmodel/build.xml
+sapmodel*/gensrc/*
+sapmodel*/resources/beans.xsd
+sapmodel*/resources/items.xsd
+sapmodel*/extensioninfo.xsd
+sapmodel*/build.xml
