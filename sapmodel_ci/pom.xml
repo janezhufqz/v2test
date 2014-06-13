@@ -22,7 +22,8 @@
                  <translationCollection>de.hybris.platform.sapmodel</translationCollection>
                  <translationDeveloper>I816040</translationDeveloper >
                  <translationResources>
-                     <translationResource>resources\localization</translationResource>
+                     <translationResource>sapmodel\resources\localization</translationResource>
+                     <translationResource>sapmodelhmc\hmc\resources\localization</translationResource>
                  </translationResources>                 
              </configuration>
          </plugin>
