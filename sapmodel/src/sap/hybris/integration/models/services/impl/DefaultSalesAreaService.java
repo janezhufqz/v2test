@@ -1,8 +1,21 @@
+/*
+ * [y] hybris Platform
+ *
+ * Copyright (c) 2000-2014 hybris AG
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of hybris
+ * ("Confidential Information"). You shall not disclose such Confidential
+ * Information and shall use it only in accordance with the terms of the
+ * license agreement you entered into with hybris.
+ *
+ * 
+ */
 package sap.hybris.integration.models.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import de.hybris.platform.sap.core.configuration.jalo.SAPConfiguration;
+ 
 import de.hybris.platform.sap.core.configuration.model.SAPConfigurationModel;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 import de.hybris.platform.store.BaseStoreModel;
@@ -11,11 +24,17 @@ import sap.hybris.integration.models.model.ReferenceDistributionChannelMappingMo
 import sap.hybris.integration.models.model.ReferenceDivisionMappingModel;
 import sap.hybris.integration.models.services.SalesAreaService;
 
+/**
+ * Default sales area service implementation for accessing common distribution channels and divisions.
+ */
 public class DefaultSalesAreaService implements SalesAreaService{
 	
 	private BaseStoreService baseStoreService;
 
 
+	/**
+	 * Accessing the tables for common channels and divisions
+	 */
 	@Autowired
 	protected FlexibleSearchService flexibleSearchService;	
 
@@ -90,6 +109,12 @@ public class DefaultSalesAreaService implements SalesAreaService{
 		this.baseStoreService = baseStoreService;
 	}
 	
+	/**
+	 * Read common distribution channel for condition maintenance
+	 * @param salesOrganization 
+	 * @param distributionChannel
+	 * @return The common channel for condition maintenance
+	 */
 	protected String getCommonDistributionChannelConditions(
 			final String salesOrganization, final String distributionChannel) {
 		final ReferenceDistributionChannelMappingModel referenceDistributionChannel = getCommonDistributionChannel(
@@ -101,6 +126,12 @@ public class DefaultSalesAreaService implements SalesAreaService{
 		}
 	}
 	
+	/**
+	 * Read common distribution channel for customer and material master
+	 * @param salesOrganization
+	 * @param distributionChannel
+	 * @return The common channel for customer and material master
+	 */
 	protected String getCommonDistributionChannelCustMaster(
 			final String salesOrganization, final String distributionChannel) {
 		final ReferenceDistributionChannelMappingModel referenceDistributionChannel = getCommonDistributionChannel(
@@ -130,6 +161,12 @@ public class DefaultSalesAreaService implements SalesAreaService{
 		return referenceDistributionChannel;
 	}
 
+	/**
+	 * Read common division for customer and material master
+	 * @param salesOrganization
+	 * @param division
+	 * @return Common division
+	 */
 	protected String getCommonDivisionCustMaster(final String salesOrganization,
 			final String division) {
 		final ReferenceDivisionMappingModel referenceDivision = getCommonDivsion(
@@ -141,6 +178,12 @@ public class DefaultSalesAreaService implements SalesAreaService{
 		}
 	}
 	
+	/**
+	 * Read common division for condition maintenance
+	 * @param salesOrganization
+	 * @param division
+	 * @return Common division
+	 */
 	protected String getCommonDivisionConditions(final String salesOrganization,
 			final String division) {
 		final ReferenceDivisionMappingModel referenceDivision = getCommonDivsion(
