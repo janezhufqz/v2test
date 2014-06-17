@@ -14,6 +14,9 @@
 package de.hybris.platform.sap.sapcommonbol.common.backendobject.impl;
 
 
+import de.hybris.platform.sap.core.bol.backend.BackendType;
+import de.hybris.platform.sap.core.jco.exceptions.BackendException;
+
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -21,9 +24,6 @@ import java.util.Map;
 import com.sap.conn.jco.JCoFunction;
 import com.sap.conn.jco.JCoParameterList;
 import com.sap.conn.jco.JCoTable;
-
-import de.hybris.platform.sap.core.bol.backend.BackendException;
-import de.hybris.platform.sap.core.bol.backend.BackendType;
 
 
 /**

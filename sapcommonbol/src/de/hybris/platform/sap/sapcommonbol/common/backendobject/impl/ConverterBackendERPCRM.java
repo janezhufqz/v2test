@@ -14,15 +14,6 @@
 package de.hybris.platform.sap.sapcommonbol.common.backendobject.impl;
 
 
-import java.util.Map;
-import java.util.Map.Entry;
-
-import javax.annotation.Resource;
-
-import com.sap.tc.logging.Severity;
-
-import de.hybris.platform.sap.core.bol.backend.BackendException;
-import de.hybris.platform.sap.core.bol.backend.BackendRuntimeException;
 import de.hybris.platform.sap.core.bol.backend.jco.BackendBusinessObjectBaseJCo;
 import de.hybris.platform.sap.core.bol.cache.CacheAccess;
 import de.hybris.platform.sap.core.bol.cache.exceptions.SAPHybrisCacheException;
@@ -30,9 +21,18 @@ import de.hybris.platform.sap.core.bol.logging.Log4JWrapper;
 import de.hybris.platform.sap.core.bol.logging.LogCategories;
 import de.hybris.platform.sap.core.common.exceptions.ApplicationBaseRuntimeException;
 import de.hybris.platform.sap.core.common.util.LocaleUtil;
+import de.hybris.platform.sap.core.jco.exceptions.BackendException;
+import de.hybris.platform.sap.core.jco.exceptions.BackendRuntimeException;
 import de.hybris.platform.sap.sapcommonbol.common.backendobject.interf.ConverterBackend;
 import de.hybris.platform.sap.sapcommonbol.constants.SapcommonbolConstants;
 import de.hybris.platform.sap.sapcommonbol.transaction.util.impl.ConversionTools;
+
+import java.util.Map;
+import java.util.Map.Entry;
+
+import javax.annotation.Resource;
+
+import com.sap.tc.logging.Severity;
 
 
 
@@ -48,12 +48,12 @@ public abstract class ConverterBackendERPCRM extends BackendBusinessObjectBaseJC
 	protected static final Log4JWrapper sapLogger = Log4JWrapper.getInstance(ConverterBackendERPCRM.class.getName());
 	private static final String CACHEKEY_CURRENCIES = "SAP_CURRENCIES";
 	private static final String CACHEKEY_UNITS = "SAP_UNITS";
-	
+
 	@Resource(name = SapcommonbolConstants.BEAN_ID_CACHE_CURRENCIES)
 	protected CacheAccess currencyCacheAccess;
-	
+
 	@Resource(name = SapcommonbolConstants.BEAN_ID_CACHE_UNITS)
-	protected CacheAccess unitCacheAccess;	
+	protected CacheAccess unitCacheAccess;
 
 	public ConverterBackendERPCRM()
 	{
@@ -224,7 +224,7 @@ public abstract class ConverterBackendERPCRM extends BackendBusinessObjectBaseJC
 				}
 			}
 			return units;
-		}		
+		}
 	}
 
 	@Override
