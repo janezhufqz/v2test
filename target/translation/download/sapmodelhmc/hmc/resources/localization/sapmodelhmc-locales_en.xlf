@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="javapropertyresourcebundle" date="2014-06-17T18:44:10Z" original="E:\.jenkins\workspace\Zeus_SAPModel_Translation_Upload\sapmodelhmc\hmc\resources\localization\sapmodelhmc-locales.properties" source-language="en" target-language="en">
+    <header>
+      <skl>
+        <internal-file crc="08d27fdea61c7cb0acc79f2cbe026f26" form="base64">H4sIAAAAAAAAAI2QQWvDMAyF74H+B0GPBYeOjI5CKWWBERijkAx2VRwlMU3sECk1+/ezcxg7jLGL9Cyevoe1hZf3IgdxUBPomVCoAW+kh15kOqap9161ON7mJQxdqyxJuiymWUtHdpNs4c0JHaHqDUNrBgKP/M1Crd3cGNvFDOlDiLN3smKc5fBGAY02hrduscEuERizOYabm1G+aRXjpAJnWidpY3ga8DN9JbR5sbZdXuyqGS0PGNG76+w0Mf8DNmFHnN4N+agU6rh/jrpoTvssezzsD0/ZwyYJrI+qqDYJ0+pRNQblxpFmTRF6Ki9XKHEghkv4/Y8NwToaotnZ0/PaoCSRcBf+hfyn9wvbwbO2swEAAA==</internal-file>
+      </skl>
+      <phase-group>
+        <phase company-name="SAP AG" date="2014-06-16T23:50:34Z" phase-name="file-creation" process-name="file-creation" tool-id="urn:x-sap:sls-mlt:java:properties-converter"/>
+      </phase-group>
+      <tool tool-company="SAP AG" tool-id="urn:x-sap:sls-mlt:java:properties-converter" tool-name="Java .properties File Converter" tool-version="1.5.0"/>
+      <sxmd:metadata xmlns="urn:x-sap:mlt:tsmetadata:1.0" xmlns:sxmd="urn:x-sap:mlt:xliff12:metadata:1.0">
+        <object-name>be350f10-a611-11e3-a5e2-0800200c9a66</object-name>
+        <collection>de.hybris.platform.sapmodel</collection>
+        <domain>SD</domain>
+        <developer>I816040</developer>
+        <description> SAP Model Extension hmc texts </description>
+      </sxmd:metadata>
+    </header>
+    <body>
+      <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.basecommerce.sap" resname="section.basecommerce.sap" sap:sc="XTIT">
+        <source>SAP Sales Area</source>
+        <target state="translated">SAP Sales Area</target>
+      </trans-unit>
+      <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="tab.sapcommon" resname="tab.sapcommon" sap:sc="XTIT">
+        <source>Common Settings</source>
+        <target state="translated">Common Settings</target>
+      </trans-unit>
+      <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.sapcommon" resname="section.sapcommon" sap:sc="XTIT">
+        <source>Common Settings</source>
+        <target state="translated">Common Settings</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
