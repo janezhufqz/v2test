@@ -30,7 +30,7 @@ public class SapmodelHMCExtension extends HMCExtension
 	private static final Logger LOG = Logger.getLogger(SapmodelHMCExtension.class.getName());
 
 	/** Path to the resource bundles. */
-	public final static String RESOURCE_PATH = "de.hybris.platform.sapmodelhmc.hmc.locales";
+	public final static String RESOURCE_PATH = "localization.sapmodelhmc-locales";
 
 	/**
 	 * @see HMCExtension#getTreeNodeChips(de.hybris.platform.hmc.webchips.DisplayState,
