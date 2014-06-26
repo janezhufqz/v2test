@@ -18,6 +18,36 @@
 								<attribute name="sapcommon_division" width="300" />
 						</listlayout>
 					</section>
+					<!-- delivery section -->
+					<section name="section.sapdelivery" mode="append">
+						<listlayout>
+							<attribute labelwidth="200" name="sapDeliveryModes" width="408">
+								<referencecollectioneditor presetattribute="sapConfiguration" autosave="true" externalcreate="false"
+									editable="true">
+									<itemlayout>
+										<attribute name="deliveryMode" width="136" />
+										<attribute name="deliveryName" width="136" />
+										<attribute name="deliveryValue" width="136" />
+									</itemlayout>
+								</referencecollectioneditor>
+							</attribute>
+						</listlayout>
+					</section>
+					<!-- payment section -->
+					<section name="section.sappayment" mode="append">
+						<listlayout>
+							<attribute labelwidth="200" name="sapPaymentModes" width="408">
+								<referencecollectioneditor presetattribute="sapConfiguration" autosave="true" externalcreate="false"
+									editable="true">
+									<itemlayout>
+										<attribute name="paymentMode" width="136" />
+										<attribute name="paymentName" width="136" />
+										<attribute name="paymentValue" width="136" />
+									</itemlayout>
+								</referencecollectioneditor>
+							</attribute>
+						</listlayout>
+					</section>
 				</tab>
 				
 				</editor>

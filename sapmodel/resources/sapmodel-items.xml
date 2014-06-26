@@ -26,6 +26,40 @@
 
 		</relation>
 
+		<relation code="SapConfigDeliveryRelation" autocreate="true"
+			localized="false">
+
+			<sourceElement type="SAPConfiguration" qualifier="sapConfiguration"
+				cardinality="one">
+				<modifiers read="true" write="true" search="true"
+					optional="false" />
+			</sourceElement>
+
+			<targetElement type="SapDeliveryMode" qualifier="sapDeliveryModes"
+				cardinality="many" collectiontype="set" ordered="false">
+				<modifiers read="true" write="true" search="true"
+					optional="true" />
+			</targetElement>
+
+		</relation>
+
+		<relation code="SapConfigPaymentRelation" autocreate="true"
+			localized="false">
+
+			<sourceElement type="SAPConfiguration" qualifier="sapConfiguration"
+				cardinality="one">
+				<modifiers read="true" write="true" search="true"
+					optional="false" />
+			</sourceElement>
+
+			<targetElement type="SapPaymentMode" qualifier="sapPaymentModes"
+				cardinality="many" collectiontype="set" ordered="false">
+				<modifiers read="true" write="true" search="true"
+					optional="true" />
+			</targetElement>
+
+		</relation>
+
 	</relations>
 
 	<itemtypes>
@@ -287,6 +321,82 @@
 			</attributes>
 		</itemtype>
 
+		<itemtype code="SapDeliveryMode" extends="GenericItem"
+			jaloclass="de.hybris.platform.sap.sappricingbol.jalo.SapDeliveryMode"
+			autocreate="true" generate="true">
+
+			<deployment table="SapDeliveryModes" typecode="10833" />
+
+			<attributes>
+
+				<attribute qualifier="sapConfiguration" type="SAPConfiguration">
+					<persistence type="property" />
+					<modifiers unique="true" optional="true" read="true"
+						write="false" initial="true" search="true" />
+				</attribute>
+
+				<attribute qualifier="deliveryMode" type="DeliveryMode">
+					<persistence type="property" />
+					<modifiers unique="true" optional="false" read="true"
+						write="true" initial="false" search="true" />
+				</attribute>
+
+				<attribute qualifier="deliveryName" type="java.lang.String"
+					autocreate="true">
+					<persistence type="property" />
+					<modifiers unique="false" optional="false" read="true"
+						write="true" initial="false" search="true" />
+				</attribute>
+
+				<attribute qualifier="deliveryValue" type="java.lang.String"
+					autocreate="true">
+					<persistence type="property" />
+					<modifiers unique="false" optional="false" read="true"
+						write="true" initial="false" search="true" />
+				</attribute>
+
+			</attributes>
+
+		</itemtype>
+
+		<itemtype code="SapPaymentMode" extends="GenericItem"
+			jaloclass="de.hybris.platform.sap.sappricingbol.jalo.SapPaymentMode"
+			autocreate="true" generate="true">
+
+			<deployment table="SapPaymentModes" typecode="10834" />
+
+			<attributes>
+
+				<attribute qualifier="sapConfiguration" type="SAPConfiguration">
+					<persistence type="property" />
+					<modifiers unique="true" optional="true" read="true"
+						write="false" initial="true" search="true" />
+				</attribute>
+
+				<attribute qualifier="paymentMode" type="PaymentMode">
+					<persistence type="property" />
+					<modifiers unique="true" optional="false" read="true"
+						write="true" initial="false" search="true" />
+				</attribute>
+
+				<attribute qualifier="paymentName" type="java.lang.String"
+					autocreate="true">
+					<persistence type="property" />
+					<modifiers unique="false" optional="false" read="true"
+						write="true" initial="false" search="true" />
+				</attribute>
+
+				<attribute qualifier="paymentValue" type="java.lang.String"
+					autocreate="true">
+					<persistence type="property" />
+					<modifiers unique="false" optional="false" read="true"
+						write="true" initial="false" search="true" />
+				</attribute>
+
+			</attributes>
+
+		</itemtype>
+	
 	</itemtypes>
 
 
