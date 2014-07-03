@@ -5,17 +5,55 @@
 <configuration xmlns="hybris.de/schemas/hmc/generic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="hybris.de/schemas/hmc/generic hmc.xsd">
 
-	<type name="SAPConfiguration" mode="append" >
+	<explorertree mode="append">
+		<group description="group.sapintegration.description" expand="false" name="group.sapintegration.name">
+			<typeref description="node.sapidoctargetsystem.description" type="SAPIDocTargetSystem" />
+		</group>
+	</explorertree>
+
+	<type name="SAPIDocTargetSystem" mode="append">
+		<organizer>
+			<search mode="replace">
+				<condition attribute="sapcommon_receiverName" />
+			</search>
+			<result>
+				<listview mode="replace">
+					<itemlayout>
+						<attribute name="sapcommon_receiverName" />
+					</itemlayout>
+				</listview>
+			</result>
+			<editor>
+				<essentials>
+					<columnlayout mode="replace">
+						<row>
+							<attribute name="sapcommon_receiverName" />
+						</row>
+					</columnlayout>
+				</essentials>
+				<tab name="tab.sapcommon">
+					<section name="section.sapcommon">
+						<listlayout>
+							<attribute name="sapcommon_receiverName" width="300"></attribute>
+							<attribute name="httpDestination" width="300"></attribute>
+						</listlayout>
+					</section>
+				</tab>
+			</editor>
+		</organizer>
+	</type>
+
+	<type name="SAPConfiguration" mode="append">
 		<organizer>
 			<editor>
 				<tab name="tab.sapcommon">
 					<section name="section.sapcommon">
 						<listlayout>
-								<attribute name="sapcommon_transactionType" width="300"></attribute>
-								<attribute name="sapcommon_referenceCustomer" width="300" />
-								<attribute name="sapcommon_salesOrganization" width="300" />
-								<attribute name="sapcommon_distributionChannel" width="300" />
-								<attribute name="sapcommon_division" width="300" />
+							<attribute name="sapcommon_transactionType" width="300"></attribute>
+							<attribute name="sapcommon_referenceCustomer" width="300" />
+							<attribute name="sapcommon_salesOrganization" width="300" />
+							<attribute name="sapcommon_distributionChannel" width="300" />
+							<attribute name="sapcommon_division" width="300" />
 						</listlayout>
 					</section>
 					<!-- delivery section -->
@@ -49,11 +87,11 @@
 						</listlayout>
 					</section>
 				</tab>
-				
-				</editor>
+
+			</editor>
 		</organizer>
 	</type>
-	
-	
+
+
 
 </configuration>
