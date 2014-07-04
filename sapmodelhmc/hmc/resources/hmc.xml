@@ -41,6 +41,11 @@
 				</tab>
 			</editor>
 		</organizer>
+		<defaultreference mode="replace" searchattribute="sapcommon_receiverName">
+			<itemlayout>
+				<attribute name="sapcommon_receiverName" />
+			</itemlayout>
+		</defaultreference>
 	</type>
 
 	<type name="SAPConfiguration" mode="append">
