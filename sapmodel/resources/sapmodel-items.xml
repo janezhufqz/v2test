@@ -280,7 +280,7 @@
 		<itemtype code="SapPricingCondition" extends="GenericItem" jaloclass="de.hybris.platform.sap.sapmodel.jalo.SapPricingCondition"
 			autocreate="true" generate="true">
 
-			<deployment table="SapPricingConditions" typecode="10835" />
+			<deployment table="SapPricingConditions" typecode="9310" />
 
 			<attributes>
 				<attribute qualifier="order" type="java.lang.String">
@@ -339,7 +339,7 @@
 		<itemtype code="SapDeliveryMode" extends="GenericItem" jaloclass="de.hybris.platform.sap.sappricingbol.jalo.SapDeliveryMode"
 			autocreate="true" generate="true">
 
-			<deployment table="SapDeliveryModes" typecode="10833" />
+			<deployment table="SapDeliveryModes" typecode="9311" />
 
 			<attributes>
 
@@ -370,7 +370,7 @@
 		<itemtype code="SapPaymentMode" extends="GenericItem" jaloclass="de.hybris.platform.sap.sappricingbol.jalo.SapPaymentMode"
 			autocreate="true" generate="true">
 
-			<deployment table="SapPaymentModes" typecode="10834" />
+			<deployment table="SapPaymentModes" typecode="9312" />
 
 			<attributes>
 
