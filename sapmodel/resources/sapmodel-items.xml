@@ -78,6 +78,56 @@
 			</attributes>
 		</itemtype>
 
+		<itemtype code="Language" autocreate="false" generate="false">
+			<attributes>
+				<attribute qualifier="sapCode" type="java.lang.String">
+					<description>SAP Code (ERP Table T002 field SPRAS)</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="Currency" autocreate="false" generate="false">
+			<attributes>
+				<attribute qualifier="sapCode" type="java.lang.String">
+					<description>SAP Code (ERP Table TCURC field WAERS)</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="Unit" autocreate="false" generate="false">
+			<attributes>
+				<attribute qualifier="sapCode" type="java.lang.String">
+					<description>SAP Code (ERP Table T006 field MSEHI)</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="ClassificationAttributeUnit" autocreate="false" generate="false">
+			<attributes>
+				<attribute qualifier="sapCode" type="java.lang.String">
+					<description>SAP Code (ERP Table T006 field MSEHI)</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="Country" autocreate="false" generate="false">
+			<attributes>
+				<attribute qualifier="sapCode" type="java.lang.String">
+					<description>SAP Code (ERP Table T005 field LAND1)</description>
+					<modifiers read="true" write="true" search="true" optional="true" />
+					<persistence type="property" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
 		<itemtype code="Product" autocreate="false" generate="false">
 			<attributes>
 				<attribute qualifier="sapBlocked" type="java.lang.Boolean">
