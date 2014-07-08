@@ -12,14 +12,11 @@
            http://www.springframework.org/schema/aop
            http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 
-
-
 	<alias alias="sapCommonSalesAreaService" name="sapCommonDefaultSalesAreaService" />
 	<bean id="sapCommonDefaultSalesAreaService"
 		class="sap.hybris.integration.models.services.impl.DefaultSalesAreaService">
 		<property name="baseStoreService" ref="baseStoreService" />
 	</bean>
-
 
 	<bean id="discountTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
 		<property name="typeCode" value="48" />
@@ -38,7 +35,6 @@
 		</property>
 	</bean>
 	
-
 	<alias name="sapDefaultIDocTargetSystemDataHubConverter" alias="sapIDocTargetSystemDataHubConverter" />
 	<bean id="sapDefaultIDocTargetSystemDataHubConverter" parent="abstractPopulatingConverter">
 		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
@@ -72,4 +68,20 @@
 			</list>
 		</property>
 	</bean>
+	
+	<alias name="sapDefaultDeliveryModeMappingDataHubConverter" alias="sapDeliveryModeMappingDataHubConverter" />
+	<bean id="sapDefaultDeliveryModeMappingDataHubConverter" parent="abstractPopulatingConverter">
+		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
+		<property name="populators">
+			<list>
+				<ref bean="sapCoreGenericModel2MapPopulator" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="sapDeliveryModeMappingTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
+		<property name="typeCode" value="9311" />
+		<property name="rawType" value="RawHybrisDeliveryModeMapping" />
+		<property name="converter" ref="sapDeliveryModeMappingDataHubConverter" />
+	</bean>		
 </beans>
