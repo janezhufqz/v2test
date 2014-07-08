@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- [y] hybris Platform Copyright (c) 2000-2013 hybris AG All rights reserved. 
-	This software is the confidential and proprietary information of hybris ("Confidential 
-	Information"). You shall not disclose such Confidential Information and shall 
-	use it only in accordance with the terms of the license agreement you entered 
-	into with hybris. -->
+<!-- [y] hybris Platform Copyright (c) 2000-2013 hybris AG All rights reserved. This software is the confidential and proprietary information 
+	of hybris ("Confidential Information"). You shall not disclose such Confidential Information and shall use it only in accordance with 
+	the terms of the license agreement you entered into with hybris. -->
 
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
            http://www.springframework.org/schema/aop
            http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 
 	<alias alias="sapCommonSalesAreaService" name="sapCommonDefaultSalesAreaService" />
-	<bean id="sapCommonDefaultSalesAreaService"
-		class="sap.hybris.integration.models.services.impl.DefaultSalesAreaService">
+	<bean id="sapCommonDefaultSalesAreaService" class="sap.hybris.integration.models.services.impl.DefaultSalesAreaService">
 		<property name="baseStoreService" ref="baseStoreService" />
 	</bean>
 
@@ -24,8 +20,7 @@
 		<property name="converter" ref="discountDataHubTransferConfigurationConverter" />
 	</bean>
 
-	<alias name="defaultDiscountDataHubTransferConfigurationConverter"
-		alias="discountDataHubTransferConfigurationConverter" />
+	<alias name="defaultDiscountDataHubTransferConfigurationConverter" alias="discountDataHubTransferConfigurationConverter" />
 	<bean id="defaultDiscountDataHubTransferConfigurationConverter" parent="abstractPopulatingConverter">
 		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
 		<property name="populators">
@@ -34,7 +29,7 @@
 			</list>
 		</property>
 	</bean>
-	
+
 	<alias name="sapDefaultIDocTargetSystemDataHubConverter" alias="sapIDocTargetSystemDataHubConverter" />
 	<bean id="sapDefaultIDocTargetSystemDataHubConverter" parent="abstractPopulatingConverter">
 		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
@@ -49,17 +44,16 @@
 		<property name="typeCode" value="9308" />
 		<property name="rawType" value="RawSAPIDocTargetSystem" />
 		<property name="converter" ref="sapIDocTargetSystemDataHubConverter" />
-	</bean>	
-	
-	
+	</bean>
+
+
 	<bean id="baseStoreTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
 		<property name="typeCode" value="2013" />
 		<property name="rawType" value="RawBaseStore" />
 		<property name="converter" ref="baseStoreDataHubTransferConfigurationConverter" />
 	</bean>
 
-	<alias name="defaultBaseStoreDataHubTransferConfigurationConverter"
-		alias="baseStoreDataHubTransferConfigurationConverter" />
+	<alias name="defaultBaseStoreDataHubTransferConfigurationConverter" alias="baseStoreDataHubTransferConfigurationConverter" />
 	<bean id="defaultBaseStoreDataHubTransferConfigurationConverter" parent="abstractPopulatingConverter">
 		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
 		<property name="populators">
@@ -68,13 +62,18 @@
 			</list>
 		</property>
 	</bean>
-	
+
+	<alias name="sapDefaultDeliveryModeMappingPopulator" alias="sapDeliveryModeMappingPopulator" />
+	<bean id="sapDefaultDeliveryModeMappingPopulator" class="de.hybris.platform.sap.model.populators.DefaultDeliveryModeMappingPopulator"
+		scope="prototype" />
+
 	<alias name="sapDefaultDeliveryModeMappingDataHubConverter" alias="sapDeliveryModeMappingDataHubConverter" />
 	<bean id="sapDefaultDeliveryModeMappingDataHubConverter" parent="abstractPopulatingConverter">
 		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
 		<property name="populators">
 			<list>
 				<ref bean="sapCoreGenericModel2MapPopulator" />
+				<ref bean="sapDeliveryModeMappingPopulator" />
 			</list>
 		</property>
 	</bean>
@@ -83,5 +82,5 @@
 		<property name="typeCode" value="9311" />
 		<property name="rawType" value="RawHybrisDeliveryModeMapping" />
 		<property name="converter" ref="sapDeliveryModeMappingDataHubConverter" />
-	</bean>		
+	</bean>
 </beans>
