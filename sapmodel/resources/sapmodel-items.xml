@@ -28,16 +28,16 @@
 
 
 		<relation autocreate="true" code="SapHttpDestinationForIDocTargetSystem" generate="true" localized="false">
-			<sourceElement cardinality="many" qualifier="iDocTargetSystems" type="SAPIDocTargetSystem"/>
-			<targetElement cardinality="one" qualifier="httpDestination" type="SAPHTTPDestination"/>
+			<sourceElement cardinality="many" qualifier="iDocTargetSystems" type="SAPIDocTargetSystem" />
+			<targetElement cardinality="one" qualifier="httpDestination" type="SAPHTTPDestination" />
 		</relation>
 
 		<relation autocreate="true" code="SapIDocTargetSystemForGlobalConfiguration" generate="true" localized="false">
-			<sourceElement cardinality="many" qualifier="configurations" type="SAPGlobalConfiguration"/>
-			<targetElement cardinality="one" qualifier="sapErpIDocTargetSystem" type="SAPIDocTargetSystem"/>
+			<sourceElement cardinality="many" qualifier="configurations" type="SAPGlobalConfiguration" />
+			<targetElement cardinality="one" qualifier="sapErpIDocTargetSystem" type="SAPIDocTargetSystem" />
 		</relation>
 
-		
+
 		<relation code="SapConfigDeliveryRelation" autocreate="true" localized="false">
 
 			<sourceElement type="SAPConfiguration" qualifier="sapConfiguration" cardinality="one">
@@ -67,7 +67,7 @@
 
 	<itemtypes>
 
-		<itemtype autocreate="true" code="SAPIDocTargetSystem" generate="true" >
+		<itemtype autocreate="true" code="SAPIDocTargetSystem" generate="true">
 			<deployment table="SAPIDocTargetSystem" typecode="9308" />
 			<attributes>
 				<attribute qualifier="sapcommon_receiverName" type="java.lang.String">
@@ -447,6 +447,18 @@
 			</attributes>
 
 		</itemtype>
+
+		<itemtype autocreate="false" code="SAPGlobalConfiguration" generate="false" singleton="true">
+			<deployment table="SAPGlobalConfiguration" typecode="9313" />
+			<attributes>
+				<attribute qualifier="cpdCustomerActive" type="boolean" autocreate="true">
+					<persistence type="property" />
+					<modifiers unique="false" optional="false" read="true" write="true" initial="true" search="true" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
+
 
 	</itemtypes>
 
