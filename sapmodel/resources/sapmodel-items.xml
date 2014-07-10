@@ -449,7 +449,6 @@
 		</itemtype>
 
 		<itemtype autocreate="false" code="SAPGlobalConfiguration" generate="false" singleton="true">
-			<deployment table="SAPGlobalConfiguration" typecode="9313" />
 			<attributes>
 				<attribute qualifier="cpdCustomerActive" type="boolean" autocreate="true">
 					<persistence type="property" />
