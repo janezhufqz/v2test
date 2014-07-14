@@ -58,6 +58,13 @@
 						</listlayout>
 					</section>
 				</tab>
+				<tab name="tab.cpdCustomer">
+					<section name="section.customerprocessingmode">
+						<listlayout>
+							<attribute name="cpdCustomerActive" width="1"></attribute>
+						</listlayout>
+					</section>
+				</tab>
 			</editor>
 		</organizer>
 	</type>
