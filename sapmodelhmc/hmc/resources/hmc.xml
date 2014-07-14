@@ -48,6 +48,20 @@
 		</defaultreference>
 	</type>
 
+	<type name="SAPGlobalConfiguration" mode="append">
+		<organizer>
+			<editor>
+				<tab name="tab.idoctransfer">
+					<section name="section.backendconnectivity">
+						<listlayout>
+							<attribute name="sapErpIDocTargetSystem" width="300"></attribute>
+						</listlayout>
+					</section>
+				</tab>
+			</editor>
+		</organizer>
+	</type>
+
 	<type name="SAPConfiguration" mode="append">
 		<organizer>
 			<editor>
