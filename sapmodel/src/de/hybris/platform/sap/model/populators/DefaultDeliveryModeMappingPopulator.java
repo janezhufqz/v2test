@@ -14,11 +14,10 @@
 package de.hybris.platform.sap.model.populators;
 
 import de.hybris.platform.converters.Populator;
-import de.hybris.platform.sap.sappricingbol.model.SapDeliveryModeModel;
+import de.hybris.platform.sap.sapmodel.model.SapDeliveryModeModel;
 import de.hybris.platform.servicelayer.dto.converter.ConversionException;
 
 import java.util.Map;
-
 
 /**
  * Populator for additional fields specific for the delivery mode mapping

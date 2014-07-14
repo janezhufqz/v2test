@@ -391,7 +391,7 @@
 			</attributes>
 		</itemtype>
 
-		<itemtype code="SapDeliveryMode" extends="GenericItem" jaloclass="de.hybris.platform.sap.sappricingbol.jalo.SapDeliveryMode"
+		<itemtype code="SapDeliveryMode" extends="GenericItem" jaloclass="de.hybris.platform.sap.sapmodel.jalo.SapDeliveryMode"
 			autocreate="true" generate="true">
 
 			<deployment table="SapDeliveryModes" typecode="9311" />
@@ -422,7 +422,7 @@
 
 		</itemtype>
 
-		<itemtype code="SapPaymentMode" extends="GenericItem" jaloclass="de.hybris.platform.sap.sappricingbol.jalo.SapPaymentMode"
+		<itemtype code="SapPaymentMode" extends="GenericItem" jaloclass="de.hybris.platform.sap.sapmodel.jalo.SapPaymentMode"
 			autocreate="true" generate="true">
 
 			<deployment table="SapPaymentModes" typecode="9312" />
