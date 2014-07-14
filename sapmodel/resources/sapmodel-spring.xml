@@ -87,4 +87,21 @@
 		<property name="rawType" value="RawHybrisDeliveryModeMapping" />
 		<property name="converter" ref="sapDeliveryModeMappingDataHubConverter" />
 	</bean>
+	
+	<bean id="sapSalesAreaToCatalogMappingTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
+		<property name="itemCode" value="SapSalesAreaToCatalog" />
+		<property name="rawType" value="RawHybrisSalesAreaToCatalogMapping" />
+		<property name="converter" ref="sapSalesAreaToCatalogMappingDataHubConverter" />
+	</bean>
+	
+	<alias name="sapDefaultSalesAreaToCatalogMappingDataHubConverter" alias="sapSalesAreaToCatalogMappingDataHubConverter" />
+	<bean id="sapDefaultSalesAreaToCatalogMappingDataHubConverter" parent="abstractPopulatingConverter">
+		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
+		<property name="populators">
+			<list>
+				<ref bean="sapCoreGenericModel2MapPopulator" />
+			</list>
+		</property>
+	</bean>
+	
 </beans>
