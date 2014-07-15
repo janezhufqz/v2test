@@ -58,16 +58,17 @@
 						</listlayout>
 					</section>
 				</tab>
-				<tab name="tab.cpdCustomer">
-					<section name="section.customerprocessingmode">
+				<tab name="tab.customerreplication">
+					<section name="section.replicationofconsumer">
 						<listlayout>
-							<attribute name="cpdCustomerActive" width="1"></attribute>
+							<attribute name="replicateregistereduser" width="1"></attribute>
 						</listlayout>
 					</section>
 				</tab>
 			</editor>
 		</organizer>
 	</type>
+
 
 	<type name="SAPConfiguration" mode="append">
 		<organizer>
