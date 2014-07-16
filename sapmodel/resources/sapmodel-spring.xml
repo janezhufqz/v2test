@@ -85,4 +85,15 @@
 		</property>
 	</bean>
 	
+	
+	<alias alias="sapUnitDao" name="sapDefaultUnitDao" />
+	<bean id="sapDefaultUnitDao" class="de.hybris.platform.sap.sapmodel.daos.SAPDefaultUnitDao" parent="unitDao">
+	</bean>
+	
+	<alias alias="sapUnitService" name="sapDefaultUnitService" />
+	<bean id="sapDefaultUnitService" class="sap.hybris.integration.models.services.impl.SAPDefaultUnitService" parent="unitService" >
+		<property name="sapUnitDao" ref="sapUnitDao" />
+	</bean>
+	
+	
 </beans>
