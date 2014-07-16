@@ -5,12 +5,6 @@
 <configuration xmlns="hybris.de/schemas/hmc/generic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="hybris.de/schemas/hmc/generic hmc.xsd">
 
-	<explorertree mode="append">
-		<group description="group.sapintegration.description" expand="false" name="group.sapintegration.name">
-			<typeref description="node.sapidoctargetsystem.description" type="SAPIDocTargetSystem" />
-		</group>
-	</explorertree>
-
 	<type name="SAPGlobalConfiguration" mode="append">
 		<organizer>
 			<editor>
