@@ -31,26 +31,7 @@
 		</property>
 	</bean>
 
-	<alias name="sapDefaultIDocTargetSystemDataHubConverter" alias="sapIDocTargetSystemDataHubConverter" />
-	<bean id="sapDefaultIDocTargetSystemDataHubConverter" parent="abstractPopulatingConverter">
-		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
-		<property name="populators">
-			<list>
-				<ref bean="sapCoreGenericModel2MapPopulator" />
-			</list>
-		</property>
-	</bean>
-
-	<bean id="sapIDocTargetSystemTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-<!-- 		<property name="typeCode" value="9308" /> -->
-		<property name="itemCode" value="SAPIDocTargetSystem" />		
-		<property name="rawType" value="RawSAPIDocTargetSystem" />
-		<property name="converter" ref="sapIDocTargetSystemDataHubConverter" />
-	</bean>
-
-
 	<bean id="baseStoreTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-<!-- 		<property name="typeCode" value="2013" /> -->
 		<property name="itemCode" value="BaseStore" />
 		<property name="rawType" value="RawBaseStore" />
 		<property name="converter" ref="baseStoreDataHubTransferConfigurationConverter" />

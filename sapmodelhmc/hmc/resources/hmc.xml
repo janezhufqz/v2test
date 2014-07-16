@@ -11,50 +11,14 @@
 		</group>
 	</explorertree>
 
-	<type name="SAPIDocTargetSystem" mode="append">
-		<organizer>
-			<search mode="replace">
-				<condition attribute="sapcommon_receiverName" />
-			</search>
-			<result>
-				<listview mode="replace">
-					<itemlayout>
-						<attribute name="sapcommon_receiverName" />
-					</itemlayout>
-				</listview>
-			</result>
-			<editor>
-				<essentials>
-					<columnlayout mode="replace">
-						<row>
-							<attribute name="sapcommon_receiverName" />
-						</row>
-					</columnlayout>
-				</essentials>
-				<tab name="tab.sapcommon">
-					<section name="section.sapcommon">
-						<listlayout>
-							<attribute name="sapcommon_receiverName" width="300"></attribute>
-							<attribute name="httpDestination" width="300"></attribute>
-						</listlayout>
-					</section>
-				</tab>
-			</editor>
-		</organizer>
-		<defaultreference mode="replace" searchattribute="sapcommon_receiverName">
-			<itemlayout>
-				<attribute name="sapcommon_receiverName" />
-			</itemlayout>
-		</defaultreference>
-	</type>
-
 	<type name="SAPGlobalConfiguration" mode="append">
 		<organizer>
 			<editor>
-				<tab name="tab.idoctransfer">
-					<section name="section.backendconnectivity">
+				<tab name="tab.backendconnectivity">
+					<section name="section.idoctransfer">
 						<listlayout>
-							<attribute name="sapErpIDocTargetSystem" width="300"></attribute>
+							<attribute name="sapcommon_erpLogicalSystem" width="300"></attribute>
+							<attribute name="sapcommon_erpHttpDestination" width="300"></attribute>
 						</listlayout>
 					</section>
 				</tab>

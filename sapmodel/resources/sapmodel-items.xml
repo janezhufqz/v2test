@@ -27,14 +27,9 @@
 		</relation>
 
 
-		<relation autocreate="true" code="SapHttpDestinationForIDocTargetSystem" generate="true" localized="false">
-			<sourceElement cardinality="many" qualifier="iDocTargetSystems" type="SAPIDocTargetSystem" />
-			<targetElement cardinality="one" qualifier="httpDestination" type="SAPHTTPDestination" />
-		</relation>
-
-		<relation autocreate="true" code="SapIDocTargetSystemForGlobalConfiguration" generate="true" localized="false">
-			<sourceElement cardinality="many" qualifier="configurations" type="SAPGlobalConfiguration" />
-			<targetElement cardinality="one" qualifier="sapErpIDocTargetSystem" type="SAPIDocTargetSystem" />
+		<relation autocreate="true" code="SapErpHttpDestinationForGlobalConfiguration" generate="true" localized="false">
+			<sourceElement cardinality="many" qualifier="sapcommon_globalConfigurations" type="SAPGlobalConfiguration" />
+			<targetElement cardinality="one" qualifier="sapcommon_erpHttpDestination" type="SAPHTTPDestination" />
 		</relation>
 
 
@@ -71,17 +66,6 @@
 	</relations>
 
 	<itemtypes>
-
-		<itemtype autocreate="true" code="SAPIDocTargetSystem" generate="true">
-			<deployment table="SAPIDocTargetSystem" typecode="9308" />
-			<attributes>
-				<attribute qualifier="sapcommon_receiverName" type="java.lang.String">
-					<description>Name of the Receiver partner</description>
-					<persistence type="property" />
-					<modifiers unique="true" read="true" write="true" search="true" optional="true" />
-				</attribute>
-			</attributes>
-		</itemtype>
 
 		<itemtype code="Language" autocreate="false" generate="false">
 			<attributes>
@@ -456,6 +440,10 @@
 		<itemtype autocreate="false" code="SAPGlobalConfiguration" generate="false" singleton="true">
 			<attributes>
 				<attribute qualifier="replicateregistereduser" type="boolean" autocreate="true">
+					<persistence type="property" />
+					<modifiers unique="false" optional="false" read="true" write="true" initial="true" search="true" />
+				</attribute>
+				<attribute qualifier="sapcommon_erpLogicalSystem" type="java.lang.String" autocreate="true">
 					<persistence type="property" />
 					<modifiers unique="false" optional="false" read="true" write="true" initial="true" search="true" />
 				</attribute>
