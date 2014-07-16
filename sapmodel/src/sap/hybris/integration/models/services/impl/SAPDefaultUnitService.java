@@ -24,7 +24,7 @@ public class SAPDefaultUnitService extends DefaultUnitService implements SAPUnit
 		return sapUnitDao;
 	}
 
-@Required
+	@Required
 	public void setSapUnitDao(SAPUnitDao sapUnitDao)
 	{
 		this.sapUnitDao = sapUnitDao;
@@ -35,11 +35,14 @@ public class SAPDefaultUnitService extends DefaultUnitService implements SAPUnit
 	{
 		validateParameterNotNull(code, "Parameter code was null");
 		final List<UnitModel> units = sapUnitDao.findUnitBySAPUnitCode(code);
-
-		validateIfSingleResult(units, format("Unit with sapcode '%s' not found!", code),
-				format("SAP Code '%s' is not unique, %d units found!", code, Integer.valueOf(units.size())));
-
-		return units.get(0);
+		if (units.size() > 0)
+		{
+			return units.get(0);
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 }
