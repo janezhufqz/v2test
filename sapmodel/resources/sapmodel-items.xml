@@ -440,6 +440,7 @@
 		<itemtype autocreate="false" code="SAPGlobalConfiguration" generate="false" singleton="true">
 			<attributes>
 				<attribute qualifier="replicateregistereduser" type="boolean" autocreate="true">
+				   <description>Replicate Registered User</description>
 					<persistence type="property" />
 					<modifiers unique="false" optional="false" read="true" write="true" initial="true" search="true" />
 				</attribute>
