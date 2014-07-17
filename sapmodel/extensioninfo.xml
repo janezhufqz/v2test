@@ -19,12 +19,9 @@
       <!-- <requires-extension name="cms"/> -->         
         <requires-extension name="basecommerce"/> 
         <requires-extension name="sapcoreconfiguration" />
-	 
 
       <coremodule generated="true" manager="sap.hybris.integration.models.jalo.SapmodelManager" packageroot="sap.hybris.integration.models"/>
-
-      <webmodule jspcompile="false" webroot="/sapmodel"/>
-					
+			
 	
 
    </extension>

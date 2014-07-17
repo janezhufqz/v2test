@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<testclasses>
-  <sapmodel>
-    <testclass>sap.hybris.integration.models.jalo.SapmodelTest</testclass>
-    <testclass>sap.hybris.integration.models.jalo.BlockedAttributeTest</testclass>
-    <testclass>sap.hybris.integration.models.jalo.BaseStoreAttributesTest</testclass>
-  </sapmodel>
-</testclasses>
