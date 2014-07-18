@@ -378,7 +378,7 @@
 		<itemtype code="SAPDeliveryMode" extends="GenericItem" jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPDeliveryMode"
 			autocreate="true" generate="true">
 
-			<deployment table="SapDeliveryModes" typecode="9311" />
+			<deployment table="SAPDeliveryModes" typecode="9311" />
 
 			<attributes>
 
@@ -409,7 +409,7 @@
 		<itemtype code="SAPPaymentMode" extends="GenericItem" jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPPaymentMode"
 			autocreate="true" generate="true">
 
-			<deployment table="SapPaymentModes" typecode="9312" />
+			<deployment table="SAPPaymentModes" typecode="9312" />
 
 			<attributes>
 
@@ -473,7 +473,7 @@
 		</itemtype>
 		
 		<itemtype code="SAPPricingSalesAreaToCatalog" extends="GenericItem" autocreate="true" generate="true">
-			<deployment table="SAPpricingsalesarea" typecode="9314" />
+			<deployment table="SAPPricingSalesArea" typecode="9314" />
 			<attributes>
 				<attribute type="java.lang.String" qualifier="salesOrganization">
 					<modifiers unique="true" />
