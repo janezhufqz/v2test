@@ -11,15 +11,15 @@
 				<tab name="tab.backendconnectivity">
 					<section name="section.idoctransfer">
 						<listlayout>
-							<attribute name="sapcommon_erpLogicalSystem" width="300"></attribute>
-							<attribute name="sapcommon_erpHttpDestination" width="300"></attribute>
+							<attribute labelwidth="200" name="sapcommon_erpLogicalSystem" width="300"></attribute>
+							<attribute labelwidth="200" name="sapcommon_erpHttpDestination" width="300"></attribute>
 						</listlayout>
 					</section>
 				</tab>
 				<tab name="tab.customerreplication">
 					<section name="section.replicationofconsumer">
 						<listlayout>
-							<attribute name="replicateregistereduser" width="1"></attribute>
+							<attribute labelwidth="200" name="replicateregistereduser" width="1"></attribute>
 						</listlayout>
 					</section>
 				</tab>
@@ -34,11 +34,11 @@
 				<tab name="tab.sapcommon">
 					<section name="section.sapcommon">
 						<listlayout>
-							<attribute name="sapcommon_transactionType" width="300"></attribute>
-							<attribute name="sapcommon_referenceCustomer" width="300" />
-							<attribute name="sapcommon_salesOrganization" width="300" />
-							<attribute name="sapcommon_distributionChannel" width="300" />
-							<attribute name="sapcommon_division" width="300" />
+							<attribute labelwidth="200" name="sapcommon_transactionType" width="300"></attribute>
+							<attribute labelwidth="200" name="sapcommon_referenceCustomer" width="300" />
+							<attribute labelwidth="200" name="sapcommon_salesOrganization" width="300" />
+							<attribute labelwidth="200" name="sapcommon_distributionChannel" width="300" />
+							<attribute labelwidth="200" name="sapcommon_division" width="300" />
 						</listlayout>
 					</section>
 					<!-- delivery section -->

@@ -2,7 +2,7 @@ sapmodel/.settings/org.eclipse*
 # Ignore Eclipse project and settings files
 .settings
 /**/*.jar
- 
+sapmodel*/**/*.jar
 # Ignore Hybris project and settings files
 sapmodel*/platformhome.properties
  
@@ -19,5 +19,5 @@ sapmodel*/resources/beans.xsd
 sapmodel*/resources/items.xsd
 sapmodel*/extensioninfo.xsd
 sapmodel*/build.xml
-sapmodel/**/**/*-testclasses.xml
-sapmodel/**/**/*-webtestclasses.xml
+sapmodel*/**/**/*-testclasses.xml
+sapmodel*/**/**/*-webtestclasses.xml
