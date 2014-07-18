@@ -19,10 +19,10 @@ import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.type.ComposedType;
 import org.apache.log4j.Logger;
 
-public class SapDeliveryMode extends GeneratedSapDeliveryMode
+public class SAPPricingCondition extends GeneratedSAPPricingCondition
 {
 	@SuppressWarnings("unused")
-	private final static Logger LOG = Logger.getLogger( SapDeliveryMode.class.getName() );
+	private final static Logger LOG = Logger.getLogger( SAPPricingCondition.class.getName() );
 	
 	@Override
 	protected Item createItem(final SessionContext ctx, final ComposedType type, final ItemAttributeMap allAttributes) throws JaloBusinessException
