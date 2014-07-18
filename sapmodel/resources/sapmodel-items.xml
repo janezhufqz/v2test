@@ -18,7 +18,7 @@
 				<modifiers read="true" write="false" initial="true" search="true" optional="true" unique="true" />
 			</sourceElement>
 
-			<targetElement type="SapPricingCondition" qualifier="sapPricingConditions" cardinality="many" collectiontype="set"
+			<targetElement type="SAPPricingCondition" qualifier="sapPricingConditions" cardinality="many" collectiontype="set"
 				ordered="false">
 				<description>SAP pricing conditions</description>
 				<modifiers read="true" write="true" search="true" optional="true" />
@@ -33,13 +33,13 @@
 		</relation>
 
 
-		<relation code="SapConfigDeliveryRelation" autocreate="true" localized="false">
+		<relation code="SAPConfigDeliveryRelation" autocreate="true" localized="false">
 
 			<sourceElement type="SAPConfiguration" qualifier="sapConfiguration" cardinality="one">
 				<modifiers read="true" write="true" search="true" optional="false" />
 			</sourceElement>
 
-			<targetElement type="SapDeliveryMode" qualifier="sapDeliveryModes" cardinality="many" collectiontype="set"
+			<targetElement type="SAPDeliveryMode" qualifier="sapDeliveryModes" cardinality="many" collectiontype="set"
 				ordered="false">
 				<modifiers read="true" write="true" search="true" optional="true" />
 			</targetElement>
@@ -52,7 +52,7 @@
 				<modifiers read="true" write="true" search="true" optional="false" />
 			</sourceElement>
 
-			<targetElement type="SapPaymentMode" qualifier="sapPaymentModes" cardinality="many" collectiontype="set" ordered="false">
+			<targetElement type="SAPPaymentMode" qualifier="sapPaymentModes" cardinality="many" collectiontype="set" ordered="false">
 				<modifiers read="true" write="true" search="true" optional="true" />
 			</targetElement>
 
@@ -319,7 +319,7 @@
 		<itemtype code="SAPPricingCondition" extends="GenericItem" jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPPricingCondition"
 			autocreate="true" generate="true">
 
-			<deployment table="SapPricingConditions" typecode="9310" />
+			<deployment table="SAPPricingConditions" typecode="9310" />
 
 			<attributes>
 				<attribute qualifier="order" type="java.lang.String">
@@ -469,6 +469,29 @@
 					<persistence type="property" />
 					<description>Catalog Version</description>
 				</attribute>
+			</attributes>
+		</itemtype>
+		
+		<itemtype code="SAPPricingSalesAreaToCatalog" extends="GenericItem" autocreate="true" generate="true">
+			<deployment table="SAPpricingsalesarea" typecode="9314" />
+			<attributes>
+				<attribute type="java.lang.String" qualifier="salesOrganization">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Sales Organization</description>
+				</attribute>
+				<attribute type="java.lang.String" qualifier="distributionChannel">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Distribution Channel</description>
+				</attribute>
+				<attribute type="CatalogVersion" qualifier="catalogVersion">
+					<modifiers unique="false" search="true" />
+					<persistence type="property" />
+					<description>Catalog Version</description>
+				</attribute>
+				
+				
 			</attributes>
 		</itemtype>
 
