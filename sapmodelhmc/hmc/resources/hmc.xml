@@ -23,6 +23,22 @@
 						</listlayout>
 					</section>
 				</tab>
+				<tab name="tab.datahubmappings">
+					<section name="section.datahubmappings_pricing">
+						<listlayout>
+							<attribute labelwidth="200" name="sapcommon_sapPricingSalesArea" width="408">
+								<referencecollectioneditor presetattribute="sapcommon_sapGlobalConfiguration" autosave="true" externalcreate="false"
+									editable="true">
+									<itemlayout>
+										<attribute name="salesOrganization" width="136" />
+										<attribute name="distributionChannel" width="136" />
+										<attribute name="catalogVersion" width="136" />
+									</itemlayout>
+								</referencecollectioneditor>
+							</attribute>
+						</listlayout>
+					</section>
+				</tab>
 			</editor>
 		</organizer>
 	</type>

@@ -57,12 +57,19 @@
 			</targetElement>
 
 		</relation>
+		
 
 		<relation code="SAPGlobalConfigSAPProductSalesAreaToCatalogRelation" autocreate="true" localized="false">
 			<sourceElement type="SAPGlobalConfiguration" qualifier="sapGlobalConfiguration" cardinality="one"></sourceElement>
 			<targetElement type="SAPProductSalesAreaToCatalog" qualifier="sapProductSalesAreaToCatalog" cardinality="many"
 				collectiontype="set"></targetElement>
 		</relation>
+		
+		<relation code="SAPGlobalConfigurationPricingSalesArea" autocreate="true" localized="false">
+			<sourceElement type="SAPGlobalConfiguration" qualifier="sapcommon_sapGlobalConfiguration" cardinality="one"></sourceElement>
+			<targetElement type="SAPPricingSalesAreaToCatalog" qualifier="sapcommon_sapPricingSalesArea" cardinality="many" collectiontype="set"></targetElement>
+		</relation>
+		
 
 	</relations>
 
@@ -161,7 +168,7 @@
 					<description>Unique identifier of SAP contact</description>
 					<modifiers initial="true" read="true" write="true" optional="true" />
 					<persistence type="property" />
-				</attribute>
+				</attribute>				
 			</attributes>
 		</itemtype>
 
@@ -176,7 +183,7 @@
 					<description>Unique identifier of SAP contact</description>
 					<modifiers initial="true" read="true" write="true" optional="true" />
 					<persistence type="property" />
-				</attribute>
+				</attribute>				
 				<attribute qualifier="sapIsReplicated" type="java.lang.Boolean">
 					<description>Indicates if the customer has been replicated to the SAP system</description>
 					<modifiers read="true" write="true" search="true" optional="true" />
@@ -446,7 +453,7 @@
 		<itemtype autocreate="false" code="SAPGlobalConfiguration" generate="false" singleton="true">
 			<attributes>
 				<attribute qualifier="replicateregistereduser" type="boolean" autocreate="true">
-					<description>Replicate Registered User</description>
+				   <description>Replicate Registered User</description>
 					<persistence type="property" />
 					<modifiers unique="false" optional="false" read="true" write="true" initial="true" search="true" />
 				</attribute>
@@ -495,6 +502,11 @@
 					<modifiers unique="false" search="true" />
 					<persistence type="property" />
 					<description>Catalog Version</description>
+				</attribute>
+				<attribute type="boolean" qualifier="net">
+					<modifiers unique="false" search="true" />
+					<persistence type="property" />
+					<description>Net Flag</description>
 				</attribute>
 
 
