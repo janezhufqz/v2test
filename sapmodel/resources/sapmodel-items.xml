@@ -156,6 +156,11 @@
 					<modifiers initial="true" read="true" write="true" optional="true" />
 					<persistence type="property" />
 				</attribute>
+				<attribute qualifier="sapContactID" type="java.lang.String">
+					<description>Unique identifier of SAP contact</description>
+					<modifiers initial="true" read="true" write="true" optional="true" />
+					<persistence type="property" />
+				</attribute>				
 			</attributes>
 		</itemtype>
 
