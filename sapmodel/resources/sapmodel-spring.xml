@@ -96,4 +96,11 @@
 	</bean>
 	
 	
+	<alias alias="sapNetAttributeHandler" name="sapDefaultNetAttributeHandler" />
+	<bean id="sapDefaultNetAttributeHandler" class="de.hybris.platform.sap.sapmodel.daos.NetAttributeHandler" >
+	</bean>
+	
+	
+	
+	
 </beans>
