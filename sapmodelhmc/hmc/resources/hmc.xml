@@ -23,7 +23,7 @@
 						</listlayout>
 					</section>
 				</tab>
-				<tab name="tab.datahubmappings">
+				<tab name="tab.datahubmappings_pricing">
 					<section name="section.datahubmappings_pricing">
 						<listlayout>
 							<attribute labelwidth="200" name="sapcommon_sapPricingSalesArea" width="408">
@@ -38,6 +38,20 @@
 							</attribute>
 						</listlayout>
 					</section>
+					                                <!-- Bonus Buy Site section -->
+                                <section name="section.sapbonusbuysite" mode="append">
+                                                <listlayout>
+                                                                <attribute labelwidth="200" name="sapcommon_sapSiteToCatalog" width="250">
+                                                                                <referencecollectioneditor autosave="true" externalcreate="false" editable="true">
+                                                                                                <itemlayout>
+                                                                                                                <attribute name="site" width="50" />
+                                                                                                                <attribute name="catalogVersion" width="200" />
+                                                                                                </itemlayout>
+                                                                                </referencecollectioneditor>
+                                                                </attribute>
+                                                </listlayout>
+                                </section>          
+					
 				</tab>
 			</editor>
 		</organizer>
