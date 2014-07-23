@@ -49,14 +49,14 @@
 	</bean>
 
 	<bean id="sapDeliveryModeMappingTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-<!-- 		<property name="typeCode" value="9311" /> -->
+
 		<property name="itemCode" value="SapDeliveryMode" />
 		<property name="rawType" value="RawHybrisDeliveryModeMapping" />
 		<property name="converter" ref="sapDeliveryModeMappingDataHubConverter" />
 	</bean>
 	
 	<bean id="sapSalesAreaToCatalogMappingTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-		<property name="itemCode" value="SapSalesAreaToCatalog" />
+		<property name="itemCode" value="SAPProductSalesAreaToCatalog" />
 		<property name="rawType" value="RawHybrisSalesAreaToCatalogMapping" />
 		<property name="converter" ref="sapSalesAreaToCatalogMappingDataHubConverter" />
 	</bean>
@@ -99,6 +99,7 @@
 		<property name="populators">
 			<list>
 				<ref bean="sapCoreGenericModel2MapPopulator" />
+				<ref bean="sapPricingCatalogMappingPopulator" />
 			</list>
 		</property>
 	</bean>
@@ -116,10 +117,16 @@
 		<property name="populators">
 			<list>
 				<ref bean="sapCoreGenericModel2MapPopulator" />
+				<ref bean="sapBonusBuySiteToCatalogPopulator" />
 			</list>
 		</property>
 	</bean>
 	
+	<alias name="defaultSapPricingCatalogMappingPopulator" alias="sapPricingCatalogMappingPopulator" />
+<bean id="defaultSapPricingCatalogMappingPopulator" class="de.hybris.platform.sap.model.populators.SAPPricingCatalogMappingPopulator" />
+	
+	<alias name="defaultSapBonusBuySiteToCatalogPopulator" alias="sapBonusBuySiteToCatalogPopulator" />
+<bean id="defaultSapBonusBuySiteToCatalogPopulator" class="de.hybris.platform.sap.model.populators.SAPBonusBuySiteToCatalogPopulator" />
 	
 	
 </beans>
