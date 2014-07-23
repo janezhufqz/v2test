@@ -42,7 +42,7 @@
                                 <section name="section.sapbonusbuysite" mode="append">
                                                 <listlayout>
                                                                 <attribute labelwidth="200" name="sapcommon_sapSiteToCatalog" width="250">
-                                                                                <referencecollectioneditor autosave="true" externalcreate="false" editable="true">
+                                                                                <referencecollectioneditor presetattribute="sapcommon_sapGlobalConfiguration" autosave="true" externalcreate="false" editable="true">
                                                                                                 <itemlayout>
                                                                                                                 <attribute name="site" width="50" />
                                                                                                                 <attribute name="catalogVersion" width="200" />

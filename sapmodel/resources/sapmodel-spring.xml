@@ -15,7 +15,7 @@
 	</bean>
 
 	<bean id="discountTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-<!-- 		<property name="typeCode" value="48" /> -->
+
 		<property name="itemCode" value="Discount" />
 		<property name="rawType" value="RawHybrisDiscount" />
 		<property name="converter" ref="discountDataHubTransferConfigurationConverter" />
@@ -31,21 +31,7 @@
 		</property>
 	</bean>
 
-	<bean id="baseStoreTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-		<property name="itemCode" value="BaseStore" />
-		<property name="rawType" value="RawBaseStore" />
-		<property name="converter" ref="baseStoreDataHubTransferConfigurationConverter" />
-	</bean>
-
-	<alias name="defaultBaseStoreDataHubTransferConfigurationConverter" alias="baseStoreDataHubTransferConfigurationConverter" />
-	<bean id="defaultBaseStoreDataHubTransferConfigurationConverter" parent="abstractPopulatingConverter">
-		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
-		<property name="populators">
-			<list>
-				<ref bean="sapCoreGenericModel2MapPopulator" />
-			</list>
-		</property>
-	</bean>
+	
 
 	<alias name="sapDefaultDeliveryModeMappingPopulator" alias="sapDeliveryModeMappingPopulator" />
 	<bean id="sapDefaultDeliveryModeMappingPopulator" class="de.hybris.platform.sap.model.populators.DefaultDeliveryModeMappingPopulator"
@@ -100,6 +86,39 @@
 	<bean id="sapDefaultNetAttributeHandler" class="de.hybris.platform.sap.sapmodel.daos.NetAttributeHandler" >
 	</bean>
 	
+	<bean id="sapPricingSalesAreaTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
+
+		<property name="itemCode" value="SAPPricingSalesAreaToCatalog" />
+		<property name="rawType" value="RawPricingSalesAreaMapping" />
+		<property name="converter" ref="sapPricingSalesAreaDataHubTransferConfigurationConverter" />
+	</bean>
+
+	<alias name="defaultSapPricingSalesAreaDataHubTransferConfigurationConverter" alias="sapPricingSalesAreaDataHubTransferConfigurationConverter" />
+	<bean id="defaultSapPricingSalesAreaDataHubTransferConfigurationConverter" parent="abstractPopulatingConverter">
+		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
+		<property name="populators">
+			<list>
+				<ref bean="sapCoreGenericModel2MapPopulator" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="sapBonusBuySiteTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
+
+		<property name="itemCode" value="SAPBonusBuySiteToCatalog" />
+		<property name="rawType" value="RawBonusBuySite" />
+		<property name="converter" ref="sapBonusBuySiteDataHubTransferConfigurationConverter" />
+	</bean>
+
+	<alias name="defaultSapBonusBuySiteDataHubTransferConfigurationConverter" alias="sapBonusBuySiteDataHubTransferConfigurationConverter" />
+	<bean id="defaultSapBonusBuySiteDataHubTransferConfigurationConverter" parent="abstractPopulatingConverter">
+		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
+		<property name="populators">
+			<list>
+				<ref bean="sapCoreGenericModel2MapPopulator" />
+			</list>
+		</property>
+	</bean>
 	
 	
 	
