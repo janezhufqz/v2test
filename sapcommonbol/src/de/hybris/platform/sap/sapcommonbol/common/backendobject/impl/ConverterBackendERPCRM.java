@@ -152,8 +152,7 @@ public abstract class ConverterBackendERPCRM extends BackendBusinessObjectBaseJC
 					currencyCacheAccess.put(rfcCacheKey, currencies);
 					if (sapLogger.isDebugEnabled())
 					{
-						sapLogger.debug("loaded from backend currencies {0}", new Object[]
-						{ currencies });
+						sapLogger.debug("loaded from backend currencies"+ currencies);
 					}
 				}
 				catch (final SAPHybrisCacheException e)
@@ -214,8 +213,7 @@ public abstract class ConverterBackendERPCRM extends BackendBusinessObjectBaseJC
 					unitCacheAccess.put(rfcCacheKey, units);
 					if (sapLogger.isDebugEnabled())
 					{
-						sapLogger.debug("loaded from backend units {0}", new Object[]
-						{ units });
+						sapLogger.debug("loaded from backend units "+ units );
 					}
 				}
 				catch (final SAPHybrisCacheException e)
