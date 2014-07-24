@@ -537,6 +537,12 @@
                                                                                 <persistence type="property" />
                                                                                 <description>Catalog Version</description>
                                                                 </attribute>
+                                                                <attribute type="PromotionGroup" qualifier="promotionGroup">
+                                                                                <modifiers unique="false" search="true" />
+                                                                                <persistence type="property" />
+                                                                                <description>Promotion Group</description>
+                                                                </attribute>                                                       
+                                                                
                                                 </attributes>
                                 </itemtype>
 

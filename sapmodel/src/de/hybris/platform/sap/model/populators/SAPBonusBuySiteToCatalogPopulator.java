@@ -19,6 +19,7 @@ import org.apache.log4j.Logger;
 
 import de.hybris.platform.catalog.model.CatalogVersionModel;
 import de.hybris.platform.converters.Populator;
+import de.hybris.platform.promotions.model.PromotionGroupModel;
 import de.hybris.platform.sap.sapmodel.model.SAPBonusBuySiteToCatalogModel;
 import de.hybris.platform.servicelayer.dto.converter.ConversionException;
 
@@ -40,14 +41,18 @@ public class SAPBonusBuySiteToCatalogPopulator implements Populator<SAPBonusBuyS
 		sb.append(catalogId);
 		sb.append(":");
 		sb.append(version);
-		
+      //Promotion Group
+      PromotionGroupModel promotionGroupModel = source.getPromotionGroup();
+      String promotionGroup = promotionGroupModel.getIdentifier();
+
 		if (LOGGER.isDebugEnabled())
 		{
-			LOGGER.debug(sb.toString());
+			LOGGER.debug("Bonus Buy catalog version is " + sb.toString());
+			LOGGER.debug("Bonus Buy catalog promotion group is " + promotionGroup);
 		}
 		
 		target.put("catalogVersion", sb.toString());
-		
+		target.put("promotionGroup", promotionGroup);
 	}
 
 }

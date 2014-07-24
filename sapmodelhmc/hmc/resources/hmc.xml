@@ -46,6 +46,7 @@
                                                                                                 <itemlayout>
                                                                                                                 <attribute name="site" width="50" />
                                                                                                                 <attribute name="catalogVersion" width="200" />
+                                                                                                                <attribute name="promotionGroup" width="200" />
                                                                                                 </itemlayout>
                                                                                 </referencecollectioneditor>
                                                                 </attribute>
