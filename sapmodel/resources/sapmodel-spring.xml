@@ -31,7 +31,7 @@
 		</property>
 	</bean>
 
-	
+
 
 	<alias name="sapDefaultDeliveryModeMappingPopulator" alias="sapDeliveryModeMappingPopulator" />
 	<bean id="sapDefaultDeliveryModeMappingPopulator" class="de.hybris.platform.sap.model.populators.DefaultDeliveryModeMappingPopulator"
@@ -54,15 +54,15 @@
 		<property name="rawType" value="RawHybrisDeliveryModeMapping" />
 		<property name="converter" ref="sapDeliveryModeMappingDataHubConverter" />
 	</bean>
-	
-	<bean id="sapSalesAreaToCatalogMappingTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-		<property name="itemCode" value="SAPProductSalesAreaToCatalog" />
-		<property name="rawType" value="RawHybrisSalesAreaToCatalogMapping" />
-		<property name="converter" ref="sapSalesAreaToCatalogMappingDataHubConverter" />
+
+	<bean id="sapProductSalesAreaToCatalogMappingTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
+		<property name="itemCode" value="SAPProductSalesAreaToCatalogMapping" />
+		<property name="rawType" value="RawHybrisProductSalesAreaToCatalogMapping" />
+		<property name="converter" ref="sapProductSalesAreaToCatalogMappingDataHubConverter" />
 	</bean>
-	
-	<alias name="sapDefaultSalesAreaToCatalogMappingDataHubConverter" alias="sapSalesAreaToCatalogMappingDataHubConverter" />
-	<bean id="sapDefaultSalesAreaToCatalogMappingDataHubConverter" parent="abstractPopulatingConverter">
+
+	<alias name="sapDefaultProductSalesAreaToCatalogMappingDataHubConverter" alias="sapProductSalesAreaToCatalogMappingDataHubConverter" />
+	<bean id="sapDefaultProductSalesAreaToCatalogMappingDataHubConverter" parent="abstractPopulatingConverter">
 		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
 		<property name="populators">
 			<list>
@@ -70,22 +70,21 @@
 			</list>
 		</property>
 	</bean>
-	
-	
+
 	<alias alias="sapUnitDao" name="sapDefaultUnitDao" />
 	<bean id="sapDefaultUnitDao" class="de.hybris.platform.sap.sapmodel.daos.SAPDefaultUnitDao" parent="unitDao">
 	</bean>
-	
+
 	<alias alias="sapUnitService" name="sapDefaultUnitService" />
-	<bean id="sapDefaultUnitService" class="sap.hybris.integration.models.services.impl.SAPDefaultUnitService" parent="unitService" >
+	<bean id="sapDefaultUnitService" class="sap.hybris.integration.models.services.impl.SAPDefaultUnitService" parent="unitService">
 		<property name="sapUnitDao" ref="sapUnitDao" />
 	</bean>
-	
-	
+
+
 	<alias alias="sapNetAttributeHandler" name="sapDefaultNetAttributeHandler" />
-	<bean id="sapDefaultNetAttributeHandler" class="de.hybris.platform.sap.sapmodel.daos.NetAttributeHandler" >
+	<bean id="sapDefaultNetAttributeHandler" class="de.hybris.platform.sap.sapmodel.daos.NetAttributeHandler">
 	</bean>
-	
+
 	<bean id="sapPricingSalesAreaTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
 
 		<property name="itemCode" value="SAPPricingSalesAreaToCatalog" />
@@ -103,7 +102,7 @@
 			</list>
 		</property>
 	</bean>
-	
+
 	<bean id="sapBonusBuySiteTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
 
 		<property name="itemCode" value="SAPBonusBuySiteToCatalog" />
@@ -121,12 +120,12 @@
 			</list>
 		</property>
 	</bean>
-	
+
 	<alias name="defaultSapPricingCatalogMappingPopulator" alias="sapPricingCatalogMappingPopulator" />
-<bean id="defaultSapPricingCatalogMappingPopulator" class="de.hybris.platform.sap.model.populators.SAPPricingCatalogMappingPopulator" />
-	
+	<bean id="defaultSapPricingCatalogMappingPopulator" class="de.hybris.platform.sap.model.populators.SAPPricingCatalogMappingPopulator" />
+
 	<alias name="defaultSapBonusBuySiteToCatalogPopulator" alias="sapBonusBuySiteToCatalogPopulator" />
-<bean id="defaultSapBonusBuySiteToCatalogPopulator" class="de.hybris.platform.sap.model.populators.SAPBonusBuySiteToCatalogPopulator" />
-	
-	
+	<bean id="defaultSapBonusBuySiteToCatalogPopulator" class="de.hybris.platform.sap.model.populators.SAPBonusBuySiteToCatalogPopulator" />
+
+
 </beans>

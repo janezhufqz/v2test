@@ -6,10 +6,10 @@ import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.type.ComposedType;
 import org.apache.log4j.Logger;
 
-public class SAPProductSalesAreaToCatalog extends GeneratedSAPProductSalesAreaToCatalog
+public class SAPProductSalesAreaToCatalogMapping extends GeneratedSAPProductSalesAreaToCatalogMapping
 {
 	@SuppressWarnings("unused")
-	private final static Logger LOG = Logger.getLogger( SAPProductSalesAreaToCatalog.class.getName() );
+	private final static Logger LOG = Logger.getLogger( SAPProductSalesAreaToCatalogMapping.class.getName() );
 	
 	@Override
 	protected Item createItem(final SessionContext ctx, final ComposedType type, final ItemAttributeMap allAttributes) throws JaloBusinessException
