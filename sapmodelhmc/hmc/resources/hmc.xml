@@ -92,13 +92,12 @@
 					<section name="section.sapdelivery" mode="append">
 						<listlayout>
 							<attribute labelwidth="200" name="sapDeliveryModes"
-								width="408">
-								<referencecollectioneditor
+								width="272">
+								<referencecollectioneditor  
 									presetattribute="sapConfiguration" autosave="true"
 									externalcreate="false" editable="true">
 									<itemlayout>
 										<attribute name="deliveryMode" width="136" />
-										<attribute name="deliveryName" width="136" />
 										<attribute name="deliveryValue" width="136" />
 									</itemlayout>
 								</referencecollectioneditor>
