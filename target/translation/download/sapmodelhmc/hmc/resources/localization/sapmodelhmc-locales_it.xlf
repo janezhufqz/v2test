@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file datatype="javapropertyresourcebundle" date="2014-07-30T13:49:16Z" original="E:\.jenkins\workspace\Zeus_SAPModel_Translation_Upload\sapmodelhmc\hmc\resources\localization\sapmodelhmc-locales.properties" source-language="en" target-language="en">
+  <file datatype="javapropertyresourcebundle" date="2014-07-30T13:49:16Z" original="E:\.jenkins\workspace\Zeus_SAPModel_Translation_Upload\sapmodelhmc\hmc\resources\localization\sapmodelhmc-locales.properties" source-language="en" target-language="it">
     <header>
       <skl>
         <internal-file crc="86b5c9089e81231ae4acba60bb686d88" form="base64">H4sIAAAAAAAAAJVT3YubQBB/D+R/GLiXloByR8qVg6VcFFqhLaGx0LdjXce4RHdlPyL+9501Xs8GIe1LZnb4fYwzkzv4/DNLwWkoEIRB7rCEXroaaue6pzju+z6qeHsynoq6ihS62HtZjj9HVOvVHXzXDp8gr6WFSjYIPbd/tLgQ2pRSHYOHq8lEqzMqJ7Wy9OYOBFfBvNJeEdwFweBtg7k8yagvq8jyLiKdbqzEpbRdw4f4K3KVZmPYpNkmN1zZhgfpzd5ogdb+g1jHj2jjs8Q+ZBEXgf8p5FnJ7rfbD4/3jx+3D+sVaf3Ks3y9sjhiooJTptsWjcAgyg7PezjwBi0809fPGI4XARDAWrFkDHBA52gudkH5P7ElNvKMZmDplCzDOj60NHm2v8Sr/gouTqhKWo8KlLN0A9tdapDMigvastTCheFXaFiWagH59LryEN46TfMy2DVSjJtiyVSDH2/FBY8ZRVfUpPXEYTMO6Cr0Odbh3e4heQ9X7iV3vPZFS5MIs3zpjBSUsP0l3mjgFvt1RXTIBlICwxdfLC+i0Mrbwg9WOmS78ICdH24rvF7FC2WT7Xhu4drYt0tjswO04S+XkE6j/76cuc6Besj1hHoToeoV/TcUTiBXKgQAAA==</internal-file>
@@ -21,59 +21,47 @@
     <body>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.basecommerce.sap" resname="section.basecommerce.sap" sap:sc="XTIT">
         <source>SAP Sales Area</source>
-        <target state="translated">SAP Sales Area</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="tab.sapcommon" resname="tab.sapcommon" sap:sc="XTIT">
         <source>Common Settings</source>
-        <target state="translated">Common Settings</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.sapcommon" resname="section.sapcommon" sap:sc="XTIT">
         <source>Common Settings</source>
-        <target state="translated">Common Settings</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.sapdelivery" resname="section.sapdelivery" sap:sc="XTIT">
         <source>Delivery</source>
-        <target state="translated">Shipping</target>
+        <target>Consegna</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.sappayment" resname="section.sappayment" sap:sc="XTIT">
         <source>Payment</source>
-        <target state="translated">Payment</target>
+        <target>Pagamento</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="tab.backendconnectivity" resname="tab.backendconnectivity" sap:sc="XTIT">
         <source>Backend Connectivity</source>
-        <target state="translated">Back-End Connectivity</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.idoctransfer" resname="section.idoctransfer" sap:sc="XTIT">
         <source>IDoc Transfer</source>
-        <target state="translated">IDoc Transfer</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="tab.customerreplication" resname="tab.customerreplication" sap:sc="XTIT">
         <source>Customer Replication</source>
-        <target state="translated">Customer Replication</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.replicationofconsumer" resname="section.replicationofconsumer" sap:sc="XTIT">
         <source>Replication of Consumer (B2C) </source>
-        <target state="translated">Replication of Consumer (B2C)</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="tab.datahubmappings_pricing" resname="tab.datahubmappings_pricing" sap:sc="XTIT">
         <source>Pricing Replication</source>
-        <target state="translated">Pricing Replication</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.datahubmappings_pricing" resname="section.datahubmappings_pricing" sap:sc="XTIT">
         <source>Pricing Settings for Data Hub</source>
-        <target state="translated">Pricing Settings for Data Hub</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.sapbonusbuysite" resname="section.sapbonusbuysite" sap:sc="XTIT">
         <source>Bonus Buy Settings for Data Hub</source>
-        <target state="translated">Bonus Buy Settings for Data Hub</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="sapcommon_sapPricingSalesArea" resname="sapcommon_sapPricingSalesArea" sap:sc="XTIT">
         <source>Mapping Sales Areas to Catalogs</source>
-        <target state="translated">Mapping Sales Areas to Catalogs</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="sapcommon_sapSiteToCatalog" resname="sapcommon_sapSiteToCatalog" sap:sc="XTIT">
         <source>Mapping Sites to Catalogs</source>
-        <target state="translated">Mapping Sites to Catalogs</target>
       </trans-unit>
     </body>
   </file>
