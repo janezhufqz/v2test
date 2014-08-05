@@ -24,11 +24,6 @@
 		class="de.hybris.platform.sap.sapcommonbol.businesspartner.businessobject.impl.AddressImpl">
 	</bean>
 
-	<alias alias="sapCommonTransferItem" name="sapCommonDefaultTransferItem" />
-	<bean id="sapCommonDefaultTransferItem" scope="prototype"
-		class="de.hybris.platform.sap.sapcommonbol.transaction.item.businessobject.impl.TransferItemImpl">
-	</bean>
-
 	<!-- Business Objects (BO) -->
 	<alias alias="sapCommonConverter" name="sapCommonDefaultConverter" />
 	<bean id="sapCommonDefaultConverter" parent="sapCoreBusinessObject"
