@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file datatype="javapropertyresourcebundle" date="2014-07-30T23:27:11Z" original="E:\.jenkins\workspace\Zeus_SAPModel_Translation_Upload\sapmodelhmc\hmc\resources\localization\sapmodelhmc-locales.properties" source-language="en" target-language="en">
+  <file datatype="javapropertyresourcebundle" date="2014-08-15T14:33:38Z" original="E:\.jenkins\workspace\Zeus_SAPModel_Translation_Upload\sapmodelhmc\hmc\resources\localization\sapmodelhmc-locales.properties" source-language="en" target-language="en">
     <header>
       <skl>
-        <internal-file crc="86b5c9089e81231ae4acba60bb686d88" form="base64">H4sIAAAAAAAAAJVT3YubQBB/D+R/GLiXloByR8qVg6VcFFqhLaGx0LdjXce4RHdlPyL+9501Xs8GIe1LZnb4fYwzkzv4/DNLwWkoEIRB7rCEXroaaue6pzju+z6qeHsynoq6ihS62HtZjj9HVOvVHXzXDp8gr6WFSjYIPbd/tLgQ2pRSHYOHq8lEqzMqJ7Wy9OYOBFfBvNJeEdwFweBtg7k8yagvq8jyLiKdbqzEpbRdw4f4K3KVZmPYpNkmN1zZhgfpzd5ogdb+g1jHj2jjs8Q+ZBEXgf8p5FnJ7rfbD4/3jx+3D+sVaf3Ks3y9sjhiooJTptsWjcAgyg7PezjwBi0809fPGI4XARDAWrFkDHBA52gudkH5P7ElNvKMZmDplCzDOj60NHm2v8Sr/gouTqhKWo8KlLN0A9tdapDMigvastTCheFXaFiWagH59LryEN46TfMy2DVSjJtiyVSDH2/FBY8ZRVfUpPXEYTMO6Cr0Odbh3e4heQ9X7iV3vPZFS5MIs3zpjBSUsP0l3mjgFvt1RXTIBlICwxdfLC+i0Mrbwg9WOmS78ICdH24rvF7FC2WT7Xhu4drYt0tjswO04S+XkE6j/76cuc6Besj1hHoToeoV/TcUTiBXKgQAAA==</internal-file>
+        <internal-file crc="fdeedf4767faddc572398e33bdfa3a66" form="base64">H4sIAAAAAAAAAJVT3WvbQAx/D+R/EPRlI9SmJaOjcIwmGZthG2FxYW9FPsvxEefO3EeM//vpnHT1QiDbS6QTvw9ZUm7gy3O2Am+gIJCW0FMJnfI11N63j2nadV1S4X5nAxdNlWjyaQiqHH62pKeTG/hhPD1CXisHlWoIOnR/tFBKY0ult9HD12xi9IG0V0Y7fqMHiTqaVyZohvsoGL1dNFc7lXRllThsE9Zph0paKtc22KffCPUqG8Jslc1yi9o1GKVna2skOfcPYi1uyaUHRV3MEpSR/ynmWSnu5vMPD3cPH+f30wlr/cqzfDpxNGCSAjkz+z1ZSVFUbJ7WsMGGHDzx148YHosIiGCjxXIIsCHveS7ugvJ/Yktq1IFsLza1alvGXYa12O958mJ9jGf9FSh3pEtej46Ug/K9WHDt9jOvZTmqXhBXpZE+Tr8iK7KVkZCfXmcmMjhveGCW2kbJYVViearBz7fiBY8RxVTcpQvMESMOmCr2OdTh3eJ++f7MvESPdSj2OMzIvbRWSU7E+hiv+F9jv66ID9nCisHwNRSXF1EYHVwReqc8iUV8wCL01xVer+KFs5PtcG7x2sT3Y2OjA3TxL7dkncb8fTljnQ33kJsT6k2Eq2f03+w5+eYqBAAA</internal-file>
       </skl>
       <phase-group>
-        <phase company-name="SAP AG" date="2014-07-29T23:51:28Z" phase-name="file-creation" process-name="file-creation" tool-id="urn:x-sap:sls-mlt:java:properties-converter"/>
+        <phase company-name="SAP AG" date="2014-08-15T14:31:42Z" phase-name="file-creation" process-name="file-creation" tool-id="urn:x-sap:sls-mlt:java:properties-converter"/>
       </phase-group>
       <tool tool-company="SAP AG" tool-id="urn:x-sap:sls-mlt:java:properties-converter" tool-name="Java .properties File Converter" tool-version="1.5.0"/>
       <sxmd:metadata xmlns="urn:x-sap:mlt:tsmetadata:1.0" xmlns:sxmd="urn:x-sap:mlt:xliff12:metadata:1.0">
@@ -32,7 +32,7 @@
         <target state="translated">Common Settings</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.sapdelivery" resname="section.sapdelivery" sap:sc="XTIT">
-        <source>Delivery</source>
+        <source>Shipping</source>
         <target state="translated">Shipping</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.sappayment" resname="section.sappayment" sap:sc="XTIT">
@@ -40,7 +40,7 @@
         <target state="translated">Payment</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="tab.backendconnectivity" resname="tab.backendconnectivity" sap:sc="XTIT">
-        <source>Backend Connectivity</source>
+        <source>Back-End Connectivity</source>
         <target state="translated">Back-End Connectivity</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.idoctransfer" resname="section.idoctransfer" sap:sc="XTIT">
@@ -52,7 +52,7 @@
         <target state="translated">Customer Replication</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.replicationofconsumer" resname="section.replicationofconsumer" sap:sc="XTIT">
-        <source>Replication of Consumer (B2C) </source>
+        <source>Replication of Consumer (B2C)</source>
         <target state="translated">Replication of Consumer (B2C)</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="tab.datahubmappings_pricing" resname="tab.datahubmappings_pricing" sap:sc="XTIT">

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file datatype="javapropertyresourcebundle" date="2014-08-05T23:27:02Z" original="E:\.jenkins\workspace\Zeus_SAPModel_Translation_Upload\sapmodel\resources\localization\sapmodel-locales.properties" source-language="en" target-language="zh-CN">
+  <file datatype="javapropertyresourcebundle" date="2014-08-15T14:33:37Z" original="E:\.jenkins\workspace\Zeus_SAPModel_Translation_Upload\sapmodel\resources\localization\sapmodel-locales.properties" source-language="en" target-language="zh-CN">
     <header>
       <skl>
-        <internal-file crc="2f878783be3ae4ef90e79af1dde1fe5d" form="base64">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</internal-file>
+        <internal-file crc="bb368001c40eaa2beb0a9679d5c36737" form="base64">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</internal-file>
       </skl>
       <phase-group>
-        <phase company-name="SAP AG" date="2014-08-04T23:51:15Z" phase-name="file-creation" process-name="file-creation" tool-id="urn:x-sap:sls-mlt:java:properties-converter"/>
+        <phase company-name="SAP AG" date="2014-08-15T14:31:42Z" phase-name="file-creation" process-name="file-creation" tool-id="urn:x-sap:sls-mlt:java:properties-converter"/>
       </phase-group>
       <tool tool-company="SAP AG" tool-id="urn:x-sap:sls-mlt:java:properties-converter" tool-name="Java .properties File Converter" tool-version="1.5.0"/>
       <sxmd:metadata xmlns="urn:x-sap:mlt:tsmetadata:1.0" xmlns:sxmd="urn:x-sap:mlt:xliff12:metadata:1.0">
@@ -231,7 +231,6 @@
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapConsumerID.name" resname="type.Customer.sapConsumerID.name" sap:sc="XFLD">
         <source>SAP Consumer ID</source>
         <target>SAP Consumer ID</target>
-        <note annotates="source" from="Developer">Technical attribute name - do not translate</note>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapConsumerID.Description" resname="type.Customer.sapConsumerID.Description" sap:sc="XTIT">
         <source>Unique Identifier of SAP Consumer</source>
@@ -240,7 +239,6 @@
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapIsReplicated.name" resname="type.Customer.sapIsReplicated.name" sap:sc="XFLD">
         <source>Replicated to SAP</source>
         <target>Replicated to SAP</target>
-        <note annotates="source" from="Developer">Technical attribute name - do not translate</note>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapIsReplicated.Description" resname="type.Customer.sapIsReplicated.Description" sap:sc="XTIT">
         <source>Indicates If the Customer Has Been Replicated to the SAP System</source>
@@ -249,7 +247,6 @@
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapReplicationInfo.name" resname="type.Customer.sapReplicationInfo.name" sap:sc="XFLD">
         <source>SAP Replication Info</source>
         <target>SAP Replication Info</target>
-        <note annotates="source" from="Developer">Technical attribute name - do not translate</note>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapReplicationInfo.Description" resname="type.Customer.sapReplicationInfo.Description" sap:sc="XTIT">
         <source>Information Related to the Replication to the SAP System</source>
@@ -258,7 +255,6 @@
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Address.sapContactID.name" resname="type.Address.sapContactID.name" sap:sc="XFLD">
         <source>SAP Contact ID</source>
         <target>SAP Contact ID</target>
-        <note annotates="source" from="Developer">Technical attribute name - do not translate</note>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Address.sapContactID.Description" resname="type.Address.sapContactID.Description" sap:sc="XTIT">
         <source>Unique Identifier of SAP Contact</source>
@@ -267,7 +263,6 @@
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Address.sapCustomerID.name" resname="type.Address.sapCustomerID.name" sap:sc="XFLD">
         <source>SAP Customer ID</source>
         <target>SAP Customer ID</target>
-        <note annotates="source" from="Developer">Technical attribute name - do not translate</note>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Address.sapCustomerID.Description" resname="type.Address.sapCustomerID.Description" sap:sc="XTIT">
         <source>Unique Identifier of SAP Customer</source>
@@ -374,7 +369,7 @@
         <target>SAP ERP 逻辑系统</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.sapglobalconfiguration.replicateregistereduser.name" resname="type.sapglobalconfiguration.replicateregistereduser.name" sap:sc="XFLD">
-        <source>Replicate registered users</source>
+        <source>Replicate Registered Users</source>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPProductSalesAreaToCatalogMapping.name" resname="type.SAPProductSalesAreaToCatalogMapping.name" sap:sc="XFLD">
         <source>Mapping Sales Areas to Catalogs</source>

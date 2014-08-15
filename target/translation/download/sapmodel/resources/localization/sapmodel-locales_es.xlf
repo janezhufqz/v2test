@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file datatype="javapropertyresourcebundle" date="2014-08-05T23:27:00Z" original="E:\.jenkins\workspace\Zeus_SAPModel_Translation_Upload\sapmodel\resources\localization\sapmodel-locales.properties" source-language="en" target-language="es">
+  <file datatype="javapropertyresourcebundle" date="2014-08-15T14:33:35Z" original="E:\.jenkins\workspace\Zeus_SAPModel_Translation_Upload\sapmodel\resources\localization\sapmodel-locales.properties" source-language="en" target-language="es">
     <header>
       <skl>
-        <internal-file crc="2f878783be3ae4ef90e79af1dde1fe5d" form="base64">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</internal-file>
+        <internal-file crc="bb368001c40eaa2beb0a9679d5c36737" form="base64">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</internal-file>
       </skl>
       <phase-group>
-        <phase company-name="SAP AG" date="2014-08-04T23:51:15Z" phase-name="file-creation" process-name="file-creation" tool-id="urn:x-sap:sls-mlt:java:properties-converter"/>
+        <phase company-name="SAP AG" date="2014-08-15T14:31:42Z" phase-name="file-creation" process-name="file-creation" tool-id="urn:x-sap:sls-mlt:java:properties-converter"/>
       </phase-group>
       <tool tool-company="SAP AG" tool-id="urn:x-sap:sls-mlt:java:properties-converter" tool-name="Java .properties File Converter" tool-version="1.5.0"/>
       <sxmd:metadata xmlns="urn:x-sap:mlt:tsmetadata:1.0" xmlns:sxmd="urn:x-sap:mlt:xliff12:metadata:1.0">
@@ -25,6 +25,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Language.sapCode.description" resname="type.Language.sapCode.description" sap:sc="XTIT">
         <source>SAP Code (ERP table T002, field SPRAS)</source>
+        <target>Código SAP (ERP tabla T002, campo SPRAS)</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Currency.sapCode.name" resname="type.Currency.sapCode.name" sap:sc="XFLD">
         <source>Currency Key</source>
@@ -32,6 +33,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Currency.sapCode.description" resname="type.Currency.sapCode.description" sap:sc="XTIT">
         <source>SAP Code (ERP table TCURC, field WAERS)</source>
+        <target>Código SAP (ERP tabla TCURC, campo WAERS)</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Unit.sapCode.name" resname="type.Unit.sapCode.name" sap:sc="XFLD">
         <source>Unit of Measurement</source>
@@ -39,6 +41,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Unit.sapCode.description" resname="type.Unit.sapCode.description" sap:sc="XTIT">
         <source>SAP Code (ERP table T006, field MSEHI)</source>
+        <target>Código SAP (ERP tabla T006, campo MSEHI)</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ClassificationAttributeUnit.sapCode.name" resname="type.ClassificationAttributeUnit.sapCode.name" sap:sc="XFLD">
         <source>Unit of Measurement</source>
@@ -46,6 +49,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ClassificationAttributeUnit.sapCode.description" resname="type.ClassificationAttributeUnit.sapCode.description" sap:sc="XTIT">
         <source>SAP Code (ERP table T006, field MSEHI)</source>
+        <target>Código SAP (ERP tabla T006, campo MSEHI)</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Country.sapCode.name" resname="type.Country.sapCode.name" sap:sc="XFLD">
         <source>Country Key</source>
@@ -53,6 +57,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Country.sapCode.description" resname="type.Country.sapCode.description" sap:sc="XTIT">
         <source>SAP Code (ERP table T005, field LAND1)</source>
+        <target>Código SAP (ERP tabla T005, campo LAND1)</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Product.sapBlocked.name" resname="type.Product.sapBlocked.name" sap:sc="XFLD">
         <source>Blocked</source>
@@ -68,6 +73,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Product.sapBlockedDate.description" resname="type.Product.sapBlockedDate.description" sap:sc="XTIT">
         <source>Indicates the date as of which the product is blocked</source>
+        <target>Indica la fecha a partir de la cual el producto está bloqueado</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Product.sapConfigurable.name" resname="type.Product.sapConfigurable.name" sap:sc="XFLD">
         <source>Configurable</source>
@@ -83,15 +89,19 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Product.sapEAN.description" resname="type.Product.sapEAN.description" sap:sc="XTIT">
         <source>Product EAN</source>
+        <target>Producto EAN</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Product.sapBaseUnitConversion.name" resname="type.Product.sapBaseUnitConversion.name" sap:sc="XFLD">
         <source>Base Unit Conversion</source>
+        <target>Conversión de unidad base</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Product.sapBaseUnitConversion.description" resname="type.Product.sapBaseUnitConversion.description" sap:sc="XTIT">
         <source>Factor for converting sales unit quantity to base unit quantity</source>
+        <target>Factor para convertir la cantidad de unidad de ventas a la cantidad de unidad base</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPConfiguration.sapcommon_referenceCustomer.name" resname="type.SAPConfiguration.sapcommon_referenceCustomer.name" sap:sc="XFLD">
         <source>Reference Customer</source>
+        <target>Cliente de referencia</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPConfiguration.sapcommon_salesOrganization.name" resname="type.SAPConfiguration.sapcommon_salesOrganization.name" sap:sc="XFLD">
         <source>Sales Organization</source>
@@ -143,6 +153,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDistributionChannelMapping.refDistChannelConditions.description" resname="type.ReferenceDistributionChannelMapping.refDistChannelConditions.description" sap:sc="XTIT">
         <source>Reference Distribution Channel for Conditions</source>
+        <target>Canal de distribución de referencia para las condiciones</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDistributionChannelMapping.refDistChannelConditionsName.name" resname="type.ReferenceDistributionChannelMapping.refDistChannelConditionsName.name" sap:sc="XFLD">
         <source>Reference Name for Conditions</source>
@@ -150,18 +161,23 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDistributionChannelMapping.refDistChannelConditionsName.description" resname="type.ReferenceDistributionChannelMapping.refDistChannelConditionsName.description" sap:sc="XTIT">
         <source>Reference Distribution Channel Name for Conditions</source>
+        <target>Nombre del canal de distribución de referencia para las condiciones</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDistributionChannelMapping.refDistChannelCustMat.name" resname="type.ReferenceDistributionChannelMapping.refDistChannelCustMat.name" sap:sc="XFLD">
         <source>Reference for Customer and Material Masters</source>
+        <target>Referencia para maestros de material y clientes</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDistributionChannelMapping.refDistChannelCustMat.description" resname="type.ReferenceDistributionChannelMapping.refDistChannelCustMat.description" sap:sc="XTIT">
         <source>Reference Distribution Channel for Customer and Material Masters</source>
+        <target>Canal de distribución de referencia para maestros de material y clientes</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDistributionChannelMapping.refDistChannelCustMatName.name" resname="type.ReferenceDistributionChannelMapping.refDistChannelCustMatName.name" sap:sc="XFLD">
         <source>Reference Name for Customer and Material Masters</source>
+        <target>Nombre de referencia para maestros de material y clientes</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDistributionChannelMapping.refDistChannelCustMatName.description" resname="type.ReferenceDistributionChannelMapping.refDistChannelCustMatName.description" sap:sc="XTIT">
         <source>Reference Distribution Channel Name for Customer and Material Masters</source>
+        <target>Nombre de canal de distribución de referencia para maestros de material y clientes</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDivisionMapping.salesOrganization.name" resname="type.ReferenceDivisionMapping.salesOrganization.name" sap:sc="XFLD">
         <source>Sales Organization</source>
@@ -186,6 +202,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDivisionMapping.refDivisionConditions.description" resname="type.ReferenceDivisionMapping.refDivisionConditions.description" sap:sc="XTIT">
         <source>Reference Distribution Channel for Conditions</source>
+        <target>Canal de distribución de referencia para las condiciones</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDivisionMapping.refDivisionConditionsName.name" resname="type.ReferenceDivisionMapping.refDivisionConditionsName.name" sap:sc="XFLD">
         <source>Reference Name for Conditions</source>
@@ -193,6 +210,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDivisionMapping.refDivisionConditionsName.description" resname="type.ReferenceDivisionMapping.refDivisionConditionsName.description" sap:sc="XTIT">
         <source>Reference Division Name for Conditions</source>
+        <target>Nombre de división de referencia para condiciones</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.ReferenceDivisionMapping.refDivisionCustomer.name" resname="type.ReferenceDivisionMapping.refDivisionCustomer.name" sap:sc="XFLD">
         <source>Reference for Customer</source>
@@ -212,15 +230,15 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapConsumerID.name" resname="type.Customer.sapConsumerID.name" sap:sc="XFLD">
         <source>SAP Consumer ID</source>
-        <note annotates="source" from="Developer">Technical attribute name - do not translate</note>
+        <target>ID de consumidor de SAP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapConsumerID.Description" resname="type.Customer.sapConsumerID.Description" sap:sc="XTIT">
         <source>Unique Identifier of SAP Consumer</source>
+        <target>Identificador único de consumidor de SAP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapIsReplicated.name" resname="type.Customer.sapIsReplicated.name" sap:sc="XFLD">
         <source>Replicated to SAP</source>
         <target>Replicado a SAP</target>
-        <note annotates="source" from="Developer">Technical attribute name - do not translate</note>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapIsReplicated.Description" resname="type.Customer.sapIsReplicated.Description" sap:sc="XTIT">
         <source>Indicates If the Customer Has Been Replicated to the SAP System</source>
@@ -228,30 +246,35 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapReplicationInfo.name" resname="type.Customer.sapReplicationInfo.name" sap:sc="XFLD">
         <source>SAP Replication Info</source>
-        <note annotates="source" from="Developer">Technical attribute name - do not translate</note>
+        <target>SAP Replication Info</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Customer.sapReplicationInfo.Description" resname="type.Customer.sapReplicationInfo.Description" sap:sc="XTIT">
         <source>Information Related to the Replication to the SAP System</source>
+        <target>Información relacionada con la réplica en el sistema de SAP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Address.sapContactID.name" resname="type.Address.sapContactID.name" sap:sc="XFLD">
         <source>SAP Contact ID</source>
-        <note annotates="source" from="Developer">Technical attribute name - do not translate</note>
+        <target>SAP Contact ID</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Address.sapContactID.Description" resname="type.Address.sapContactID.Description" sap:sc="XTIT">
         <source>Unique Identifier of SAP Contact</source>
+        <target>Identificador único de contacto de SAP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Address.sapCustomerID.name" resname="type.Address.sapCustomerID.name" sap:sc="XFLD">
         <source>SAP Customer ID</source>
-        <note annotates="source" from="Developer">Technical attribute name - do not translate</note>
+        <target>SAP Customer ID</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.Address.sapCustomerID.Description" resname="type.Address.sapCustomerID.Description" sap:sc="XTIT">
         <source>Unique Identifier of SAP Customer</source>
+        <target>Identificador único de cliente de SAP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapPricingCondition.name" resname="type.SapPricingCondition.name" sap:sc="XFLD">
         <source>SAP Pricing Condition</source>
+        <target>Condición de definición de precio de SAP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.AbstractOrderEntry.sapPricingConditions.name" resname="type.AbstractOrderEntry.sapPricingConditions.name" sap:sc="XFLD">
         <source>SAP Pricing Conditions</source>
+        <target>Condiciones de definición de precio de SAP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapPricingCondition.stepNumber.name" resname="type.SapPricingCondition.stepNumber.name" sap:sc="XFLD">
         <source>Step Number</source>
@@ -259,6 +282,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapPricingCondition.conditionCounter.name" resname="type.SapPricingCondition.conditionCounter.name" sap:sc="XFLD">
         <source>Condition Counter</source>
+        <target>Recuento de condición</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapPricingCondition.conditionType.name" resname="type.SapPricingCondition.conditionType.name" sap:sc="XFLD">
         <source>Condition Type</source>
@@ -270,6 +294,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapPricingCondition.conditionPricingUnit.name" resname="type.SapPricingCondition.conditionPricingUnit.name" sap:sc="XFLD">
         <source>Condition Pricing Unit</source>
+        <target>Unidad de definición de precios de condición</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapPricingCondition.conditionUnit.name" resname="type.SapPricingCondition.conditionUnit.name" sap:sc="XFLD">
         <source>Condition Unit</source>
@@ -281,6 +306,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapPricingCondition.conditionRate.name" resname="type.SapPricingCondition.conditionRate.name" sap:sc="XFLD">
         <source>Condition Rate</source>
+        <target>Tasa de condición</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapPricingCondition.conditionValue.name" resname="type.SapPricingCondition.conditionValue.name" sap:sc="XFLD">
         <source>Condition Value</source>
@@ -296,9 +322,11 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapDeliveryMode.name" resname="type.SapDeliveryMode.name" sap:sc="XFLD">
         <source>SAP Shipping Methods</source>
+        <target>Métodos de envío de SAP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPConfiguration.sapDeliveryModes.name" resname="type.SAPConfiguration.sapDeliveryModes.name" sap:sc="XFLD">
         <source>Shipping Method Mapping</source>
+        <target>Asignación del método de envío</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapDeliveryMode.deliveryMode.name" resname="type.SapDeliveryMode.deliveryMode.name" sap:sc="XFLD">
         <source>hybris Shipping Methods</source>
@@ -310,6 +338,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapDeliveryMode.deliveryValue.name" resname="type.SapDeliveryMode.deliveryValue.name" sap:sc="XFLD">
         <source>SAP Shipping Values</source>
+        <target>Valores de envío de SAP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapPaymentMode.name" resname="type.SapPaymentMode.name" sap:sc="XFLD">
         <source>SAP Payment Methods</source>
@@ -317,6 +346,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPConfiguration.sapPaymentModes.name" resname="type.SAPConfiguration.sapPaymentModes.name" sap:sc="XFLD">
         <source>Payment Method Mapping</source>
+        <target>Asignación de métodos de pago</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapPaymentMode.paymentMode.name" resname="type.SapPaymentMode.paymentMode.name" sap:sc="XFLD">
         <source>hybris Payment Methods</source>
@@ -328,18 +358,23 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SapPaymentMode.paymentValue.name" resname="type.SapPaymentMode.paymentValue.name" sap:sc="XFLD">
         <source>SAP Payment Values</source>
+        <target>Valores de pago de SAP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.sapglobalconfiguration.sapcommon_erpHttpDestination.name" resname="type.sapglobalconfiguration.sapcommon_erpHttpDestination.name" sap:sc="XFLD">
         <source>SAP ERP HTTP Destination</source>
+        <target>Destino HTTP de SAP ERP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.sapglobalconfiguration.sapcommon_erpLogicalSystem.name" resname="type.sapglobalconfiguration.sapcommon_erpLogicalSystem.name" sap:sc="XFLD">
         <source>SAP ERP Logical System</source>
+        <target>Sistema lógico de SAP ERP</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.sapglobalconfiguration.replicateregistereduser.name" resname="type.sapglobalconfiguration.replicateregistereduser.name" sap:sc="XFLD">
-        <source>Replicate registered users</source>
+        <source>Replicate Registered Users</source>
+        <target>Replicar usuarios registrados</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPProductSalesAreaToCatalogMapping.name" resname="type.SAPProductSalesAreaToCatalogMapping.name" sap:sc="XFLD">
         <source>Mapping Sales Areas to Catalogs</source>
+        <target>Asignación de áreas de ventas a catálogos</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPProductSalesAreaToCatalogMapping.salesOrganization.name" resname="type.SAPProductSalesAreaToCatalogMapping.salesOrganization.name" sap:sc="XFLD">
         <source>Sales Organization</source>
@@ -351,9 +386,11 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPProductSalesAreaToCatalogMapping.catalogVersion.name" resname="type.SAPProductSalesAreaToCatalogMapping.catalogVersion.name" sap:sc="XFLD">
         <source>Catalog Version</source>
+        <target>Versión de catálogo</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPPricingSalesAreaToCatalog.name" resname="type.SAPPricingSalesAreaToCatalog.name" sap:sc="XFLD">
         <source>Mapping Sales Areas to Catalogs</source>
+        <target>Asignación de áreas de ventas a catálogos</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPPricingSalesAreaToCatalog.salesOrganization.name" resname="type.SAPPricingSalesAreaToCatalog.salesOrganization.name" sap:sc="XFLD">
         <source>Sales Organization</source>
@@ -369,6 +406,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPBonusBuySiteToCatalog.name" resname="type.SAPBonusBuySiteToCatalog.name" sap:sc="XFLD">
         <source>Mapping Sites to Catalogs</source>
+        <target>Asignación de sitios a catálogos</target>
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPBonusBuySiteToCatalog.site.name" resname="type.SAPBonusBuySiteToCatalog.site.name" sap:sc="XFLD">
         <source>Site</source>
@@ -380,6 +418,7 @@
       </trans-unit>
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="type.SAPBonusBuySiteToCatalog.promotionGroup.name" resname="type.SAPBonusBuySiteToCatalog.promotionGroup.name" sap:sc="XFLD">
         <source>Promotion Group</source>
+        <target>Grupo de promoción</target>
       </trans-unit>
     </body>
   </file>
