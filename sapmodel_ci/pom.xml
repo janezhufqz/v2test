@@ -5,11 +5,11 @@
   <artifactId>core</artifactId>
   <packaging>jar</packaging>
   <version>5.3.0.0-RC8-SNAPSHOT</version>
-  <url>https://projectportal.wdf.sap.corp/projects/sap.hybris.integration.productexchange</url>
+  <url>https://projectportal.wdf.sap.corp/projects/sap.hybris.integration.sapmodel</url>
 	<parent>
         <groupId>com.sap.hybris</groupId>
         <artifactId>sap-hybris-parent-pom</artifactId>
-        <version>0.0.4-SNAPSHOT</version>
+        <version>5.3.0.0-RC8-SNAPSHOT</version>
     </parent>
   <build>
   <pluginManagement>
@@ -51,5 +51,5 @@
 		  </plugin>
 	</plugins>
 </build>
-  <name>SAP Product Exchange</name>
+  <name>SAP Model</name>
 </project>
