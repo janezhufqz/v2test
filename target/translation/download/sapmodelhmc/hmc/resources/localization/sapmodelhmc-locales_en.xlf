@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file datatype="javapropertyresourcebundle" date="2014-08-17T23:26:49Z" original="E:\.jenkins\workspace\Zeus_SAPModel_Translation_Upload\sapmodelhmc\hmc\resources\localization\sapmodelhmc-locales.properties" source-language="en" target-language="en">
+  <file datatype="javapropertyresourcebundle" date="2014-08-20T13:44:11Z" original="E:\.jenkins\workspace\Zeus_SAPModel_Translation_Upload\sapmodelhmc\hmc\resources\localization\sapmodelhmc-locales.properties" source-language="en" target-language="en">
     <header>
       <skl>
-        <internal-file crc="fdeedf4767faddc572398e33bdfa3a66" form="base64">H4sIAAAAAAAAAJVT3WvbQAx/D+R/EPRlI9SmJaOjcIwmGZthG2FxYW9FPsvxEefO3EeM//vpnHT1QiDbS6QTvw9ZUm7gy3O2Am+gIJCW0FMJnfI11N63j2nadV1S4X5nAxdNlWjyaQiqHH62pKeTG/hhPD1CXisHlWoIOnR/tFBKY0ult9HD12xi9IG0V0Y7fqMHiTqaVyZohvsoGL1dNFc7lXRllThsE9Zph0paKtc22KffCPUqG8Jslc1yi9o1GKVna2skOfcPYi1uyaUHRV3MEpSR/ynmWSnu5vMPD3cPH+f30wlr/cqzfDpxNGCSAjkz+z1ZSVFUbJ7WsMGGHDzx148YHosIiGCjxXIIsCHveS7ugvJ/Yktq1IFsLza1alvGXYa12O958mJ9jGf9FSh3pEtej46Ug/K9WHDt9jOvZTmqXhBXpZE+Tr8iK7KVkZCfXmcmMjhveGCW2kbJYVViearBz7fiBY8RxVTcpQvMESMOmCr2OdTh3eJ++f7MvESPdSj2OMzIvbRWSU7E+hiv+F9jv66ID9nCisHwNRSXF1EYHVwReqc8iUV8wCL01xVer+KFs5PtcG7x2sT3Y2OjA3TxL7dkncb8fTljnQ33kJsT6k2Eq2f03+w5+eYqBAAA</internal-file>
+        <internal-file crc="90e0775377e6dfa50a74f5317b164ff9" form="base64">H4sIAAAAAAAAAJVSbYvTQBD+Xuh/GLgvSjHhjsrJwSLXRjQgUmwEv8lkM2mWprvLvjTk3zubO7WUyOmXzOzD87I7kxv4+K0sIBioCaQjDNTAoEIHXQj2Ic+HYchaPB1dZNC0maaQx6ia6XMgvVzcwBcT6AGqTnloVU8woP/thVIa1yh9SBmh4xCjz6SDMtrzGQNI1Cm8NVEzPSTDlO1TuDqqbGjazKPN2MdOSN4ob3sc88+EuiinsirKVeVQ+x6T9WrnjCTv/8HM4oF8flY0pC5DmfTvU1824na9fnt/e/9ufbdcsNf3qqyWC08TJ6uRO3M6kZOUTMX+cQd77MnDI7/+QhGwToRENlpspwJ7CoHn4mec/5PbUK/O5Eax75S1zJunWRxPPHmxe6pX96tRHkk3vB6dJGcVRrFh7M0HXsv2Ap0xV42RIU2/JSfKwkionk9XITL6YHhgjmyv5LQqsX3G4OsfcCbjQmJavqWPrBEXGjBtuueEw6vN3fb1VXiDAbtYn3Cakf9hnZLciN1TfSH/JfWvFfGP7KBgMnyK9fwiaqOjr+PoVSCxSQfYxPFvDj8Bu+xTpKMDAAA=</internal-file>
       </skl>
       <phase-group>
-        <phase company-name="SAP AG" date="2014-08-16T23:49:54Z" phase-name="file-creation" process-name="file-creation" tool-id="urn:x-sap:sls-mlt:java:properties-converter"/>
+        <phase company-name="SAP AG" date="2014-08-19T23:50:57Z" phase-name="file-creation" process-name="file-creation" tool-id="urn:x-sap:sls-mlt:java:properties-converter"/>
       </phase-group>
       <tool tool-company="SAP AG" tool-id="urn:x-sap:sls-mlt:java:properties-converter" tool-name="Java .properties File Converter" tool-version="1.5.0"/>
       <sxmd:metadata xmlns="urn:x-sap:mlt:tsmetadata:1.0" xmlns:sxmd="urn:x-sap:mlt:xliff12:metadata:1.0">
@@ -66,14 +66,6 @@
       <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="section.sapbonusbuysite" resname="section.sapbonusbuysite" sap:sc="XTIT">
         <source>Bonus Buy Settings for Data Hub</source>
         <target state="translated">Bonus Buy Settings for Data Hub</target>
-      </trans-unit>
-      <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="sapcommon_sapPricingSalesArea" resname="sapcommon_sapPricingSalesArea" sap:sc="XTIT">
-        <source>Mapping Sales Areas to Catalogs</source>
-        <target state="translated">Mapping Sales Areas to Catalogs</target>
-      </trans-unit>
-      <trans-unit xmlns:sap="urn:x-sap:sls-mlt" datatype="plaintext" id="sapcommon_sapSiteToCatalog" resname="sapcommon_sapSiteToCatalog" sap:sc="XTIT">
-        <source>Mapping Sites to Catalogs</source>
-        <target state="translated">Mapping Sites to Catalogs</target>
       </trans-unit>
     </body>
   </file>
