@@ -127,5 +127,22 @@
 	<alias name="defaultSapBonusBuySiteToCatalogPopulator" alias="sapBonusBuySiteToCatalogPopulator" />
 	<bean id="defaultSapBonusBuySiteToCatalogPopulator" class="de.hybris.platform.sap.model.populators.SAPBonusBuySiteToCatalogPopulator" />
 
+ 	<!-- product --> 
+	<bean id="unitsTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
+
+		<property name="itemCode" value="Unit" />
+		<property name="rawType" value="RawHybrisUnit" />
+		<property name="converter" ref="unitDataHubTransferConfigurationConverter" />
+	</bean>
+
+	<alias name="defaultUnitDataHubTransferConfigurationConverter" alias="unitDataHubTransferConfigurationConverter" />
+	<bean id="defaultUnitDataHubTransferConfigurationConverter" parent="abstractPopulatingConverter">
+		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
+		<property name="populators">
+			<list>
+				<ref bean="sapCoreGenericModel2MapPopulator" />
+			</list>
+		</property>
+	</bean>
 
 </beans>
