@@ -539,10 +539,15 @@
 			</attributes>
 		</itemtype>
 
-
-
+		<itemtype code="ERP_Variant_Product_300" extends="VariantProduct" jaloclass="de.hybris.platform.sap.sapmodel.jalo.ERP_Variant_Product_300"
+			autocreate="true" generate="true" metatype="VariantType">
+			<attributes>
+				<attribute type="java.lang.String" qualifier="variantProductID" metatype="VariantAttributeDescriptor">
+					<persistence type="property" />
+					<description>Variant Product ID</description>
+				</attribute>
+			</attributes>
+		</itemtype>
 
 	</itemtypes>
-
-
 </items>
