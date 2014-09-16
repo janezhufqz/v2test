@@ -19,10 +19,10 @@ import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.type.ComposedType;
 import org.apache.log4j.Logger;
 
-public class ERP_Variant_Product_300 extends GeneratedERP_Variant_Product_300
+public class ERPVariantProduct extends GeneratedERPVariantProduct
 {
 	@SuppressWarnings("unused")
-	private final static Logger LOG = Logger.getLogger( ERP_Variant_Product_300.class.getName() );
+	private final static Logger LOG = Logger.getLogger( ERPVariantProduct.class.getName() );
 	
 	@Override
 	protected Item createItem(final SessionContext ctx, final ComposedType type, final ItemAttributeMap allAttributes) throws JaloBusinessException

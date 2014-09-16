@@ -88,13 +88,11 @@
 
 	<itemtypes>
 
-		<itemtype code="AbstractOrderEntry" autocreate="false"
-			generate="false">
+		<itemtype code="AbstractOrderEntry" autocreate="false" generate="false">
 			<attributes>
 				<attribute qualifier="externalConfiguration" type="java.lang.String">
 					<description>XML Representation of a Product Configuration</description>
-					<modifiers read="true" write="true" search="false"
-						optional="true" />
+					<modifiers read="true" write="true" search="false" optional="true" />
 					<persistence type="property">
 						<columntype database="oracle">
 							<value>CLOB</value>
@@ -564,7 +562,7 @@
 			</attributes>
 		</itemtype>
 
-		<itemtype code="ERP_Variant_Product_300" extends="VariantProduct" jaloclass="de.hybris.platform.sap.sapmodel.jalo.ERP_Variant_Product_300"
+		<itemtype code="ERPVariantProduct" extends="VariantProduct" jaloclass="de.hybris.platform.sap.sapmodel.jalo.ERPVariantProduct"
 			autocreate="true" generate="true" metatype="VariantType">
 			<attributes>
 				<attribute type="java.lang.String" qualifier="variantProductID" metatype="VariantAttributeDescriptor">
