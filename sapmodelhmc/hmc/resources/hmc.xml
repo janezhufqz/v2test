@@ -114,8 +114,8 @@
 				<tab name="sapLongText">
 					<section name="sapLongText">
 						<listlayout>
-							<attribute name="sapLongText" editable="false">
-								<textareaeditor expanded="true" rows="5" />
+							<attribute name="sapLongText" editable="false" width="610" >
+								<textareaeditor expanded="true" />
 							</attribute>
 						</listlayout>
 					</section>
