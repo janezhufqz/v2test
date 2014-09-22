@@ -574,12 +574,12 @@
 
 		<itemtype code="ClassificationAttribute" autocreate="false" generate="false">
 			<attributes>
-				<attribute qualifier="sapLongText" type="localized:java.lang.String">
-					<description></description>
+				<attribute qualifier="sapLongTextOriginal" type="localized:java.lang.String">
+					<description>SAP Long Text</description>
 					<persistence type="property" />
 				</attribute>
 				<attribute qualifier="sapLongTextFormatted" type="localized:java.lang.String">
-					<description></description>
+					<description>SAP Long Text Formatted in hybris</description>
 					<persistence type="property" />
 				</attribute>
 			</attributes>

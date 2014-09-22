@@ -111,18 +111,14 @@
 	<type name="ClassificationAttribute" mode="append">
 		<organizer>
 			<editor>
-				<tab name="sapLongText">
-					<section name="sapLongText">
-						<listlayout>
-							<attribute name="sapLongText" editable="false" width="610" >
-								<textareaeditor expanded="true" />
-							</attribute>
-						</listlayout>
-					</section>
-					<section name="sapLongTextFormatted">
+				<tab name="tab.saplongtext">
+					<section name="section.saplongtext">
 						<listlayout>
 							<attribute name="sapLongTextFormatted">
 								<wysiwygeditor />
+							</attribute>
+							<attribute name="sapLongTextOriginal" editable="false" width="613">
+								<textareaeditor expanded="true" />
 							</attribute>
 						</listlayout>
 					</section>
