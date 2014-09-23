@@ -200,6 +200,16 @@
 					<modifiers initial="true" read="true" write="true" optional="true" />
 					<persistence type="property" />
 				</attribute>
+				<attribute qualifier="sapAddressUsage" type="java.lang.String">
+					<description>SAP address usage</description>
+					<modifiers initial="true" read="true" write="true" optional="true" />
+					<persistence type="property" />
+				</attribute>
+				<attribute qualifier="sapAddressUsageCounter" type="java.lang.String">
+					<description>SAP address usage counter</description>
+					<modifiers initial="true" read="true" write="true" optional="true" />
+					<persistence type="property" />
+				</attribute>				
 			</attributes>
 		</itemtype>
 
