@@ -114,10 +114,10 @@
 				<tab name="tab.saplongtext">
 					<section name="section.saplongtext">
 						<listlayout>
-							<attribute name="sapLongTextFormatted">
+							<attribute name="description">
 								<wysiwygeditor />
 							</attribute>
-							<attribute name="sapLongTextOriginal" editable="false" width="613">
+							<attribute name="sapERPCharacteristicLongText" editable="false" width="613">
 								<textareaeditor expanded="true" />
 							</attribute>
 						</listlayout>
