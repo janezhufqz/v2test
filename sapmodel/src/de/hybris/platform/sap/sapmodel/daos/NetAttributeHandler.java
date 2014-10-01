@@ -16,7 +16,7 @@ public class NetAttributeHandler implements DynamicAttributeHandler<Boolean, SAP
 			.getLogger(NetAttributeHandler.class);
 
 	@Autowired
-	protected FlexibleSearchService flexibleSearchService;	
+	protected FlexibleSearchService flexibleSearchService;	//NOPMD
 	
 	@Override
 	public Boolean get(SAPPricingSalesAreaToCatalogModel model)

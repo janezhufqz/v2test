@@ -40,7 +40,7 @@ public class BaseStoreAttributesTest extends HybrisJUnit4TransactionalTest
 	@Test
 	public void testPresenceOfDCattributeInAPI()
 	{
-		final BaseStoreModel basestore = new BaseStoreModel();
+		final BaseStoreModel basestore = new BaseStoreModel(); //NOPMD
 		//		basestore.setDistributionChannel("01");
 		//		assertTrue("01".equals(basestore.getDistributionChannel()));
 		//		//assertTrue(product.getBlocked().booleanValue());
