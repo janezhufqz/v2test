@@ -16,7 +16,9 @@ package sap.hybris.integration.models.services.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 
  
+
 import de.hybris.platform.sap.core.configuration.model.SAPConfigurationModel;
+import de.hybris.platform.sap.sapmodel.exceptions.SAPModelRuntimeException;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 import de.hybris.platform.store.BaseStoreModel;
 import de.hybris.platform.store.services.BaseStoreService;
@@ -36,7 +38,7 @@ public class DefaultSalesAreaService implements SalesAreaService{
 	 * Accessing the tables for common channels and divisions
 	 */
 	@Autowired
-	protected FlexibleSearchService flexibleSearchService;	
+	protected FlexibleSearchService flexibleSearchService;	//NOPMD
 
 	@Override
 	public String getSalesOrganization() {
@@ -47,11 +49,11 @@ public class DefaultSalesAreaService implements SalesAreaService{
 	private SAPConfigurationModel getCurrentSAPConfiguration() {
 	BaseStoreModel baseStore = baseStoreService.getCurrentBaseStore();
 	if (baseStore == null){
-		throw new RuntimeException("No base store available");
+		throw new SAPModelRuntimeException("No base store available");
 	}
 		SAPConfigurationModel sapConfiguration = baseStore.getSAPConfiguration();
 		if (sapConfiguration == null){
-			throw new RuntimeException("No SAP configuration available");			
+			throw new SAPModelRuntimeException("No SAP configuration available");			
 		}
 		return sapConfiguration;
 	}
@@ -156,7 +158,7 @@ public class DefaultSalesAreaService implements SalesAreaService{
 		final ReferenceDistributionChannelMappingModel referenceDistributionChannel = flexibleSearchService
 				.getModelByExample(example);
 		if (referenceDistributionChannel == null){
-			throw new RuntimeException("No distribution channel mapping found");
+			throw new SAPModelRuntimeException("No distribution channel mapping found");
 		}
 		return referenceDistributionChannel;
 	}
@@ -208,7 +210,7 @@ public class DefaultSalesAreaService implements SalesAreaService{
 		final ReferenceDivisionMappingModel referenceDivision = flexibleSearchService
 				.getModelByExample(example);
 		if (referenceDivision == null){
-			throw new RuntimeException("No distribution channel mapping found");
+			throw new SAPModelRuntimeException("No distribution channel mapping found");
 		}
 		
 		return referenceDivision;
