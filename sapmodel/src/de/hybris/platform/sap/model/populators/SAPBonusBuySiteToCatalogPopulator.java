@@ -34,6 +34,11 @@ public class SAPBonusBuySiteToCatalogPopulator implements Populator<SAPBonusBuyS
 	public void populate(final SAPBonusBuySiteToCatalogModel source, final Map<String, Object> target) throws ConversionException
 	{
 		CatalogVersionModel catalogVersion = source.getCatalogVersion();
+		if (catalogVersion == null)
+		{
+			LOGGER.error("Bonus Buy Transfer: Catalog Version is not maintained");
+			return;
+		}
 		String version = catalogVersion.getVersion();
 		String catalogId = catalogVersion.getCatalog().getId();
 		
