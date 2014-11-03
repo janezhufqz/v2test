@@ -15,7 +15,6 @@
 	</bean>
 
 	<bean id="discountTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-
 		<property name="itemCode" value="Discount" />
 		<property name="rawType" value="RawHybrisDiscount" />
 		<property name="converter" ref="discountDataHubTransferConfigurationConverter" />
@@ -30,8 +29,6 @@
 			</list>
 		</property>
 	</bean>
-
-
 
 	<alias name="sapDefaultDeliveryModeMappingPopulator" alias="sapDeliveryModeMappingPopulator" />
 	<bean id="sapDefaultDeliveryModeMappingPopulator" class="de.hybris.platform.sap.model.populators.DefaultDeliveryModeMappingPopulator"
@@ -49,7 +46,6 @@
 	</bean>
 
 	<bean id="sapDeliveryModeMappingTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-
 		<property name="itemCode" value="SapDeliveryMode" />
 		<property name="rawType" value="RawHybrisDeliveryModeMapping" />
 		<property name="converter" ref="sapDeliveryModeMappingDataHubConverter" />
@@ -80,13 +76,11 @@
 		<property name="sapUnitDao" ref="sapUnitDao" />
 	</bean>
 
-
 	<alias alias="sapNetAttributeHandler" name="sapDefaultNetAttributeHandler" />
 	<bean id="sapDefaultNetAttributeHandler" class="de.hybris.platform.sap.sapmodel.daos.NetAttributeHandler">
 	</bean>
 
 	<bean id="sapPricingSalesAreaTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-
 		<property name="itemCode" value="SAPPricingSalesAreaToCatalog" />
 		<property name="rawType" value="RawPricingSalesAreaMapping" />
 		<property name="converter" ref="sapPricingSalesAreaDataHubTransferConfigurationConverter" />
@@ -104,7 +98,6 @@
 	</bean>
 
 	<bean id="sapBonusBuySiteTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-
 		<property name="itemCode" value="SAPBonusBuySiteToCatalog" />
 		<property name="rawType" value="RawBonusBuySite" />
 		<property name="converter" ref="sapBonusBuySiteDataHubTransferConfigurationConverter" />
@@ -129,7 +122,6 @@
 
  	<!-- product --> 
 	<bean id="unitsTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-
 		<property name="itemCode" value="Unit" />
 		<property name="rawType" value="RawHybrisUnit" />
 		<property name="converter" ref="unitDataHubTransferConfigurationConverter" />

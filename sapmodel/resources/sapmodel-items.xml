@@ -518,6 +518,11 @@
 					<persistence type="property" />
 					<description>Catalog Version</description>
 				</attribute>
+				<attribute type="Country" qualifier="taxClassCountry">
+					<modifiers unique="false" search="true" />
+					<persistence type="property" />
+					<description>Tax Class Country</description>
+				</attribute>				
 			</attributes>
 		</itemtype>
 
