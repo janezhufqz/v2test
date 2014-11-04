@@ -63,6 +63,7 @@
 		<property name="populators">
 			<list>
 				<ref bean="sapCoreGenericModel2MapPopulator" />
+				<ref bean="sapProductCatalogMappingPopulator" />
 			</list>
 		</property>
 	</bean>
@@ -121,6 +122,9 @@
 	<bean id="defaultSapBonusBuySiteToCatalogPopulator" class="de.hybris.platform.sap.model.populators.SAPBonusBuySiteToCatalogPopulator" />
 
  	<!-- product --> 
+ 	<alias name="defaultSapProductCatalogMappingPopulator" alias="sapProductCatalogMappingPopulator" />
+	<bean id="defaultSapProductCatalogMappingPopulator" class="de.hybris.platform.sap.model.populators.SAPProductCatalogMappingPopulator" />
+	
 	<bean id="unitsTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
 		<property name="itemCode" value="Unit" />
 		<property name="rawType" value="RawHybrisUnit" />

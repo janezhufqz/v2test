@@ -500,7 +500,8 @@
 			</attributes>
 		</itemtype>
 
-		<itemtype code="SAPProductSalesAreaToCatalogMapping" extends="GenericItem" autocreate="true" generate="true">
+		<itemtype code="SAPProductSalesAreaToCatalogMapping" extends="GenericItem" autocreate="true" generate="true"
+			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPProductSalesAreaToCatalogMapping">
 			<deployment table="SAPProductSales2Catalog" typecode="9313" />
 			<attributes>
 				<attribute type="java.lang.String" qualifier="salesOrganization">
