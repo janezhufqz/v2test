@@ -632,6 +632,35 @@
 				</attribute>
 			</attributes>
 		</itemtype>
-
+		
+		<itemtype code="SAPProductIDDataConversion" autocreate="true" generate="true">
+			<attributes>
+				<attribute qualifier="conversionID" type="java.lang.String">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Conversion ID</description>
+				</attribute>
+				<attribute qualifier="matnrLength" type="java.lang.Integer">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Length of the material number</description>
+				</attribute>
+				<attribute qualifier="displayLeadingZeros" type="java.lang.Boolean">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Indicator: Display material number with leading zeros</description>
+				</attribute>
+				<attribute qualifier="displayLexicographic" type="java.lang.Boolean">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Indicator for lexicographical material numbers</description>
+				</attribute>
+				<attribute qualifier="mask" type="java.lang.String">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Template for material number conversion</description>
+				</attribute>
+			</attributes>
+		</itemtype>
 	</itemtypes>
 </items>
