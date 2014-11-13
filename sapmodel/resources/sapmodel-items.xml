@@ -190,6 +190,11 @@
 					<modifiers read="true" write="true" search="false" optional="true" />
 					<persistence type="property" />
 				</attribute>
+				<attribute qualifier="sapProductID" type="java.lang.String">
+					<description>Product ID after conversion</description>
+					<modifiers read="true" write="false" search="false" />
+					<persistence type="dynamic" attributeHandler="sapProductIDAttributeHandler" />
+				</attribute>
 			</attributes>
 		</itemtype>
 

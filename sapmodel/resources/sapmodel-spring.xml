@@ -140,5 +140,8 @@
 			</list>
 		</property>
 	</bean>
-
+	
+	<alias alias="sapProductIDAttributeHandler" name="sapDefaultProductIDAttributeHandler" />
+	<bean id="sapDefaultProductIDAttributeHandler" class="de.hybris.platform.sap.sapmodel.daos.ProductIDAttributeHandler">
+	</bean>
 </beans>
