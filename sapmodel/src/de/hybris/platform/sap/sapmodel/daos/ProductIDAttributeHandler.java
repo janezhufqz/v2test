@@ -44,7 +44,8 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 
 		final int size = productID.length();
 		final int maxLength = customizing.getMatnrLength();
-		final String mask = customizing.getMask();
+		String mask = customizing.getMask();
+		mask = mask != null ? mask : "";
 
 		final Set<Character> symbols = new HashSet<Character>();
 		for (int i = 0; i < mask.length(); i++)
