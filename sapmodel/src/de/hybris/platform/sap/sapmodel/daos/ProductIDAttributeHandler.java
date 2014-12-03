@@ -92,7 +92,7 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 
 			String workProductID = productID;
 			workProductID = workProductID.substring(0, Math.min(workProductID.length(), 18));
-			workProductID = isNumeric ? workProductID.substring(Math.max(leadZeroCount, nonMarkCount)) : workProductID;
+			workProductID = isNumeric && !customizing.getDisplayLeadingZeros() ? workProductID.substring(Math.max(leadZeroCount, nonMarkCount)) : workProductID;
 			if (leadZeroCount < nonMarkCount)
 			{
 				isNumeric = false;
