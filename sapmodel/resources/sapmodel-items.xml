@@ -82,7 +82,24 @@
 				collectiontype="set" ordered="false">
 				<modifiers read="true" write="true" search="true" optional="true" />
 			</targetElement>
+		</relation>		
+		
+		<relation code="SapProductPlantRelation" localized="false" generate="true"
+			autocreate="true">
+			<sourceElement type="Product" qualifier="Product"
+				cardinality="many">
+				<modifiers read="false" write="false" search="false"
+					optional="false" />
+			</sourceElement>
+			<targetElement type="Warehouse" cardinality="one"
+				qualifier="sapPlant">
+				<description>Sap Plant mapped to hybris warehouse</description>
+				<modifiers read="true" write="true" search="true" />
+			</targetElement>
 		</relation>
+		
+		
+		
 
 	</relations>
 
