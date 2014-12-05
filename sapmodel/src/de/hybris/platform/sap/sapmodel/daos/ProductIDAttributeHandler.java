@@ -1,11 +1,14 @@
 package de.hybris.platform.sap.sapmodel.daos;
 
 import de.hybris.platform.core.model.product.ProductModel;
+import de.hybris.platform.servicelayer.exceptions.ModelNotFoundException;
 import de.hybris.platform.servicelayer.model.attribute.DynamicAttributeHandler;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,6 +20,8 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 {
 	protected SAPProductIDDataConversionModel customizing;
 
+	protected static final Logger LOGGER = Logger.getLogger(ProductIDAttributeHandler.class.getName());
+
 	@Autowired
 	protected FlexibleSearchService flexibleSearchService; //NOPMD
 
@@ -26,7 +31,15 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 		{
 			final SAPProductIDDataConversionModel data = new SAPProductIDDataConversionModel();
 			data.setConversionID("MATCONV");
-			customizing = flexibleSearchService.getModelByExample(data);
+			try
+			{
+				customizing = flexibleSearchService.getModelByExample(data);
+			}
+			catch (final ModelNotFoundException e)
+			{
+				LOGGER.logp(Level.WARNING, ProductIDAttributeHandler.class.getName(), "convertID",
+						"Missing SAPProductIDDataConversion customizing, using default value", e);
+			}
 
 			if (customizing == null)
 			{
@@ -92,7 +105,8 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 
 			String workProductID = productID;
 			workProductID = workProductID.substring(0, Math.min(workProductID.length(), 18));
-			workProductID = isNumeric && !customizing.getDisplayLeadingZeros() ? workProductID.substring(Math.max(leadZeroCount, nonMarkCount)) : workProductID;
+			workProductID = isNumeric && !customizing.getDisplayLeadingZeros() ? workProductID.substring(Math.max(leadZeroCount,
+					nonMarkCount)) : workProductID;
 			if (leadZeroCount < nonMarkCount)
 			{
 				isNumeric = false;
