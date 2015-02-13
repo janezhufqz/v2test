@@ -1,7 +1,7 @@
 {
-    "_comment" : "Do not modify this file if you don't know what you do! PLEASE!!!! ",
-    "bdid" : 142,
-    "area" : "ecp",
-    "bdscan" : true,
-    "bdscan-contact" : "jason.lam@sap.com"
- } 
+	"_comment" : "Do not modify this file if you don't know what you do! PLEASE!!!! ",
+	"bdid" : 142,
+	"area" : "ecp",
+	"bdscan" : true,
+	"bdscan-contact" : "jason.lam@sap.com"
+}
