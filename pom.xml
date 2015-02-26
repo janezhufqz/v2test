@@ -22,33 +22,28 @@
 				<artifactId>basecommerce-module</artifactId>
 				<groupId>de.hybris.platform</groupId>
 				<type>zip</type>
-				<version>5.5.0.0-RC2</version>
+				<version>5.5.1.0-M4</version>
 			</dependency>
 			<dependency>
 				<artifactId>platform-module</artifactId>
 				<groupId>de.hybris.platform</groupId>
 				<type>zip</type>
-				<version>5.5.0.0-RC3</version>
+				<version>5.5.1.0-M7</version>
 			</dependency>
 			<dependency>
 				<artifactId>platform-optional-module</artifactId>
 				<groupId>de.hybris.platform</groupId>
 				<type>zip</type>
-				<version>5.5.0.0-RC1</version>
+				<version>5.5.1.0-M4</version>
 			</dependency>
 			<dependency>
 				<groupId>de.hybris.platform</groupId>
 				<artifactId>coreaccelerator-module</artifactId>
-				<version>5.5.0.0-RC1</version>
+				<version>5.5.1.0-M2</version>
 				<type>zip</type>
 
 			</dependency>
-			<dependency>
-				<groupId>de.hybris.platform</groupId>
-				<artifactId>mdm-datahub-module</artifactId>
-				<version>5.5.0.0-RC1</version>
-				<type>zip</type>
-			</dependency>
+			
 			<dependency>
 				<groupId>de.hybris.platform</groupId>
 				<artifactId>sap-frwcore-module</artifactId>
@@ -87,6 +82,7 @@
 
 		<hybris.local.ext.sapmodel.package>ext-integration/sap/core</hybris.local.ext.sapmodel.package>
 		<hybris.local.ext.sapmodelhmc.package>ext-integration/sap/core</hybris.local.ext.sapmodelhmc.package>
+		<hybris.local.build.target>1.8</hybris.local.build.target>
 		
 		<dist.finaldevzipname>${project.build.directory}/distribution-dev.zip</dist.finaldevzipname>
 		<dist.create.en.langpack>true</dist.create.en.langpack>
@@ -146,6 +142,13 @@
 					</execution>
 				</executions>
 			</plugin>
+				<plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
 		</plugins>
 	</build>
 </project>
