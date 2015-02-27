@@ -82,7 +82,7 @@
 
 		<hybris.local.ext.sapmodel.package>ext-integration/sap/core</hybris.local.ext.sapmodel.package>
 		<hybris.local.ext.sapmodelhmc.package>ext-integration/sap/core</hybris.local.ext.sapmodelhmc.package>
-		<hybris.local.build.target>1.8</hybris.local.build.target>
+		<hybris.local.build.target>1.7</hybris.local.build.target>
 		
 		<dist.finaldevzipname>${project.build.directory}/distribution-dev.zip</dist.finaldevzipname>
 		<dist.create.en.langpack>true</dist.create.en.langpack>
@@ -142,13 +142,7 @@
 					</execution>
 				</executions>
 			</plugin>
-				<plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
+				
 		</plugins>
 	</build>
 </project>
