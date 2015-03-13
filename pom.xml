@@ -22,24 +22,24 @@
 				<artifactId>basecommerce-module</artifactId>
 				<groupId>de.hybris.platform</groupId>
 				<type>zip</type>
-				<version>5.5.1.0-M4</version>
+				<version>5.5.1.0-RC2</version>
 			</dependency>
 			<dependency>
 				<artifactId>platform-module</artifactId>
 				<groupId>de.hybris.platform</groupId>
 				<type>zip</type>
-				<version>5.5.1.0-M7</version>
+				<version>5.5.1.0-RC7</version>
 			</dependency>
 			<dependency>
 				<artifactId>platform-optional-module</artifactId>
 				<groupId>de.hybris.platform</groupId>
 				<type>zip</type>
-				<version>5.5.1.0-M4</version>
+				<version>5.5.1.0-RC3</version>
 			</dependency>
 			<dependency>
 				<groupId>de.hybris.platform</groupId>
 				<artifactId>coreaccelerator-module</artifactId>
-				<version>5.5.1.0-M2</version>
+				<version>5.5.1.0-RC5</version>
 				<type>zip</type>
 
 			</dependency>
