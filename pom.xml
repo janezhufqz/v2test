@@ -28,7 +28,7 @@
 				<artifactId>platform-module</artifactId>
 				<groupId>de.hybris.platform</groupId>
 				<type>zip</type>
-				<version>5.5.1.0-RC7</version>
+				<version>5.5.1.0-RC8</version>
 			</dependency>
 			<dependency>
 				<artifactId>platform-optional-module</artifactId>
