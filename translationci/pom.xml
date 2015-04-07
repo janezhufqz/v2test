@@ -5,14 +5,13 @@
 	<artifactId>sap-model-module</artifactId>
 	<name>SAP Model</name>
 	<packaging>jar</packaging>
-	<version>5.6.0.0</version>
 	<url>https://projectportal.wdf.sap.corp/projects/sap.hybris.integration.sapmodel</url>
 	
 	<parent>
 		<groupId>com.sap.hybris</groupId>
-		<artifactId>sap-hybris-parent-pom</artifactId>
-		<version>${project.version}</version>
-		<relativePath>/</relativePath>
+		<artifactId>sap-parent-pom</artifactId>
+		<version>5.6.0.0-SNAPSHOT</version>
+		<relativePath>/sap-parent-pom.xml</relativePath>
 	</parent>
 	
 	<build>
@@ -26,8 +25,8 @@
 						<translationCollection>de.hybris.platform.sapmodel</translationCollection>
 						<translationDeveloper>I816040</translationDeveloper>
 						<translationResources>
-							<translationResource>sapmodel\resources\localization</translationResource>
-							<translationResource>sapmodelhmc\hmc\resources\localization</translationResource>
+							<translationResource>sapmodel/resources/localization</translationResource>
+							<translationResource>sapmodelhmc/hmc/resources/localization</translationResource>
 						</translationResources>
 					</configuration>
 				</plugin>
