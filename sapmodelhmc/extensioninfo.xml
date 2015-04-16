@@ -23,7 +23,7 @@
 
       <hmcmodule extensionclassname="de.hybris.platform.sapmodelhmc.SapmodelHMCExtension"/>
 					
-	  <meta key="backoffice-module" value="true"/>
+	 
 	
 
    </extension>

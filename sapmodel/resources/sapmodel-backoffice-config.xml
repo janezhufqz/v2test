@@ -71,6 +71,30 @@
             </editorArea:tab>
         </editorArea:editorArea>
     </context>
+    <context merge-by="module" type="SAPProductSalesAreaToCatalogMapping" component="referenceListViewCatalogMapping">
+        <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+            <list-view:column qualifier="salesOrganization"/>
+            <list-view:column qualifier="distributionChannel"/>
+            <list-view:column qualifier="catalogVersion"/>
+            <list-view:column qualifier="taxClassCountry"/>
+        </list-view:list-view>
+    </context>
+    
+    <context merge-by="module" type="SAPGlobalConfiguration" component="editor-area">
+        <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+            <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.sapproduct">
+                <section name="hmc.section.sapproduct">
+                    <attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapProductSalesAreaToCatalogMapping">
+                    	<editorArea:editor-parameter>
+			                <editorArea:name>listConfigContext</editorArea:name>
+			                <editorArea:value>referenceListViewCatalogMapping</editorArea:value>
+			            </editorArea:editor-parameter>
+                    </attribute>
+                </section>
+            </editorArea:tab>
+        </editorArea:editorArea>
+    </context>
+ 
     <context merge-by="type" parent="GenericItem" type="ClassificationAttribute" component="editor-area">
         <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
             <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.saplongtext">
