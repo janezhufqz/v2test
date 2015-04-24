@@ -23,6 +23,7 @@
 
       <hmcmodule extensionclassname="de.hybris.platform.sapmodelhmc.SapmodelHMCExtension"/>
 					
+	 
 	
 
    </extension>

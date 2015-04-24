@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config xmlns="http://www.hybris.com/cockpit/config">
+    <context merge-by="module" parent="auto" component="explorer-tree">
+        <explorer-tree:explorer-tree xmlns:explorer-tree="http://www.hybris.com/cockpitng/config/explorertree"/>
+    </context>
+    
+     <context merge-by="type" type="SAPProductSalesAreaToCatalogMapping" component="referenceListViewCatalogMapping">
+        <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+            <list-view:column qualifier="salesOrganization"/>
+            <list-view:column qualifier="distributionChannel"/>
+            <list-view:column qualifier="catalogVersion"/>
+            <list-view:column qualifier="taxClassCountry"/>
+        </list-view:list-view>
+    </context>
+   
+    <context merge-by="module" parent="auto" type="SAPGlobalConfiguration" component="editor-area">
+        <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+            <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.backendconnectivity">
+                <section name="hmc.section.idoctransfer">
+                    <attribute qualifier="sapcommon_erpLogicalSystem"/>
+                    <attribute qualifier="sapcommon_erpHttpDestination"/>
+                </section>
+            </editorArea:tab>
+            <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.customerreplication">
+                <section name="hmc.section.replicationofconsumer">
+                    <attribute qualifier="replicateregistereduser"/>
+                </section>
+            </editorArea:tab>
+            <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.datahubmappings_pricing">
+                <section name="hmc.section.datahubmappings_pricing">
+                    <attribute qualifier="sapcommon_sapPricingSalesArea"/>
+                </section>
+                <section name="hmc.section.sapbonusbuysite">
+                    <attribute qualifier="sapcommon_sapSiteToCatalog"/>
+                </section>
+            </editorArea:tab>  
+             <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.sapproduct">
+                <section name="hmc.section.sapproduct">
+                    <attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapProductSalesAreaToCatalogMapping">
+                    	<editorArea:editor-parameter>
+			                <editorArea:name>listConfigContext</editorArea:name>
+			                <editorArea:value>referenceListViewCatalogMapping</editorArea:value>
+			            </editorArea:editor-parameter>
+                    </attribute>
+                </section>
+            </editorArea:tab>         
+        </editorArea:editorArea>
+    </context>
+  
+     <context merge-by="type" type="SAPDeliveryMode" component="referenceListViewDeliveryModes">
+        <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+            <list-view:column qualifier="deliveryMode"/>
+            <list-view:column qualifier="deliveryValue"/>
+        </list-view:list-view>
+    </context>
+    
+    <context merge-by="type" type="SAPPaymentMode" component="referenceListViewPaymentModes">
+        <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+            <list-view:column qualifier="paymentMode"/>
+            <list-view:column qualifier="paymentValue"/>
+        </list-view:list-view>
+    </context>
+    <context merge-by="module" parent="auto" type="SAPConfiguration" component="editor-area">
+        <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+            <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.sapcommon" position="1">
+                <editorArea:section name="hmc.section.sapcommon">
+      			<editorArea:panel>
+                    <editorArea:attribute qualifier="sapcommon_transactionType"/>
+                    <editorArea:attribute qualifier="sapcommon_referenceCustomer"/>
+                    <editorArea:attribute qualifier="sapcommon_salesOrganization"/>
+                    <editorArea:attribute qualifier="sapcommon_distributionChannel"/>
+                    <editorArea:attribute qualifier="sapcommon_division"/>
+                 </editorArea:panel>
+                </editorArea:section>
+                <section name="hmc.section.sapdelivery">
+                 <editorArea:attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapDeliveryModes">
+	                	<editorArea:editor-parameter>
+			                <editorArea:name>listConfigContext</editorArea:name>
+			                <editorArea:value>referenceListViewDeliveryModes</editorArea:value>
+			            </editorArea:editor-parameter>
+		            </editorArea:attribute>
+                </section>
+                <section name="hmc.section.sappayment">
+                	<editorArea:attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapPaymentModes">
+	                	<editorArea:editor-parameter>
+			                <editorArea:name>listConfigContext</editorArea:name>
+			                <editorArea:value>referenceListViewPaymentModes</editorArea:value>
+			            </editorArea:editor-parameter>
+		            </editorArea:attribute>
+                </section>
+            </editorArea:tab>
+        </editorArea:editorArea>
+    </context>
+   
+    <context merge-by="type" parent="GenericItem" type="ClassificationAttribute" component="editor-area">
+        <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+            <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.saplongtext">
+                <section name="hmc.section.saplongtext">
+                    <attribute qualifier="description"/>
+                    <attribute qualifier="sapERPCharacteristicLongText"/>
+                </section>
+            </editorArea:tab>
+        </editorArea:editorArea>
+    </context>
+</config>

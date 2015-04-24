@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<testclasses>
-  <sapmodelhmc>
-    <testclass>de.hybris.platform.sapmodelhmc.jalo.SapmodelhmcTest</testclass>
-  </sapmodelhmc>
-</testclasses>
+<?xml version="1.0" encoding="utf-8"?><testclasses><sapmodelhmc><testclass>de.hybris.platform.sapmodelhmc.jalo.SapmodelhmcTest</testclass></sapmodelhmc></testclasses>
