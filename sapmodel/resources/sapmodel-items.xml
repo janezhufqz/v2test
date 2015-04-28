@@ -263,6 +263,7 @@
 
 		<itemtype code="ReferenceDistributionChannelMapping" generate="true" autocreate="true">
 			<description>Distribution Channel per Sales Organization - Assign Master Data. Filled from ERP view V_TVKOV_ST</description>
+			<deployment table="RefDistChMapping" typecode="9317" />
 			<attributes>
 				<attribute autocreate="true" qualifier="salesOrganization" type="java.lang.String">
 					<description>Sales Organization</description>
@@ -305,6 +306,7 @@
 
 		<itemtype code="ReferenceDivisionMapping" generate="true" autocreate="true">
 			<description>Divisions per Sales Organization - Assign Master Data. Filled from ERP view V_TVKOS_ST</description>
+			<deployment table="RefDivMapping" typecode="9318" />
 			<attributes>
 				<attribute autocreate="true" qualifier="salesOrganization" type="java.lang.String">
 					<description>Sales Organization</description>
@@ -651,6 +653,7 @@
 		</itemtype>
 		
 		<itemtype code="SAPProductIDDataConversion" autocreate="true" generate="true">
+		<deployment table="SAPProdIDDConv" typecode="9319" />
 			<attributes>
 				<attribute qualifier="conversionID" type="java.lang.String">
 					<modifiers unique="true" />
