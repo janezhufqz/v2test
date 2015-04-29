@@ -49,7 +49,7 @@
 		</dependency>
 	</dependencies>
 	<properties>
-	 <project.version>5.6.0.0-SNAPSHOT</project.version>
+	
 		<contained.extensions>sapmodel,sapmodelhmc</contained.extensions>
 		<platform.extensions>${contained.extensions}</platform.extensions>
 		<testclasses.extensions>${contained.extensions}</testclasses.extensions>
