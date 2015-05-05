@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <config xmlns="http://www.hybris.com/cockpit/config">
-    <context merge-by="module" parent="auto" component="explorer-tree">
-        <explorer-tree:explorer-tree xmlns:explorer-tree="http://www.hybris.com/cockpitng/config/explorertree"/>
-    </context>
-    
-     <context merge-by="type" type="SAPProductSalesAreaToCatalogMapping" component="referenceListViewCatalogMapping">
+        
+    <context merge-by="type" type="SAPProductSalesAreaToCatalogMapping" component="referenceListViewCatalogMapping">
         <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
             <list-view:column qualifier="salesOrganization"/>
             <list-view:column qualifier="distributionChannel"/>
             <list-view:column qualifier="catalogVersion"/>
             <list-view:column qualifier="taxClassCountry"/>
+        </list-view:list-view>
+    </context>
+    
+    <context merge-by="type" type="SAPPricingSalesAreaToCatalog" component="referenceListViewPricingMapping">
+        <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+            <list-view:column qualifier="salesOrganization"/>
+            <list-view:column qualifier="distributionChannel"/>
+            <list-view:column qualifier="catalogVersion"/>
+            <list-view:column qualifier="sapNetAttributeHandler"/>
+            
+        </list-view:list-view>
+    </context>
+
+    <context merge-by="type" type="SAPPricingSalesAreaToCatalog" component="referenceListViewBonusMapping">
+        <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+            <list-view:column qualifier="site"/>
+            <list-view:column qualifier="catalogVersion"/>
+            <list-view:column qualifier="promotionGroup"/>
         </list-view:list-view>
     </context>
    
@@ -28,11 +43,25 @@
             </editorArea:tab>
             <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.datahubmappings_pricing">
                 <section name="hmc.section.datahubmappings_pricing">
-                    <attribute qualifier="sapcommon_sapPricingSalesArea"/>
+                
+                 <attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapcommon_sapPricingSalesArea">
+                    	<editorArea:editor-parameter>
+			                <editorArea:name>listConfigContext</editorArea:name>
+			                <editorArea:value>referenceListViewPricingMapping</editorArea:value>
+			            </editorArea:editor-parameter>
+                    </attribute>               
+                    
                 </section>
                 <section name="hmc.section.sapbonusbuysite">
-                    <attribute qualifier="sapcommon_sapSiteToCatalog"/>
-                </section>
+                
+                
+                 <attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapcommon_sapSiteToCatalog">
+                    	<editorArea:editor-parameter>
+			                <editorArea:name>listConfigContext</editorArea:name>
+			                <editorArea:value>referenceListViewBonusMapping</editorArea:value>
+			            </editorArea:editor-parameter>
+                    </attribute>               
+                    </section>
             </editorArea:tab>  
              <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.sapproduct">
                 <section name="hmc.section.sapproduct">
