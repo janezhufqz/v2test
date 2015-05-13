@@ -15,18 +15,95 @@
             <list-view:column qualifier="salesOrganization"/>
             <list-view:column qualifier="distributionChannel"/>
             <list-view:column qualifier="catalogVersion"/>
-            <list-view:column qualifier="sapNetAttributeHandler"/>
-            
+            <list-view:column qualifier="net"/>
         </list-view:list-view>
     </context>
-
-    <context merge-by="type" type="SAPPricingSalesAreaToCatalog" component="referenceListViewBonusMapping">
+<context merge-by="type" type="SAPPricingSalesAreaToCatalog" component="editor-area">
+	   <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+             <editorArea:tab name="hmc.essential">
+                <editorArea:section name="hmc.essential">
+                    <editorArea:attribute qualifier="salesOrganization"/>
+					<editorArea:attribute qualifier="distributionChannel"/>
+					<editorArea:attribute qualifier="catalogVersion"/>
+					<editorArea:attribute qualifier="net"/>
+              </editorArea:section>
+              </editorArea:tab>
+        </editorArea:editorArea>
+	</context>
+	
+	<context merge-by="type" parent="GenericItem" type="SAPPricingSalesAreaToCatalog" component="base">
+        <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+            <y:labels>
+                <y:label>salesOrganization+ ' - ' +distributionChannel+ ' - ' +catalogVersion.catalog.id + ' : ' + catalogVersion.version + ' - ' + net</y:label>
+			</y:labels>
+		</y:base>
+    </context>
+    
+    <context merge-by="type" type="SAPBonusBuySiteToCatalog" component="editor-area">
+	   <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+            <editorArea:tab name="hmc.essential">
+                <editorArea:section name="hmc.essential">
+                    <editorArea:attribute qualifier="site"/>
+					<editorArea:attribute qualifier="catalogVersion"/>
+					<editorArea:attribute qualifier="promotionGroup"/>
+              </editorArea:section>
+              </editorArea:tab>   
+        </editorArea:editorArea>
+	</context>
+	
+	<context merge-by="type" parent="GenericItem" type="SAPBonusBuySiteToCatalog" component="base">
+        <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+            <y:labels>
+                <y:label>site+ ' - ' + catalogVersion.catalog.id + ' : ' + catalogVersion.version+ ' - ' +promotionGroup.Identifier</y:label>
+			</y:labels>
+		</y:base>
+    </context>
+    
+    <context merge-by="type" type="SAPBonusBuySiteToCatalog" component="referenceListViewBonusMapping">
         <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
             <list-view:column qualifier="site"/>
             <list-view:column qualifier="catalogVersion"/>
             <list-view:column qualifier="promotionGroup"/>
         </list-view:list-view>
     </context>
+   
+   <context merge-by="type" type="SAPProductSalesAreaToCatalogMapping" component="editor-area">
+	   <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+             <editorArea:tab name="hmc.essential">
+                <editorArea:section name="hmc.essential">
+                    <editorArea:attribute qualifier="salesOrganization"/>
+					<editorArea:attribute qualifier="distributionChannel"/>
+					<editorArea:attribute qualifier="catalogVersion"/>
+					<editorArea:attribute qualifier="taxClassCountry"/>
+              </editorArea:section>
+              </editorArea:tab>
+        </editorArea:editorArea>
+	</context>
+	
+	<context merge-by="type" parent="GenericItem" type="SAPProductSalesAreaToCatalogMapping" component="base">
+        <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+            <y:labels>
+                <y:label>salesOrganization+ ' - ' +distributionChannel+ ' - ' +catalogVersion.catalog.id + ' : ' + catalogVersion.version + ' - ' + taxClassCountry</y:label>
+			</y:labels>
+		</y:base>
+    </context>
+	
+	<context merge-by="type" parent="GenericItem" type="PromotionGroup" component="base">
+        <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+            <y:labels>
+                <y:label>Identifier</y:label>
+			</y:labels>
+		</y:base>
+    </context>
+	
+    <context merge-by="type" parent="GenericItem" type="BaseStore" component="base">
+        <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+            <y:labels>
+                <y:label>name</y:label>
+			</y:labels>
+		</y:base>
+    </context>
+   
    
     <context merge-by="module" parent="auto" type="SAPGlobalConfiguration" component="editor-area">
         <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">

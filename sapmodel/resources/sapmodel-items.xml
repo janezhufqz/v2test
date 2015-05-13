@@ -66,21 +66,21 @@
 
 		<relation code="SAPGlobalConfigurationPricingSalesArea" autocreate="true" localized="false">
 			<sourceElement type="SAPGlobalConfiguration" qualifier="sapcommon_sapGlobalConfiguration" cardinality="one">
-				<modifiers read="true" write="true" search="true" optional="false" />
+			
 			</sourceElement>
 			<targetElement type="SAPPricingSalesAreaToCatalog" qualifier="sapcommon_sapPricingSalesArea" cardinality="many"
 				collectiontype="set">
-				<modifiers read="true" write="true" search="true" optional="true" />
+				
 			</targetElement>
 		</relation>
 
 		<relation code="SAPConfigBonusBuySite" autocreate="true" localized="false">
 			<sourceElement type="SAPGlobalConfiguration" qualifier="sapcommon_sapGlobalConfiguration" cardinality="one">
-				<modifiers read="true" write="true" search="true" optional="false" />
+				
 			</sourceElement>
 			<targetElement type="SAPBonusBuySiteToCatalog" qualifier="sapcommon_sapSiteToCatalog" cardinality="many"
 				collectiontype="set" ordered="false">
-				<modifiers read="true" write="true" search="true" optional="true" />
+			
 			</targetElement>
 		</relation>		
 		
@@ -539,7 +539,7 @@
 					<description>Distribution Channel</description>
 				</attribute>
 				<attribute type="CatalogVersion" qualifier="catalogVersion">
-					<modifiers unique="false" search="true" />
+					<modifiers unique="false" search="true" optional="false"/>
 					<persistence type="property" />
 					<description>Catalog Version</description>
 				</attribute>
@@ -566,7 +566,7 @@
 					<description>Distribution Channel</description>
 				</attribute>
 				<attribute type="CatalogVersion" qualifier="catalogVersion">
-					<modifiers unique="false" search="true" />
+					<modifiers unique="false" search="true" optional="false"/>
 					<persistence type="property" />
 					<description>Catalog Version</description>
 				</attribute>
@@ -589,7 +589,7 @@
 					<description>Bonus Buy Site</description>
 				</attribute>
 				<attribute type="CatalogVersion" qualifier="catalogVersion">
-					<modifiers unique="false" search="true" />
+					<modifiers unique="false" search="true" optional="false"/>
 					<persistence type="property" />
 					<description>Catalog Version</description>
 				</attribute>
