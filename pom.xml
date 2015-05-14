@@ -9,65 +9,19 @@
 		<version>1.0.15</version>
 	</parent>
 
-
 	<groupId>de.hybris.platform</groupId>
 	<artifactId>sap-model-module</artifactId>
 	<version>5.5.1.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<!-- Define your hybris dependencies here -->
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<artifactId>basecommerce-module</artifactId>
-				<groupId>de.hybris.platform</groupId>
-				<type>zip</type>
-				<version>5.5.1.0-RC2</version>
-			</dependency>
-			<dependency>
-				<artifactId>platform-module</artifactId>
-				<groupId>de.hybris.platform</groupId>
-				<type>zip</type>
-				<version>5.5.1.0-RC9</version>
-			</dependency>
-			<dependency>
-				<artifactId>platform-optional-module</artifactId>
-				<groupId>de.hybris.platform</groupId>
-				<type>zip</type>
-				<version>5.5.1.0-RC3</version>
-			</dependency>
-			<dependency>
-				<groupId>de.hybris.platform</groupId>
-				<artifactId>coreaccelerator-module</artifactId>
-				<version>5.5.1.0-RC5</version>
-				<type>zip</type>
-
-			</dependency>
-			
-			<dependency>
-				<groupId>de.hybris.platform</groupId>
-				<artifactId>sap-frwcore-module</artifactId>
-				<version>${project.version}</version>
-				<type>zip</type>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<dependencies>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>sap-frwcore-module</artifactId>
+			<version>${project.version}</version>
 			<type>zip</type>
 		</dependency>
-		<!-- <dependency> <artifactId>basecommerce-module</artifactId> <groupId>de.hybris.platform</groupId> 
-			<type>zip</type> </dependency> <dependency> <artifactId>platform-module</artifactId> 
-			<groupId>de.hybris.platform</groupId> <type>zip</type> </dependency> <dependency> 
-			<artifactId>platform-optional-module</artifactId> <groupId>de.hybris.platform</groupId> 
-			<type>zip</type> </dependency> <dependency> <groupId>de.hybris.platform</groupId> 
-			<artifactId>coreaccelerator-module</artifactId> <type>zip</type> </dependency> 
-			<dependency> <groupId>de.hybris.platform</groupId> <artifactId>mdm-datahub-module</artifactId> 
-			<type>zip</type> </dependency> -->
-
 	</dependencies>
 
 	<properties>
@@ -86,9 +40,8 @@
 		
 		<dist.finaldevzipname>${project.build.directory}/distribution-dev.zip</dist.finaldevzipname>
 		<dist.create.en.langpack>true</dist.create.en.langpack>
-
-
 	</properties>
+	
 	<build>
 		<pluginManagement>
 			<plugins>
