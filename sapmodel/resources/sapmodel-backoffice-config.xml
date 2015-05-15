@@ -104,7 +104,22 @@
 		</y:base>
     </context>
    
-   
+   <context merge-by="type" parent="GenericItem" type="SAPDeliveryMode" component="base">
+        <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+            <y:labels>
+                 <y:label>deliveryMode.name+ ' - ' +deliveryValue</y:label>
+			</y:labels>
+		</y:base>
+    </context>
+    
+    <context merge-by="type" parent="GenericItem" type="SAPPaymentMode" component="base">
+        <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+            <y:labels>
+                <y:label>paymentMode.name+ ' - ' +paymentValue</y:label>
+			</y:labels>
+		</y:base>
+    </context>
+    
     <context merge-by="module" parent="auto" type="SAPGlobalConfiguration" component="editor-area">
         <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
             <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.backendconnectivity">
