@@ -19,7 +19,7 @@
 				<artifactId>basecommerce-module</artifactId>
 				<groupId>de.hybris.platform</groupId>
 				<type>zip</type>
-				<version>5.6.0.0-M1</version>
+				<version>5.6.0.0-M2</version>
 			</dependency>
 			<dependency>
 				<artifactId>platform-module</artifactId>
