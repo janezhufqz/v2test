@@ -95,6 +95,14 @@
 			</y:labels>
 		</y:base>
     </context>
+    
+    <context merge-by="type" parent="GenericItem" type="AbstractPromotion" component="base">
+        <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+            <y:labels>
+                <y:label>code</y:label>
+			</y:labels>
+		</y:base>
+    </context>
 	
     <context merge-by="type" parent="GenericItem" type="BaseStore" component="base">
         <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
