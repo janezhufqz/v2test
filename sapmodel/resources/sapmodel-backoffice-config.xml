@@ -193,13 +193,13 @@
         <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
             <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.sapcommon" position="1">
                 <editorArea:section name="hmc.section.sapcommon">
-      			<editorArea:panel>
+      		
                     <editorArea:attribute qualifier="sapcommon_transactionType"/>
                     <editorArea:attribute qualifier="sapcommon_referenceCustomer"/>
                     <editorArea:attribute qualifier="sapcommon_salesOrganization"/>
                     <editorArea:attribute qualifier="sapcommon_distributionChannel"/>
                     <editorArea:attribute qualifier="sapcommon_division"/>
-                 </editorArea:panel>
+              
                 </editorArea:section>
                 <section name="hmc.section.sapdelivery">
                  <editorArea:attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapDeliveryModes">
