@@ -3,8 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          name="pmd-eclipse"
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
-
-
          
 	<exclude-pattern>.*/generated-sources/.*</exclude-pattern>
 	<exclude-pattern>.*/Generated/.*</exclude-pattern>
