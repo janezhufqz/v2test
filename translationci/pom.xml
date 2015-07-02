@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.sap.hybris</groupId>
+	<artifactId>sap-model-module</artifactId>
+	<name>SAP Model</name>
+	<packaging>jar</packaging>
+	<url>https://projectportal.wdf.sap.corp/projects/sap.hybris.integration.sapmodel</url>
+	
+	<parent>
+		<groupId>com.sap.hybris</groupId>
+		<artifactId>sap-parent-pom</artifactId>
+		<version>5.5.0.0-SNAPSHOT</version>
+		<relativePath>/sap-parent-pom.xml</relativePath>
+	</parent>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.sap.ldi</groupId>
+					<artifactId>translation-plugin</artifactId>
+					<version>${translation.plugin.version}</version>
+					<configuration>
+						<translationCollection>de.hybris.platform.sapmodel</translationCollection>
+						<translationDeveloper>I816040</translationDeveloper>
+						<translationResources>
+							<translationResource>sapmodel/resources/localization</translationResource>
+							<translationResource>sapmodelhmc/hmc/resources/localization</translationResource>
+						</translationResources>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
