@@ -25,13 +25,13 @@
 				<artifactId>platform-module</artifactId>
 				<groupId>de.hybris.platform</groupId>
 				<type>zip</type>
-				<version>5.6.0.0-RC10</version>
+				<version>5.7.0.0-M1</version>
 			</dependency>
 			<dependency>
 				<artifactId>platform-optional-module</artifactId>
 				<groupId>de.hybris.platform</groupId>
 				<type>zip</type>
-				<version>5.6.0.0-RC4</version>
+				<version>5.7.0.0-M3</version>
 			</dependency>
 			<dependency>
 				<groupId>de.hybris.platform</groupId>
