@@ -1,3 +1,16 @@
+/*
+ * [y] hybris Platform
+ *
+ * Copyright (c) 2000-2015 hybris AG
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information of hybris
+ * ("Confidential Information"). You shall not disclose such Confidential
+ * Information and shall use it only in accordance with the terms of the
+ * license agreement you entered into with hybris.
+ *
+ *
+ */
 package de.hybris.platform.sap.sapmodel.daos;
 
 
@@ -132,7 +145,7 @@ public class ProductIDAttributeHandlerTest
 		Assert.assertEquals("12345678901234567890", get("012345678901234567890")); // 20 digits
 		Assert.assertEquals("7", get("07")); //  7 less than 18
 		Assert.assertEquals("-00000000000000007", get("-00000000000000007")); // 7 negative
-		Assert.assertEquals("00000000000000000７", get("00000000000000000７")); // 7 unicode full width	
+		Assert.assertEquals("00000000000000000???", get("00000000000000000???")); // 7 unicode full width	
 	}
 
 
@@ -165,7 +178,7 @@ public class ProductIDAttributeHandlerTest
 		Assert.assertEquals("0000000000000000010000000A", get("0000000000000000010000000A")); // 7 more than 18, alpha after
 		Assert.assertEquals("07", get("07")); //  7 less than 18
 		Assert.assertEquals("-00000000000000007", get("-00000000000000007")); //  7 negative
-		Assert.assertEquals("00000000000000000７", get("00000000000000000７")); //  7 unicode full width
+		Assert.assertEquals("00000000000000000???", get("00000000000000000???")); //  7 unicode full width
 	}
 
 	@Test
@@ -189,7 +202,7 @@ public class ProductIDAttributeHandlerTest
 		Assert.assertEquals("", get("00123")); // 5 chars to 0 chars
 		Assert.assertEquals("0000000123", get("000450000000000123")); //18 chars to 10
 		Assert.assertEquals("0000012345", get("100000000000012345")); //18 chars to 17
-		Assert.assertEquals("00045000000000012７", get("00045000000000012７")); //7 unicode full width: read as non numeric
+		Assert.assertEquals("00045000000000012???", get("00045000000000012???")); //7 unicode full width: read as non numeric
 		Assert.assertEquals("char", get("char"));
 		Assert.assertEquals("000char", get("000char"));
 		Assert.assertEquals("charcharcharcharch", get("charcharcharcharch")); //18 stays 18 for char
@@ -208,7 +221,7 @@ public class ProductIDAttributeHandlerTest
 		Assert.assertEquals("", get("")); //initial
 		Assert.assertEquals("00000000000012345", get("100000000000012345")); //18 chars to 17
 		Assert.assertEquals("charcharcharcharch", get("charcharcharcharch")); //18 chars stays 18 for alphanum
-		Assert.assertEquals("00045000000000012７", get("00045000000000012７")); //7 unicode full width: read as non numeric
+		Assert.assertEquals("00045000000000012???", get("00045000000000012???")); //7 unicode full width: read as non numeric
 		Assert.assertEquals("12345678912345678", get("012345678912345678")); //18 chars to 17
 		Assert.assertEquals("00000000000000123", get("000000000000000123")); //18 chars to 17
 		Assert.assertEquals("00450000000000123", get("000450000000000123")); //18 chars to 17
@@ -240,7 +253,7 @@ public class ProductIDAttributeHandlerTest
 		Assert.assertEquals("", get("00123"));
 		Assert.assertEquals("", get("0123"));
 		Assert.assertEquals("00123", get("000450000000000123"));
-		Assert.assertEquals("00045000000000012７", get("00045000000000012７")); // 7 unicode full width
+		Assert.assertEquals("00045000000000012???", get("00045000000000012???")); // 7 unicode full width
 		Assert.assertEquals("char", get("char"));
 		Assert.assertEquals("00char", get("00char"));
 	}
@@ -284,7 +297,7 @@ public class ProductIDAttributeHandlerTest
 		Assert.assertEquals("- #", get("07"));
 		Assert.assertEquals("0-0#00000000000007", get("-00000000000000007"));
 		Assert.assertEquals("+-0#00000000000000", get("+00000000000000007"));
-		Assert.assertEquals("0-0#00000000000000", get("00000000000000000７"));
+		Assert.assertEquals("0-0#00000000000000", get("00000000000000000???"));
 		Assert.assertEquals("c-h#ar", get("char"));
 		Assert.assertEquals("0-c#har", get("0char"));
 		Assert.assertEquals("E-P#HBR03", get("EPHBR03"));
