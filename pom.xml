@@ -15,40 +15,47 @@
 	<packaging>pom</packaging>
 
 	<dependencies>
-			<dependency>
-				<artifactId>basecommerce-module</artifactId>
-				<groupId>de.hybris.platform</groupId>
-				<type>zip</type>
-				<version>5.7.0.0-M2</version>
-			</dependency>
-			<dependency>
-				<artifactId>platform-module</artifactId>
-				<groupId>de.hybris.platform</groupId>
-				<type>zip</type>
-				<version>5.7.0.0-M3</version>
-			</dependency>
-			<dependency>
-				<artifactId>platform-optional-module</artifactId>
-				<groupId>de.hybris.platform</groupId>
-				<type>zip</type>
-				<version>5.7.0.0-M3</version>
-			</dependency>
-			<dependency>
-				<groupId>de.hybris.platform</groupId>
-				<artifactId>coreaccelerator-module</artifactId>
-				<version>5.7.0.0-RC1</version>
-				<type>zip</type>
-			</dependency>
-			<dependency>
-				<groupId>de.hybris.platform</groupId>
-				<artifactId>sap-frwcore-module</artifactId>
-				<version>${project.version}</version>
-				<type>zip</type>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>		
+			<artifactId>basecommerce-module</artifactId>
+			<type>zip</type>
+			<version>5.7.0.0-M2</version>
 		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>		
+			<artifactId>platform-module</artifactId>
+			<type>zip</type>
+			<version>5.7.0.0-M3</version>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>		
+			<artifactId>platform-optional-module</artifactId>
+			<type>zip</type>
+			<version>5.7.0.0-M3</version>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>coreaccelerator-module</artifactId>
+			<version>5.7.0.0-RC1</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>platform-backoffice-module</artifactId>
+			<version>5.7.0.0-M5</version>
+			<type>zip</type>
+		</dependency>		
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>sap-frwcore-module</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>		
 	</dependencies>
-	<properties>
 	
+	<properties>
 		<contained.extensions>sapmodel,sapmodelhmc</contained.extensions>
+		
 		<platform.extensions>${contained.extensions}</platform.extensions>
 		<testclasses.extensions>${contained.extensions}</testclasses.extensions>
 		<codequality.extensions>${contained.extensions}</codequality.extensions>
@@ -60,12 +67,11 @@
 		<hybris.local.ext.sapmodel.package>ext-integration/sap/core</hybris.local.ext.sapmodel.package>
 		<hybris.local.ext.sapmodelhmc.package>ext-integration/sap/core</hybris.local.ext.sapmodelhmc.package>
 		<hybris.local.build.target>1.8</hybris.local.build.target>
-		
+
 		<dist.finaldevzipname>${project.build.directory}/distribution-dev.zip</dist.finaldevzipname>
 		<dist.create.en.langpack>true</dist.create.en.langpack>
-
-
 	</properties>
+	
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -119,7 +125,6 @@
 					</execution>
 				</executions>
 			</plugin>
-				
 		</plugins>
 	</build>
 </project>
