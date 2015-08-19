@@ -15,6 +15,7 @@ package sap.hybris.integration.models.jalo;
 
 import static org.junit.Assert.assertTrue;
 
+import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.testframework.HybrisJUnit4TransactionalTest;
 
@@ -27,6 +28,7 @@ import org.junit.Test;
 /**
  * 
  */
+@UnitTest
 public class BlockedAttributeTest extends HybrisJUnit4TransactionalTest
 {
 	/** Edit the local|project.properties to change logging behaviour (properties log4j.*). */

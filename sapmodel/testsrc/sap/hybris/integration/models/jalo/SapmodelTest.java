@@ -15,6 +15,7 @@ package sap.hybris.integration.models.jalo;
 
 import static org.junit.Assert.assertTrue;
 
+import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.testframework.HybrisJUnit4TransactionalTest;
 
 import org.apache.log4j.Logger;
@@ -26,6 +27,7 @@ import org.junit.Test;
 /**
  * JUnit Tests for the Sapmodel extension
  */
+@UnitTest
 public class SapmodelTest extends HybrisJUnit4TransactionalTest
 {
 	/** Edit the local|project.properties to change logging behaviour (properties log4j.*). */
