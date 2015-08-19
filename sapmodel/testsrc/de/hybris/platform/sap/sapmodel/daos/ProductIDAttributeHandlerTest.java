@@ -15,6 +15,7 @@ package de.hybris.platform.sap.sapmodel.daos;
 
 
 
+import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.core.model.ItemModel;
 import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.servicelayer.search.FlexibleSearchQuery;
@@ -33,7 +34,7 @@ import org.junit.Test;
 
 import sap.hybris.integration.models.model.SAPProductIDDataConversionModel;
 
-
+@UnitTest
 public class ProductIDAttributeHandlerTest
 {
 
