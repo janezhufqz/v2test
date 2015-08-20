@@ -15,7 +15,6 @@ package sap.hybris.integration.models.jalo;
 
 import static org.junit.Assert.assertTrue;
 
-import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.testframework.HybrisJUnit4TransactionalTest;
 
 import org.apache.log4j.Logger;
