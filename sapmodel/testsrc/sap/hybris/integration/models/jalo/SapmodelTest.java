@@ -27,7 +27,6 @@ import org.junit.Test;
 /**
  * JUnit Tests for the Sapmodel extension
  */
-@UnitTest
 public class SapmodelTest extends HybrisJUnit4TransactionalTest
 {
 	/** Edit the local|project.properties to change logging behaviour (properties log4j.*). */

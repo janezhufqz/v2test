@@ -13,7 +13,6 @@
  */
 package sap.hybris.integration.models.jalo;
 
-import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.store.BaseStoreModel;
 import de.hybris.platform.testframework.HybrisJUnit4TransactionalTest;
 
@@ -26,7 +25,6 @@ import org.junit.Test;
 /**
  * 
  */
-
 public class BaseStoreAttributesTest extends HybrisJUnit4TransactionalTest
 {
 	/** Edit the local|project.properties to change logging behaviour (properties log4j.*). */

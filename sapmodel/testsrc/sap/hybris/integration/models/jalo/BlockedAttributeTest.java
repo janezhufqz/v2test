@@ -28,7 +28,6 @@ import org.junit.Test;
 /**
  * 
  */
-@UnitTest
 public class BlockedAttributeTest extends HybrisJUnit4TransactionalTest
 {
 	/** Edit the local|project.properties to change logging behaviour (properties log4j.*). */
