@@ -19,19 +19,19 @@
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>5.7.0.0-M2</version>
+			<version>5.7.0.0-RC5</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>5.7.0.0-M4</version>
+			<version>5.7.0.0-RC4</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-optional-module</artifactId>
 			<type>zip</type>
-			<version>5.7.0.0-M3</version>
+			<version>5.7.0.0-RC1</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
