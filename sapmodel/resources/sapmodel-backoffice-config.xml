@@ -15,7 +15,7 @@
             <list-view:column qualifier="salesOrganization"/>
             <list-view:column qualifier="distributionChannel"/>
             <list-view:column qualifier="catalogVersion"/>
-            <list-view:column qualifier="net"/>
+      
         </list-view:list-view>
     </context>
 <context merge-by="type" type="SAPPricingSalesAreaToCatalog" component="editor-area">
@@ -25,7 +25,7 @@
                     <editorArea:attribute qualifier="salesOrganization"/>
 					<editorArea:attribute qualifier="distributionChannel"/>
 					<editorArea:attribute qualifier="catalogVersion"/>
-					<editorArea:attribute qualifier="net"/>
+		 
               </editorArea:section>
               </editorArea:tab>
         </editorArea:editorArea>
@@ -34,7 +34,7 @@
 	<context merge-by="type" parent="GenericItem" type="SAPPricingSalesAreaToCatalog" component="base">
         <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
             <y:labels>
-                <y:label>salesOrganization+ ' - ' +distributionChannel+ ' - ' +catalogVersion.catalog.id + ' : ' + catalogVersion.version + ' - ' + net</y:label>
+  			<y:label>salesOrganization+ ' - ' +distributionChannel+ ' - ' +catalogVersion.catalog.id + ' : ' + catalogVersion.version</y:label>
 			</y:labels>
 		</y:base>
     </context>
