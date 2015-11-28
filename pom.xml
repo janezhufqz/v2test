@@ -19,13 +19,13 @@
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>5.9.9.9-RC1</version>
+			<version>5.9.9.9-RC2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>5.9.9.9-RC1</version>
+			<version>5.9.9.9-RC2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
