@@ -3,5 +3,7 @@
 	"bdid" : 142,
 	"area" : "ecp",
 	"bdscan" : false,
-	"bdscan-contact" : "jason.lam@sap.com"
+	"bdscan-contact" : "jason.lam@sap.com",
+	"old-repo-url" : "stash.hybris.com/projects/sapintegration/repos/sap.hybris.integration.sapmodel/browse/repo-properties.json",
+    "old-repo-branch" : "master"
 }
