@@ -25,7 +25,7 @@
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.0.0.0-M4</version>
+			<version>6.0.0.0-M6</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>5.9.9.9-RC2</version>
+			<version>6.0.0.0-M2</version>
 			<type>zip</type>
 		</dependency>	
 		<dependency>
