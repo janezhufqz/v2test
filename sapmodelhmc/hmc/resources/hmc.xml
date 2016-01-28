@@ -126,5 +126,18 @@
 			</editor>
 		</organizer>
 	</type>
+	<type name="SAPConfiguration" mode="append">
+		<organizer>
+			<editor>
+				<tab name="tab.b2bcontactreplication">
+					<section name="section.b2bcontactreplication" mode="append">
+						<listlayout>
+							<attribute labelwidth="200" name="replicateregisteredb2buser" width="200"></attribute>
+						</listlayout>
+					</section>
+				</tab>
+			</editor>
+		</organizer>
+	</type>
 
 </configuration>
