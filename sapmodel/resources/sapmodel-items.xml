@@ -118,7 +118,7 @@
 							<value>NCLOB</value>
 						</columntype>
 						<columntype database="mysql">
-							<value>TEXT</value>
+							<value>MEDIUMTEXT</value>
 						</columntype>
 						<columntype>
 							<value>HYBRIS.LONG_STRING</value>

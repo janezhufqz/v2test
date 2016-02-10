@@ -19,24 +19,24 @@
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>6.0.0.0-RC1</version>
+			<version>6.0.0.0-RC2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.0.0.0-M22</version>
+			<version>6.0.0.0-M25</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-optional-module</artifactId>
 			<type>zip</type>
-			<version>6.0.0.0-M4</version>
+			<version>6.0.0.0-M6</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.0.0.0-M9</version>
+			<version>6.0.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>	
 		<dependency>
