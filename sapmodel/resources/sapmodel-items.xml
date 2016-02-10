@@ -194,7 +194,7 @@
 				<attribute qualifier="sapConfigurable" type="java.lang.Boolean">
 					<description>Is the product configurable?</description>
 					<modifiers read="true" write="true" search="true" optional="true" />
-					<defaultvalue>Boolean.FALSE</defaultvalue>
+					<defaultvalue>java.lang.Boolean.FALSE</defaultvalue>
 					<persistence type="property" />
 				</attribute>
 				<attribute qualifier="sapEAN" type="java.lang.String">
