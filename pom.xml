@@ -25,7 +25,7 @@
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.0.0.0-M25</version>
+			<version>6.0.0.0-M29</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
