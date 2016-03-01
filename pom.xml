@@ -16,6 +16,12 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>sap-frwcore-module</artifactId>
+			<version>${project.version}</version>
+			<type>zip</type>
+		</dependency>	
+		<dependency>
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
@@ -39,12 +45,12 @@
 			<version>6.0.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>	
-		<dependency>
-			<groupId>de.hybris.platform</groupId>
-			<artifactId>sap-frwcore-module</artifactId>
-			<version>${project.version}</version>
-			<type>zip</type>
-		</dependency>		
+	    <dependency>
+	      <artifactId>commerceservices-module</artifactId>
+	      <groupId>de.hybris.platform</groupId>
+	      <type>zip</type>
+	      <version>6.0.0.0-RC6</version>
+	    </dependency>		
 	</dependencies>
 	
 	<properties>
