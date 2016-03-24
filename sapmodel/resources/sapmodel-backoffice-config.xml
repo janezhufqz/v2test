@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <config xmlns="http://www.hybris.com/cockpit/config">
         
+        
+       <context merge-by="type" type="SAPLogicalSystemToHttpDestinationMapping" component="editor-area">
+	   <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+             <editorArea:tab name="hmc.essential">
+                <editorArea:section name="hmc.essential">
+                    <editorArea:attribute qualifier="sapcommon_erpLogicalSystem"/>
+					<editorArea:attribute qualifier="sapcommon_erpHttpDestination"/>
+              </editorArea:section>
+              </editorArea:tab>
+        </editorArea:editorArea>
+	</context>
+	
+	 <context merge-by="type" parent="GenericItem" type="SAPProductSalesAreaToCatalogMapping" component="base">
+        <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+            <y:labels>
+                <y:label>sapcommon_erpLogicalSystem+ ' - ' +sapcommon_erpHttpDestination</y:label>
+			</y:labels>
+		</y:base>
+    </context>
+	
+	
     <context merge-by="type" type="SAPProductSalesAreaToCatalogMapping" component="referenceListViewCatalogMapping">
         <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
             <list-view:column qualifier="salesOrganization"/>
@@ -130,12 +151,17 @@
     
     <context merge-by="module" parent="auto" type="SAPGlobalConfiguration" component="editor-area">
         <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
-            <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.backendconnectivity">
+        
+         <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.backendconnectivity">
                 <section name="hmc.section.idoctransfer">
-                    <attribute qualifier="sapcommon_erpLogicalSystem"/>
-                    <attribute qualifier="sapcommon_erpHttpDestination"/>
+                    <attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapLogSystemToHttpTargetDestinationMapping">
+                    	<editorArea:editor-parameter>
+			                <editorArea:name>listConfigContext</editorArea:name>
+			                <editorArea:value>referenceListViewLogicalSystemMapping</editorArea:value>
+			            </editorArea:editor-parameter>
+                    </attribute>
                 </section>
-            </editorArea:tab>
+            </editorArea:tab>      
             <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.customerreplication">
                 <section name="hmc.section.replicationofconsumer">
                     <attribute qualifier="replicateregistereduser"/>

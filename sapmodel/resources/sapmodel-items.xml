@@ -98,12 +98,36 @@
 			</targetElement>
 		</relation>
 		
+		<relation code="SAPGlobalConfigToLogSystenMappingRelation" autocreate="true" localized="false">
+			<sourceElement type="SAPGlobalConfiguration" qualifier="sapGlobalConfiguration" cardinality="one"></sourceElement>
+			<targetElement type="SAPLogicalSystemToHttpDestinationMapping" qualifier="sapLogSystemToHttpTargetDestinationMapping"
+				cardinality="many" collectiontype="set"></targetElement>
+		</relation>
+		
 		
 		
 
 	</relations>
 
 	<itemtypes>
+	
+	<itemtype code="SAPLogicalSystemToHttpDestinationMapping" extends="GenericItem" autocreate="true" generate="true"
+			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPLogicalSystemToHttpDestinationMapping">
+			<deployment table="SAPLogSysHttpDest" typecode="9616" />
+			<attributes>
+				<attribute type="java.lang.String" qualifier="sapcommon_erpLogicalSystem">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Target Logical Syetem</description>
+				</attribute>
+				<attribute type="java.lang.String" qualifier="sapcommon_erpHttpDestination">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Target Http Destination</description>
+				</attribute>
+					
+			</attributes>
+		</itemtype>
 
 		<itemtype code="AbstractOrderEntry" autocreate="false" generate="false">
 			<attributes>
