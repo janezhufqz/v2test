@@ -26,13 +26,6 @@
 
 		</relation>
 
-
-		<relation autocreate="true" code="SapErpHttpDestinationForGlobalConfiguration" generate="true" localized="false">
-			<sourceElement cardinality="many" qualifier="sapcommon_globalConfigurations" type="SAPGlobalConfiguration" />
-			<targetElement cardinality="one" qualifier="sapcommon_erpHttpDestination" type="SAPHTTPDestination" />
-		</relation>
-
-
 		<relation code="SAPConfigDeliveryRelation" autocreate="true" localized="false">
 
 			<sourceElement type="SAPConfiguration" qualifier="sapConfiguration" cardinality="one">
@@ -97,35 +90,31 @@
 				<modifiers read="true" write="true" search="true" />
 			</targetElement>
 		</relation>
-		
+	
 		<relation code="SAPGlobalConfigToLogSystenMappingRelation" autocreate="true" localized="false">
-			<sourceElement type="SAPGlobalConfiguration" qualifier="sapGlobalConfiguration" cardinality="one"></sourceElement>
+			<sourceElement type="SAPGlobalConfiguration" qualifier="sapcommon_sapGlobalConfiguration" cardinality="one"></sourceElement>
 			<targetElement type="SAPLogicalSystemToHttpDestinationMapping" qualifier="sapLogSystemToHttpTargetDestinationMapping"
 				cardinality="many" collectiontype="set"></targetElement>
 		</relation>
-		
-		
-		
-
+			
 	</relations>
 
 	<itemtypes>
 	
-	<itemtype code="SAPLogicalSystemToHttpDestinationMapping" extends="GenericItem" autocreate="true" generate="true"
+	    <itemtype code="SAPLogicalSystemToHttpDestinationMapping" extends="GenericItem" autocreate="true" generate="true"
 			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPLogicalSystemToHttpDestinationMapping">
 			<deployment table="SAPLogSysHttpDest" typecode="9616" />
 			<attributes>
 				<attribute type="java.lang.String" qualifier="sapcommon_erpLogicalSystem">
 					<modifiers unique="true" />
 					<persistence type="property" />
-					<description>Target Logical Syetem</description>
+					<description>Target Logical System</description>
 				</attribute>
-				<attribute type="java.lang.String" qualifier="sapcommon_erpHttpDestination">
+				<attribute type="SAPHTTPDestination" qualifier="sapcommon_erpHttpDestination">
 					<modifiers unique="true" />
 					<persistence type="property" />
-					<description>Target Http Destination</description>
-				</attribute>
-					
+					<description>Target HTTP Destination</description>
+				</attribute>		
 			</attributes>
 		</itemtype>
 
