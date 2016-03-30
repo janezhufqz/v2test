@@ -92,9 +92,8 @@
 		</relation>
 	
 		<relation code="SAPGlobalConfigToLogSystenMappingRelation" autocreate="true" localized="false">
-			<sourceElement type="SAPGlobalConfiguration" qualifier="sapcommon_sapGlobalConfiguration" cardinality="one"></sourceElement>
-			<targetElement type="SAPLogicalSystemToHttpDestinationMapping" qualifier="sapLogSystemToHttpTargetDestinationMapping"
-				cardinality="many" collectiontype="set"></targetElement>
+			<sourceElement type="SAPGlobalConfiguration" qualifier="sapcommon_sapGlobalConfiguration" cardinality="one"/>
+			<targetElement type="SAPLogicalSystemToHttpDestinationMapping" qualifier="sapLogicalSystemToHttpDestinationMapping" cardinality="many" collectiontype="set"/>
 		</relation>
 			
 	</relations>
@@ -103,7 +102,8 @@
 	
 	    <itemtype code="SAPLogicalSystemToHttpDestinationMapping" extends="GenericItem" autocreate="true" generate="true"
 			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPLogicalSystemToHttpDestinationMapping">
-			<deployment table="SAPLogSysHttpDest" typecode="9616" />
+			<description> Check this link for the SAP typecode range https://wiki.wdf.sap.corp/wiki/display/hybris/Type+codes</description>
+			<deployment table="SAPLogSysHttpDest" typecode="9321" />
 			<attributes>
 				<attribute type="java.lang.String" qualifier="sapcommon_erpLogicalSystem">
 					<modifiers unique="true" />
@@ -530,10 +530,10 @@
 					<persistence type="property" />
 					<modifiers unique="false" optional="false" read="true" write="true" initial="true" search="true" />
 				</attribute>
-				<attribute qualifier="sapcommon_erpLogicalSystem" type="java.lang.String" autocreate="true">
-					<persistence type="property" />
-					<modifiers unique="false" optional="false" read="true" write="true" initial="true" search="true" />
-				</attribute>
+<!-- 				<attribute qualifier="sapcommon_erpLogicalSystem" type="java.lang.String" autocreate="true"> -->
+<!-- 					<persistence type="property" /> -->
+<!-- 					<modifiers unique="false" optional="false" read="true" write="true" initial="true" search="true" /> -->
+<!-- 				</attribute> -->
 			</attributes>
 		</itemtype>
 

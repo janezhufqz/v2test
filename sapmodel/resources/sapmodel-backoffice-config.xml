@@ -2,7 +2,14 @@
 <config xmlns="http://www.hybris.com/cockpit/config">
         
         
-       <context merge-by="type" type="SAPLogicalSystemToHttpDestinationMapping" component="editor-area">
+    <context merge-by="type" type="SAPLogicalSystemToHttpDestinationMapping" component="referenceListViewLogicalSystemMapping">
+        <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+            <list-view:column qualifier="sapcommon_erpLogicalSystem"/>
+            <list-view:column qualifier="sapcommon_erpHttpDestination"/>
+        </list-view:list-view>
+	</context>
+	
+	<context merge-by="type" type="SAPLogicalSystemToHttpDestinationMapping" component="editor-area">
 	   <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
              <editorArea:tab name="hmc.essential">
                 <editorArea:section name="hmc.essential">
@@ -13,15 +20,15 @@
         </editorArea:editorArea>
 	</context>
 	
-	 <context merge-by="type" parent="GenericItem" type="SAPProductSalesAreaToCatalogMapping" component="base">
+	<context merge-by="type" parent="GenericItem" type="SAPLogicalSystemToHttpDestinationMapping" component="base">
         <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
             <y:labels>
-                <y:label>sapcommon_erpLogicalSystem+ ' - ' +sapcommon_erpHttpDestination</y:label>
+  			<y:label>sapcommon_erpLogicalSystem+ ' - ' +sapcommon_erpHttpDestination</y:label>
 			</y:labels>
 		</y:base>
     </context>
 	
-	
+
     <context merge-by="type" type="SAPProductSalesAreaToCatalogMapping" component="referenceListViewCatalogMapping">
         <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
             <list-view:column qualifier="salesOrganization"/>
@@ -152,21 +159,23 @@
     <context merge-by="module" parent="auto" type="SAPGlobalConfiguration" component="editor-area">
         <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
         
-         <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.backendconnectivity">
+           <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.backendconnectivity">
                 <section name="hmc.section.idoctransfer">
-                    <attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapLogSystemToHttpTargetDestinationMapping">
+                    <attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapLogicalSystemToHttpDestinationMapping">
                     	<editorArea:editor-parameter>
 			                <editorArea:name>listConfigContext</editorArea:name>
 			                <editorArea:value>referenceListViewLogicalSystemMapping</editorArea:value>
 			            </editorArea:editor-parameter>
                     </attribute>
                 </section>
-            </editorArea:tab>      
+            </editorArea:tab>
+                  
             <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.customerreplication">
                 <section name="hmc.section.replicationofconsumer">
                     <attribute qualifier="replicateregistereduser"/>
                 </section>
             </editorArea:tab>
+            
             <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.datahubmappings_pricing">
                 <section name="hmc.section.datahubmappings_pricing">
                 
@@ -188,7 +197,8 @@
 			            </editorArea:editor-parameter>
                     </attribute>               
                     </section>
-            </editorArea:tab>  
+            </editorArea:tab>
+              
              <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.sapproduct">
                 <section name="hmc.section.sapproduct">
                     <attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapProductSalesAreaToCatalogMapping">
@@ -198,7 +208,8 @@
 			            </editorArea:editor-parameter>
                     </attribute>
                 </section>
-            </editorArea:tab>         
+            </editorArea:tab> 
+                    
         </editorArea:editorArea>
     </context>
   

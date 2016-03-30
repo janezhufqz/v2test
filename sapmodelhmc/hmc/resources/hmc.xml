@@ -11,7 +11,7 @@
 				<tab name="tab.backendconnectivity">
 					<section name="section.idoctransfer">
 						<listlayout>
-							<attribute labelwidth="200" name="sapLogSystemToHttpTargetDestinationMapping" width="408">
+							<attribute labelwidth="200" name="sapLogicalSystemToHttpDestinationMapping" width="408">
 								<referencecollectioneditor presetattribute="sapcommon_sapGlobalConfiguration" autosave="true" externalcreate="false"
 									editable="true">
 									<itemlayout>
