@@ -2,31 +2,65 @@
 <config xmlns="http://www.hybris.com/cockpit/config">
         
         
-    <context merge-by="type" type="SAPLogicalSystemToHttpDestinationMapping" component="referenceListViewLogicalSystemMapping">
+    <context merge-by="type" type="SAPLogicalSystem" component="referenceListViewLogicalSystem">
         <list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
-            <list-view:column qualifier="sapcommon_erpLogicalSystem"/>
-            <list-view:column qualifier="sapcommon_erpHttpDestination"/>
+            <list-view:column qualifier="sapLogicalSystemName"/>
+            <list-view:column qualifier="sapHTTPDestination"/>
         </list-view:list-view>
 	</context>
 	
-	<context merge-by="type" type="SAPLogicalSystemToHttpDestinationMapping" component="editor-area">
+	<context merge-by="type" type="SAPLogicalSystem" component="editor-area">
 	   <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
              <editorArea:tab name="hmc.essential">
                 <editorArea:section name="hmc.essential">
-                    <editorArea:attribute qualifier="sapcommon_erpLogicalSystem"/>
-					<editorArea:attribute qualifier="sapcommon_erpHttpDestination"/>
-              </editorArea:section>
+                    <editorArea:attribute qualifier="sapLogicalSystemName"/>
+                    <editorArea:attribute qualifier="sapHTTPDestination"/>
+              	</editorArea:section>
               </editorArea:tab>
         </editorArea:editorArea>
 	</context>
 	
-	<context merge-by="type" parent="GenericItem" type="SAPLogicalSystemToHttpDestinationMapping" component="base">
+	<context merge-by="type" parent="GenericItem" type="SAPLogicalSystem" component="base">
         <y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
             <y:labels>
-  			<y:label>sapcommon_erpLogicalSystem+ ' - ' +sapcommon_erpHttpDestination</y:label>
+  			<y:label>sapLogicalSystemName+ ' - ' +sapHTTPDestination.httpDestinationName</y:label>
 			</y:labels>
 		</y:base>
     </context>
+    
+    <context component="editorareaactions" type="SAPLogicalSystem" >
+        <y:actions xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+            <y:group qualifier="common">
+                <y:action action-id="com.hybris.cockpitng.action.delete"  property="currentObject" />
+            </y:group>
+    	</y:actions>
+    </context>
+	
+	<context type="SAPLogicalSystem" component="create-wizard">
+	<wz:flow xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config" id="logicalSystemWizard" title="create.saplogicalsystem.title">
+ 
+	    <wz:prepare id="logicalSystemWizard">
+	        <wz:initialize property="newLogicalSystem" type="SAPLogicalSystem"/>
+	    </wz:prepare>
+	 
+	    <wz:step id="step1" label="create.saplogicalsystem.essential.label" sublabel="create.saplogicalsystem.essential.sublabel">
+	          <wz:content id="step1.content">
+	            <wz:property-list root="newLogicalSystem">
+	                <wz:property qualifier="sapLogicalSystemName" type="java.lang.String"/>
+	                <wz:property qualifier="sapHTTPDestination"/>
+	            </wz:property-list>
+	        </wz:content>
+	        <wz:navigation id="step1.navigation">
+	            <wz:cancel/>
+ 	            <wz:done visible="!#empty(newLogicalSystem.sapLogicalSystemName)">
+	                <wz:save property="newLogicalSystem"/>
+	            </wz:done>
+	        </wz:navigation>
+	    </wz:step>
+ 
+	</wz:flow>
+	</context>
+	
 	
 
     <context merge-by="type" type="SAPProductSalesAreaToCatalogMapping" component="referenceListViewCatalogMapping">
@@ -161,10 +195,10 @@
         
            <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.backendconnectivity">
                 <section name="hmc.section.idoctransfer">
-                    <attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapLogicalSystemToHttpDestinationMapping">
+                    <attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapLogicalSystemGlobalConfig">
                     	<editorArea:editor-parameter>
 			                <editorArea:name>listConfigContext</editorArea:name>
-			                <editorArea:value>referenceListViewLogicalSystemMapping</editorArea:value>
+			                <editorArea:value>referenceListViewLogicalSystem</editorArea:value>
 			            </editorArea:editor-parameter>
                     </attribute>
                 </section>
