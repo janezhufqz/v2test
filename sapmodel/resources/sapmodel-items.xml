@@ -95,6 +95,13 @@
 			<sourceElement type="SAPGlobalConfiguration" qualifier="sapGlobalConfiguration" cardinality="one"/>
 			<targetElement type="SAPLogicalSystem" qualifier="sapLogicalSystemGlobalConfig" cardinality="many" collectiontype="set"/>
 		</relation>
+		
+		<relation code="SAPGlobalConfig2Warehouse" autocreate="true" generate="true" localized="false">
+			<sourceElement type="SAPLogicalSystem" qualifier="SAPLogicalSystemForWarehouse" cardinality="one"/>
+			<targetElement type="Warehouse" qualifier="warehouses" cardinality="many" collectiontype="set"/>
+		</relation>
+			
+			
 			
 	</relations>
 
