@@ -43,7 +43,7 @@
 				<wz:initialize property="newLogicalSystem" type="SAPLogicalSystem" />
 			</wz:prepare>
 
-			<wz:step id="step1" label="create.saplogicalsystem.essential.label" sublabel="create.saplogicalsystem.essential.sublabel">
+			<wz:step id="step1" label="create.saplogicalsystem.essential.label">
 				<wz:content id="step1.content">
 					<wz:property-list root="newLogicalSystem">
 						<wz:property qualifier="sapLogicalSystemName" type="java.lang.String" />
@@ -109,8 +109,7 @@
 				 <wz:navigation id="step1.navigation">
                     <wz:cancel/>
                     <wz:done visible="!#empty(newSAPPlantLogSysOrg.logSys.sapLogicalSystemName) and
-                                      !#empty(newSAPPlantLogSysOrg.plant.code) and 
-                                      !#empty(newSAPPlantLogSysOrg.salesOrg.salesOrganization)">
+                                      !#empty(newSAPPlantLogSysOrg.plant.code)">
                         <wz:save property="newSAPPlantLogSysOrg"/>
                     </wz:done>
                 </wz:navigation>
@@ -127,6 +126,47 @@
 		</y:base>
 	</context>
 	
+	  <context merge-by="type" type="SAPSalesOrganization" component="editor-area">
+    <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+             <editorArea:tab name="hmc.essential">
+                <editorArea:section name="hmc.essential">
+                    <editorArea:attribute qualifier="salesOrganization"/>
+                    <editorArea:attribute qualifier="distributionChannel"/>
+                    <editorArea:attribute qualifier="division"/>
+              </editorArea:section>              
+              </editorArea:tab>
+        </editorArea:editorArea>
+     </context>
+     
+      <context type="SAPSalesOrganization" component="create-wizard">
+		<wz:flow xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config" id="sapSalesOrganizationWizard" title="create.sapSalesOrganization.title">
+
+			<wz:prepare id="sapSalesOrganizationPrepare">
+				<wz:initialize property="newSAPSalesOrganization" type="SAPSalesOrganization" />
+			</wz:prepare>
+
+			<wz:step id="step1" label="create.sapSalesOrganization.essential.label">
+				<wz:content id="step1.content">
+					<wz:property-list root="newSAPSalesOrganization">
+						<wz:property qualifier="salesOrganization" type="java.lang.String" />
+						<wz:property qualifier="distributionChannel" type="java.lang.String" />
+						<wz:property qualifier="division" type="java.lang.String" />
+					</wz:property-list>
+				</wz:content>
+				
+				 <wz:navigation id="step1.navigation">
+                    <wz:cancel/>
+                    <wz:done visible="!#empty(newSAPSalesOrganization.salesOrganization) and
+                                      !#empty(newSAPSalesOrganization.distributionChannel) and 
+                                      !#empty(newSAPSalesOrganization.division)">
+                        <wz:save property="newSAPSalesOrganization"/>
+                    </wz:done>
+                </wz:navigation>
+			</wz:step>
+
+		</wz:flow>
+	</context>
+     
 	 <context merge-by="type" parent="GenericItem" type="SAPSalesOrganization" component="base">
 		<y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
 			<y:labels>
