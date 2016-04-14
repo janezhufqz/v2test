@@ -59,50 +59,49 @@
 
 		<relation code="SAPGlobalConfigurationPricingSalesArea" autocreate="true" localized="false">
 			<sourceElement type="SAPGlobalConfiguration" qualifier="sapcommon_sapGlobalConfiguration" cardinality="one">
-			
+
 			</sourceElement>
 			<targetElement type="SAPPricingSalesAreaToCatalog" qualifier="sapcommon_sapPricingSalesArea" cardinality="many"
 				collectiontype="set">
-				
+
 			</targetElement>
 		</relation>
 
 		<relation code="SAPConfigBonusBuySite" autocreate="true" localized="false">
 			<sourceElement type="SAPGlobalConfiguration" qualifier="sapcommon_sapGlobalConfiguration" cardinality="one">
-				
+
 			</sourceElement>
 			<targetElement type="SAPBonusBuySiteToCatalog" qualifier="sapcommon_sapSiteToCatalog" cardinality="many"
 				collectiontype="set" ordered="false">
-			
+
 			</targetElement>
-		</relation>		
-		
-		<relation code="SapProductPlantRelation" localized="false" generate="true"
-			autocreate="true">
-			<sourceElement type="Product" qualifier="Product"
-				cardinality="many">
-				<modifiers read="false" write="false" search="false"
-					optional="false" />
+		</relation>
+
+		<relation code="SapProductPlantRelation" localized="false" generate="true" autocreate="true">
+			<sourceElement type="Product" qualifier="Product" cardinality="many">
+				<modifiers read="false" write="false" search="false" optional="false" />
 			</sourceElement>
-			<targetElement type="Warehouse" cardinality="one"
-				qualifier="sapPlant">
+			<targetElement type="Warehouse" cardinality="one" qualifier="sapPlant">
 				<description>Sap Plant mapped to hybris warehouse</description>
 				<modifiers read="true" write="true" search="true" />
 			</targetElement>
 		</relation>
-	
+
 		<relation code="SAPGlobalConfig2LogSystem" autocreate="true" generate="true" localized="false">
-			<sourceElement type="SAPGlobalConfiguration" qualifier="sapGlobalConfiguration" cardinality="one"/>
-			<targetElement type="SAPLogicalSystem" qualifier="sapLogicalSystemGlobalConfig" cardinality="many" collectiontype="set"/>
+			<sourceElement type="SAPGlobalConfiguration" qualifier="sapGlobalConfiguration" cardinality="one" />
+			<targetElement type="SAPLogicalSystem" qualifier="sapLogicalSystemGlobalConfig" cardinality="many"
+				collectiontype="set" />
+		</relation>
+
+		<relation code="SAPConfig2PlantLogSysOrg" autocreate="true" localized="false">
+			<sourceElement type="SAPConfiguration" qualifier="sapConfiguration" cardinality="one" >
+				<modifiers read="true" write="true" search="true" optional="false" />
+			</sourceElement>
+			<targetElement type="SAPPlantLogSysOrg" qualifier="sapPlantLogSysOrg" cardinality="many" collectiontype="set" >
+				<modifiers read="true" write="true" search="true" optional="true" />
+			</targetElement>
 		</relation>
 		
-		<relation code="SAPGlobalConfig2Warehouse" autocreate="true" generate="true" localized="false">
-			<sourceElement type="SAPLogicalSystem" qualifier="SAPLogicalSystemForWarehouse" cardinality="one"/>
-			<targetElement type="Warehouse" qualifier="warehouses" cardinality="many" collectiontype="set"/>
-		</relation>
-			
-			
-			
 	</relations>
 
 	<itemtypes>
@@ -536,7 +535,7 @@
 					<description>Distribution Channel</description>
 				</attribute>
 				<attribute type="CatalogVersion" qualifier="catalogVersion">
-					<modifiers unique="false" search="true" optional="false"/>
+					<modifiers unique="false" search="true" optional="false" />
 					<persistence type="property" />
 					<description>Catalog Version</description>
 				</attribute>
@@ -544,7 +543,7 @@
 					<modifiers unique="false" search="true" />
 					<persistence type="property" />
 					<description>Tax Class Country</description>
-				</attribute>				
+				</attribute>
 			</attributes>
 		</itemtype>
 
@@ -563,7 +562,7 @@
 					<description>Distribution Channel</description>
 				</attribute>
 				<attribute type="CatalogVersion" qualifier="catalogVersion">
-					<modifiers unique="false" search="true" optional="false"/>
+					<modifiers unique="false" search="true" optional="false" />
 					<persistence type="property" />
 					<description>Catalog Version</description>
 				</attribute>
@@ -586,7 +585,7 @@
 					<description>Bonus Buy Site</description>
 				</attribute>
 				<attribute type="CatalogVersion" qualifier="catalogVersion">
-					<modifiers unique="false" search="true" optional="false"/>
+					<modifiers unique="false" search="true" optional="false" />
 					<persistence type="property" />
 					<description>Catalog Version</description>
 				</attribute>
@@ -648,9 +647,9 @@
 				</attribute>
 			</attributes>
 		</itemtype>
-		
+
 		<itemtype code="SAPProductIDDataConversion" autocreate="true" generate="true">
-		<deployment table="SAPProdIDDConv" typecode="9319" />
+			<deployment table="SAPProdIDDConv" typecode="9319" />
 			<attributes>
 				<attribute qualifier="conversionID" type="java.lang.String">
 					<modifiers unique="true" />
@@ -679,10 +678,10 @@
 				</attribute>
 			</attributes>
 		</itemtype>
-		
-		 <itemtype code="SAPLogicalSystem" extends="GenericItem" autocreate="true" generate="true"
+
+		<itemtype code="SAPLogicalSystem" extends="GenericItem" autocreate="true" generate="true"
 			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPLogicalSystem">
-			<description> Check this link for the SAP typecode range https://wiki.wdf.sap.corp/wiki/display/hybris/Type+codes</description>
+			<description>Check this link for the SAP typecode range https://wiki.wdf.sap.corp/wiki/display/hybris/Type+codes</description>
 			<deployment table="SAPLogicalSystems" typecode="9321" />
 			<attributes>
 				<attribute type="java.lang.String" qualifier="sapLogicalSystemName">
@@ -690,12 +689,62 @@
 					<persistence type="property" />
 					<description>Target Logical System</description>
 				</attribute>
-				
+
 				<attribute qualifier="sapHTTPDestination" type="SAPHTTPDestination">
 					<description>Specifies the http destination corresponding to logical system</description>
 					<persistence type="property" />
 				</attribute>
 			</attributes>
 		</itemtype>
+
+		<itemtype code="SAPSalesOrganization" extends="GenericItem" autocreate="true" generate="true"
+			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPSalesOrganization">
+			<deployment table="SAPSalesOrganization" typecode="9324" />
+			<attributes>
+				<attribute qualifier="salesOrganization" type="java.lang.String">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Sales Organization</description>
+				</attribute>
+				<attribute qualifier="distributionChannel" type="java.lang.String">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Distribution Channel</description>
+				</attribute>
+				<attribute qualifier="division" type="java.lang.String">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Division</description>
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="SAPPlantLogSysOrg" extends="GenericItem" autocreate="true" generate="true"
+			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPPlantLogSysOrg">
+			<deployment table="SAPPlantLogSysOrg" typecode="9325" />
+			<attributes>
+				<attribute qualifier="sapConfiguration" type="SAPConfiguration">
+					<persistence type="property" />
+					<modifiers unique="true" optional="true" read="true" write="false" initial="true" search="true" />
+					<description>SAP Configuration</description>
+				</attribute>
+				<attribute qualifier="plant" type="Warehouse">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Sales Organization</description>
+				</attribute>
+				<attribute qualifier="logSys" type="SAPLogicalSystem">
+					<modifiers unique="false" />
+					<persistence type="property" />
+					<description>Distribution Channel</description>
+				</attribute>
+				<attribute qualifier="salesOrg" type="SAPSalesOrganization">
+					<modifiers unique="false" />
+					<persistence type="property" />
+					<description>Division</description>
+				</attribute>
+			</attributes>
+		</itemtype>
+
 	</itemtypes>
 </items>
