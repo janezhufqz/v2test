@@ -54,19 +54,24 @@
 	</dependencies>
 	
 	<properties>
-		<contained.extensions>sapmodel,sapmodelhmc</contained.extensions>
+		<!-- Define extensions for delivery -->
+		<contained.extensions>sapmodel,sapmodelhmc,sapmodelbackoffice</contained.extensions>
 		<platform.extensions>${contained.extensions}</platform.extensions>
 		<testclasses.extensions>${contained.extensions}</testclasses.extensions>
 		<codequality.extensions>${contained.extensions}</codequality.extensions>
+		
 		<!-- hybris distribution properties -->
 		<dist.extensions.binary></dist.extensions.binary>
 		<dist.extensions.source>${contained.extensions}</dist.extensions.source>
 		<dist.create.source.dist>true</dist.create.source.dist>
-		<hybris.local.ext.sapmodel.package>ext-integration/sap/core</hybris.local.ext.sapmodel.package>
-		<hybris.local.ext.sapmodelhmc.package>ext-integration/sap/core</hybris.local.ext.sapmodelhmc.package>
-		<hybris.local.build.target>1.8</hybris.local.build.target>
 		<dist.finaldevzipname>${project.build.directory}/distribution-dev.zip</dist.finaldevzipname>
 		<dist.create.en.langpack>true</dist.create.en.langpack>
+		
+		<!-- Define location in Commerce Suite zip -->
+		<hybris.local.ext.sapmodel.package>ext-integration/sap/core</hybris.local.ext.sapmodel.package>
+		<hybris.local.ext.sapmodelhmc.package>ext-integration/sap/core</hybris.local.ext.sapmodelhmc.package>
+		<hybris.local.ext.sapmodelbackoffice.package>ext-integration/sap/core</hybris.local.ext.sapmodelbackoffice.package>
+		<hybris.local.build.target>1.8</hybris.local.build.target>
 	</properties>
 	
 	<build>
