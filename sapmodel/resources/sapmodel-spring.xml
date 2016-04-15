@@ -144,4 +144,10 @@
 	<alias alias="sapProductIDAttributeHandler" name="sapDefaultProductIDAttributeHandler" />
 	<bean id="sapDefaultProductIDAttributeHandler" class="de.hybris.platform.sap.sapmodel.daos.ProductIDAttributeHandler">
 	</bean>
+	
+	<alias alias="sapPlantLogSysOrgService" name="defaultSapPlantLogSysOrgService" />
+	<bean id="defaultSapPlantLogSysOrgService" class="sap.hybris.integration.models.services.impl.DefaultSapPlantLogSysOrgService">
+		<property name="baseStoreService" ref="baseStoreService" />
+	</bean>
+	
 </beans>

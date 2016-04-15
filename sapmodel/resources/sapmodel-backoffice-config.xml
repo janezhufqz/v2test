@@ -100,6 +100,7 @@
 			<wz:step id="step1" label="create.sapPlantLogSysOrg.essential.label">
 				<wz:content id="step1.content">
 					<wz:property-list root="newSAPPlantLogSysOrg">
+					    <wz:property qualifier="sapConfiguration" type="SAPConfiguration" />
 						<wz:property qualifier="plant" type="Warehouse" />
 						<wz:property qualifier="logSys" type="SAPLogicalSystem" />
 						<wz:property qualifier="salesOrg" type="SAPSalesOrganization" />
@@ -109,6 +110,7 @@
 				 <wz:navigation id="step1.navigation">
                     <wz:cancel/>
                     <wz:done visible="!#empty(newSAPPlantLogSysOrg.logSys.sapLogicalSystemName) and
+                                      !#empty(newSAPPlantLogSysOrg.sapConfiguration.core_name) and
                                       !#empty(newSAPPlantLogSysOrg.plant.code)">
                         <wz:save property="newSAPPlantLogSysOrg"/>
                     </wz:done>

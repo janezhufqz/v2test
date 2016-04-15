@@ -725,7 +725,7 @@
 			<attributes>
 				<attribute qualifier="sapConfiguration" type="SAPConfiguration">
 					<persistence type="property" />
-					<modifiers unique="true" optional="true" read="true" write="true" initial="true" search="true" />
+					<modifiers unique="true" optional="false" read="true" write="false" initial="true" search="true" />
 					<description>SAP Configuration</description>
 				</attribute>
 				<attribute qualifier="plant" type="Warehouse">
