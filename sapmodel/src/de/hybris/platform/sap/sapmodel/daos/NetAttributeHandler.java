@@ -40,10 +40,11 @@ public class NetAttributeHandler implements DynamicAttributeHandler<Boolean, SAP
 	/*
 	 * Returns Net (true) or Gross (false) of Base Store based on PricingSalesArea mapping
 	 * 
-	 * Base Store is linked to SAP Base Store Configuration SAP Base Store Configuration defines a Sales Organization and
-	 * Distribution Channel Pricing Replication (SAP Global Configuration) maps Sales Organization and Distribution
-	 * Channel to Catalog Using Sales Organization and Distribution Channel, we can get if a Price is Net or Gross If
-	 * there is an issue with configuration, we default to Gross (false)
+	 * Base Store is linked to SAP Base Store Configuration 
+	 * SAP Base Store Configuration defines a Sales Organization and Distribution Channel 
+	 * Pricing Replication (SAP Global Configuration) maps Sales Organization and Distribution Channel to Catalog 
+	 * Using Sales Organization and Distribution Channel, we can get if a Price is Net or Gross 
+	 * If there is an issue with configuration, we default to Gross (false)
 	 */
 	@Override
 	public Boolean get(SAPPricingSalesAreaToCatalogModel model)
@@ -62,7 +63,7 @@ public class NetAttributeHandler implements DynamicAttributeHandler<Boolean, SAP
 			return Boolean.FALSE; // default to gross
 		}
 
-		// Find Net value from first base store in first configuration model
+		// Find Net value from first basestore in first configuration model that has a basestore
 		for (SAPConfigurationModel sapConfiguration : sapConfigurationModels)
 		{
 			LOGGER.debug("SAP Configuration found: {}", sapConfiguration.getCore_name());
