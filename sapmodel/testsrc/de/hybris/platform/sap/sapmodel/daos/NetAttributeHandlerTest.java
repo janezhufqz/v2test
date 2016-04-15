@@ -50,16 +50,6 @@ public class NetAttributeHandlerTest
 		@SuppressWarnings("unchecked")
 		public <T> List<T> getModelsByExample(final T example)
 		{
-			try
-			{
-				Thread.sleep(2);
-			}
-			catch (final InterruptedException e)
-			{
-				e.printStackTrace();
-			}
-			
-			modelsList.removeIf(p -> p.getSapcommon_salesOrganization() != data.getSalesOrganization() && p.getSapcommon_distributionChannel() != data.getDistributionChannel());
 			return (List<T>) modelsList;
 		}
 
@@ -124,31 +114,15 @@ public class NetAttributeHandlerTest
 		return handler.get(data);
 	}
 
-	private void reset()
-	{
-		modelsList.clear();
-		baseStoreCollection.clear();
-	}
-
 	@Test
 	public void testZeroConfigurationModel() throws Exception
 	{
-		reset();
 		Assert.assertFalse(getNet()); //No model - should hit first "return Boolean.FALSE"
-
-		SAPConfigurationModel model = new SAPConfigurationModel();
-		model.setSapcommon_salesOrganization("2000");
-		model.setSapcommon_distributionChannel("20");
-		modelsList.add(model);
-		
-		Assert.assertFalse(getNet()); //No model matching search data(1000,10)
 	}
 	
 	@Test
 	public void testOneConfigurationModelOneBaseStore() throws Exception
 	{
-		reset();
-		
 		//setup one config model and one basestore
 		SAPConfigurationModel model = new SAPConfigurationModel();
 		model.setSapcommon_salesOrganization("1000");
@@ -167,11 +141,9 @@ public class NetAttributeHandlerTest
 	@Test
 	public void testManyConfigurationModelsOneBaseStore() throws Exception
 	{
-		reset();
-		
 		SAPConfigurationModel model1 = new SAPConfigurationModel();
-		model1.setSapcommon_salesOrganization("2000");
-		model1.setSapcommon_distributionChannel("20");
+		model1.setSapcommon_salesOrganization("1000");
+		model1.setSapcommon_distributionChannel("10");
 		modelsList.add(model1);
 		
 		SAPConfigurationModel model2 = new SAPConfigurationModel();
@@ -191,8 +163,6 @@ public class NetAttributeHandlerTest
 	@Test
 	public void testOneConfigurationModelManyBaseStores() throws Exception
 	{
-		reset();
-		
 		SAPConfigurationModel model = new SAPConfigurationModel();
 		model.setSapcommon_salesOrganization("1000");
 		model.setSapcommon_distributionChannel("10");
@@ -214,8 +184,6 @@ public class NetAttributeHandlerTest
 	@Test
 	public void testZeroBaseStore() throws Exception
 	{
-		reset();
-		
 		SAPConfigurationModel model = new SAPConfigurationModel();
 		model.setSapcommon_salesOrganization("1000");
 		model.setSapcommon_distributionChannel("10");
