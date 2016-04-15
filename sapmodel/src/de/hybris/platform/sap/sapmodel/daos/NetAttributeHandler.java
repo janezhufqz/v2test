@@ -12,8 +12,11 @@
  *
  */
 package de.hybris.platform.sap.sapmodel.daos;
-import java.util.Collection;
-import java.util.Iterator;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,69 +26,69 @@ import de.hybris.platform.sap.sapmodel.model.SAPPricingSalesAreaToCatalogModel;
 import de.hybris.platform.servicelayer.model.attribute.DynamicAttributeHandler;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 import de.hybris.platform.store.BaseStoreModel;
-public class NetAttributeHandler implements DynamicAttributeHandler<Boolean, SAPPricingSalesAreaToCatalogModel>{
 
-	protected static final Logger LOGGER = Logger
-			.getLogger(NetAttributeHandler.class);
+public class NetAttributeHandler implements DynamicAttributeHandler<Boolean, SAPPricingSalesAreaToCatalogModel> {
+
+	protected static final Logger LOGGER = Logger.getLogger(NetAttributeHandler.class);
 
 	@Autowired
-	protected FlexibleSearchService flexibleSearchService;	//NOPMD
-	
+	protected FlexibleSearchService flexibleSearchService; // NOPMD
+
+	/*
+	 * Returns Net (true) or Gross (false) of Base Store based on PricingSalesArea mapping
+	 * 
+	 * Base Store is linked to SAP Base Store Configuration
+	 * SAP Base Store Configuration defines a Sales Organization and Distribution Channel 
+	 * Pricing Replication (SAP Global Configuration) maps Sales Organization and Distribution Channel to Catalog
+	 * Using Sales Organization and Distribution Channel, we can get if a Price is Net or Gross
+	 * If there is an issue with configuration, we default to Gross (false)
+	 */
 	@Override
-	public Boolean get(SAPPricingSalesAreaToCatalogModel model)
-	{
+	public Boolean get(SAPPricingSalesAreaToCatalogModel model) {
+		//Set example model for search
+		final SAPConfigurationModel sapConfigurationExampleModel = new SAPConfigurationModel();
+		sapConfigurationExampleModel.setSapcommon_distributionChannel(model.getDistributionChannel());
+		sapConfigurationExampleModel.setSapcommon_salesOrganization(model.getSalesOrganization());
+
+		//Search for existing configurations using the example model
+		final List<SAPConfigurationModel> sapConfigurationModels = flexibleSearchService.getModelsByExample(sapConfigurationExampleModel);
 		
-		final SAPConfigurationModel sapConfigurationModel = new SAPConfigurationModel();
-		sapConfigurationModel.setSapcommon_distributionChannel(model.getDistributionChannel());
-		sapConfigurationModel.setSapcommon_salesOrganization(model.getSalesOrganization());
-		
-		final SAPConfigurationModel foundSapConfiguration = flexibleSearchService
-				.getModelByExample(sapConfigurationModel);
-		
-		if (foundSapConfiguration != null)
-		{
-			if (LOGGER.isDebugEnabled())
-			{
-				LOGGER.debug("SAP Configuration found: "+ foundSapConfiguration.getCore_name());
-			}
-			
-			Collection<BaseStoreModel> baseStores = foundSapConfiguration.getBaseStores();
-			if (baseStores.size() == 0)
-			{
-				StringBuilder sb = new StringBuilder(500);
-				sb.append("No Base Store Assigned to SAP Configuration: ");
-				sb.append( foundSapConfiguration.getCore_name() );			
-				LOGGER.error(sb);
-			}
-			else
-			{
-				for (BaseStoreModel baseStoreModel : baseStores)
-				{
-					//return the first base store
-					return baseStoreModel.isNet();
-				}
-			}
-		}
-		else
-		{
+		if (sapConfigurationModels.isEmpty()) {
 			StringBuilder sb = new StringBuilder(500);
-			sb.append("No SAP Configuration assigned to the Sales Area: ");
-			sb.append( model.getSalesOrganization() );
-			sb.append(" with distribution channel: ");
-			sb.append( model.getDistributionChannel() );
+			sb.append("No SAP Configuration found for Sales Organization ");
+			sb.append(model.getSalesOrganization());
+			sb.append(" and distribution channel ");
+			sb.append(model.getDistributionChannel());
+			sb.append(" - Returning default value: FALSE (gross)");
 			LOGGER.error(sb);
-			return Boolean.FALSE;
+
+			return Boolean.FALSE; //default to gross
 		}
-		
-		
-		return Boolean.TRUE;
+
+		//Find Net value from first base store in first configuration model 
+		for (SAPConfigurationModel sapConfiguration : sapConfigurationModels) {
+			if (LOGGER.isDebugEnabled()) {
+				LOGGER.debug("SAP Configuration found: " + sapConfiguration.getCore_name());
+			}
+
+			for (BaseStoreModel baseStoreModel : Optional.ofNullable(sapConfiguration.getBaseStores()).orElse(Collections.emptyList())) {
+				return baseStoreModel.isNet();
+			}
+		}
+
+		StringBuilder sb = new StringBuilder(500);
+		sb.append("No Base Store assigned to SAP Configuration: ");
+		sb.append(sapConfigurationModels.stream().map(SAPConfigurationModel::getCore_name).collect(Collectors.joining(",")));
+		sb.append(" - Returning default value: FALSE (gross)");
+		LOGGER.error(sb);
+
+		return Boolean.FALSE; //default to gross
 	}
 
 	@Override
-	public void set(SAPPricingSalesAreaToCatalogModel model, Boolean value)
-	{
-		 throw new UnsupportedOperationException();
-		 
+	public void set(SAPPricingSalesAreaToCatalogModel model, Boolean value) {
+		throw new UnsupportedOperationException();
+
 	}
 
 }
