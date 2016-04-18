@@ -59,7 +59,7 @@ public class NetAttributeHandler implements DynamicAttributeHandler<Boolean, SAP
 
 		if (sapConfigurationModels.isEmpty())
 		{
-			LOGGER.error("No SAP Configuration found for Sales Organization {} and distribution channel {} - Returning default value: FALSE (gross)", model.getSalesOrganization(), model.getDistributionChannel());
+			LOGGER.error("No SAP Configuration found for Sales Organization {} and distribution channel {} - Returning default value FALSE (gross)", model.getSalesOrganization(), model.getDistributionChannel());
 			return Boolean.FALSE; // default to gross
 		}
 
@@ -74,7 +74,7 @@ public class NetAttributeHandler implements DynamicAttributeHandler<Boolean, SAP
 			}
 		}
 
-		LOGGER.error("No Base Store assigned to SAP Configuration: {} - Returning default value: FALSE (gross)", sapConfigurationModels.stream().map(SAPConfigurationModel::getCore_name).collect(Collectors.joining(",")));
+		LOGGER.error("No Base Store assigned to SAP Configuration {} was found - Returning default value FALSE (gross)", sapConfigurationModels.stream().map(SAPConfigurationModel::getCore_name).collect(Collectors.joining(",")));
 
 		return Boolean.FALSE; // default to gross
 	}
