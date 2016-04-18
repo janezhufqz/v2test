@@ -75,7 +75,6 @@ public class NetAttributeHandler implements DynamicAttributeHandler<Boolean, SAP
 		}
 
 		LOGGER.error("No Base Store assigned to SAP Configuration {} was found - Returning default value FALSE (gross)", sapConfigurationModels.stream().map(SAPConfigurationModel::getCore_name).collect(Collectors.joining(",")));
-
 		return Boolean.FALSE; // default to gross
 	}
 
