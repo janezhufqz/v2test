@@ -176,6 +176,14 @@
 			</y:labels>
 		</y:base>
 	</context>
+	  
+     <context merge-by="type" parent="GenericItem" type="SAPPlantLogSysOrg" component="base">
+		<y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+			<y:labels>
+				<y:label>logSys.sapLogicalSystemName+ ' - ' +salesOrg.salesOrganization</y:label>
+			</y:labels>
+		</y:base>
+	</context>
 	
 	<context merge-by="type" type="SAPProductSalesAreaToCatalogMapping" component="referenceListViewCatalogMapping">
 		<list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
@@ -416,6 +424,17 @@
 			</editorArea:tab>
 		</editorArea:editorArea>
 	</context>
+
+	<context merge-by="module" parent="auto" type="Warehouse" component="editor-area">
+        <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+            <editorArea:tab name="hmc.tab.warehouseBackendConectivity" position="30">              
+                <editorArea:section name="hmc.section.plantLogSysOrg">
+                    <editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="sapLogicalSystem"/> 
+                    <editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="sapSalesOrganization"/>                
+                 </editorArea:section>                
+            </editorArea:tab>
+        </editorArea:editorArea>
+    </context>
 
 	<context merge-by="type" parent="GenericItem" type="ClassificationAttribute" component="editor-area">
 		<editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">

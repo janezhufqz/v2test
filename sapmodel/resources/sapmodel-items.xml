@@ -101,6 +101,26 @@
 				<modifiers read="true" write="true" search="true" optional="true" />
 			</targetElement>
 		</relation>
+			
+		<relation code="Warehouse2salesOrganization" autocreate="true" localized="false">
+			<sourceElement type="Warehouse" qualifier="warehouse" cardinality="many" collectiontype="set" >
+				<modifiers read="true" write="true" search="true" optional="true" />
+			</sourceElement>
+			<targetElement type="SAPSalesOrganization" qualifier="sapSalesOrganization" cardinality="one" >
+				<modifiers read="true" write="true" search="true" optional="true" />
+			</targetElement>
+		</relation>
+		
+		<relation code="Warehouse2logicalSystem" autocreate="true" localized="false">
+			<sourceElement type="Warehouse" qualifier="warehouse" cardinality="many" collectiontype="set" >
+				<modifiers read="true" write="true" search="true" optional="true" />
+			</sourceElement>
+			<targetElement type="SAPLogicalSystem" qualifier="sapLogicalSystem" cardinality="one" >
+				<modifiers read="true" write="true" search="true" optional="true" />
+			</targetElement>
+		</relation>
+		
+		
 		
 	</relations>
 
@@ -731,7 +751,7 @@
 				<attribute qualifier="plant" type="Warehouse">
 					<modifiers unique="true" />
 					<persistence type="property" />
-					<description>Sales Organization</description>
+					<description>Warehouse</description>
 				</attribute>
 				<attribute qualifier="logSys" type="SAPLogicalSystem">
 					<modifiers unique="false" />
@@ -745,6 +765,6 @@
 				</attribute>
 			</attributes>
 		</itemtype>
-
+		
 	</itemtypes>
 </items>
