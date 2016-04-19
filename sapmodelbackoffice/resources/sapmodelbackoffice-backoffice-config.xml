@@ -136,8 +136,8 @@
                     <attribute qualifier="sapcommon_erpHttpDestination"/>
                 </section>
             </editorArea:tab>
-            <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.customerreplication">
-                <section name="hmc.section.replicationofconsumer">
+            <editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.b2cconsumerreplication">
+                <section name="hmc.section.b2cconsumerreplication">
                     <attribute qualifier="replicateregistereduser"/>
                 </section>
             </editorArea:tab>
