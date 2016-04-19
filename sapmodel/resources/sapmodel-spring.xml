@@ -146,8 +146,6 @@
 	</bean>
 	
 	<alias alias="sapPlantLogSysOrgService" name="defaultSapPlantLogSysOrgService" />
-	<bean id="defaultSapPlantLogSysOrgService" class="sap.hybris.integration.models.services.impl.DefaultSapPlantLogSysOrgService">
-		<property name="baseStoreService" ref="baseStoreService" />
-	</bean>
+	<bean id="defaultSapPlantLogSysOrgService" class="sap.hybris.integration.models.services.impl.DefaultSapPlantLogSysOrgService"/>
 	
 </beans>
