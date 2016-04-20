@@ -8,24 +8,24 @@ import de.hybris.platform.store.BaseStoreModel;
 public interface SapPlantLogSysOrgService {
 	
     /**
-     * @param plantCode
      * @param baseStoreModel
-     * @return SAP logical system for a given plant
+     * @param plantCode
+     * @return SAP logical system for given base store and plant
      */
-    public SAPLogicalSystemModel getSapLogicalSystemForPlant(String plantCode, BaseStoreModel baseStoreModel);
+    public SAPLogicalSystemModel getSapLogicalSystemForPlant(BaseStoreModel baseStoreModel, String plantCode);
     
     /**
-     * @param plantCode
      * @param baseStoreModel
-     * @return SAP sales organization for a given plant
+     * @param plantCode
+     * @return SAP sales organization for given base store and plant
      */
-    public SAPSalesOrganizationModel getSapSalesOrganizationForPlant(String plantCode, BaseStoreModel baseStoreModel);
+    public SAPSalesOrganizationModel getSapSalesOrganizationForPlant(BaseStoreModel baseStoreModel, String plantCode);
     
     /**
-     * @param plantCode
      * @param baseStoreModel
-     * @return SAP logical system and sales organization for a given plant
+     * @param plantCode
+     * @return SAP logical system and sales organization for given base store and plant
      */
-    public SAPPlantLogSysOrgModel getSapPlantLogSysOrgForPlant(String plantCode, BaseStoreModel baseStoreModel);
+    public SAPPlantLogSysOrgModel getSapPlantLogSysOrgForPlant(BaseStoreModel baseStoreModel, String plantCode);
     
 }
