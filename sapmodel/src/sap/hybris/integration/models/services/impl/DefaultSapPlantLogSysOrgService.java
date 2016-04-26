@@ -5,19 +5,24 @@ import java.util.Set;
 import java.util.function.BiFunction;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Required;
 
 import com.google.common.collect.Sets;
 
 import sap.hybris.integration.models.services.SapPlantLogSysOrgService;
+
 import de.hybris.platform.sap.core.configuration.model.SAPConfigurationModel;
 import de.hybris.platform.sap.sapmodel.model.SAPLogicalSystemModel;
 import de.hybris.platform.sap.sapmodel.model.SAPPlantLogSysOrgModel;
 import de.hybris.platform.sap.sapmodel.model.SAPSalesOrganizationModel;
+import de.hybris.platform.servicelayer.model.ModelService;
 import de.hybris.platform.store.BaseStoreModel;
 
 public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService {
-
+	
 	private final static Logger LOG = Logger.getLogger(DefaultSapPlantLogSysOrgService.class);
+	
+	private ModelService modelService;
 
 	private final BiFunction<Set<SAPPlantLogSysOrgModel>, String, Optional<SAPPlantLogSysOrgModel>> selectEntry = (
 			sapPlantLogSysOrgSet, plantCode) -> sapPlantLogSysOrgSet.stream()
@@ -34,7 +39,8 @@ public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService
 		} else {
 			LOG.error(String.format("No SAP logical system is maintanied for the base store %s and plant %s!",
 					baseStoreModel, plantCode));
-			return new SAPLogicalSystemModel();
+			
+			return getModelService().create(SAPLogicalSystemModel.class);
 		}
 
 	}
@@ -50,7 +56,8 @@ public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService
 		} else {
 			LOG.error(String.format("No SAP sales organization is maintained for the plant %s in base store %s!",
 					plantCode, baseStoreModel));
-			return new SAPSalesOrganizationModel();
+			
+			return getModelService().create(SAPSalesOrganizationModel.class);
 		}
 	}
 
@@ -66,7 +73,12 @@ public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService
 			LOG.error(String.format(
 					"No SAP logical system and sales organization are maintained for the plant %s in base store %s!",
 					plantCode, baseStoreModel));
-			return new SAPPlantLogSysOrgModel();
+			
+			SAPPlantLogSysOrgModel sapPlantLogSysOrgModel = getModelService().create(SAPPlantLogSysOrgModel.class);
+			sapPlantLogSysOrgModel.setLogSys(getModelService().create(SAPLogicalSystemModel.class));
+			sapPlantLogSysOrgModel.setSalesOrg(getModelService().create(SAPSalesOrganizationModel.class));
+			
+			return sapPlantLogSysOrgModel;
 		}
 
 	}
@@ -80,11 +92,22 @@ public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService
 		} else {
 			LOG.error(String.format("No SAP multiple backends configuration is maintained for the base store %s!",
 					baseStore));
-			SAPConfigurationModel sapConfigurationModel = new SAPConfigurationModel();
+			SAPConfigurationModel sapConfigurationModel = getModelService().create(SAPConfigurationModel.class);
 			sapConfigurationModel.setSapPlantLogSysOrg(Sets.newHashSet());
 			return sapConfigurationModel;
 		}
 
 	}
+
+	public ModelService getModelService() {
+		return modelService;
+	}
+    
+	@Required
+	public void setModelService(ModelService modelService) {
+		this.modelService = modelService;
+	}
+	
+	
 
 }
