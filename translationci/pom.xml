@@ -23,7 +23,7 @@
 					<version>${translation.plugin.version}</version>
 					<configuration>
 						<translationCollection>de.hybris.platform.sapmodel</translationCollection>
-						<translationDeveloper>I816040</translationDeveloper>
+						<translationDeveloper>I813953</translationDeveloper>
 						<translationResources>
 							<translationResource>sapmodel/resources/localization</translationResource>
 							<translationResource>sapmodel/resources/localization/backoffice</translationResource>
