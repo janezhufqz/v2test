@@ -26,7 +26,6 @@
 						<translationDeveloper>I813953</translationDeveloper>
 						<translationResources>
 							<translationResource>sapmodel/resources/localization</translationResource>
-							<translationResource>sapmodel/resources/localization/backoffice</translationResource>
 							<translationResource>sapmodelhmc/hmc/resources/localization</translationResource>
 							<translationResource>sapmodelbackoffice/resources/localization/backoffice</translationResource>
 						</translationResources>
