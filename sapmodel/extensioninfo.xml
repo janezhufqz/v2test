@@ -24,7 +24,7 @@
 
       <coremodule generated="true" manager="sap.hybris.integration.models.jalo.SapmodelManager" packageroot="sap.hybris.integration.models"/>
 			
-	<meta key="backoffice-module" value="true"/>
+
 
    </extension>
       
