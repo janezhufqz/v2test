@@ -11,10 +11,17 @@
 				<tab name="tab.backendconnectivity">
 					<section name="section.idoctransfer">
 						<listlayout>
-							<attribute labelwidth="200" name="sapcommon_erpLogicalSystem" width="300"></attribute>
-							<attribute labelwidth="200" name="sapcommon_erpHttpDestination" width="300"></attribute>
+							<attribute labelwidth="200" name="sapLogicalSystemToHttpDestinationMapping" width="408">
+								<referencecollectioneditor presetattribute="sapcommon_sapGlobalConfiguration" autosave="true" externalcreate="false"
+									editable="true">
+									<itemlayout>
+										<attribute name="sapcommon_erpLogicalSystem" width="300"/>
+										<attribute name="sapcommon_erpHttpDestination" width="300"/>								
+									</itemlayout>
+								</referencecollectioneditor>
+							</attribute>
 						</listlayout>
-					</section>
+					</section>					
 				</tab>
 				<tab name="tab.customerreplication">
 					<section name="section.replicationofconsumer">

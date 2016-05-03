@@ -121,10 +121,10 @@
 	<alias name="defaultSapBonusBuySiteToCatalogPopulator" alias="sapBonusBuySiteToCatalogPopulator" />
 	<bean id="defaultSapBonusBuySiteToCatalogPopulator" class="de.hybris.platform.sap.model.populators.SAPBonusBuySiteToCatalogPopulator" />
 
- 	<!-- product --> 
- 	<alias name="defaultSapProductCatalogMappingPopulator" alias="sapProductCatalogMappingPopulator" />
+	<!-- product -->
+	<alias name="defaultSapProductCatalogMappingPopulator" alias="sapProductCatalogMappingPopulator" />
 	<bean id="defaultSapProductCatalogMappingPopulator" class="de.hybris.platform.sap.model.populators.SAPProductCatalogMappingPopulator" />
-	
+
 	<bean id="unitsTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
 		<property name="itemCode" value="Unit" />
 		<property name="rawType" value="RawHybrisUnit" />
@@ -140,8 +140,14 @@
 			</list>
 		</property>
 	</bean>
-	
+
 	<alias alias="sapProductIDAttributeHandler" name="sapDefaultProductIDAttributeHandler" />
 	<bean id="sapDefaultProductIDAttributeHandler" class="de.hybris.platform.sap.sapmodel.daos.ProductIDAttributeHandler">
 	</bean>
+
+	<alias alias="sapPlantLogSysOrgService" name="defaultSapPlantLogSysOrgService" />
+	<bean id="defaultSapPlantLogSysOrgService" class="sap.hybris.integration.models.services.impl.DefaultSapPlantLogSysOrgService">
+		<property name="modelService" ref="modelService" />
+	</bean>
+
 </beans>
