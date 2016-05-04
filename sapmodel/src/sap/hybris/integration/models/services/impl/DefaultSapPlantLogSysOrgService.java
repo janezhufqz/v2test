@@ -49,7 +49,7 @@ public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService
 			return sapPlantLogSysOrg.get().getLogSys();
 		} else {
 			LOG.error(String.format("No SAP logical system is maintanied for the base store %s and plant %s!",
-					baseStoreModel, plantCode));
+					baseStoreModel.getName(), plantCode));
 			
 			return getModelService().create(SAPLogicalSystemModel.class);
 		}
@@ -66,7 +66,7 @@ public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService
 			return sapPlantLogSysOrg.get().getSalesOrg();
 		} else {
 			LOG.error(String.format("No SAP sales organization is maintained for the plant %s in base store %s!",
-					plantCode, baseStoreModel));
+					plantCode, baseStoreModel.getName()));
 			
 			return getModelService().create(SAPSalesOrganizationModel.class);
 		}
@@ -83,7 +83,7 @@ public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService
 		} else {
 			LOG.error(String.format(
 					"No SAP logical system and sales organization are maintained for the plant %s in base store %s!",
-					plantCode, baseStoreModel));
+					plantCode, baseStoreModel.getName()));
 			
 			SAPPlantLogSysOrgModel sapPlantLogSysOrgModel = getModelService().create(SAPPlantLogSysOrgModel.class);
 			sapPlantLogSysOrgModel.setLogSys(getModelService().create(SAPLogicalSystemModel.class));
@@ -102,7 +102,7 @@ public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService
 			return sapConfiguration;
 		} else {
 			LOG.error(String.format("No SAP multiple backends configuration is maintained for the base store %s!",
-					baseStore));
+					baseStore.getName()));
 			SAPConfigurationModel sapConfigurationModel = getModelService().create(SAPConfigurationModel.class);
 			sapConfigurationModel.setSapPlantLogSysOrg(Sets.newHashSet());
 			return sapConfigurationModel;
