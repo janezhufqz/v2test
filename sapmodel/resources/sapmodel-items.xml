@@ -120,24 +120,6 @@
 			</targetElement>
 		</relation>
 			
-		<relation code="Warehouse2salesOrganization" autocreate="true" localized="false">
-			<sourceElement type="Warehouse" qualifier="warehouse" cardinality="many" collectiontype="set" >
-				<modifiers read="true" write="true" search="true" optional="true" />
-			</sourceElement>
-			<targetElement type="SAPSalesOrganization" qualifier="sapSalesOrganization" cardinality="one" >
-				<modifiers read="true" write="true" search="true" optional="true" />
-			</targetElement>
-		</relation>
-		
-		<relation code="Warehouse2logicalSystem" autocreate="true" localized="false">
-			<sourceElement type="Warehouse" qualifier="warehouse" cardinality="many" collectiontype="set" >
-				<modifiers read="true" write="true" search="true" optional="true" />
-			</sourceElement>
-			<targetElement type="SAPLogicalSystem" qualifier="sapLogicalSystem" cardinality="one" >
-				<modifiers read="true" write="true" search="true" optional="true" />
-			</targetElement>
-		</relation>
-		
 		<relation code="Order2SapOrder" generate="true" localized="false"
 			autocreate="true">
 			<sourceElement type="Order" cardinality="one"
