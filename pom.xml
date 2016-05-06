@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.hybris.onpremise</groupId>
 		<artifactId>superpom</artifactId>
-		<version>2.1.1</version>
+		<version>2.1.2</version>
 	</parent>
 
 	<groupId>de.hybris.platform</groupId>
@@ -72,66 +72,13 @@
 		<dist.extensions.binary></dist.extensions.binary>
 		<dist.extensions.source>${contained.extensions}</dist.extensions.source>
 		<dist.create.source.dist>true</dist.create.source.dist>
-		<dist.finaldevzipname>${project.build.directory}/distribution-dev.zip</dist.finaldevzipname>
 		<dist.create.en.langpack>true</dist.create.en.langpack>
 		
 		<!-- Define sonar scan properties -->
-		<sonar.extension.src>sapmodel/src,sapmodelhmc/src,sapmodelbackoffice/src</sonar.extension.src>
+		<sonar.extension.src>
+			sapmodel/src,
+			sapmodelhmc/src,
+			sapmodelbackoffice/src
+		</sonar.extension.src>
 	</properties>
-	
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>versions-maven-plugin</artifactId>
-					<version>2.1</version>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>build-helper-maven-plugin</artifactId>
-					<version>1.8</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>versions-maven-plugin</artifactId>
-				<configuration>
-					<includesList>de.hybris.platform</includesList>
-					<generateBackupPoms>${generateBackupPoms}</generateBackupPoms>
-					<allowSnapshots>false</allowSnapshots>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>attach-artifacts</id>
-						<phase>package</phase>
-						<goals>
-							<goal>attach-artifact</goal>
-						</goals>
-						<configuration>
-							<artifacts>
-								<artifact>
-									<file>${project.build.directory}/hybris/temp/dists/langpack.zip</file>
-									<classifier>loc</classifier>
-									<type>zip</type>
-								</artifact>
-								<artifact>
-									<file>${project.build.directory}/distribution-dev.zip</file>
-									<classifier>dev</classifier>
-									<type>zip</type>
-								</artifact>
-							</artifacts>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>
