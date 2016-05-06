@@ -18,9 +18,16 @@
 			<editor>
 				<tab name="tab.backendconnectivity">
 					<section name="section.idoctransfer">
-						<listlayout>
-							<attribute labelwidth="200" name="sapcommon_erpLogicalSystem" width="300"></attribute>
-							<attribute labelwidth="200" name="sapcommon_erpHttpDestination" width="300"></attribute>
+                         <listlayout>
+							<attribute labelwidth="200" name="sapLogicalSystemGlobalConfig" width="400">
+								<referencecollectioneditor presetattribute="sapcommon_sapGlobalConfiguration" autosave="true"
+									externalcreate="false" editable="true">
+									<itemlayout>
+										<attribute name="sapLogicalSystemName" width="200" />
+										<attribute name="sapHTTPDestination" width="200" />
+									</itemlayout>
+								</referencecollectioneditor>
+							</attribute>
 						</listlayout>
 					</section>
 				</tab>
