@@ -133,12 +133,6 @@
 					optional="true" />
 			</targetElement>
 		</relation>
-		
-		<relation code="SAPGlobalConfig2LogSysAndDestination" autocreate="true" localized="false">
-			<sourceElement type="SAPGlobalConfiguration" qualifier="sapcommon_sapGlobalConfiguration" cardinality="one"></sourceElement>
-			<targetElement type="SAPLogicalSystemToHttpDestinationMapping" qualifier="sapLogSystemToHttpTargetDestinationMapping"
-				cardinality="many" collectiontype="set"></targetElement>
-		</relation>
 			
 	</relations>
 
@@ -399,11 +393,23 @@
 		
 		<itemtype autocreate="false" code="SAPGlobalConfiguration" generate="false" singleton="true">
 			<attributes>
+				
 				<attribute qualifier="replicateregistereduser" type="boolean" autocreate="true">
 					<description>Replicate Registered User</description>
 					<persistence type="property" />
 					<modifiers unique="false" optional="false" read="true" write="true" initial="true" search="true" />
 				</attribute>
+				
+				<attribute qualifier="sapcommon_erpLogicalSystem" type="java.lang.String" autocreate="true">
+					<persistence type="property" />
+					<modifiers unique="false" optional="true" read="true" write="true" initial="true" search="true" />
+				</attribute>
+				
+				<attribute qualifier="sapcommon_erpHttpDestination" type="SAPHTTPDestination" autocreate="true">
+					<persistence type="property" />
+					<modifiers unique="false" optional="true" read="true" write="true" initial="true" search="true" />
+				</attribute>
+				
 			</attributes>
 		</itemtype>
 	
@@ -804,23 +810,6 @@
 					<defaultvalue>em().getEnumerationValue("SAPOrderStatus", "NOT_SENT_TO_ERP")</defaultvalue>
 					<description>Sap Order Status</description>
 				</attribute>
-			</attributes>
-		</itemtype>
-		
-		<itemtype code="SAPLogicalSystemToHttpDestinationMapping" extends="GenericItem" autocreate="true" generate="true"
-			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPLogicalSystemToHttpDestinationMapping">
-			<deployment table="SAPLogSysHttpDest" typecode="9327" />
-			<attributes>
-				<attribute type="java.lang.String" qualifier="sapcommon_erpLogicalSystem">
-					<modifiers unique="true" />
-					<persistence type="property" />
-					<description>Target Logical System</description>
-				</attribute>
-				<attribute type="SAPHTTPDestination" qualifier="sapcommon_erpHttpDestination">
-					<modifiers unique="true" />
-					<persistence type="property" />
-					<description>Target HTTP Destination</description>
-				</attribute>		
 			</attributes>
 		</itemtype>
 			

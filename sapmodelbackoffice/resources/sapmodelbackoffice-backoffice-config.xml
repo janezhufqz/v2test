@@ -435,17 +435,6 @@
 		</editorArea:editorArea>
 	</context>
 
-	<context merge-by="module" parent="auto" type="Warehouse" component="editor-area">
-        <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
-            <editorArea:tab name="hmc.tab.warehouseBackendConectivity" position="30">              
-                <editorArea:section name="hmc.section.plantLogSysOrg">
-                    <editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="sapLogicalSystem"/> 
-                    <editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="sapSalesOrganization"/>                
-                 </editorArea:section>                
-            </editorArea:tab>
-        </editorArea:editorArea>
-    </context>
-
 	<context merge-by="type" parent="GenericItem" type="ClassificationAttribute" component="editor-area">
 		<editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
 			<editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.saplongtext">
