@@ -16,6 +16,7 @@
 		<list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
 			<list-view:column qualifier="sapLogicalSystemName" />
 			<list-view:column qualifier="sapHTTPDestination" />
+			<list-view:column qualifier="defaultLogicalSystem" />
 		</list-view:list-view>
 	</context>
 
@@ -25,6 +26,7 @@
 				<editorArea:section name="hmc.essential">
 					<editorArea:attribute qualifier="sapLogicalSystemName" />
 					<editorArea:attribute qualifier="sapHTTPDestination" />
+					<editorArea:attribute qualifier="defaultLogicalSystem" />
 				</editorArea:section>
 			</editorArea:tab>
 		</editorArea:editorArea>
