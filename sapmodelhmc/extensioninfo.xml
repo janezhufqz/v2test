@@ -22,7 +22,7 @@
 
       <hmcmodule extensionclassname="de.hybris.platform.sapmodelhmc.SapmodelHMCExtension"/>
 					
-	 
+	  <meta key="deprecated" value="true"/>
 	
 
    </extension>
