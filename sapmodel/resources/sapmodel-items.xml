@@ -21,6 +21,7 @@
 			<value code="NOT_SENT_TO_ERP" />
 			<value code="SENT_TO_ERP" />
 			<value code="CONFIRMED_FROM_ERP" />
+			<value code="CANCELLED_FROM_ERP" />
 		</enumtype>
 	</enumtypes>
 
@@ -165,6 +166,20 @@
 				collectiontype="set" qualifier="sapOrder" ordered="true">
 				<modifiers read="true" write="true" search="true"
 					optional="true" />
+			</targetElement>
+		</relation>
+
+		<relation code="ConsignmentSapOrderRelation" autocreate="true"
+			generate="false" localized="false">
+			<sourceElement type="Consignment" qualifier="consignments"
+				collectiontype="set" cardinality="many" ordered="false">
+				<modifiers read="true" write="true" search="true"
+					optional="true" />
+			</sourceElement>
+			<targetElement type="SAPOrder" qualifier="sapOrder"
+				cardinality="one">
+				<modifiers read="true" write="false" initial="true"
+					search="true" optional="true" />
 			</targetElement>
 		</relation>
 
