@@ -16,23 +16,21 @@ import de.hybris.platform.servicelayer.exceptions.ModelNotFoundException;
 import de.hybris.platform.servicelayer.model.attribute.DynamicAttributeHandler;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import sap.hybris.integration.models.model.SAPProductIDDataConversionModel;
 
-
-
-public class ProductIDAttributeHandler implements DynamicAttributeHandler<String, ProductModel>
+public class ProductIDAttributeHandler implements DynamicAttributeHandler<String, ProductModel>, Serializable
 {
+	private static final Logger LOGGER = Logger.getLogger(ProductIDAttributeHandler.class.getName());
+	private static final long serialVersionUID = 1L;
 	protected SAPProductIDDataConversionModel customizing;
-
-	protected static final Logger LOGGER = Logger.getLogger(ProductIDAttributeHandler.class.getName());
-
+	
 	@Autowired
 	protected FlexibleSearchService flexibleSearchService; //NOPMD
 
