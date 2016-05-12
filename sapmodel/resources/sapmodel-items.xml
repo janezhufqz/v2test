@@ -163,7 +163,7 @@
 					search="true" optional="false" />
 			</sourceElement>
 			<targetElement type="SAPOrder" cardinality="many"
-				collectiontype="set" qualifier="sapOrder" ordered="true">
+				collectiontype="set" qualifier="sapOrders" ordered="true">
 				<modifiers read="true" write="true" search="true"
 					optional="true" />
 			</targetElement>
@@ -957,7 +957,7 @@
 			generate="true" jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPOrder">
 			<deployment table="SAPOrders" typecode="9326" />
 			<attributes>
-				<attribute qualifier="sapOrderNumber" type="java.lang.String">
+				<attribute qualifier="code" type="java.lang.String">
 					<modifiers unique="true" />
 					<persistence type="property" />
 					<description>SAP Order Number</description>
