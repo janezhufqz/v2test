@@ -37,19 +37,19 @@
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-optional-module</artifactId>
 			<type>zip</type>
-			<version>6.1.0.0-M2</version>
+			<version>6.1.0.0-M3</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.1.0.0-M13</version>
+			<version>6.1.0.0-M14</version>
 			<type>zip</type>
 		</dependency>	
 	    <dependency>
 	      <artifactId>commerceservices-module</artifactId>
 	      <groupId>de.hybris.platform</groupId>
 	      <type>zip</type>
-	      <version>6.1.0.0-M15</version>
+	      <version>6.1.0.0-M17</version>
 	    </dependency>		
 	</dependencies>
 	
