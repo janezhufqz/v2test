@@ -943,12 +943,12 @@
 				<attribute qualifier="logSys" type="SAPLogicalSystem">
 					<modifiers unique="false" />
 					<persistence type="property" />
-					<description>Distribution Channel</description>
+					<description>SAP Logical System</description>
 				</attribute>
 				<attribute qualifier="salesOrg" type="SAPSalesOrganization">
 					<modifiers unique="false" />
 					<persistence type="property" />
-					<description>Division</description>
+					<description>SAP Sales Organization</description>
 				</attribute>
 			</attributes>
 		</itemtype>
