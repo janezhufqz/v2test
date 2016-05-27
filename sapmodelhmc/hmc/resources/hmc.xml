@@ -20,7 +20,7 @@
 					<section name="section.idoctransfer">
                          <listlayout>
 							<attribute labelwidth="200" name="sapLogicalSystemGlobalConfig" width="560">
-								<referencecollectioneditor presetattribute="sapcommon_sapGlobalConfiguration" autosave="true"
+								<referencecollectioneditor presetattribute="sapGlobalConfiguration" autosave="true"
 									externalcreate="false" editable="true">
 									<itemlayout>
 										<attribute name="sapLogicalSystemName" width="180" />
