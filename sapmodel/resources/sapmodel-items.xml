@@ -493,34 +493,6 @@
 			</attributes>
 		</itemtype>
 
-		<!-- <itemtype code="SAPConfig2PlantLogSysOrg" autocreate="false" -->
-		<!-- generate="false"> -->
-
-		<!-- <attributes> -->
-		<!-- <attribute qualifier="sapPlantLogSysOrg" type="SAPPlantLogSysOrg"> -->
-		<!-- <persistence type="property" /> -->
-		<!-- <modifiers unique="true" optional="false" initial="true" -->
-		<!-- write="false" /> -->
-		<!-- <description>SAP Plant LogSysOrg</description> -->
-		<!-- </attribute> -->
-		<!-- <attribute qualifier="sapConfiguration" type="SAPConfiguration"> -->
-		<!-- <persistence type="property" /> -->
-		<!-- <modifiers unique="true" optional="false" initial="true" -->
-		<!-- write="false" /> -->
-		<!-- <description>SA PConfiguration</description> -->
-		<!-- </attribute> -->
-		<!-- </attributes> -->
-
-		<!-- <indexes> -->
-		<!-- <index name="SAPConfig2PlantLogSysOrgIdx" unique="true"> -->
-		<!-- <key attribute="sapConfiguration"/> -->
-		<!-- <key attribute="sapPlantLogSysOrg"/> -->
-		<!-- </index> -->
-		<!-- </indexes> -->
-
-		<!-- </itemtype> -->
-
-
 		<!-- SAP Defined Tables -->
 		<!-- SAP type-code range should be maintained @ https://wiki.wdf.sap.corp/wiki/display/hybris/Type+codes -->
 
