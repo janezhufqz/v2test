@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--
- [y] hybris Platform
-
- Copyright (c) 2000-2016 SAP SE or an SAP affiliate company.
- All rights reserved.
-
- This software is the confidential and proprietary information of SAP
- ("Confidential Information"). You shall not disclose such Confidential
- Information and shall use it only in accordance with the terms of the
- license agreement you entered into with SAP.
--->
+<!-- [y] hybris Platform Copyright (c) 2000-2016 SAP SE or an SAP affiliate 
+	company. All rights reserved. This software is the confidential and proprietary 
+	information of SAP ("Confidential Information"). You shall not disclose such 
+	Confidential Information and shall use it only in accordance with the terms 
+	of the license agreement you entered into with SAP. -->
 
 <items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="items.xsd">
@@ -145,13 +139,11 @@
 			localized="false">
 			<sourceElement type="SAPConfiguration" qualifier="sapConfiguration"
 				cardinality="one">
-				<modifiers read="true" write="true" search="true"
-					optional="false" />
 			</sourceElement>
 			<targetElement type="SAPPlantLogSysOrg" qualifier="sapPlantLogSysOrg"
 				cardinality="many" collectiontype="set">
-				<modifiers read="true" write="true" search="true"
-					optional="true" />
+				<modifiers read="true" write="true" optional="true"
+					partof="true" />
 			</targetElement>
 		</relation>
 
@@ -500,6 +492,33 @@
 
 			</attributes>
 		</itemtype>
+
+		<!-- <itemtype code="SAPConfig2PlantLogSysOrg" autocreate="false" -->
+		<!-- generate="false"> -->
+
+		<!-- <attributes> -->
+		<!-- <attribute qualifier="sapPlantLogSysOrg" type="SAPPlantLogSysOrg"> -->
+		<!-- <persistence type="property" /> -->
+		<!-- <modifiers unique="true" optional="false" initial="true" -->
+		<!-- write="false" /> -->
+		<!-- <description>SAP Plant LogSysOrg</description> -->
+		<!-- </attribute> -->
+		<!-- <attribute qualifier="sapConfiguration" type="SAPConfiguration"> -->
+		<!-- <persistence type="property" /> -->
+		<!-- <modifiers unique="true" optional="false" initial="true" -->
+		<!-- write="false" /> -->
+		<!-- <description>SA PConfiguration</description> -->
+		<!-- </attribute> -->
+		<!-- </attributes> -->
+
+		<!-- <indexes> -->
+		<!-- <index name="SAPConfig2PlantLogSysOrgIdx" unique="true"> -->
+		<!-- <key attribute="sapConfiguration"/> -->
+		<!-- <key attribute="sapPlantLogSysOrg"/> -->
+		<!-- </index> -->
+		<!-- </indexes> -->
+
+		<!-- </itemtype> -->
 
 
 		<!-- SAP Defined Tables -->
@@ -929,28 +948,27 @@
 			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPPlantLogSysOrg">
 			<deployment table="SAPPlantLogSysOrg" typecode="9325" />
 			<attributes>
-				<attribute qualifier="sapConfiguration" type="SAPConfiguration">
-					<persistence type="property" />
-					<modifiers unique="true" optional="false" read="true"
-						write="false" initial="true" search="true" />
-					<description>SAP Configuration</description>
-				</attribute>
 				<attribute qualifier="plant" type="Warehouse">
-					<modifiers unique="true" />
+					<modifiers read="true" write="true" search="true"
+						optional="false" />
 					<persistence type="property" />
 					<description>Warehouse</description>
 				</attribute>
 				<attribute qualifier="logSys" type="SAPLogicalSystem">
-					<modifiers unique="false" />
 					<persistence type="property" />
 					<description>SAP Logical System</description>
 				</attribute>
 				<attribute qualifier="salesOrg" type="SAPSalesOrganization">
-					<modifiers unique="false" />
 					<persistence type="property" />
 					<description>SAP Sales Organization</description>
 				</attribute>
 			</attributes>
+			<indexes>
+				<index name="sapPlantLogSysOrgIdx" unique="true">
+					<key attribute="sapConfiguration" />
+					<key attribute="plant" />
+				</index>
+			</indexes>
 		</itemtype>
 
 		<itemtype code="SAPOrder" extends="GenericItem" autocreate="true"

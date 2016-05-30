@@ -106,13 +106,13 @@
 		<wz:flow xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config" id="sapPlantLogSysOrgWizard" title="create.sapPlantLogSysOrg.title">
 
 			<wz:prepare id="sapPlantLogSysOrgPrepare">
-				<wz:initialize property="newSAPPlantLogSysOrg" type="SAPPlantLogSysOrg" />
+				<wz:initialize property="newSAPPlantLogSysOrg" type="ctx.TYPE_CODE" />
+				<wz:assign property="newSAPPlantLogSysOrg.sapConfiguration" value="ctx.parentObject" />
 			</wz:prepare>
 
 			<wz:step id="step1" label="create.sapPlantLogSysOrg.essential.label">
 				<wz:content id="step1.content">
-					<wz:property-list root="newSAPPlantLogSysOrg">
-					    <wz:property qualifier="sapConfiguration" type="SAPConfiguration" />
+					<wz:property-list root="newSAPPlantLogSysOrg">					    
 						<wz:property qualifier="plant" type="Warehouse" />
 						<wz:property qualifier="logSys" type="SAPLogicalSystem" />
 						<wz:property qualifier="salesOrg" type="SAPSalesOrganization" />
