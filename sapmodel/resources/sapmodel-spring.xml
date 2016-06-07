@@ -157,5 +157,14 @@
 	<bean id="defaultSapPlantLogSysOrgService" class="sap.hybris.integration.models.services.impl.DefaultSapPlantLogSysOrgService">
 		<property name="modelService" ref="modelService" />
 	</bean>
+	
+	<bean id="sapLogicalSystemValidationInterceptor" class="de.hybris.platform.sap.sapmodel.jalo.interceptor.SapLogicalSystemValidationInterceptor">
+		<property name="modelService" ref="modelService" />
+	</bean>
+	
+	<bean id="sapLogicalSystemValidationInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
+		<property name="interceptor" ref="sapLogicalSystemValidationInterceptor" />
+		<property name="typeCode" value="SAPLogicalSystem" />
+	</bean>
 
 </beans>
