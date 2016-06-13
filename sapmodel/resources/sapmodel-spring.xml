@@ -158,13 +158,22 @@
 		<property name="modelService" ref="modelService" />
 	</bean>
 	
-	<bean id="sapLogicalSystemValidationInterceptor" class="de.hybris.platform.sap.sapmodel.jalo.interceptor.SapLogicalSystemValidationInterceptor">
-		<property name="modelService" ref="modelService" />
-	</bean>
+	<bean id="sapLogicalSystemValidationInterceptor" class="de.hybris.platform.sap.sapmodel.jalo.interceptor.SapLogicalSystemValidationInterceptor"/>
 	
 	<bean id="sapLogicalSystemValidationInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
 		<property name="interceptor" ref="sapLogicalSystemValidationInterceptor" />
 		<property name="typeCode" value="SAPLogicalSystem" />
 	</bean>
 
+    <bean id="sapPlantLogSysOrgValidationInterceptor" class="de.hybris.platform.sap.sapmodel.jalo.interceptor.SapPlantLogSysOrgValidationInterceptor"/>
+	
+	<bean id="SapPlantLogSysOrgValidationInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
+		<property name="interceptor" ref="sapPlantLogSysOrgValidationInterceptor" />
+		<property name="typeCode" value="SAPPlantLogSysOrg" />
+	</bean>
+	
+	<bean id="sapLogicalSystemSaveListener" class="de.hybris.platform.sap.sapmodel.jalo.listener.SapLogicalSystemSaveListener">
+		<property name="flexibleSearchService" ref="flexibleSearchService" />
+	</bean>
+	
 </beans>

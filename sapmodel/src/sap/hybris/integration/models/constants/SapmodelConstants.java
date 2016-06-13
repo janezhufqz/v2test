@@ -30,6 +30,8 @@ public final class SapmodelConstants extends GeneratedSapmodelConstants
 	/** SAP PRICING CONSTANT ATTRIBURES **/
 
 	public static final String CONFIGURATION_PROPERTY_REFERENCE_CUSTOMER = "sapcommon_referenceCustomer";
+	
+	public static final int SAP_LOGICAL_SYSTEM_TYPE_CODE = 9321;
 
 	private SapmodelConstants()
 	{

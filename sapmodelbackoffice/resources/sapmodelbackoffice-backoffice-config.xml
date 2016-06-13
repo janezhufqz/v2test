@@ -52,7 +52,8 @@
 		<wz:flow xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config" id="logicalSystemWizard" title="create.saplogicalsystem.title">
 
 			<wz:prepare id="logicalSystemWizard">
-				<wz:initialize property="newLogicalSystem" type="SAPLogicalSystem" />
+				<wz:initialize property="newLogicalSystem" type="ctx.TYPE_CODE" />
+				<wz:assign property="newLogicalSystem.sapGlobalConfiguration" value="ctx.parentObject" />
 			</wz:prepare>
 
 			<wz:step id="step1" label="create.saplogicalsystem.essential.label">
