@@ -372,13 +372,15 @@
 			</editorArea:tab>
 
 			<editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.sapproduct">
-				<section name="hmc.section.sapproduct">
+				<section name="hmc.section.sapproduct" columns="2" position="0">
+				<editorArea:panel rowspan="2">
 					<attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapProductSalesAreaToCatalogMapping">
 						<editorArea:editor-parameter>
 							<editorArea:name>listConfigContext</editorArea:name>
 							<editorArea:value>referenceListViewCatalogMapping</editorArea:value>
 						</editorArea:editor-parameter>
 					</attribute>
+					</editorArea:panel>
 				</section>
 			</editorArea:tab>
 
