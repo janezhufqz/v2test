@@ -31,13 +31,13 @@
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.1.0.0-RC18</version>
+			<version>6.1.0.0-RC19</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-optional-module</artifactId>
 			<type>zip</type>
-			<version>6.1.0.0-M4</version>
+			<version>6.1.0.0-RC1</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
