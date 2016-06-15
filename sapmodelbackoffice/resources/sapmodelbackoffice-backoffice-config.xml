@@ -332,13 +332,15 @@
 		<editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
 
 			<editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.backendconnectivity">
-				<section name="hmc.section.idoctransfer">
+				<section name="hmc.section.idoctransfer" columns="2" position="0">
+				<editorArea:panel rowspan="2">
 					<attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapLogicalSystemGlobalConfig">
 						<editorArea:editor-parameter>
 							<editorArea:name>listConfigContext</editorArea:name>
 							<editorArea:value>referenceListViewLogicalSystem</editorArea:value>
 						</editorArea:editor-parameter>
 					</attribute>
+				</editorArea:panel>
 				</section>
 			</editorArea:tab>
 
@@ -349,15 +351,15 @@
 			</editorArea:tab>
 
 			<editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.datahubmappings_pricing">
-				<section name="hmc.section.datahubmappings_pricing">
-
+				<section name="hmc.section.datahubmappings_pricing" columns="2" position="0">
+				<editorArea:panel rowspan="2">
 					<attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapcommon_sapPricingSalesArea">
 						<editorArea:editor-parameter>
 							<editorArea:name>listConfigContext</editorArea:name>
 							<editorArea:value>referenceListViewPricingMapping</editorArea:value>
 						</editorArea:editor-parameter>
 					</attribute>
-
+				</editorArea:panel>
 				</section>
 				<section name="hmc.section.sapbonusbuysite">
 
