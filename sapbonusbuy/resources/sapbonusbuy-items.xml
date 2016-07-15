@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- ~ [y] hybris Platform ~ ~ Copyright (c) 2000-2016 SAP SE ~ All rights 
+	reserved. ~ ~ This software is the confidential and proprietary information 
+	of SAP ~ Hybris ("Confidential Information"). You shall not disclose such 
+	~ Confidential Information and shall use it only in accordance with the ~ 
+	terms of the license agreement you entered into with SAP Hybris. -->
+<!-- ATTENTION: This is just an example file. You have to edit it according 
+	to your needs. -->
+
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="items.xsd">
+
+	<relations>	
+		<relation code="SAPConfigBonusBuySite" autocreate="true"
+			localized="false">
+			<sourceElement type="SAPGlobalConfiguration" qualifier="sapcommon_sapGlobalConfiguration"
+				cardinality="one">
+
+			</sourceElement>
+			<targetElement type="SAPBonusBuySiteToCatalog"
+				qualifier="sapcommon_sapSiteToCatalog" cardinality="many"
+				collectiontype="set" ordered="false">
+
+			</targetElement>
+		</relation>	
+	</relations>
+
+	<itemtypes>
+	
+		<itemtype code="SAPBonusBuySiteToCatalog" extends="GenericItem"
+			jaloclass="de.hybris.platform.sap.sapbonusbuy.jalo.SAPBonusBuySiteToCatalog"
+			autocreate="true" generate="true">
+			<deployment table="SAPBonusBuySiteToCatalog" typecode="9315" />
+			<attributes>
+				<attribute type="java.lang.String" qualifier="site">
+					<modifiers unique="true" />
+					<persistence type="property" />
+					<description>Bonus Buy Site</description>
+				</attribute>
+				<attribute type="CatalogVersion" qualifier="catalogVersion">
+					<modifiers unique="false" search="true" optional="false" />
+					<persistence type="property" />
+					<description>Catalog Version</description>
+				</attribute>
+				<attribute type="PromotionGroup" qualifier="promotionGroup">
+					<modifiers unique="false" search="true" />
+					<persistence type="property" />
+					<description>Promotion Group</description>
+				</attribute>
+
+			</attributes>
+		</itemtype>
+
+	</itemtypes>
+	
+</items>

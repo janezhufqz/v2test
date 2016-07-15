@@ -1,0 +1,6 @@
+
+$catalogBBY=electronicsProductCatalog:Online
+#-------------Bonus Buy Mappings----------------------------------------------
+insert_update SAPBonusBuySiteToCatalog;catalogVersion(catalog(id),version);promotionGroup(Identifier);sapcommon_sapGlobalConfiguration(core_name)[allownull=true];site[unique=true]
+;$catalogBBY;electronicsPromoGrp;GLOBAL;HBRY
+#-----------------------------------------------------------

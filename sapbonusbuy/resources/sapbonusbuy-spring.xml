@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ [y] hybris Platform
+  ~ 
+  ~ Copyright (c) 2000-2016 SAP SE
+  ~ All rights reserved.
+  ~ 
+  ~ This software is the confidential and proprietary information of SAP 
+  ~ Hybris ("Confidential Information"). You shall not disclose such 
+  ~ Confidential Information and shall use it only in accordance with the 
+  ~ terms of the license agreement you entered into with SAP Hybris.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	
+    <bean id="sapbonusbuySystemSetup" class="de.hybris.platform.sap.sapbonusbuy.setup.SapbonusbuySystemSetup">
+        <constructor-arg ref="sapbonusbuyService"/>
+    </bean>
+
+    <bean id="sapbonusbuyService" class="de.hybris.platform.sap.sapbonusbuy.service.impl.DefaultSapbonusbuyService">
+        <!-- setter injection example -->
+        <property name="modelService" ref="modelService"/>
+        <property name="mediaService" ref="mediaService"/>
+        <property name="flexibleSearchService" ref="flexibleSearchService"/>
+    </bean>
+   
+    <bean id="sapBonusBuySiteTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
+		<property name="itemCode" value="SAPBonusBuySiteToCatalog" />
+		<property name="rawType" value="RawBonusBuySite" />
+		<property name="converter" ref="sapBonusBuySiteDataHubTransferConfigurationConverter" />
+	</bean>
+
+	<alias name="defaultSapBonusBuySiteDataHubTransferConfigurationConverter" alias="sapBonusBuySiteDataHubTransferConfigurationConverter" />
+	<bean id="defaultSapBonusBuySiteDataHubTransferConfigurationConverter" parent="abstractPopulatingConverter">
+		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
+		<property name="populators">
+			<list>
+				<ref bean="sapCoreGenericModel2MapPopulator" />
+				<ref bean="sapBonusBuySiteToCatalogPopulator" />
+			</list>
+		</property>
+	</bean>
+	
+	<alias name="defaultSapBonusBuySiteToCatalogPopulator" alias="sapBonusBuySiteToCatalogPopulator" />
+	<bean id="defaultSapBonusBuySiteToCatalogPopulator" class="de.hybris.platform.sap.sapbonusbuy.populator.SAPBonusBuySiteToCatalogPopulator" />
+		
+</beans>

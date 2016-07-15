@@ -17,8 +17,7 @@
       <!-- you should add all required extensions to this list, except platform extensions which are automatically required -->         
       <!-- <requires-extension name="cms"/> -->         
         <requires-extension name="basecommerce"/>
-        <requires-extension name="commerceservices"/>  
-        <requires-extension name="promotions"/>  
+        <requires-extension name="commerceservices"/>   
         <requires-extension name="sapcoreconfiguration" />
 
       <coremodule generated="true" manager="sap.hybris.integration.models.jalo.SapmodelManager" packageroot="sap.hybris.integration.models"/>

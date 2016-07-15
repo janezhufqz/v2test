@@ -54,22 +54,6 @@
 							</attribute>
 						</listlayout>
 					</section>
-					<!-- Bonus Buy Site section -->
-					<section name="section.sapbonusbuysite" mode="append">
-						<listlayout>
-							<attribute labelwidth="200" name="sapcommon_sapSiteToCatalog" width="250">
-								<referencecollectioneditor presetattribute="sapcommon_sapGlobalConfiguration" autosave="true"
-									externalcreate="false" editable="true">
-									<itemlayout>
-										<attribute name="site" width="50" />
-										<attribute name="catalogVersion" width="200" />
-										<attribute name="promotionGroup" width="200" />
-									</itemlayout>
-								</referencecollectioneditor>
-							</attribute>
-						</listlayout>
-					</section>
-
 				</tab>
 			</editor>
 		</organizer>

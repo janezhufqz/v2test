@@ -106,29 +106,9 @@
 		</property>
 	</bean>
 
-	<bean id="sapBonusBuySiteTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
-		<property name="itemCode" value="SAPBonusBuySiteToCatalog" />
-		<property name="rawType" value="RawBonusBuySite" />
-		<property name="converter" ref="sapBonusBuySiteDataHubTransferConfigurationConverter" />
-	</bean>
-
-	<alias name="defaultSapBonusBuySiteDataHubTransferConfigurationConverter" alias="sapBonusBuySiteDataHubTransferConfigurationConverter" />
-	<bean id="defaultSapBonusBuySiteDataHubTransferConfigurationConverter" parent="abstractPopulatingConverter">
-		<lookup-method name="createTarget" bean="sapCoreDataHubPropertyMap" />
-		<property name="populators">
-			<list>
-				<ref bean="sapCoreGenericModel2MapPopulator" />
-				<ref bean="sapBonusBuySiteToCatalogPopulator" />
-			</list>
-		</property>
-	</bean>
-
 	<alias name="defaultSapPricingCatalogMappingPopulator" alias="sapPricingCatalogMappingPopulator" />
 	<bean id="defaultSapPricingCatalogMappingPopulator" class="de.hybris.platform.sap.model.populators.SAPPricingCatalogMappingPopulator" />
-
-	<alias name="defaultSapBonusBuySiteToCatalogPopulator" alias="sapBonusBuySiteToCatalogPopulator" />
-	<bean id="defaultSapBonusBuySiteToCatalogPopulator" class="de.hybris.platform.sap.model.populators.SAPBonusBuySiteToCatalogPopulator" />
-
+	
 	<!-- product -->
 	<alias name="defaultSapProductCatalogMappingPopulator" alias="sapProductCatalogMappingPopulator" />
 	<bean id="defaultSapProductCatalogMappingPopulator" class="de.hybris.platform.sap.model.populators.SAPProductCatalogMappingPopulator" />

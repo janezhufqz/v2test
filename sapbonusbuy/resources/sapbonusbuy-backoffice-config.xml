@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2000-2016 SAP SE or an SAP affiliate company.
+ All rights reserved.
+
+ This software is the confidential and proprietary information of SAP
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with SAP.
+-->
+<config xmlns="http://www.hybris.com/cockpit/config">
+        
+	<context merge-by="type" type="SAPBonusBuySiteToCatalog" component="editor-area">
+		<editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+			<editorArea:tab name="hmc.essential">
+				<editorArea:section name="hmc.essential">
+					<editorArea:attribute qualifier="site" />
+					<editorArea:attribute qualifier="catalogVersion" />
+					<editorArea:attribute qualifier="promotionGroup" />
+				</editorArea:section>
+			</editorArea:tab>
+		</editorArea:editorArea>
+	</context>
+
+	<context merge-by="type" parent="GenericItem" type="SAPBonusBuySiteToCatalog" component="base">
+		<y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+			<y:labels>
+				<y:label>site+ ' - ' + catalogVersion.catalog.id + ' : ' + catalogVersion.version+ ' - ' +promotionGroup.Identifier</y:label>
+			</y:labels>
+		</y:base>
+	</context>
+
+	<context merge-by="type" type="SAPBonusBuySiteToCatalog" component="referenceListViewBonusMapping">
+		<list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+			<list-view:column qualifier="site" />
+			<list-view:column qualifier="catalogVersion" />
+			<list-view:column qualifier="promotionGroup" />
+		</list-view:list-view>
+	</context>
+	
+	<context type="SAPBonusBuySiteToCatalog" component="create-wizard">
+		<wz:flow xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config" id="sapBonusBuySiteToCatalogWizard" title="create.sapbonusbuysitetocatalog.title">
+
+			<wz:prepare id="sapBonusBuySiteToCatalogPrepare">
+				<wz:initialize property="newSapBonusBuySiteToCatalog" type="ctx.TYPE_CODE" />
+				<wz:assign property="newSapBonusBuySiteToCatalog.sapGlobalConfiguration" value="ctx.parentObject" />
+			</wz:prepare>
+
+			<wz:step id="step1" label="create.sapbonusbuysitetocatalog.essential.label">
+				<wz:content id="step1.content">
+					<wz:property-list root="newSapBonusBuySiteToCatalog">
+						<wz:property qualifier="site" type="java.lang.String" />
+						<wz:property qualifier="catalogVersion" />
+						<wz:property qualifier="promotionGroup" />
+					</wz:property-list>
+				</wz:content>
+				<wz:navigation id="step1.navigation">
+					<wz:cancel />
+					<wz:done visible="!#empty(newSapBonusBuySiteToCatalog.site) and
+                                      !#empty(newSapBonusBuySiteToCatalog.catalogVersion.catalog.id) and
+                                      !#empty(newSapBonusBuySiteToCatalog.promotionGroup.identifier)">
+						<wz:save property="newSapBonusBuySiteToCatalog" />
+					</wz:done>
+				</wz:navigation>
+			</wz:step>
+
+		</wz:flow>
+	</context>
+
+	<context merge-by="module" parent="auto" type="SAPGlobalConfiguration" component="editor-area">	
+		<editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+			<editorArea:tab xmlns="http://www.hybris.com/cockpitng/component/editorArea" name="hmc.tab.datahubmappings_pricing">				
+				<section name="hmc.section.sapbonusbuysite">
+					<attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapcommon_sapSiteToCatalog">
+						<editorArea:editor-parameter>
+							<editorArea:name>listConfigContext</editorArea:name>
+							<editorArea:value>referenceListViewBonusMapping</editorArea:value>
+						</editorArea:editor-parameter>
+					</attribute>
+				</section>
+			</editorArea:tab>
+		</editorArea:editorArea>
+	</context>
+	
+</config>

@@ -238,34 +238,6 @@
 		</y:base>
 	</context>
 
-	<context merge-by="type" type="SAPBonusBuySiteToCatalog" component="editor-area">
-		<editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
-			<editorArea:tab name="hmc.essential">
-				<editorArea:section name="hmc.essential">
-					<editorArea:attribute qualifier="site" />
-					<editorArea:attribute qualifier="catalogVersion" />
-					<editorArea:attribute qualifier="promotionGroup" />
-				</editorArea:section>
-			</editorArea:tab>
-		</editorArea:editorArea>
-	</context>
-
-	<context merge-by="type" parent="GenericItem" type="SAPBonusBuySiteToCatalog" component="base">
-		<y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
-			<y:labels>
-				<y:label>site+ ' - ' + catalogVersion.catalog.id + ' : ' + catalogVersion.version+ ' - ' +promotionGroup.Identifier</y:label>
-			</y:labels>
-		</y:base>
-	</context>
-
-	<context merge-by="type" type="SAPBonusBuySiteToCatalog" component="referenceListViewBonusMapping">
-		<list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
-			<list-view:column qualifier="site" />
-			<list-view:column qualifier="catalogVersion" />
-			<list-view:column qualifier="promotionGroup" />
-		</list-view:list-view>
-	</context>
-
 	<context merge-by="type" type="SAPProductSalesAreaToCatalogMapping" component="editor-area">
 		<editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
 			<editorArea:tab name="hmc.essential">
@@ -360,16 +332,6 @@
 						</editorArea:editor-parameter>
 					</attribute>
 				</editorArea:panel>
-				</section>
-				<section name="hmc.section.sapbonusbuysite">
-
-
-					<attribute editor="com.hybris.cockpitng.editor.extendedmultireferenceeditor" qualifier="sapcommon_sapSiteToCatalog">
-						<editorArea:editor-parameter>
-							<editorArea:name>listConfigContext</editorArea:name>
-							<editorArea:value>referenceListViewBonusMapping</editorArea:value>
-						</editorArea:editor-parameter>
-					</attribute>
 				</section>
 			</editorArea:tab>
 

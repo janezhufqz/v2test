@@ -105,20 +105,7 @@
 
 			</targetElement>
 		</relation>
-
-		<relation code="SAPConfigBonusBuySite" autocreate="true"
-			localized="false">
-			<sourceElement type="SAPGlobalConfiguration" qualifier="sapcommon_sapGlobalConfiguration"
-				cardinality="one">
-
-			</sourceElement>
-			<targetElement type="SAPBonusBuySiteToCatalog"
-				qualifier="sapcommon_sapSiteToCatalog" cardinality="many"
-				collectiontype="set" ordered="false">
-
-			</targetElement>
-		</relation>
-
+		
 		<relation code="SapProductPlantRelation" localized="false"
 			generate="true" autocreate="true">
 			<sourceElement type="Product" qualifier="Product"
@@ -694,30 +681,6 @@
 						write="false" />
 					<persistence type="dynamic" attributeHandler="sapNetAttributeHandler" />
 					<description>Net Flag</description>
-				</attribute>
-
-			</attributes>
-		</itemtype>
-
-		<itemtype code="SAPBonusBuySiteToCatalog" extends="GenericItem"
-			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPBonusBuySiteToCatalog"
-			autocreate="true" generate="true">
-			<deployment table="SAPBonusBuySiteToCatalog" typecode="9315" />
-			<attributes>
-				<attribute type="java.lang.String" qualifier="site">
-					<modifiers unique="true" />
-					<persistence type="property" />
-					<description>Bonus Buy Site</description>
-				</attribute>
-				<attribute type="CatalogVersion" qualifier="catalogVersion">
-					<modifiers unique="false" search="true" optional="false" />
-					<persistence type="property" />
-					<description>Catalog Version</description>
-				</attribute>
-				<attribute type="PromotionGroup" qualifier="promotionGroup">
-					<modifiers unique="false" search="true" />
-					<persistence type="property" />
-					<description>Promotion Group</description>
 				</attribute>
 
 			</attributes>
