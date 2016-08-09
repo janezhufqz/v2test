@@ -42,14 +42,14 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.2.0.0-M4</version>
+			<version>6.2.0.0-M6</version>
 			<type>zip</type>
 		</dependency>	
 	    <dependency>
 	      <artifactId>commerceservices-module</artifactId>
 	      <groupId>de.hybris.platform</groupId>
 	      <type>zip</type>
-	      <version>6.2.0.0-M1</version>
+	      <version>6.2.0.0-M2</version>
 	    </dependency>		
 	</dependencies>
 	
