@@ -49,7 +49,7 @@
 	      <artifactId>commerceservices-module</artifactId>
 	      <groupId>de.hybris.platform</groupId>
 	      <type>zip</type>
-	      <version>6.2.0.0-RC4</version>
+	      <version>6.2.0.0-RC5</version>
 	    </dependency>		
 	</dependencies>
 	
