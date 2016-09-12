@@ -17,8 +17,6 @@ import de.hybris.platform.core.initialization.SystemSetup;
 import de.hybris.platform.sap.sapbonusbuy.constants.SapbonusbuyConstants;
 import de.hybris.platform.sap.sapbonusbuy.service.SapbonusbuyService;
 
-import java.io.InputStream;
-
 
 
 @SystemSetup(extension = SapbonusbuyConstants.EXTENSIONNAME)
@@ -37,8 +35,4 @@ public class SapbonusbuySystemSetup
 		sapbonusbuyService.createLogo(PLATFORM_LOGO_CODE);
 	}
 
-	private InputStream getImageStream()
-	{
-		return SapbonusbuySystemSetup.class.getResourceAsStream("/sapbonusbuy/sap-hybris-platform.png");
-	}
 }
