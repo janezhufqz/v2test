@@ -15,6 +15,7 @@ import de.hybris.platform.catalog.model.CatalogUnawareMediaModel;
 import de.hybris.platform.core.model.media.MediaModel;
 import de.hybris.platform.sap.sapbonusbuy.service.SapbonusbuyService;
 import de.hybris.platform.servicelayer.exceptions.SystemException;
+import de.hybris.platform.servicelayer.media.MediaIOException;
 import de.hybris.platform.servicelayer.media.MediaService;
 import de.hybris.platform.servicelayer.model.ModelService;
 import de.hybris.platform.servicelayer.search.FlexibleSearchQuery;
@@ -23,6 +24,7 @@ import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 import java.io.InputStream;
 import java.util.Optional;
 
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
@@ -57,8 +59,20 @@ public class DefaultSapbonusbuyService implements SapbonusbuyService
 		media.setCode(logoCode);
 		media.setRealFileName("sap-hybris-platform.png");
 		modelService.save(media);
-
-		mediaService.setStreamForMedia(media, getImageStream());
+		InputStream mediaData = null;
+		try
+		{
+			mediaData = getImageStream();
+			mediaService.setStreamForMedia(media, mediaData);
+		}
+		catch (MediaIOException | IllegalArgumentException ex)
+		{
+			LOG.error(ex.getMessage(), ex);
+		}
+		finally
+		{
+			IOUtils.closeQuietly(mediaData);
+		}
 	}
 
 	private final static String FIND_LOGO_QUERY = "SELECT {" + CatalogUnawareMediaModel.PK + "} FROM {"
