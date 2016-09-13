@@ -25,13 +25,13 @@
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>6.2.0.0-RC1</version>
+			<version>6.2.0.0-RC2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.2.0.0-RC6</version>
+			<version>6.2.0.0-RC7</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
@@ -42,14 +42,14 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.2.0.0-RC3</version>
+			<version>6.2.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>	
 	    <dependency>
 	      <artifactId>commerceservices-module</artifactId>
 	      <groupId>de.hybris.platform</groupId>
 	      <type>zip</type>
-	      <version>6.2.0.0-RC5</version>
+	      <version>6.2.0.0-RC6</version>
 	    </dependency>		
 	</dependencies>
 	
