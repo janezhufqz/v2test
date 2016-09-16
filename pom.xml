@@ -31,18 +31,18 @@
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.2.0.0-RC8</version>
+			<version>6.2.0.0-RC10</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>		
 			<artifactId>platform-optional-module</artifactId>
 			<type>zip</type>
-			<version>6.2.0.0-RC1</version>
+			<version>6.2.0.0-RC2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.2.0.0-RC5</version>
+			<version>6.2.0.0-RC6</version>
 			<type>zip</type>
 		</dependency>	
 	    <dependency>
