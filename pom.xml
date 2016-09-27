@@ -20,21 +20,21 @@
 			<artifactId>sap-frwcore-module</artifactId>
 			<version>${project.version}</version>
 			<type>zip</type>
-		</dependency>	
+		</dependency>
 		<dependency>
-			<groupId>de.hybris.platform</groupId>		
+			<groupId>de.hybris.platform</groupId>
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
 			<version>6.2.0.0-RC2</version>
 		</dependency>
 		<dependency>
-			<groupId>de.hybris.platform</groupId>		
+			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
 			<version>6.2.0.0-RC12</version>
 		</dependency>
 		<dependency>
-			<groupId>de.hybris.platform</groupId>		
+			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-optional-module</artifactId>
 			<type>zip</type>
 			<version>6.2.0.0-RC2</version>
@@ -44,15 +44,153 @@
 			<artifactId>coreaccelerator-module</artifactId>
 			<version>6.2.0.0-RC6</version>
 			<type>zip</type>
-		</dependency>	
-	    <dependency>
-	      <artifactId>commerceservices-module</artifactId>
-	      <groupId>de.hybris.platform</groupId>
-	      <type>zip</type>
-	      <version>6.2.0.0-RC7</version>
-	    </dependency>		
+		</dependency>
+		<dependency>
+			<artifactId>commerceservices-module</artifactId>
+			<groupId>de.hybris.platform</groupId>
+			<type>zip</type>
+			<version>6.2.0.0-RC7</version>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>acceleratoraddons-module</artifactId>
+			<version>6.2.0.0-RC1</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>advancedpersonalization-module</artifactId>
+			<version>6.2.0.0-RC3</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>atdd-module</artifactId>
+			<version>6.2.0.0-RC2</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>b2b-accelerator-module</artifactId>
+			<version>6.2.0.0-RC5</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>b2bcommerce-module</artifactId>
+			<version>6.2.0.0-RC1</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>b2caccelerator-module</artifactId>
+			<version>6.2.0.0-RC6</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>backoffice-module</artifactId>
+			<version>6.2.0.0-RC8</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>cockpit-apps-module</artifactId>
+			<version>6.2.0.0-RC3</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>cockpit-core-module</artifactId>
+			<version>6.2.0.0-RC3</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>commercesearch-module</artifactId>
+			<version>6.2.0.0-RC2</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>commercewebservices-module</artifactId>
+			<version>6.2.0.0-RC4</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>customerservice-module</artifactId>
+			<version>6.2.0.0-RC2</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>customersupport-module</artifactId>
+			<version>6.2.0.0-RC2</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>instore-module</artifactId>
+			<version>6.2.0.0-RC4</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>mdm-datahub-module</artifactId>
+			<version>6.2.0.0-RC3</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>npm-ancillary-module</artifactId>
+			<version>6.2.0.0-RC5</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>pcm-module</artifactId>
+			<version>6.2.0.0-RC2</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>platform-backoffice-module</artifactId>
+			<version>6.2.0.0-RC2</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>promotionengine-module</artifactId>
+			<version>6.2.0.0-RC3</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>ruleengine-module</artifactId>
+			<version>6.2.0.0-RC4</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>search-and-nav-module</artifactId>
+			<version>6.2.0.0-RC5</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>wcms-module</artifactId>
+			<version>6.2.0.0-RC5</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>webservicescommons-module</artifactId>
+			<version>6.2.0.0-RC3</version>
+			<type>zip</type>
+		</dependency>
 	</dependencies>
-	
+
 	<properties>
 		<!-- Define extensions for delivery -->
 		<contained.extensions>sapmodel,sapmodelhmc,sapmodelbackoffice</contained.extensions>
@@ -64,16 +202,16 @@
 		<hybris.local.ext.sapmodel.package>ext-integration/sap/core</hybris.local.ext.sapmodel.package>
 		<hybris.local.ext.sapmodelhmc.package>ext-integration/sap/core</hybris.local.ext.sapmodelhmc.package>
 		<hybris.local.ext.sapmodelbackoffice.package>ext-integration/sap/core</hybris.local.ext.sapmodelbackoffice.package>
-		
+
 		<!-- Define local properties -->
 		<hybris.local.build.target>1.8</hybris.local.build.target>
-				
+
 		<!-- Define hybris distribution properties -->
 		<dist.extensions.binary></dist.extensions.binary>
 		<dist.extensions.source>${contained.extensions}</dist.extensions.source>
 		<dist.create.source.dist>true</dist.create.source.dist>
 		<dist.create.en.langpack>true</dist.create.en.langpack>
-		
+
 		<!-- Define sonar scan properties -->
 		<sonar.extension.src>
 			sapmodel/src,
