@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>acceleratoraddons-module</artifactId>
-			<version>6.2.0.0-RC1</version>
+			<version>6.2.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.2.0.0-RC5</version>
+			<version>6.2.0.0-RC8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -102,7 +102,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-core-module</artifactId>
-			<version>6.2.0.0-RC3</version>
+			<version>6.2.0.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -120,13 +120,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>6.2.0.0-RC2</version>
+			<version>6.2.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customersupport-module</artifactId>
-			<version>6.2.0.0-RC2</version>
+			<version>6.2.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -144,7 +144,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.2.0.0-RC5</version>
+			<version>6.2.0.0-RC6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -162,13 +162,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>6.2.0.0-RC3</version>
+			<version>6.2.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>6.2.0.0-RC4</version>
+			<version>6.2.0.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -180,7 +180,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>6.2.0.0-RC5</version>
+			<version>6.2.0.0-RC7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
