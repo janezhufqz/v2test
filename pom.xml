@@ -108,7 +108,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercesearch-module</artifactId>
-			<version>6.2.0.0-RC2</version>
+			<version>6.3.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -144,7 +144,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.2.0.0-RC6</version>
+			<version>6.3.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -174,13 +174,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>search-and-nav-module</artifactId>
-			<version>6.2.0.0-RC5</version>
+			<version>6.3.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>6.2.0.0-RC7</version>
+			<version>6.3.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
