@@ -2,7 +2,7 @@
 	"_comment" : "Do not modify this file if you don't know what you do! PLEASE!!!! ",
 	"bdid" : 142,
 	"area" : "ecp",
-	"bdscan" : false,
+	"bdscan" : true,
 	"bdscan-contact" : "jason.lam@sap.com",
 	"old-repo-url" : "stash.hybris.com/projects/sapintegration/repos/sap.hybris.integration.sapmodel/browse/repo-properties.json",
     "old-repo-branch" : "master"
