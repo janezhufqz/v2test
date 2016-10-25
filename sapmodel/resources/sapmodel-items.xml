@@ -16,6 +16,7 @@
 
 
 	<enumtypes>
+	
 		<enumtype code="SAPOrderStatus" autocreate="true" generate="true"
 			dynamic="true">
 			<value code="NOT_SENT_TO_ERP" />
@@ -23,6 +24,13 @@
 			<value code="CONFIRMED_FROM_ERP" />
 			<value code="CANCELLED_FROM_ERP" />
 		</enumtype>
+			
+		<enumtype code="SapSystemType" autocreate="true" generate="true"
+			dynamic="true">
+			<value code="SAP_ERP" />
+			<value code="SAP_S4HANA" />
+		</enumtype>
+		
 	</enumtypes>
 
 	<relations>
@@ -836,7 +844,9 @@
 			autocreate="true" generate="true"
 			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPLogicalSystem">
 			<deployment table="SAPLogicalSystems" typecode="9321" />
+			
 			<attributes>
+				
 				<attribute qualifier="sapLogicalSystemName" type="java.lang.String">
 					<modifiers unique="true" />
 					<persistence type="property" />
@@ -847,6 +857,12 @@
 					<description>Specifies the http destination corresponding to logical system</description>
 					<persistence type="property" />
 				</attribute>
+				
+				<attribute qualifier="sapSystemType" type="SapSystemType">
+					<description>SAP System Type</description>
+					<persistence type="property" />
+					<defaultvalue>em().getEnumerationValue("SapSystemType", "SAP_ERP")</defaultvalue>
+				</attribute>	
 
 				<attribute qualifier="defaultLogicalSystem" type="boolean"
 					autocreate="true">
@@ -856,8 +872,9 @@
 						write="true" initial="true" search="true" />
 					<defaultvalue>java.lang.Boolean.FALSE</defaultvalue>
 				</attribute>
-
+				
 			</attributes>
+		
 		</itemtype>
 
 
