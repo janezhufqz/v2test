@@ -17,6 +17,8 @@
 			<list-view:column qualifier="sapLogicalSystemName" />
 			<list-view:column qualifier="sapHTTPDestination" />
 			<list-view:column qualifier="sapSystemType" />
+			<list-view:column qualifier="senderName" />
+			<list-view:column qualifier="senderPort" />
 			<list-view:column qualifier="defaultLogicalSystem" />
 		</list-view:list-view>
 	</context>
@@ -28,6 +30,8 @@
 					<editorArea:attribute qualifier="sapLogicalSystemName" />
 					<editorArea:attribute qualifier="sapHTTPDestination" />
 					<editorArea:attribute qualifier="sapSystemType" />
+					<editorArea:attribute qualifier="senderName" />
+					<editorArea:attribute qualifier="senderPort" />
 					<editorArea:attribute qualifier="defaultLogicalSystem" />
 				</editorArea:section>
 			</editorArea:tab>
@@ -63,6 +67,8 @@
 					<wz:property-list root="newLogicalSystem">
 						<wz:property qualifier="sapLogicalSystemName" type="java.lang.String" />
 						<wz:property qualifier="sapSystemType" />
+						<wz:property qualifier="senderName" />
+						<wz:property qualifier="senderPort" />
 						<wz:property qualifier="sapHTTPDestination" />
 					</wz:property-list>
 				</wz:content>

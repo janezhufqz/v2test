@@ -862,8 +862,18 @@
 					<description>SAP System Type</description>
 					<persistence type="property" />
 					<defaultvalue>em().getEnumerationValue("SapSystemType", "SAP_ERP")</defaultvalue>
+				</attribute>
+				
+				<attribute qualifier="senderName" type="java.lang.String">
+					<description>Sender Name</description>
+					<persistence type="property" />
+				</attribute>
+				
+				<attribute qualifier="senderPort" type="java.lang.String">
+					<description>Sender Port</description>
+					<persistence type="property" />
 				</attribute>	
-
+				
 				<attribute qualifier="defaultLogicalSystem" type="boolean"
 					autocreate="true">
 					<description>SAP Default Logical System</description>
