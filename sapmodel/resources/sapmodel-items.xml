@@ -17,6 +17,14 @@
 
 	<enumtypes>
 	
+		<enumtype code="ConsignmentEntryStatus" autocreate="true"
+			generate="true" dynamic="true">
+			<value code="WAITING" />
+			<value code="PICKPACK" />
+			<value code="READY" />
+			<value code="SHIPPED" />
+			<value code="CANCELLED" />
+		</enumtype> 
 		<enumtype code="SAPOrderStatus" autocreate="true" generate="true"
 			dynamic="true">
 			<value code="NOT_SENT_TO_ERP" />
@@ -953,6 +961,21 @@
 					<persistence type="property" />
 					<defaultvalue>em().getEnumerationValue("SAPOrderStatus", "NOT_SENT_TO_ERP")</defaultvalue>
 					<description>Sap Order Status</description>
+				</attribute>
+			</attributes>
+		</itemtype>
+		<itemtype code="ConsignmentEntry" autocreate="false" generate="false">
+			<description>Extending ConsignmentEntry type with additional attributes.</description>
+			<attributes>
+				<attribute qualifier="sapOrderEntryRowNumber" type="int">
+					<modifiers read="true" write="true" optional="true" />
+					<persistence type="property" />
+				</attribute>
+	
+				<attribute qualifier="status" type="ConsignmentEntryStatus">
+					<modifiers read="true" write="true" optional="false" />
+					<persistence type="property" />
+					<defaultvalue>em().getEnumerationValue("ConsignmentEntryStatus", "WAITING")</defaultvalue>
 				</attribute>
 			</attributes>
 		</itemtype>
