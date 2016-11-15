@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.3.0.0-M9</version>
+			<version>6.3.0.0-M11</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -42,14 +42,14 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.3.0.0-M7</version>
+			<version>6.3.0.0-M9</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>6.3.0.0-M11</version>
+			<version>6.3.0.0-M16</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>advancedpersonalization-module</artifactId>
-			<version>6.3.0.0-M1</version>
+			<version>6.3.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.3.0.0-M4</version>
+			<version>6.3.0.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.3.0.0-M7</version>
+			<version>6.3.0.0-M9</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -114,19 +114,19 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercewebservices-module</artifactId>
-			<version>6.3.0.0-M6</version>
+			<version>6.3.0.0-M7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>6.3.0.0-M2</version>
+			<version>6.3.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customersupport-module</artifactId>
-			<version>6.3.0.0-M2</version>
+			<version>6.3.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -162,13 +162,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>6.3.0.0-M4</version>
+			<version>6.3.0.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>6.3.0.0-M4</version>
+			<version>6.3.0.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -186,7 +186,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>webservicescommons-module</artifactId>
-			<version>6.3.0.0-M1</version>
+			<version>6.3.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
