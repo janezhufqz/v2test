@@ -42,19 +42,19 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.3.0.0-M11</version>
+			<version>6.3.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>6.3.0.0-M23</version>
+			<version>6.3.0.0-RC1</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>acceleratoraddons-module</artifactId>
-			<version>6.3.0.0-M3</version>
+			<version>6.3.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.3.0.0-M5</version>
+			<version>6.3.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.3.0.0-M10</version>
+			<version>6.3.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -102,7 +102,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-core-module</artifactId>
-			<version>6.3.0.0-RC1</version>
+			<version>6.3.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -132,7 +132,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>instore-module</artifactId>
-			<version>6.3.0.0-M1</version>
+			<version>6.3.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -150,7 +150,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>pcm-module</artifactId>
-			<version>6.3.0.0-RC1</version>
+			<version>6.3.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
