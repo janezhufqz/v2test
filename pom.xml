@@ -25,24 +25,24 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>6.3.0.0-RC5</version>
+			<version>6.3.0.0-RC6</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.3.0.0-RC7</version>
+			<version>6.3.0.0-RC8</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-optional-module</artifactId>
 			<type>zip</type>
-			<version>6.3.0.0-RC3</version>
+			<version>6.3.0.0-RC5</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.3.0.0-RC3</version>
+			<version>6.3.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -84,31 +84,31 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.3.0.0-RC5</version>
+			<version>6.3.0.0-RC6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.3.0.0-RC3</version>
+			<version>6.3.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-apps-module</artifactId>
-			<version>6.3.0.0-RC2</version>
+			<version>6.3.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-core-module</artifactId>
-			<version>6.3.0.0-RC3</version>
+			<version>6.3.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercesearch-module</artifactId>
-			<version>6.3.0.0-RC3</version>
+			<version>6.3.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -126,7 +126,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customersupport-module</artifactId>
-			<version>6.3.0.0-RC1</version>
+			<version>6.3.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -156,7 +156,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>6.3.0.0-RC2</version>
+			<version>6.3.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -174,13 +174,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>search-and-nav-module</artifactId>
-			<version>6.3.0.0-RC3</version>
+			<version>6.3.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>6.3.0.0-RC7</version>
+			<version>6.3.0.0-RC8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
