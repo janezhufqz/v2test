@@ -18,14 +18,14 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>sap-frwcore-module</artifactId>
-			<version>6.3.0.0-RC8</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>6.3.0.0-RC6</version>
+			<version>6.4.0.0-M1</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -162,13 +162,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>6.3.0.0-RC4</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>6.3.0.0-RC4</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
