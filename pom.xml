@@ -60,13 +60,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>advancedpersonalization-module</artifactId>
-			<version>6.3.0.0-RC1</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>atdd-module</artifactId>
-			<version>6.3.0.0-RC3</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -114,7 +114,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercewebservices-module</artifactId>
-			<version>6.3.0.0-RC4</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -186,7 +186,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>webservicescommons-module</artifactId>
-			<version>6.3.0.0-RC1</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
