@@ -18,7 +18,6 @@ import sap.hybris.integration.models.model.SAPProductIDDataConversionModel;
 
 public class ProductIDAttributeHandler implements DynamicAttributeHandler<String, ProductModel>
 {
-	protected SAPProductIDDataConversionModel customizing;
 
 	protected static final Logger LOGGER = Logger.getLogger(ProductIDAttributeHandler.class.getName());
 
@@ -27,29 +26,29 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 
 	protected String convertID(final String productID)
 	{
+		SAPProductIDDataConversionModel customizing = null;
+		
+		final SAPProductIDDataConversionModel data = new SAPProductIDDataConversionModel();
+		data.setConversionID("MATCONV");
+		try
+		{
+			customizing = flexibleSearchService.getModelByExample(data);
+		}
+		catch (final ModelNotFoundException e)
+		{
+			LOGGER.logp(Level.WARNING, ProductIDAttributeHandler.class.getName(), "convertID",
+					"Missing SAPProductIDDataConversion customizing, using default value", e);
+		}
+
 		if (customizing == null)
 		{
-			final SAPProductIDDataConversionModel data = new SAPProductIDDataConversionModel();
-			data.setConversionID("MATCONV");
-			try
-			{
-				customizing = flexibleSearchService.getModelByExample(data);
-			}
-			catch (final ModelNotFoundException e)
-			{
-				LOGGER.logp(Level.WARNING, ProductIDAttributeHandler.class.getName(), "convertID",
-						"Missing SAPProductIDDataConversion customizing, using default value", e);
-			}
-
-			if (customizing == null)
-			{
-				data.setMatnrLength(18);
-				data.setDisplayLeadingZeros(false);
-				data.setDisplayLexicographic(false);
-				data.setMask("");
-				customizing = data;
-			}
+			data.setMatnrLength(18);
+			data.setDisplayLeadingZeros(false);
+			data.setDisplayLexicographic(false);
+			data.setMask("");
+			customizing = data;
 		}
+		
 		if (productID == null || productID.isEmpty() || customizing.getDisplayLexicographic())
 		{
 			return productID;
