@@ -28,36 +28,35 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 {
 	private static final Logger LOGGER = Logger.getLogger(ProductIDAttributeHandler.class.getName());
 	private static final long serialVersionUID = 1L;
-	protected SAPProductIDDataConversionModel customizing;
 	
 	@Autowired
 	protected FlexibleSearchService flexibleSearchService; //NOPMD
 
 	protected String convertID(final String productID)
 	{
+		SAPProductIDDataConversionModel customizing = null;
+		
+		final SAPProductIDDataConversionModel data = new SAPProductIDDataConversionModel();
+		data.setConversionID("MATCONV");
+		try
+		{
+			customizing = flexibleSearchService.getModelByExample(data);
+		}
+		catch (final ModelNotFoundException e)
+		{
+			LOGGER.logp(Level.WARNING, ProductIDAttributeHandler.class.getName(), "convertID",
+					"Missing SAPProductIDDataConversion customizing, using default value", e);
+		}
+
 		if (customizing == null)
 		{
-			final SAPProductIDDataConversionModel data = new SAPProductIDDataConversionModel();
-			data.setConversionID("MATCONV");
-			try
-			{
-				customizing = flexibleSearchService.getModelByExample(data);
-			}
-			catch (final ModelNotFoundException e)
-			{
-				LOGGER.logp(Level.WARNING, ProductIDAttributeHandler.class.getName(), "convertID",
-						"Missing SAPProductIDDataConversion customizing, using default value", e);
-			}
-
-			if (customizing == null)
-			{
-				data.setMatnrLength(18);
-				data.setDisplayLeadingZeros(false);
-				data.setDisplayLexicographic(false);
-				data.setMask("");
-				customizing = data;
-			}
+			data.setMatnrLength(18);
+			data.setDisplayLeadingZeros(false);
+			data.setDisplayLexicographic(false);
+			data.setMask("");
+			customizing = data;
 		}
+		
 		if (productID == null || productID.isEmpty() || customizing.getDisplayLexicographic())
 		{
 			return productID;
