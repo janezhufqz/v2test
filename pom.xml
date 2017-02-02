@@ -42,14 +42,14 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.4.0.0-M2</version>
+			<version>6.4.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>6.4.0.0-M3</version>
+			<version>6.4.0.0-M4</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.4.0.0-M1</version>
+			<version>6.4.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -126,7 +126,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customersupport-module</artifactId>
-			<version>6.4.0.0-M1</version>
+			<version>6.4.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -144,7 +144,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.4.0.0-M4</version>
+			<version>6.4.0.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -186,7 +186,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>webservicescommons-module</artifactId>
-			<version>6.4.0.0-M2</version>
+			<version>6.4.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
