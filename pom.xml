@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.4.0.0-M3</version>
+			<version>6.4.0.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>acceleratoraddons-module</artifactId>
-			<version>6.3.0.0-RC5</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.4.0.0-M2</version>
+			<version>6.4.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
