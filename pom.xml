@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.4.0.0-M3</version>
+			<version>6.4.0.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -84,25 +84,25 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.4.0.0-M2</version>
+			<version>6.4.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.3.0.0-RC9</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-apps-module</artifactId>
-			<version>6.3.0.0-RC4</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-core-module</artifactId>
-			<version>6.3.0.0-RC4</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -132,7 +132,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>instore-module</artifactId>
-			<version>6.4.0.0-M1</version>
+			<version>6.4.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -144,13 +144,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.4.0.0-M5</version>
+			<version>6.4.0.0-M6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>pcm-module</artifactId>
-			<version>6.3.0.0-RC3</version>
+			<version>6.4.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -180,7 +180,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>6.4.0.0-M4</version>
+			<version>6.4.0.0-M6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
