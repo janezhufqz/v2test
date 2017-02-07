@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--
- [y] hybris Platform
-
- Copyright (c) 2017 SAP SE or an SAP affiliate company. All rights reserved.
-
- This software is the confidential and proprietary information of SAP
- ("Confidential Information"). You shall not disclose such Confidential
- Information and shall use it only in accordance with the terms of the
- license agreement you entered into with SAP.
--->
+<!-- [y] hybris Platform Copyright (c) 2017 SAP SE or an SAP affiliate company. 
+	All rights reserved. This software is the confidential and proprietary information 
+	of SAP ("Confidential Information"). You shall not disclose such Confidential 
+	Information and shall use it only in accordance with the terms of the license 
+	agreement you entered into with SAP. -->
 
 <items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="items.xsd">
 
 
 	<enumtypes>
-	
+
 		<enumtype code="ConsignmentEntryStatus" autocreate="true"
 			generate="true" dynamic="true">
 			<value code="WAITING" />
@@ -23,7 +18,7 @@
 			<value code="READY" />
 			<value code="SHIPPED" />
 			<value code="CANCELLED" />
-		</enumtype> 
+		</enumtype>
 		<enumtype code="SAPOrderStatus" autocreate="true" generate="true"
 			dynamic="true">
 			<value code="NOT_SENT_TO_ERP" />
@@ -31,13 +26,13 @@
 			<value code="CONFIRMED_FROM_ERP" />
 			<value code="CANCELLED_FROM_ERP" />
 		</enumtype>
-			
+
 		<enumtype code="SapSystemType" autocreate="true" generate="true"
 			dynamic="true">
 			<value code="SAP_ERP" />
 			<value code="SAP_S4HANA" />
 		</enumtype>
-		
+
 	</enumtypes>
 
 	<relations>
@@ -102,10 +97,15 @@
 		<relation code="SAPGlobalConfigSAPProductSalesAreaToCatalogMappingRelation"
 			autocreate="true" localized="false">
 			<sourceElement type="SAPGlobalConfiguration" qualifier="sapGlobalConfiguration"
-				cardinality="one"></sourceElement>
+				cardinality="one">
+				<modifiers read="true" write="true" search="true"
+					optional="false" />
+			</sourceElement>
 			<targetElement type="SAPProductSalesAreaToCatalogMapping"
 				qualifier="sapProductSalesAreaToCatalogMapping" cardinality="many"
-				collectiontype="set"></targetElement>
+				collectiontype="set">
+				 <modifiers partof="true"/>
+				</targetElement>
 		</relation>
 
 		<relation code="SAPGlobalConfigurationPricingSalesArea"
@@ -120,7 +120,7 @@
 
 			</targetElement>
 		</relation>
-		
+
 		<relation code="SapProductPlantRelation" localized="false"
 			generate="true" autocreate="true">
 			<sourceElement type="Product" qualifier="Product"
@@ -851,9 +851,9 @@
 			autocreate="true" generate="true"
 			jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPLogicalSystem">
 			<deployment table="SAPLogicalSystems" typecode="9321" />
-			
+
 			<attributes>
-				
+
 				<attribute qualifier="sapLogicalSystemName" type="java.lang.String">
 					<modifiers unique="true" />
 					<persistence type="property" />
@@ -864,23 +864,23 @@
 					<description>Specifies the http destination corresponding to logical system</description>
 					<persistence type="property" />
 				</attribute>
-				
+
 				<attribute qualifier="sapSystemType" type="SapSystemType">
 					<description>SAP System Type</description>
 					<persistence type="property" />
 					<defaultvalue>em().getEnumerationValue("SapSystemType", "SAP_ERP")</defaultvalue>
 				</attribute>
-				
+
 				<attribute qualifier="senderName" type="java.lang.String">
 					<description>Sender Name</description>
 					<persistence type="property" />
 				</attribute>
-				
+
 				<attribute qualifier="senderPort" type="java.lang.String">
 					<description>Sender Port</description>
 					<persistence type="property" />
-				</attribute>	
-				
+				</attribute>
+
 				<attribute qualifier="defaultLogicalSystem" type="boolean"
 					autocreate="true">
 					<description>SAP Default Logical System</description>
@@ -889,9 +889,9 @@
 						write="true" initial="true" search="true" />
 					<defaultvalue>java.lang.Boolean.FALSE</defaultvalue>
 				</attribute>
-				
+
 			</attributes>
-		
+
 		</itemtype>
 
 
@@ -963,14 +963,15 @@
 				</attribute>
 			</attributes>
 		</itemtype>
-		<itemtype code="ConsignmentEntry" autocreate="false" generate="false">
+		<itemtype code="ConsignmentEntry" autocreate="false"
+			generate="false">
 			<description>Extending ConsignmentEntry type with additional attributes.</description>
 			<attributes>
 				<attribute qualifier="sapOrderEntryRowNumber" type="int">
 					<modifiers read="true" write="true" optional="true" />
 					<persistence type="property" />
 				</attribute>
-	
+
 				<attribute qualifier="status" type="ConsignmentEntryStatus">
 					<modifiers read="true" write="true" optional="false" />
 					<persistence type="property" />
