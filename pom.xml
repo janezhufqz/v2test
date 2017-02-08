@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.4.0.0-M6</version>
+			<version>6.4.0.0-M7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.4.0.0-M4</version>
+			<version>6.4.0.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -174,7 +174,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>search-and-nav-module</artifactId>
-			<version>6.4.0.0-M1</version>
+			<version>6.4.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
