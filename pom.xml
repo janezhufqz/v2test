@@ -162,13 +162,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>6.4.0.0-M4</version>
+			<version>6.4.0.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>6.4.0.0-M4</version>
+			<version>6.4.0.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
