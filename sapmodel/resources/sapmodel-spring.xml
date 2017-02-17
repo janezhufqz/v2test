@@ -19,6 +19,7 @@
 	<alias alias="sapCommonSalesAreaService" name="sapCommonDefaultSalesAreaService" />
 	<bean id="sapCommonDefaultSalesAreaService" class="de.hybris.platform.sap.sapmodel.services.impl.DefaultSalesAreaService">
 		<property name="baseStoreService" ref="baseStoreService" />
+		<property name="flexibleSearchService" ref="flexibleSearchService" />
 	</bean>
 
 	<bean id="discountTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
