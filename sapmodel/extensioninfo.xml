@@ -19,7 +19,7 @@
         <requires-extension name="commerceservices"/>   
         <requires-extension name="sapcoreconfiguration" />
 
-      <coremodule generated="true" manager="sap.hybris.integration.models.jalo.SapmodelManager" packageroot="sap.hybris.integration.models"/>
+      <coremodule generated="true" manager="de.hybris.platform.sap.sapmodel.jalo.SapmodelManager" packageroot="de.hybris.platform.sap.sapmodel"/>
 
    </extension>
       

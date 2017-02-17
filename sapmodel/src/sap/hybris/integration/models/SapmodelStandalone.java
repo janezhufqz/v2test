@@ -25,6 +25,7 @@ import de.hybris.platform.util.Utilities;
  * </code> From eclipse, just run as Java Application. Note that you maybe need to add all other projects like
  * ext-commerce, ext-pim to the Launch configuration classpath.
  */
+@Deprecated
 public class SapmodelStandalone
 {
 	/**

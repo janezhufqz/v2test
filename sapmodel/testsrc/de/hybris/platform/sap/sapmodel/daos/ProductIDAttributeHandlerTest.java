@@ -11,25 +11,19 @@
 package de.hybris.platform.sap.sapmodel.daos;
 
 
-
 import de.hybris.bootstrap.annotations.UnitTest;
 import de.hybris.platform.core.model.ItemModel;
 import de.hybris.platform.core.model.product.ProductModel;
-import de.hybris.platform.servicelayer.search.FlexibleSearchQuery;
-import de.hybris.platform.servicelayer.search.FlexibleSearchService;
-import de.hybris.platform.servicelayer.search.RelationQuery;
-import de.hybris.platform.servicelayer.search.SearchResult;
-import de.hybris.platform.servicelayer.search.TranslationResult;
-
-import java.util.List;
-import java.util.Map;
-
+import de.hybris.platform.sap.sapmodel.model.SAPProductIDDataConversionModel;
+import de.hybris.platform.servicelayer.search.*;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import sap.hybris.integration.models.model.SAPProductIDDataConversionModel;
+import java.util.List;
+import java.util.Map;
+
 
 @UnitTest
 public class ProductIDAttributeHandlerTest

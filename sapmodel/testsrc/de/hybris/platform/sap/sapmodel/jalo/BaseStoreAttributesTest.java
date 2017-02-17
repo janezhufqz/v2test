@@ -8,7 +8,7 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with SAP.
  */
-package sap.hybris.integration.models.jalo;
+package de.hybris.platform.sap.sapmodel.jalo;
 
 import de.hybris.platform.store.BaseStoreModel;
 import de.hybris.platform.testframework.HybrisJUnit4TransactionalTest;

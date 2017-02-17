@@ -10,19 +10,18 @@
  */
 package de.hybris.platform.sap.sapmodel.jalo.listener;
 
-import java.util.Collection;
-import java.util.List;
-
-import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Required;
-
-import sap.hybris.integration.models.constants.SapmodelConstants;
+import de.hybris.platform.sap.sapmodel.constants.SapmodelConstants;
 import de.hybris.platform.sap.sapmodel.model.SAPLogicalSystemModel;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 import de.hybris.platform.servicelayer.search.SearchResult;
 import de.hybris.platform.tx.AfterSaveEvent;
 import de.hybris.platform.tx.AfterSaveListener;
 import de.hybris.platform.util.localization.Localization;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Required;
+
+import java.util.Collection;
+import java.util.List;
 
 public class SapLogicalSystemSaveListener implements
 		AfterSaveListener {

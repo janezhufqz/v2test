@@ -13,9 +13,10 @@ package sap.hybris.integration.models.constants;
 /**
  * Global class for all Sapmodel constants. You can add global constants for your extension into this class.
  */
-public final class SapmodelConstants extends GeneratedSapmodelConstants
+@Deprecated
+public final class SapmodelConstants // extends GeneratedSapmodelConstants
 {
-	public static final String EXTENSIONNAME = "sapmodel";
+	/*public static final String EXTENSIONNAME = "sapmodel";
 
 	public static final String CONFIGURATION_PROPERTY_CURRENCY = "defaultCurrency";
 	
@@ -26,7 +27,7 @@ public final class SapmodelConstants extends GeneratedSapmodelConstants
 
 	public static final String CONFIGURATION_PROPERTY_TRANSACTION_TYPE = "sapcommon_transactionType";
 
-	/** SAP PRICING CONSTANT ATTRIBURES **/
+	*//** SAP PRICING CONSTANT ATTRIBURES **//*
 
 	public static final String CONFIGURATION_PROPERTY_REFERENCE_CUSTOMER = "sapcommon_referenceCustomer";
 	
@@ -37,5 +38,5 @@ public final class SapmodelConstants extends GeneratedSapmodelConstants
 		//empty to avoid instantiating this constant class
 	}
 
-	// implement here constants used by this extension
+	// implement here constants used by this extension*/
 }

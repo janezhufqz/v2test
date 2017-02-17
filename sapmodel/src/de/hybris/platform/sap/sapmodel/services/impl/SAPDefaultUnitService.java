@@ -8,19 +8,19 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with SAP.
  */
-package sap.hybris.integration.models.services.impl;
+package de.hybris.platform.sap.sapmodel.services.impl;
 
 import de.hybris.platform.core.model.product.UnitModel;
 import de.hybris.platform.product.impl.DefaultUnitService;
 import de.hybris.platform.sap.sapmodel.daos.SAPUnitDao;
+import de.hybris.platform.sap.sapmodel.services.SAPUnitService;
 import org.springframework.beans.factory.annotation.Required;
-import sap.hybris.integration.models.services.SAPUnitService;
 
 import java.util.List;
 
 import static de.hybris.platform.servicelayer.util.ServicesUtil.validateParameterNotNull;
 
-@Deprecated
+
 public class SAPDefaultUnitService extends DefaultUnitService implements SAPUnitService
 {
 	private SAPUnitDao sapUnitDao;

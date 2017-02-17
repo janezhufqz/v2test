@@ -17,7 +17,7 @@
            http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 	<alias alias="sapCommonSalesAreaService" name="sapCommonDefaultSalesAreaService" />
-	<bean id="sapCommonDefaultSalesAreaService" class="sap.hybris.integration.models.services.impl.DefaultSalesAreaService">
+	<bean id="sapCommonDefaultSalesAreaService" class="de.hybris.platform.sap.sapmodel.services.impl.DefaultSalesAreaService">
 		<property name="baseStoreService" ref="baseStoreService" />
 	</bean>
 
@@ -80,7 +80,7 @@
 	</bean>
 
 	<alias alias="sapUnitService" name="sapDefaultUnitService" />
-	<bean id="sapDefaultUnitService" class="sap.hybris.integration.models.services.impl.SAPDefaultUnitService" parent="unitService">
+	<bean id="sapDefaultUnitService" class="de.hybris.platform.sap.sapmodel.services.impl.SAPDefaultUnitService" parent="unitService">
 		<property name="sapUnitDao" ref="sapUnitDao" />
 	</bean>
 
@@ -133,7 +133,7 @@
 	</bean>
 
 	<alias alias="sapPlantLogSysOrgService" name="defaultSapPlantLogSysOrgService" />
-	<bean id="defaultSapPlantLogSysOrgService" class="sap.hybris.integration.models.services.impl.DefaultSapPlantLogSysOrgService">
+	<bean id="defaultSapPlantLogSysOrgService" class="de.hybris.platform.sap.sapmodel.services.impl.DefaultSapPlantLogSysOrgService">
 		<property name="modelService" ref="modelService" />
 	</bean>
 	

@@ -8,7 +8,7 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with SAP.
  */
-package sap.hybris.integration.models.services.impl;
+package de.hybris.platform.sap.sapmodel.services.impl;
 
 import de.hybris.platform.sap.core.configuration.model.SAPConfigurationModel;
 import de.hybris.platform.sap.sapmodel.exceptions.SAPModelRuntimeException;
@@ -18,12 +18,11 @@ import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 import de.hybris.platform.store.BaseStoreModel;
 import de.hybris.platform.store.services.BaseStoreService;
 import org.springframework.beans.factory.annotation.Autowired;
-import sap.hybris.integration.models.services.SalesAreaService;
+import de.hybris.platform.sap.sapmodel.services.SalesAreaService;
 
 /**
  * Default sales area service implementation for accessing common distribution channels and divisions.
  */
-@Deprecated
 public class DefaultSalesAreaService implements SalesAreaService{
 	
 	private BaseStoreService baseStoreService;

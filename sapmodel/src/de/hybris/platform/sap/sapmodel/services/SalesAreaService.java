@@ -8,12 +8,11 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with SAP.
  */
-package sap.hybris.integration.models.services;
+package de.hybris.platform.sap.sapmodel.services;
 
 /**
  *	Accessing sales area data for SAP back end communication
  */
-@Deprecated
 public interface SalesAreaService {
 	
 	/**

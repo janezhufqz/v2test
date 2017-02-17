@@ -1,24 +1,30 @@
 /*
+ *  
  * [y] hybris Platform
- *
- * Copyright (c) 2017 SAP SE or an SAP affiliate company. All rights reserved.
- *
+ *  
+ * Copyright (c) 2000-2016 SAP SE
+ * All rights reserved.
+ *  
  * This software is the confidential and proprietary information of SAP
- * ("Confidential Information"). You shall not disclose such Confidential
- * Information and shall use it only in accordance with the terms of the
- * license agreement you entered into with SAP.
+ * Hybris ("Confidential Information"). You shall not disclose such
+ * Confidential Information and shall use it only in accordance with the
+ * terms of the license agreement you entered into with SAP Hybris.
+ *  
  */
-package sap.hybris.integration.models.jalo;
+package de.hybris.platform.sap.sapmodel.jalo;
 
+import de.hybris.platform.jalo.Item;
+import de.hybris.platform.jalo.JaloBusinessException;
+import de.hybris.platform.jalo.SessionContext;
+import de.hybris.platform.jalo.type.ComposedType;
 import org.apache.log4j.Logger;
 
-@Deprecated
-public class SAPProductIDDataConversion //extends GeneratedSAPProductIDDataConversion
+public class SAPProductIDDataConversion extends GeneratedSAPProductIDDataConversion
 {
 	@SuppressWarnings("unused")
 	private final static Logger LOG = Logger.getLogger( SAPProductIDDataConversion.class.getName() );
 	
-	/*@Override
+	@Override
 	protected Item createItem(final SessionContext ctx, final ComposedType type, final ItemAttributeMap allAttributes) throws JaloBusinessException
 	{
 		// business code placed here will be executed before the item is created
@@ -28,5 +34,5 @@ public class SAPProductIDDataConversion //extends GeneratedSAPProductIDDataConve
 		// and return the item
 		return item;
 	}
-	*/
+	
 }

@@ -8,24 +8,23 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with SAP.
  */
-package sap.hybris.integration.models.services.impl;
+package de.hybris.platform.sap.sapmodel.services.impl;
 
 import com.google.common.collect.Sets;
 import de.hybris.platform.sap.core.configuration.model.SAPConfigurationModel;
 import de.hybris.platform.sap.sapmodel.model.SAPLogicalSystemModel;
 import de.hybris.platform.sap.sapmodel.model.SAPPlantLogSysOrgModel;
 import de.hybris.platform.sap.sapmodel.model.SAPSalesOrganizationModel;
+import de.hybris.platform.sap.sapmodel.services.SapPlantLogSysOrgService;
 import de.hybris.platform.servicelayer.model.ModelService;
 import de.hybris.platform.store.BaseStoreModel;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Required;
-import sap.hybris.integration.models.services.SapPlantLogSysOrgService;
 
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.BiFunction;
 
-@Deprecated
 public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService {
 	
 	private final static Logger LOG = Logger.getLogger(DefaultSapPlantLogSysOrgService.class);

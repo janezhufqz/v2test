@@ -8,11 +8,11 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with SAP.
  */
-package sap.hybris.integration.models.services;
+package de.hybris.platform.sap.sapmodel.services;
 
 import de.hybris.platform.core.model.product.UnitModel;
 import de.hybris.platform.product.UnitService;
-@Deprecated
+
 public interface SAPUnitService extends UnitService
 {
 

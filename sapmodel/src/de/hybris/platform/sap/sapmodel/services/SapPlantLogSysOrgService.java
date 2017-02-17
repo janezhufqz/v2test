@@ -8,14 +8,13 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with SAP.
  */
-package sap.hybris.integration.models.services;
+package de.hybris.platform.sap.sapmodel.services;
 
 import de.hybris.platform.sap.sapmodel.model.SAPLogicalSystemModel;
 import de.hybris.platform.sap.sapmodel.model.SAPPlantLogSysOrgModel;
 import de.hybris.platform.sap.sapmodel.model.SAPSalesOrganizationModel;
 import de.hybris.platform.store.BaseStoreModel;
 
-@Deprecated
 public interface SapPlantLogSysOrgService {
 	
     /**

@@ -8,10 +8,11 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with SAP.
  */
-package sap.hybris.integration.models.jalo;
+package de.hybris.platform.sap.sapmodel.jalo;
 
 import static org.junit.Assert.assertTrue;
 
+import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.testframework.HybrisJUnit4TransactionalTest;
 
 import org.apache.log4j.Logger;
@@ -21,13 +22,13 @@ import org.junit.Test;
 
 
 /**
- * JUnit Tests for the Sapmodel extension
+ * 
  */
-public class SapmodelTest extends HybrisJUnit4TransactionalTest
+public class BlockedAttributeTest extends HybrisJUnit4TransactionalTest
 {
 	/** Edit the local|project.properties to change logging behaviour (properties log4j.*). */
 	@SuppressWarnings("unused")
-	private static final Logger LOG = Logger.getLogger(SapmodelTest.class.getName());
+	private static final Logger LOG = Logger.getLogger(BlockedAttributeTest.class.getName());
 
 	@Before
 	public void setUp()
@@ -45,9 +46,10 @@ public class SapmodelTest extends HybrisJUnit4TransactionalTest
 	 * This is a sample test method.
 	 */
 	@Test
-	public void testSapmodel()
+	public void testPresenceOfBlockedAttributeInAPI()
 	{
-		final boolean testTrue = true;
-		assertTrue("true is not true", testTrue);
+		final ProductModel product = new ProductModel();
+		product.setSapBlocked(Boolean.TRUE);
+		assertTrue(product.getSapBlocked().booleanValue());
 	}
 }

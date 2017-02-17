@@ -15,6 +15,7 @@ package sap.hybris.integration.models;
 /**
  * 
  */
+@Deprecated
 public class SalesAreaKey implements Comparable<SalesAreaKey>
 {
 	private String salesOrganization = "";

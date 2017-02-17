@@ -11,9 +11,11 @@
 package de.hybris.platform.sap.sapmodel.daos;
 
 import de.hybris.platform.core.model.product.ProductModel;
+import de.hybris.platform.sap.sapmodel.model.SAPProductIDDataConversionModel;
 import de.hybris.platform.servicelayer.exceptions.ModelNotFoundException;
 import de.hybris.platform.servicelayer.model.attribute.DynamicAttributeHandler;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -21,8 +23,6 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import sap.hybris.integration.models.model.SAPProductIDDataConversionModel;
 
 public class ProductIDAttributeHandler implements DynamicAttributeHandler<String, ProductModel>, Serializable
 {
