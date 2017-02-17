@@ -25,19 +25,6 @@ public class SAPDefaultUnitService extends DefaultUnitService implements SAPUnit
 {
 	private SAPUnitDao sapUnitDao;
 
-
-	public SAPUnitDao getSapUnitDao()
-	{
-		return sapUnitDao;
-	}
-
-	@Required
-	public void setSapUnitDao(SAPUnitDao sapUnitDao)
-	{
-		this.sapUnitDao = sapUnitDao;
-	}
-
-
 	public UnitModel getUnitForSAPCode(final String code)
 	{
 		validateParameterNotNull(code, "Parameter code was null");
@@ -51,5 +38,17 @@ public class SAPDefaultUnitService extends DefaultUnitService implements SAPUnit
 			return null;
 		}
 	}
+
+	protected SAPUnitDao getSapUnitDao()
+	{
+		return sapUnitDao;
+	}
+
+	@Required
+	public void setSapUnitDao(SAPUnitDao sapUnitDao)
+	{
+		this.sapUnitDao = sapUnitDao;
+	}
+
 
 }

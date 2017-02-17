@@ -106,7 +106,7 @@ public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService
 
 	}
 
-	public ModelService getModelService() {
+	protected ModelService getModelService() {
 		return modelService;
 	}
     

@@ -14,11 +14,11 @@ import de.hybris.platform.sap.core.configuration.model.SAPConfigurationModel;
 import de.hybris.platform.sap.sapmodel.exceptions.SAPModelRuntimeException;
 import de.hybris.platform.sap.sapmodel.model.ReferenceDistributionChannelMappingModel;
 import de.hybris.platform.sap.sapmodel.model.ReferenceDivisionMappingModel;
+import de.hybris.platform.sap.sapmodel.services.SalesAreaService;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 import de.hybris.platform.store.BaseStoreModel;
 import de.hybris.platform.store.services.BaseStoreService;
-import org.springframework.beans.factory.annotation.Autowired;
-import de.hybris.platform.sap.sapmodel.services.SalesAreaService;
+import org.springframework.beans.factory.annotation.Required;
 
 /**
  * Default sales area service implementation for accessing common distribution channels and divisions.
@@ -26,13 +26,7 @@ import de.hybris.platform.sap.sapmodel.services.SalesAreaService;
 public class DefaultSalesAreaService implements SalesAreaService{
 	
 	private BaseStoreService baseStoreService;
-
-
-	/**
-	 * Accessing the tables for common channels and divisions
-	 */
-	@Autowired
-	protected FlexibleSearchService flexibleSearchService;	//NOPMD
+	private FlexibleSearchService flexibleSearchService;
 
 	@Override
 	public String getSalesOrganization() {
@@ -91,20 +85,6 @@ public class DefaultSalesAreaService implements SalesAreaService{
 		return getCommonDivisionCustMaster(salesOrg, division);
 	}
 
-	/**
-	 * @return the baseStoreService
-	 */
-	public BaseStoreService getBaseStoreService() {
-		return baseStoreService;
-	}
-
-	/**
-	 * @param baseStoreService the baseStoreService to set
-	 */
-	public void setBaseStoreService(BaseStoreService baseStoreService) {
-		this.baseStoreService = baseStoreService;
-	}
-	
 	/**
 	 * Read common distribution channel for condition maintenance
 	 * @param salesOrganization 
@@ -196,7 +176,7 @@ public class DefaultSalesAreaService implements SalesAreaService{
 	 * @param division
 	 * @return
 	 */
-	ReferenceDivisionMappingModel getCommonDivsion(
+	protected ReferenceDivisionMappingModel getCommonDivsion(
 			final String salesOrganization, final String division) {
 		final ReferenceDivisionMappingModel example = new ReferenceDivisionMappingModel();
 		example.setSalesOrganization(salesOrganization);
@@ -208,6 +188,24 @@ public class DefaultSalesAreaService implements SalesAreaService{
 		}
 		
 		return referenceDivision;
-	}	
+	}
 
+	protected BaseStoreService getBaseStoreService() {
+		return baseStoreService;
+	}
+
+	@Required
+	public void setBaseStoreService(BaseStoreService baseStoreService) {
+		this.baseStoreService = baseStoreService;
+	}
+
+
+	protected FlexibleSearchService getFlexibleSearchService() {
+		return flexibleSearchService;
+	}
+
+	@Required
+	public void setFlexibleSearchService(FlexibleSearchService flexibleSearchService) {
+		this.flexibleSearchService = flexibleSearchService;
+	}
 }
