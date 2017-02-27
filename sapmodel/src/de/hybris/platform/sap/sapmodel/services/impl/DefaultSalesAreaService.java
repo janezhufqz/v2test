@@ -14,25 +14,19 @@ import de.hybris.platform.sap.core.configuration.model.SAPConfigurationModel;
 import de.hybris.platform.sap.sapmodel.exceptions.SAPModelRuntimeException;
 import de.hybris.platform.sap.sapmodel.model.ReferenceDistributionChannelMappingModel;
 import de.hybris.platform.sap.sapmodel.model.ReferenceDivisionMappingModel;
+import de.hybris.platform.sap.sapmodel.services.SalesAreaService;
 import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 import de.hybris.platform.store.BaseStoreModel;
 import de.hybris.platform.store.services.BaseStoreService;
-import org.springframework.beans.factory.annotation.Autowired;
-import de.hybris.platform.sap.sapmodel.services.SalesAreaService;
+import org.springframework.beans.factory.annotation.Required;
 
 /**
  * Default sales area service implementation for accessing common distribution channels and divisions.
  */
 public class DefaultSalesAreaService implements SalesAreaService{
-	
+
 	private BaseStoreService baseStoreService;
-
-
-	/**
-	 * Accessing the tables for common channels and divisions
-	 */
-	@Autowired
-	protected FlexibleSearchService flexibleSearchService;	//NOPMD
+	private FlexibleSearchService flexibleSearchService;
 
 	@Override
 	public String getSalesOrganization() {
@@ -41,13 +35,13 @@ public class DefaultSalesAreaService implements SalesAreaService{
 	}
 
 	private SAPConfigurationModel getCurrentSAPConfiguration() {
-	BaseStoreModel baseStore = baseStoreService.getCurrentBaseStore();
-	if (baseStore == null){
-		throw new SAPModelRuntimeException("No base store available");
-	}
+		BaseStoreModel baseStore = baseStoreService.getCurrentBaseStore();
+		if (baseStore == null){
+			throw new SAPModelRuntimeException("No base store available");
+		}
 		SAPConfigurationModel sapConfiguration = baseStore.getSAPConfiguration();
 		if (sapConfiguration == null){
-			throw new SAPModelRuntimeException("No SAP configuration available");			
+			throw new SAPModelRuntimeException("No SAP configuration available");
 		}
 		return sapConfiguration;
 	}
@@ -92,22 +86,8 @@ public class DefaultSalesAreaService implements SalesAreaService{
 	}
 
 	/**
-	 * @return the baseStoreService
-	 */
-	public BaseStoreService getBaseStoreService() {
-		return baseStoreService;
-	}
-
-	/**
-	 * @param baseStoreService the baseStoreService to set
-	 */
-	public void setBaseStoreService(BaseStoreService baseStoreService) {
-		this.baseStoreService = baseStoreService;
-	}
-	
-	/**
 	 * Read common distribution channel for condition maintenance
-	 * @param salesOrganization 
+	 * @param salesOrganization
 	 * @param distributionChannel
 	 * @return The common channel for condition maintenance
 	 */
@@ -121,7 +101,7 @@ public class DefaultSalesAreaService implements SalesAreaService{
 			return null;
 		}
 	}
-	
+
 	/**
 	 * Read common distribution channel for customer and material master
 	 * @param salesOrganization
@@ -137,7 +117,7 @@ public class DefaultSalesAreaService implements SalesAreaService{
 		} else {
 			return null;
 		}
-	}	
+	}
 
 	/**
 	 * @param salesOrganization
@@ -164,7 +144,7 @@ public class DefaultSalesAreaService implements SalesAreaService{
 	 * @return Common division
 	 */
 	protected String getCommonDivisionCustMaster(final String salesOrganization,
-			final String division) {
+												 final String division) {
 		final ReferenceDivisionMappingModel referenceDivision = getCommonDivsion(
 				salesOrganization, division);
 		if (referenceDivision != null) {
@@ -173,7 +153,7 @@ public class DefaultSalesAreaService implements SalesAreaService{
 			return null;
 		}
 	}
-	
+
 	/**
 	 * Read common division for condition maintenance
 	 * @param salesOrganization
@@ -181,7 +161,7 @@ public class DefaultSalesAreaService implements SalesAreaService{
 	 * @return Common division
 	 */
 	protected String getCommonDivisionConditions(final String salesOrganization,
-			final String division) {
+												 final String division) {
 		final ReferenceDivisionMappingModel referenceDivision = getCommonDivsion(
 				salesOrganization, division);
 		if (referenceDivision != null) {
@@ -189,14 +169,14 @@ public class DefaultSalesAreaService implements SalesAreaService{
 		} else {
 			return null;
 		}
-	}	
+	}
 
 	/**
 	 * @param salesOrganization
 	 * @param division
 	 * @return
 	 */
-	ReferenceDivisionMappingModel getCommonDivsion(
+	protected ReferenceDivisionMappingModel getCommonDivsion(
 			final String salesOrganization, final String division) {
 		final ReferenceDivisionMappingModel example = new ReferenceDivisionMappingModel();
 		example.setSalesOrganization(salesOrganization);
@@ -206,8 +186,26 @@ public class DefaultSalesAreaService implements SalesAreaService{
 		if (referenceDivision == null){
 			throw new SAPModelRuntimeException("No distribution channel mapping found");
 		}
-		
-		return referenceDivision;
-	}	
 
+		return referenceDivision;
+	}
+
+	protected BaseStoreService getBaseStoreService() {
+		return baseStoreService;
+	}
+
+	@Required
+	public void setBaseStoreService(BaseStoreService baseStoreService) {
+		this.baseStoreService = baseStoreService;
+	}
+
+
+	protected FlexibleSearchService getFlexibleSearchService() {
+		return flexibleSearchService;
+	}
+
+	@Required
+	public void setFlexibleSearchService(FlexibleSearchService flexibleSearchService) {
+		this.flexibleSearchService = flexibleSearchService;
+	}
 }

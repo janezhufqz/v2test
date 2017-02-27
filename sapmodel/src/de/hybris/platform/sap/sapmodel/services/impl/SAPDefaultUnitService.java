@@ -21,35 +21,27 @@ import java.util.List;
 import static de.hybris.platform.servicelayer.util.ServicesUtil.validateParameterNotNull;
 
 
-public class SAPDefaultUnitService extends DefaultUnitService implements SAPUnitService
-{
-	private SAPUnitDao sapUnitDao;
+public class SAPDefaultUnitService extends DefaultUnitService implements SAPUnitService {
+    private SAPUnitDao sapUnitDao;
 
+    public UnitModel getUnitForSAPCode(final String code) {
+        validateParameterNotNull(code, "Parameter code was null");
+        final List<UnitModel> units = sapUnitDao.findUnitBySAPUnitCode(code);
+        if (units.size() > 0) {
+            return units.get(0);
+        } else {
+            return null;
+        }
+    }
 
-	public SAPUnitDao getSapUnitDao()
-	{
-		return sapUnitDao;
-	}
+    protected SAPUnitDao getSapUnitDao() {
+        return sapUnitDao;
+    }
 
-	@Required
-	public void setSapUnitDao(SAPUnitDao sapUnitDao)
-	{
-		this.sapUnitDao = sapUnitDao;
-	}
+    @Required
+    public void setSapUnitDao(SAPUnitDao sapUnitDao) {
+        this.sapUnitDao = sapUnitDao;
+    }
 
-
-	public UnitModel getUnitForSAPCode(final String code)
-	{
-		validateParameterNotNull(code, "Parameter code was null");
-		final List<UnitModel> units = sapUnitDao.findUnitBySAPUnitCode(code);
-		if (units.size() > 0)
-		{
-			return units.get(0);
-		}
-		else
-		{
-			return null;
-		}
-	}
 
 }

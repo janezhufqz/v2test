@@ -26,95 +26,94 @@ import java.util.Set;
 import java.util.function.BiFunction;
 
 public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService {
-	
-	private final static Logger LOG = Logger.getLogger(DefaultSapPlantLogSysOrgService.class);
-	
-	private ModelService modelService;
 
-	private final BiFunction<Set<SAPPlantLogSysOrgModel>, String, Optional<SAPPlantLogSysOrgModel>> selectEntry = (
-			sapPlantLogSysOrgSet, plantCode) -> sapPlantLogSysOrgSet.stream()
-			.filter(entry -> entry.getPlant().getCode().contentEquals(plantCode)).findFirst();
+    private final static Logger LOG = Logger.getLogger(DefaultSapPlantLogSysOrgService.class);
 
-	@Override
-	public SAPLogicalSystemModel getSapLogicalSystemForPlant(BaseStoreModel baseStoreModel, String plantCode) {
+    private ModelService modelService;
 
-		final Optional<SAPPlantLogSysOrgModel> sapPlantLogSysOrg = selectEntry.apply(
-				getCurrentSAPConfiguration(baseStoreModel).getSapPlantLogSysOrg(), plantCode);
+    private final BiFunction<Set<SAPPlantLogSysOrgModel>, String, Optional<SAPPlantLogSysOrgModel>> selectEntry = (
+            sapPlantLogSysOrgSet, plantCode) -> sapPlantLogSysOrgSet.stream()
+            .filter(entry -> entry.getPlant().getCode().contentEquals(plantCode)).findFirst();
 
-		if (sapPlantLogSysOrg.isPresent()) {
-			return sapPlantLogSysOrg.get().getLogSys();
-		} else {
-			LOG.error(String.format("No SAP logical system is maintanied for the base store %s and plant %s!",
-					baseStoreModel.getName(), plantCode));
-			
-			return getModelService().create(SAPLogicalSystemModel.class);
-		}
+    @Override
+    public SAPLogicalSystemModel getSapLogicalSystemForPlant(BaseStoreModel baseStoreModel, String plantCode) {
 
-	}
+        final Optional<SAPPlantLogSysOrgModel> sapPlantLogSysOrg = selectEntry.apply(
+                getCurrentSAPConfiguration(baseStoreModel).getSapPlantLogSysOrg(), plantCode);
 
-	@Override
-	public SAPSalesOrganizationModel getSapSalesOrganizationForPlant(BaseStoreModel baseStoreModel, String plantCode) {
+        if (sapPlantLogSysOrg.isPresent()) {
+            return sapPlantLogSysOrg.get().getLogSys();
+        } else {
+            LOG.error(String.format("No SAP logical system is maintained for the base store [%s] and plant [%s]!",
+                    baseStoreModel.getName(), plantCode));
 
-		final Optional<SAPPlantLogSysOrgModel> sapPlantLogSysOrg = selectEntry.apply(
-				getCurrentSAPConfiguration(baseStoreModel).getSapPlantLogSysOrg(), plantCode);
+            return getModelService().create(SAPLogicalSystemModel.class);
+        }
 
-		if (sapPlantLogSysOrg.isPresent()) {
-			return sapPlantLogSysOrg.get().getSalesOrg();
-		} else {
-			LOG.error(String.format("No SAP sales organization is maintained for the plant %s in base store %s!",
-					plantCode, baseStoreModel.getName()));
-			
-			return getModelService().create(SAPSalesOrganizationModel.class);
-		}
-	}
+    }
 
-	@Override
-	public SAPPlantLogSysOrgModel getSapPlantLogSysOrgForPlant(BaseStoreModel baseStoreModel, String plantCode) {
+    @Override
+    public SAPSalesOrganizationModel getSapSalesOrganizationForPlant(BaseStoreModel baseStoreModel, String plantCode) {
 
-		final Optional<SAPPlantLogSysOrgModel> sapPlantLogSysOrg = selectEntry.apply(
-				getCurrentSAPConfiguration(baseStoreModel).getSapPlantLogSysOrg(), plantCode);
+        final Optional<SAPPlantLogSysOrgModel> sapPlantLogSysOrg = selectEntry.apply(
+                getCurrentSAPConfiguration(baseStoreModel).getSapPlantLogSysOrg(), plantCode);
 
-		if (sapPlantLogSysOrg.isPresent()) {
-			return sapPlantLogSysOrg.get();
-		} else {
-			LOG.error(String.format(
-					"No SAP logical system and sales organization are maintained for the plant %s in base store %s!",
-					plantCode, baseStoreModel.getName()));
-			
-			SAPPlantLogSysOrgModel sapPlantLogSysOrgModel = getModelService().create(SAPPlantLogSysOrgModel.class);
-			sapPlantLogSysOrgModel.setLogSys(getModelService().create(SAPLogicalSystemModel.class));
-			sapPlantLogSysOrgModel.setSalesOrg(getModelService().create(SAPSalesOrganizationModel.class));
-			
-			return sapPlantLogSysOrgModel;
-		}
+        if (sapPlantLogSysOrg.isPresent()) {
+            return sapPlantLogSysOrg.get().getSalesOrg();
+        } else {
+            LOG.error(String.format("No SAP sales organization is maintained for the plant [%s] in base store [%s]!",
+                    plantCode, baseStoreModel.getName()));
 
-	}
+            return getModelService().create(SAPSalesOrganizationModel.class);
+        }
+    }
 
-	private SAPConfigurationModel getCurrentSAPConfiguration(BaseStoreModel baseStore) {
+    @Override
+    public SAPPlantLogSysOrgModel getSapPlantLogSysOrgForPlant(BaseStoreModel baseStoreModel, String plantCode) {
 
-		SAPConfigurationModel sapConfiguration = baseStore.getSAPConfiguration();
+        final Optional<SAPPlantLogSysOrgModel> sapPlantLogSysOrg = selectEntry.apply(
+                getCurrentSAPConfiguration(baseStoreModel).getSapPlantLogSysOrg(), plantCode);
 
-		if (sapConfiguration != null) {
-			return sapConfiguration;
-		} else {
-			LOG.error(String.format("No SAP multiple backends configuration is maintained for the base store %s!",
-					baseStore.getName()));
-			SAPConfigurationModel sapConfigurationModel = getModelService().create(SAPConfigurationModel.class);
-			sapConfigurationModel.setSapPlantLogSysOrg(Sets.newHashSet());
-			return sapConfigurationModel;
-		}
+        if (sapPlantLogSysOrg.isPresent()) {
+            return sapPlantLogSysOrg.get();
+        } else {
+            LOG.error(String.format(
+                    "No SAP logical system and sales organization are maintained for the plant [%s] in base store [%s]!",
+                    plantCode, baseStoreModel.getName()));
 
-	}
+            SAPPlantLogSysOrgModel sapPlantLogSysOrgModel = getModelService().create(SAPPlantLogSysOrgModel.class);
+            sapPlantLogSysOrgModel.setLogSys(getModelService().create(SAPLogicalSystemModel.class));
+            sapPlantLogSysOrgModel.setSalesOrg(getModelService().create(SAPSalesOrganizationModel.class));
 
-	public ModelService getModelService() {
-		return modelService;
-	}
-    
-	@Required
-	public void setModelService(ModelService modelService) {
-		this.modelService = modelService;
-	}
-	
-	
+            return sapPlantLogSysOrgModel;
+        }
+
+    }
+
+    private SAPConfigurationModel getCurrentSAPConfiguration(BaseStoreModel baseStore) {
+
+        SAPConfigurationModel sapConfiguration = baseStore.getSAPConfiguration();
+
+        if (sapConfiguration != null) {
+            return sapConfiguration;
+        } else {
+            LOG.error(String.format("No SAP multiple back-ends configuration is maintained for the base store [%s]!",
+                    baseStore.getName()));
+            SAPConfigurationModel sapConfigurationModel = getModelService().create(SAPConfigurationModel.class);
+            sapConfigurationModel.setSapPlantLogSysOrg(Sets.newHashSet());
+            return sapConfigurationModel;
+        }
+
+    }
+
+    protected ModelService getModelService() {
+        return modelService;
+    }
+
+    @Required
+    public void setModelService(ModelService modelService) {
+        this.modelService = modelService;
+    }
+
 
 }
