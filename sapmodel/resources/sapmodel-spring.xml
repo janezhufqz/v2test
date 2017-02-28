@@ -16,10 +16,16 @@
            http://www.springframework.org/schema/aop
            http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-	<alias alias="sapCommonSalesAreaService" name="sapCommonDefaultSalesAreaService" />
-	<bean id="sapCommonDefaultSalesAreaService" class="de.hybris.platform.sap.sapmodel.services.impl.DefaultSalesAreaService">
+	<alias alias="sapDefaultSalesAreaService" name="defaultSalesAreaService" />
+	<bean id="defaultSalesAreaService" class="de.hybris.platform.sap.sapmodel.services.impl.DefaultSalesAreaService">
 		<property name="baseStoreService" ref="baseStoreService" />
 		<property name="flexibleSearchService" ref="flexibleSearchService" />
+	</bean>
+
+	<!-- TO BE REMOVED WITH THE DEPRECATED CODE-->
+	<alias alias="sapCommonSalesAreaService" name="sapCommonDefaultSalesAreaService" />
+	<bean id="sapCommonDefaultSalesAreaService" class="sap.hybris.integration.models.services.impl.DefaultSalesAreaService">
+		<property name="baseStoreService" ref="baseStoreService" />
 	</bean>
 
 	<bean id="discountTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
