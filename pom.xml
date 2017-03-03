@@ -72,13 +72,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.4.0.0-M9</version>
+			<version>6.4.0.0-M10</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2bcommerce-module</artifactId>
-			<version>6.4.0.0-M7</version>
+			<version>6.4.0.0-M8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -90,19 +90,19 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.4.0.0-M4</version>
+			<version>6.4.0.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-apps-module</artifactId>
-			<version>6.4.0.0-M3</version>
+			<version>6.4.0.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-core-module</artifactId>
-			<version>6.4.0.0-M3</version>
+			<version>6.4.0.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -120,13 +120,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>6.4.0.0-M2</version>
+			<version>6.4.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customersupport-module</artifactId>
-			<version>6.4.0.0-M3</version>
+			<version>6.4.0.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -144,19 +144,19 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.4.0.0-M9</version>
+			<version>6.4.0.0-M10</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>pcm-module</artifactId>
-			<version>6.4.0.0-M3</version>
+			<version>6.4.0.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>6.4.0.0-M4</version>
+			<version>6.4.0.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -180,7 +180,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>6.4.0.0-M9</version>
+			<version>6.4.0.0-M10</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
