@@ -10,7 +10,9 @@
  */
 package de.hybris.platform.sapmodelbackoffice.services;
 
-
+/**
+ * Place holder class just to hold the reference for SapmodelbackofficeService
+ */
 public class SapmodelbackofficeService
 {
 	public String getHello()

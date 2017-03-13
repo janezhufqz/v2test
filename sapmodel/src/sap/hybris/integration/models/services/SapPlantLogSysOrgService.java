@@ -15,28 +15,33 @@ import de.hybris.platform.sap.sapmodel.model.SAPPlantLogSysOrgModel;
 import de.hybris.platform.sap.sapmodel.model.SAPSalesOrganizationModel;
 import de.hybris.platform.store.BaseStoreModel;
 
+
 @Deprecated
-public interface SapPlantLogSysOrgService {
-	
-    /**
-     * @param baseStoreModel
-     * @param plantCode
-     * @return SAP logical system for given base store and plant
-     */
-    public SAPLogicalSystemModel getSapLogicalSystemForPlant(BaseStoreModel baseStoreModel, String plantCode);
-    
-    /**
-     * @param baseStoreModel
-     * @param plantCode
-     * @return SAP sales organization for given base store and plant
-     */
-    public SAPSalesOrganizationModel getSapSalesOrganizationForPlant(BaseStoreModel baseStoreModel, String plantCode);
-    
-    /**
-     * @param baseStoreModel
-     * @param plantCode
-     * @return SAP logical system and sales organization for given base store and plant
-     */
-    public SAPPlantLogSysOrgModel getSapPlantLogSysOrgForPlant(BaseStoreModel baseStoreModel, String plantCode);
-    
+/**
+ * Deprecated Interface to provide access to Sap logical system information for given base store and plant combination
+ */
+public interface SapPlantLogSysOrgService
+{
+
+	/**
+	 * @param baseStoreModel
+	 * @param plantCode
+	 * @return SAP logical system for given base store and plant
+	 */
+	public SAPLogicalSystemModel getSapLogicalSystemForPlant(BaseStoreModel baseStoreModel, String plantCode);
+
+	/**
+	 * @param baseStoreModel
+	 * @param plantCode
+	 * @return SAP sales organization for given base store and plant
+	 */
+	public SAPSalesOrganizationModel getSapSalesOrganizationForPlant(BaseStoreModel baseStoreModel, String plantCode);
+
+	/**
+	 * @param baseStoreModel
+	 * @param plantCode
+	 * @return SAP logical system and sales organization for given base store and plant
+	 */
+	public SAPPlantLogSysOrgModel getSapPlantLogSysOrgForPlant(BaseStoreModel baseStoreModel, String plantCode);
+
 }
