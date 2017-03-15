@@ -21,12 +21,12 @@ import java.util.List;
 import static de.hybris.platform.servicelayer.util.ServicesUtil.validateParameterNotNull;
 
 
-@Deprecated
 /**
  * Deprecated class used to provide the business logic for SAPUnitService
  * 
  * @deprecated Please use {@link de.hybris.platform.sap.sapmodel.services.imple.SAPDefaultUnitService}
  */
+@Deprecated
 public class SAPDefaultUnitService extends DefaultUnitService implements SAPUnitService
 {
 	private SAPUnitDao sapUnitDao;

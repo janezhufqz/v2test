@@ -26,14 +26,13 @@ import java.util.Set;
 import java.util.function.BiFunction;
 
 
-@SuppressWarnings("javadoc")
-@Deprecated
 /**
  *
  * Deprecated default implementation of SapPlantLogSysOrgService
  * 
  * @deprecated Please use {@link de.hybris.platform.sap.sapmodel.services.impl.DefaultSapPlantLogSysOrgService}
  */
+@Deprecated
 public class DefaultSapPlantLogSysOrgService implements SapPlantLogSysOrgService
 {
 

@@ -14,17 +14,17 @@ import de.hybris.platform.core.model.product.UnitModel;
 import de.hybris.platform.product.UnitService;
 
 
-@Deprecated
-/***
- * Deprecated interface used to provide access to SAP Product models
+/**
+ * Deprecated interface to provide access to UnitModel information for a given product SAPCode
  * 
  * @deprecated Please use {@link de.hybris.platform.sap.sapmodel.services.SAPUnitService}
  */
+@Deprecated
 public interface SAPUnitService extends UnitService
 {
 
 
-	/***
+	/**
 	 * Returns the UnitModel for a given SAP product code
 	 * 
 	 * @param code
