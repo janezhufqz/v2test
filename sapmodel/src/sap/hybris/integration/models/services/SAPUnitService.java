@@ -17,6 +17,8 @@ import de.hybris.platform.product.UnitService;
 @Deprecated
 /***
  * Deprecated interface used to provide access to SAP Product models
+ * 
+ * @deprecated Please use {@link de.hybris.platform.sap.sapmodel.services.SAPUnitService}
  */
 public interface SAPUnitService extends UnitService
 {

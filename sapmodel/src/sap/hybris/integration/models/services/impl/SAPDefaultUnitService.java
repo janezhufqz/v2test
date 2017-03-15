@@ -24,6 +24,8 @@ import static de.hybris.platform.servicelayer.util.ServicesUtil.validateParamete
 @Deprecated
 /**
  * Deprecated class used to provide the business logic for SAPUnitService
+ * 
+ * @deprecated Please use {@link de.hybris.platform.sap.sapmodel.services.imple.SAPDefaultUnitService}
  */
 public class SAPDefaultUnitService extends DefaultUnitService implements SAPUnitService
 {

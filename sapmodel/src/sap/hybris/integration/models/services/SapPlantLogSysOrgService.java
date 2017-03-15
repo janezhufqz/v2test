@@ -18,7 +18,10 @@ import de.hybris.platform.store.BaseStoreModel;
 
 @Deprecated
 /**
+ * 
  * Deprecated Interface to provide access to Sap logical system information for given base store and plant combination
+ * 
+ * @deprecated please use {@link de.hybris.platform.sap.sapmodel.services.SapPlantLogSysOrgService}
  */
 public interface SapPlantLogSysOrgService
 {
