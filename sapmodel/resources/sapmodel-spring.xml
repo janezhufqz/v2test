@@ -22,12 +22,6 @@
 		<property name="flexibleSearchService" ref="flexibleSearchService" />
 	</bean>
 
-	<!-- TO BE REMOVED WITH THE DEPRECATED CODE-->
-	<alias alias="sapCommonSalesAreaService" name="sapCommonDefaultSalesAreaService" />
-	<bean id="sapCommonDefaultSalesAreaService" class="sap.hybris.integration.models.services.impl.DefaultSalesAreaService">
-		<property name="baseStoreService" ref="baseStoreService" />
-	</bean>
-
 	<bean id="discountTransferHubConfiguration" parent="sapCoreDataHubTransferConfiguration">
 		<property name="itemCode" value="Discount" />
 		<property name="rawType" value="RawHybrisDiscount" />
