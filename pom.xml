@@ -42,19 +42,19 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.4.0.0-M22</version>
+			<version>6.4.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>6.4.0.0-M19</version>
+			<version>6.4.0.0-RC1</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>acceleratoraddons-module</artifactId>
-			<version>6.4.0.0-M7</version>
+			<version>6.4.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -72,19 +72,19 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.4.0.0-M16</version>
+			<version>6.4.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2bcommerce-module</artifactId>
-			<version>6.4.0.0-M14</version>
+			<version>6.4.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.4.0.0-M20</version>
+			<version>6.4.0.0-M21</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -138,7 +138,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>mdm-datahub-module</artifactId>
-			<version>6.4.0.0-RC3</version>
+			<version>6.4.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
