@@ -155,5 +155,11 @@
 	<bean id="sapLogicalSystemSaveListener" class="de.hybris.platform.sap.sapmodel.jalo.listener.SapLogicalSystemSaveListener">
 		<property name="flexibleSearchService" ref="flexibleSearchService" />
 	</bean>
+
+	<alias name="sapClassificationAttributeHelperImpl" alias="sapClassificationAttributeHelper" />
+	<bean id="sapClassificationAttributeHelperImpl" class="de.hybris.platform.sap.sapmodel.inbound.SapClassificationAttributeHelperImpl">
+		<property name="modelService" ref="modelService"/>
+		<property name="classificationService" ref="classificationService"/>
+	</bean>
 	
 </beans>
