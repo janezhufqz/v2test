@@ -49,7 +49,7 @@
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>6.4.0.0-RC5</version>
+			<version>6.4.0.0-RC6</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -78,7 +78,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2bcommerce-module</artifactId>
-			<version>6.4.0.0-RC6</version>
+			<version>6.4.0.0-RC7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -90,7 +90,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.4.0.0-RC6</version>
+			<version>6.4.0.0-RC7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -138,13 +138,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>mdm-datahub-module</artifactId>
-			<version>6.4.0.0-RC4</version>
+			<version>6.4.0.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.4.0.0-RC8</version>
+			<version>6.4.0.0-RC10</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -156,31 +156,31 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>6.4.0.0-RC6</version>
+			<version>6.4.0.0-RC7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>6.4.0.0-RC3</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>de.hybris.platform</groupId>
-			<artifactId>ruleengine-module</artifactId>
 			<version>6.4.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
-			<artifactId>search-and-nav-module</artifactId>
+			<artifactId>ruleengine-module</artifactId>
 			<version>6.4.0.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
+			<artifactId>search-and-nav-module</artifactId>
+			<version>6.4.0.0-RC6</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>6.4.0.0-RC8</version>
+			<version>6.4.0.0-RC10</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
