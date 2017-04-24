@@ -25,9 +25,10 @@ public class SapClassificationAttributeHelperImpl implements SapClassificationAt
             FeatureList featureList = classificationService.getFeatures(productModel);
             featureList.getFeatures().forEach(entry -> entry.removeAllValues());
             classificationService.replaceFeatures(productModel, featureList);
-        }catch(Exception ex){
-            String message = String.format("Something went wrong while removing classification system attribute values for product [%s]!\n", productCode);
-            LOG.error( message + ex.getMessage());
+            LOG.info(String.format("The current classification system attribute values for the product [%s] have been removed before importing the new ones.", productCode));
+        } catch (Exception ex) {
+            String message = String.format("Something went wrong while removing classification system attribute values for the product [%s]!\n", productCode);
+            LOG.error(message + ex.getMessage());
         }
 
     }
