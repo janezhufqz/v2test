@@ -11,13 +11,15 @@ import de.hybris.platform.jalo.Item;
 /**
  *
  * The SapClassificationAttributeTranslator translator is called from data hub
- * before the ClassificationAttributeTranslator is being called to remove the product
- * current classification attribute values before importing the new ones from SAP ERP
+ * before the ClassificationAttributeTranslator is being called.
  *
- * BaseProductAttributes(ClassificationAttributeTranslator)   depends on BaseProduct(SapClassificationAttributeTranslator)
- * SalesProductAttributes(ClassificationAttributeTranslator)  depends on SalesProduct(SapClassificationAttributeTranslator)
- * BaseVariantAttributes(ClassificationAttributeTranslator)   depends on BaseVariant(SapClassificationAttributeTranslator)
- * SalesVariantAttributes(ClassificationAttributeTranslator)  depends on SalesVariant(SapClassificationAttributeTranslator)
+ * This translator removes the product current classification attribute values before importing the new ones from the SAP/ERP backend.
+ *
+ * The target item of type BaseProductAttributes depends on the item type CleanBaseProductAttributes which calls (SapClassificationAttributeTranslator)
+ * The target item of type SalesProductAttributes depends on the item type CleanSalesProductAttributes which calls (SapClassificationAttributeTranslator)
+ *
+ * The target item of type BaseVariantAttributes depends on the item type CleanBaseVariantAttributes which calls (SapClassificationAttributeTranslator)
+ * The target item of type SalesVariantAttributes depends on the item type CleanSalesVariantAttributes which calls (SapClassificationAttributeTranslator)
  *
  */
 public class SapClassificationAttributeTranslator extends AbstractSpecialValueTranslator {
