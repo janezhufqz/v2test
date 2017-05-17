@@ -5,6 +5,7 @@ import de.hybris.platform.classification.features.FeatureList;
 import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.servicelayer.model.ModelService;
+import org.apache.commons.lang.exception.ExceptionUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Required;
 
@@ -27,7 +28,7 @@ public class SapClassificationAttributeHelperImpl implements SapClassificationAt
             classificationService.replaceFeatures(productModel, featureList);
             LOG.info(String.format("The current classification system attribute values for the product [%s] have been removed before importing the new ones.", productCode));
         } catch (Exception ex) {
-            LOG.error(String.format("Something went wrong while removing classification system attribute values for the product [%s]!", productCode) + ex.getStackTrace() );
+            LOG.error(String.format("Something went wrong while removing classification system attribute values for the product [%s]!", productCode) + ExceptionUtils.getStackTrace(ex) );
         }
 
     }
