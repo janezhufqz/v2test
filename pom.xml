@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.5.0.0-M9</version>
+			<version>6.5.0.0-M10</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -144,7 +144,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.4.0.0-RC11</version>
+			<version>6.5.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -180,7 +180,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>6.4.0.0-RC11</version>
+			<version>6.5.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
