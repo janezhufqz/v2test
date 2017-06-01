@@ -25,7 +25,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>6.5.0.0-M1</version>
+			<version>6.5.0.0-M2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -162,13 +162,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>6.4.0.0-RC5</version>
+			<version>6.5.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>6.4.0.0-RC6</version>
+			<version>6.5.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
