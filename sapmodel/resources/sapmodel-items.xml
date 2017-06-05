@@ -985,5 +985,46 @@
 			</attributes>
 		</itemtype>
 
+		<itemtype code="SAPInboundProduct" extends="GenericItem" autocreate="true"
+				  generate="true" jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPInboundProduct">
+			<deployment table="SAPInboundProduct" typecode="9334" />
+			<attributes>
+				<attribute qualifier="code" type="java.lang.String">
+					<modifiers unique="true" optional="false" />
+					<persistence type="property" />
+					<description>Product Code</description>
+				</attribute>
+				<attribute qualifier="catalogVersion" type="CatalogVersion" >
+					<modifiers unique="true" search="true" optional="false" />
+					<persistence type="property" />
+					<description>Catalog Version</description>
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="SAPInboundVariant" extends="GenericItem" autocreate="true"
+				  generate="true" jaloclass="de.hybris.platform.sap.sapmodel.jalo.SAPInboundVariant">
+			      <deployment table="SAPInboundVariant" typecode="9335" />
+			<attributes>
+				<attribute qualifier="code" type="java.lang.String">
+					<modifiers unique="true" optional="false" />
+					<persistence type="property" />
+					<description>Product Code</description>
+				</attribute>
+				<attribute qualifier="catalogVersion" type="CatalogVersion" >
+					<modifiers unique="true" search="true" optional="false" />
+					<persistence type="property" />
+					<description>Catalog Version</description>
+				</attribute>
+				<attribute qualifier="baseProduct" type="Product">
+					<modifiers unique="true" />
+					<persistence type="property"/>
+					<description>Base Product</description>
+				</attribute>
+			</attributes>
+		</itemtype>
+
+
+
 	</itemtypes>
 </items>
