@@ -144,7 +144,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.5.0.0-M2</version>
+			<version>6.5.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
