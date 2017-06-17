@@ -42,14 +42,14 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.5.0.0-M1</version>
+			<version>6.5.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>6.5.0.0-M1</version>
+			<version>6.5.0.0-M2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -84,25 +84,25 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.5.0.0-M1</version>
+			<version>6.5.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.5.0.0-M1</version>
+			<version>6.5.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-apps-module</artifactId>
-			<version>6.5.0.0-M1</version>
+			<version>6.5.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-core-module</artifactId>
-			<version>6.5.0.0-M1</version>
+			<version>6.5.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -150,19 +150,19 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>pcm-module</artifactId>
-			<version>6.5.0.0-M1</version>
+			<version>6.5.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>6.5.0.0-M1</version>
+			<version>6.5.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>6.5.0.0-M1</version>
+			<version>6.5.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
