@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>sap-frwcore-module</artifactId>
-			<version>6.4.0.0-RC2</version>
+			<version>6.5.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>advancedpersonalization-module</artifactId>
-			<version>6.4.0.0-RC4</version>
+			<version>6.5.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
