@@ -25,7 +25,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>6.5.0.0-M3</version>
+			<version>6.5.0.0-M4</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.5.0.0-M3</version>
+			<version>6.5.0.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.5.0.0-M3</version>
+			<version>6.5.0.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -162,13 +162,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>6.5.0.0-M2</version>
+			<version>6.5.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>6.5.0.0-M2</version>
+			<version>6.5.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
