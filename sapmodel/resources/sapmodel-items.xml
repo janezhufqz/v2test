@@ -1023,8 +1023,15 @@
 				</attribute>
 			</attributes>
 		</itemtype>
-
-
-
+		
+		<itemtype code="ProductFeature" autocreate="false" generate="false">
+			<attributes>
+					<attribute qualifier="author" type="java.lang.String">
+						<description>author of attribute value </description>
+						<modifiers read="true" write="true" search="true" optional="true"/>
+						<persistence type="property"/>
+					</attribute>
+			</attributes>
+		</itemtype>
 	</itemtypes>
 </items>

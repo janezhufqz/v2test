@@ -165,4 +165,12 @@
 		<property name="cleanCharacteristicsEnabled" value="${sapmodel.inbound.product.cleanCharacteristicsEnabled}"></property>
 	</bean>
 	
+	<alias name="sapClassificationAttributeAuthorHelperImpl" alias="sapClassificationAttributeAuthorHelper" />
+	<bean id="sapClassificationAttributeAuthorHelperImpl"  
+	class="de.hybris.platform.sap.sapmodel.authors.SapClassificationAttributeAuthorHelperImpl">
+		<property name="classificationService" ref="classificationService"/>
+		<property name="modelService" ref="modelService"/>
+		<property name="productService" ref="productService"/>
+		<property name="catalogVersionService" ref="catalogVersionService"/>
+	</bean>
 </beans>
