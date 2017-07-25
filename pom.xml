@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.5.0.0-RC5</version>
+			<version>6.5.0.0-RC8</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>acceleratoraddons-module</artifactId>
-			<version>6.5.0.0-RC1</version>
+			<version>6.5.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -114,13 +114,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercewebservices-module</artifactId>
-			<version>6.5.0.0-RC1</version>
+			<version>6.5.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>6.5.0.0-RC2</version>
+			<version>6.5.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -144,7 +144,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.5.0.0-RC1</version>
+			<version>6.5.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -180,7 +180,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>6.5.0.0-RC1</version>
+			<version>6.5.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
