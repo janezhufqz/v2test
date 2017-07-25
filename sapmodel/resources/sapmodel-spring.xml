@@ -171,6 +171,5 @@
 		<property name="classificationService" ref="classificationService"/>
 		<property name="modelService" ref="modelService"/>
 		<property name="productService" ref="productService"/>
-		<property name="catalogVersionService" ref="catalogVersionService"/>
 	</bean>
 </beans>

@@ -1,8 +1,6 @@
 /*
  * [y] hybris Platform
- *
  * Copyright (c) 2017 SAP SE or an SAP affiliate company. All rights reserved.
- *
  * This software is the confidential and proprietary information of SAP
  * ("Confidential Information"). You shall not disclose such Confidential
  * Information and shall use it only in accordance with the terms of the
@@ -10,21 +8,16 @@
  */
 package de.hybris.platform.sap.sapmodel.authors;
 
-import de.hybris.platform.catalog.CatalogVersionService;
-import de.hybris.platform.catalog.constants.CatalogConstants;
 import de.hybris.platform.catalog.jalo.CatalogManager;
 import de.hybris.platform.catalog.jalo.CatalogVersion;
 import de.hybris.platform.catalog.jalo.classification.ClassAttributeAssignment;
 import de.hybris.platform.catalog.jalo.classification.ClassificationAttribute;
 import de.hybris.platform.catalog.jalo.classification.ClassificationAttributeUnit;
 import de.hybris.platform.catalog.jalo.classification.ClassificationAttributeValue;
-import de.hybris.platform.catalog.jalo.classification.ClassificationClass;
 import de.hybris.platform.catalog.jalo.classification.ClassificationSystem;
 import de.hybris.platform.catalog.jalo.classification.ClassificationSystemVersion;
-import de.hybris.platform.catalog.jalo.classification.impex.ClassificationAttributeValueTranslator;
+import de.hybris.platform.catalog.jalo.classification.impex.ClassificationAttributeTranslator;
 import de.hybris.platform.catalog.jalo.classification.impex.UnitAwareValue;
-import de.hybris.platform.catalog.jalo.classification.util.FeatureValue;
-import de.hybris.platform.catalog.jalo.classification.util.TypedFeature;
 import de.hybris.platform.catalog.model.CatalogVersionModel;
 import de.hybris.platform.catalog.model.ProductFeatureModel;
 import de.hybris.platform.catalog.model.classification.ClassAttributeAssignmentModel;
@@ -32,7 +25,6 @@ import de.hybris.platform.catalog.model.classification.ClassificationAttributeVa
 import de.hybris.platform.classification.ClassificationService;
 import de.hybris.platform.classification.features.Feature;
 import de.hybris.platform.classification.features.FeatureList;
-import de.hybris.platform.core.PK;
 import de.hybris.platform.core.Registry;
 import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.impex.constants.ImpExConstants;
@@ -41,7 +33,6 @@ import de.hybris.platform.impex.jalo.header.AbstractDescriptor.ColumnParams;
 import de.hybris.platform.impex.jalo.header.HeaderDescriptor;
 import de.hybris.platform.impex.jalo.header.HeaderValidationException;
 import de.hybris.platform.impex.jalo.header.SpecialColumnDescriptor;
-import de.hybris.platform.impex.jalo.header.StandardColumnDescriptor;
 import de.hybris.platform.impex.jalo.imp.ValueLine;
 import de.hybris.platform.impex.jalo.translators.AbstractValueTranslator;
 import de.hybris.platform.impex.jalo.translators.AtomicValueTranslator;
@@ -50,35 +41,24 @@ import de.hybris.platform.impex.jalo.translators.SingleValueTranslator;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.JaloInvalidParameterException;
 import de.hybris.platform.jalo.JaloItemNotFoundException;
-import de.hybris.platform.jalo.JaloSession;
-import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.c2l.Language;
 import de.hybris.platform.jalo.product.Product;
-import de.hybris.platform.jalo.type.TypeManager;
 import de.hybris.platform.product.ProductService;
 import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
 import de.hybris.platform.servicelayer.model.ModelService;
 import de.hybris.platform.util.CSVUtils;
 import de.hybris.platform.util.Config;
-import de.hybris.platform.util.Utilities;
 
 import java.util.Collection;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 
 
-public class SapClassificationAttributeAuthorTranslator
-		extends de.hybris.platform.catalog.jalo.classification.impex.ClassificationAttributeTranslator
+public class SapClassificationAttributeAuthorTranslator extends ClassificationAttributeTranslator
 		implements NotifiedSpecialValueTranslator
 {
 	public static final String IMPEX_NONEXISTEND_CLSATTRVALUE_FALLBACK_KEY = "impex.nonexistend.clsattrvalue.fallback.enabled";
@@ -87,36 +67,7 @@ public class SapClassificationAttributeAuthorTranslator
 
 	private final String VALUEAUTHORSEPARATOR = "#";
 
-
-
-	public interface Modifiers
-	{
-		String SYSTEM = "system";
-		String VERSION = "version";
-		String ClASS = "class";
-	}
-
-	protected String qualfier;
-	protected String systemName;
-	protected String versionName;
-	protected String className;
-	protected Language lang;
-	protected Locale locale;
-	protected String dateFormatString;
-	protected String numberFormatString;
-
-	protected ClassificationAttribute classAttr;
-	protected ClassAttributeAssignment classAttrAssignment;
-	protected ClassificationSystemVersion classSystemVersion;
-	protected char collectionDelimiter = ImpExConstants.Syntax.DEFAULT_COLLECTION_VALUE_DELIMITER;
-	protected char attributeSeparator = ImpExConstants.Syntax.DEFAULT_ATTRIBUTE_PATH_SEPARATOR;
-
-	protected Collection<UnitAwareValueAuthor> classificationAttributeAuthor;
-	protected char[] TO_ESCAPE = new char[]
-	{ collectionDelimiter };
-
-	protected PK allDoneFor = null;
-	protected String currentCellValue;
+	private Collection<UnitAwareValueAuthor> classificationAttributeAuthor;
 
 	final private static String BEAN_NAME = "sapClassificationAttributeAuthorHelper";
 	private SapClassificationAttributeAuthorHelper sapClassificationAttributeAuthorHelper;
@@ -124,7 +75,6 @@ public class SapClassificationAttributeAuthorTranslator
 	private ClassificationService classificationService;
 	private ModelService modelService;
 	private ProductService productService;
-	private CatalogVersionService catalogVersionService;
 
 	private SpecialColumnDescriptor columnDescriptor;
 
@@ -142,17 +92,7 @@ public class SapClassificationAttributeAuthorTranslator
 	public SapClassificationAttributeAuthorTranslator(final ClassificationSystemVersion sysVer, final ClassificationAttribute attr,
 			final char delimiter, final Language lang)
 	{
-		super();
-		this.classSystemVersion = sysVer;
-		this.systemName = this.classSystemVersion.getCatalog().getId();
-		this.versionName = this.classSystemVersion.getVersion();
-		this.lang = lang;
-		this.classAttr = attr;
-		this.qualfier = attr.getCode();
-		//		this.class2valueTranslatorMap = createValueTranslators();
-		this.collectionDelimiter = delimiter;
-		this.TO_ESCAPE = new char[]
-		{ delimiter };
+		super(sysVer, attr, delimiter, lang);
 	}
 
 	@Override
@@ -167,175 +107,8 @@ public class SapClassificationAttributeAuthorTranslator
 			classificationService = sapClassificationAttributeAuthorHelper.getClassificationService();
 			modelService = sapClassificationAttributeAuthorHelper.getModelService();
 			productService = sapClassificationAttributeAuthorHelper.getProductService();
-			catalogVersionService = sapClassificationAttributeAuthorHelper.getCatalogVersionService();
 		}
 		this.columnDescriptor = columnDescriptor;
-
-		// check if translator is used for product header at all
-		if (!TypeManager.getInstance().getComposedType(Product.class)
-				.isAssignableFrom(columnDescriptor.getHeader().getConfiguredComposedType()))
-		{
-			throw new HeaderValidationException(columnDescriptor.getHeader(),
-					"invalid header type " + columnDescriptor.getHeader().getConfiguredComposedType().getCode()
-							+ " for ClassificationAttributeTranslator " + "in column " + columnDescriptor.getValuePosition() + ":"
-							+ columnDescriptor.getQualifier() + " - expected Product or any of its subtypes",
-					HeaderValidationException.UNKNOWN);
-		}
-		if (columnDescriptor.getDescriptorData().getModifier(ImpExConstants.Syntax.Modifier.LANGUAGE) != null)
-		{
-			this.lang = StandardColumnDescriptor.findLanguage(columnDescriptor.getHeader(),
-					columnDescriptor.getDescriptorData().getModifier(ImpExConstants.Syntax.Modifier.LANGUAGE));
-		}
-		this.locale = columnDescriptor.getHeader().getReader().getLocale();
-		if (lang != null)
-		{
-			this.locale = new Locale(lang.toString());
-		}
-
-		this.qualfier = columnDescriptor.getQualifier();
-		// remove trailing @
-
-		if (this.qualfier.startsWith(ImpExConstants.Syntax.SPECIAL_COLUMN_PREFIX))
-		{
-			this.qualfier = this.qualfier.substring(ImpExConstants.Syntax.SPECIAL_COLUMN_PREFIX.length()).trim();
-		}
-
-		this.systemName = columnDescriptor.getDescriptorData().getModifier(Modifiers.SYSTEM);
-		this.versionName = columnDescriptor.getDescriptorData().getModifier(Modifiers.VERSION);
-		this.className = columnDescriptor.getDescriptorData().getModifier(Modifiers.ClASS);
-
-		lookupAttributeOrAssignment(this.systemName, this.versionName, this.className, this.qualfier, columnDescriptor);
-
-		final String customDelimiter = columnDescriptor.getDescriptorData()
-				.getModifier(ImpExConstants.Syntax.Modifier.COLLECTION_VALUE_DELIMITER);
-
-		if (customDelimiter != null && customDelimiter.length() > 0)
-		{
-			this.collectionDelimiter = customDelimiter.charAt(0);
-			this.TO_ESCAPE = new char[]
-			{ this.collectionDelimiter };
-		}
-
-
-		this.dateFormatString = columnDescriptor.getDescriptorData().getModifier(ImpExConstants.Syntax.Modifier.DATEFORMAT);
-		this.numberFormatString = columnDescriptor.getDescriptorData().getModifier(ImpExConstants.Syntax.Modifier.NUMBERFORMAT);
-	}
-
-	private void lookupAttributeOrAssignment(final String systemName, final String versionName, final String className,
-			final String qualifier, final SpecialColumnDescriptor columnDescriptor) throws HeaderValidationException
-	{
-		final ClassificationSystem sys = CatalogManager.getInstance().getClassificationSystem(systemName);
-		if (sys == null)
-		{
-			throw new HeaderValidationException(
-					columnDescriptor.getHeader(), "unknown classification system '" + systemName + "' in column "
-							+ columnDescriptor.getValuePosition() + ":" + columnDescriptor.getQualifier(),
-					HeaderValidationException.UNKNOWN);
-		}
-		this.classSystemVersion = (ClassificationSystemVersion) sys.getCatalogVersion(versionName);
-		if (this.classSystemVersion == null)
-		{
-			throw new HeaderValidationException(columnDescriptor.getHeader(),
-					"unknown classification system version '" + systemName + "." + versionName + "' in column "
-							+ columnDescriptor.getValuePosition() + ":" + columnDescriptor.getQualifier(),
-					HeaderValidationException.UNKNOWN);
-		}
-		try
-		{
-			this.classAttr = this.classSystemVersion.getClassificationAttribute(qualifier);
-		}
-		catch (final JaloItemNotFoundException e)
-		{
-			throw new HeaderValidationException(columnDescriptor.getHeader(),
-					"unknown classification attribute " + qualifier + " within system version '" + systemName + "." + versionName
-							+ "' " + "in column " + columnDescriptor.getValuePosition() + ":" + columnDescriptor.getQualifier(),
-					HeaderValidationException.UNKNOWN);
-		}
-		if (StringUtils.isNotBlank(className))
-		{
-			ClassificationClass classificationClass = null;
-			try
-			{
-				classificationClass = this.classSystemVersion.getClassificationClass(className);
-			}
-			catch (final JaloItemNotFoundException e)
-			{
-				throw new HeaderValidationException(columnDescriptor.getHeader(),
-						"unknown classification class " + className + " within system version '" + systemName + "." + versionName + "' "
-								+ "in column " + columnDescriptor.getValuePosition() + ":" + columnDescriptor.getQualifier(),
-						HeaderValidationException.UNKNOWN);
-			}
-			try
-			{
-				this.classAttrAssignment = classificationClass.getAttributeAssignment(this.classAttr);
-			}
-			catch (final JaloItemNotFoundException e)
-			{
-				throw new HeaderValidationException(columnDescriptor.getHeader(),
-						"unknown attribute assignment " + className + "." + qualifier + " within system version '" + systemName + "."
-								+ versionName + "' " + "in column " + columnDescriptor.getValuePosition() + ":"
-								+ columnDescriptor.getQualifier(),
-						HeaderValidationException.UNKNOWN);
-			}
-		}
-	}
-
-	private transient final Map<ClassAttributeAssignment, SingleValueTranslator> class2TranslatorCache = new HashMap();
-
-	@Override
-	protected AbstractValueTranslator getSingleCellValueTranslator(final ClassAttributeAssignment assignment)
-	{
-		SingleValueTranslator ret = class2TranslatorCache.get(assignment);
-		if (ret == null)
-		{
-			final String type = assignment.getAttributeType().getCode();
-
-			if (CatalogConstants.Enumerations.ClassificationAttributeTypeEnum.BOOLEAN.equalsIgnoreCase(type))
-			{
-				final AtomicValueTranslator trans = new AtomicValueTranslator(null, Boolean.class);
-				trans.setLocale(this.locale);
-				ret = trans;
-			}
-			else if (CatalogConstants.Enumerations.ClassificationAttributeTypeEnum.NUMBER.equalsIgnoreCase(type))
-			{
-				final AtomicValueTranslator trans = new AtomicValueTranslator(null, Double.class);
-				trans.setLocale(this.locale);
-				if (this.numberFormatString != null)
-				{
-					trans.setNumberFormat(Utilities.getDecimalFormat(this.numberFormatString, this.locale));
-				}
-				ret = trans;
-			}
-			else if (CatalogConstants.Enumerations.ClassificationAttributeTypeEnum.ENUM.equalsIgnoreCase(type))
-			{
-				ret = new ClassificationAttributeValueTranslator(assignment);
-			}
-			else if (CatalogConstants.Enumerations.ClassificationAttributeTypeEnum.STRING.equalsIgnoreCase(type))
-			{
-				final AtomicValueTranslator trans = new AtomicValueTranslator(null, String.class);
-				trans.setLocale(this.locale);
-				ret = trans;
-			}
-			else if (CatalogConstants.Enumerations.ClassificationAttributeTypeEnum.DATE.equalsIgnoreCase(type))
-			{
-				final AtomicValueTranslator trans = new AtomicValueTranslator(null, Date.class);
-				trans.setLocale(this.locale);
-				if (this.dateFormatString != null)
-				{
-					trans.setDateFormat(Utilities.getSimpleDateFormat(this.dateFormatString, this.locale));
-				}
-				ret = trans;
-			}
-			else
-			{
-				LOG.warn("Unsupported attribute type " + type + ", will use type String");
-				final AtomicValueTranslator trans = new AtomicValueTranslator(null, String.class);
-				trans.setLocale(this.locale);
-				ret = trans;
-			}
-			class2TranslatorCache.put(assignment, ret);
-		}
-		return ret;
 	}
 
 	private SingleValueTranslator fallbackValueTranslator = null;
@@ -348,136 +121,6 @@ public class SapClassificationAttributeAuthorTranslator
 			fallbackValueTranslator = new AtomicValueTranslator(null, String.class);
 		}
 		return fallbackValueTranslator;
-	}
-
-	private transient final Map<ClassificationClass, ClassAttributeAssignment> matchingClassCache = new HashMap();
-
-	@Override
-	protected ClassAttributeAssignment getAssignment()
-	{
-		return this.classAttrAssignment;
-	}
-
-	@Override
-	protected ClassAttributeAssignment matchAssignment(final Collection<ClassificationClass> classes)
-	{
-		for (final ClassificationClass myClass : classes)
-		{
-			ClassAttributeAssignment match = matchingClassCache.get(myClass);
-			// if not cached calculate match
-			if (match == null)
-			{
-				try
-				{
-					if (this.classAttr != null)
-					{
-						match = myClass.getAttributeAssignment(this.classAttr);
-						matchingClassCache.put(myClass, match);
-					}
-				}
-				catch (final JaloItemNotFoundException e)
-				{
-					// fine here
-				}
-			}
-			// now test match
-			if (match != null)
-			{
-				return match;
-			}
-		}
-		return null;
-	}
-
-	@Override
-	protected SessionContext getValueCtx(final boolean localized) throws HeaderValidationException
-	{
-		SessionContext ret = JaloSession.getCurrentSession().getSessionContext();
-		if (localized)
-		{
-			// use own language if defined
-			if (this.lang != null)
-			{
-				ret = new SessionContext(ret);
-				ret.setLanguage(this.lang);
-			}
-			else if (ret.getLanguage() == null)
-			{
-				throw new HeaderValidationException(
-						"neither session nor colum provided language for localized classification attribute " + this.classAttr, 0);
-			}
-		}
-		return ret;
-	}
-
-	@Override
-	protected TypedFeature getFeature(final Product product)
-	{
-		final ClassAttributeAssignment assignment = matchAssignment(CatalogManager.getInstance().getClassificationClasses(product));
-		return assignment != null ? TypedFeature.loadTyped(product, assignment) : null;
-	}
-
-	@Override
-	public String performExport(final Item item) throws ImpExException
-	{
-		if (item != null && item.isAlive())
-		{
-			final TypedFeature<? extends Object> feat = getFeature((Product) item);
-			if (feat != null)
-			{
-				final ClassAttributeAssignment assignment = feat.getClassAttributeAssignment();
-				final boolean localized = assignment.isLocalizedAsPrimitive();
-				final AbstractValueTranslator trans = getSingleCellValueTranslator(assignment);
-
-				int index = 0;
-				final StringBuilder stringBuilder = new StringBuilder();
-				for (final FeatureValue fv : feat.getValues(getValueCtx(localized)))
-				{
-					if (index > 0)
-					{
-						stringBuilder.append(this.collectionDelimiter);
-					}
-					stringBuilder.append(CSVUtils.escapeString(trans.exportValue(fv.getValue()), TO_ESCAPE, true));
-					index++;
-				}
-				return stringBuilder.toString();
-			}
-		}
-		return null;
-	}
-
-	// TODO support units and value details !
-	@Override
-	public void performImport(final String cellValue, final Item processedItem) throws ImpExException
-	{
-		this.allDoneFor = null;
-		this.currentCellValue = cellValue;
-	}
-
-	/**
-	 * @deprecated since ages
-	 */
-	@Override
-	@Deprecated
-	/**
-	 * @deprecated {@use #translateCurrentValuesTyped(ValueLine,ClassAttributeAssignment,Product)}
-	 */
-	public Collection<Object> translateCurrentValues(final ValueLine line, final ClassAttributeAssignment assignment,
-			final Product processedItem) throws HeaderValidationException
-	{
-
-		final Collection<UnitAwareValue> resultTyped = translateCurrentUnitAwareValues(line, assignment, processedItem);
-
-		if (resultTyped == null)
-		{
-			return null;
-		}
-		final Collection<Object> result = new LinkedList<Object>();
-		for (final UnitAwareValue unitAwareValue : resultTyped)
-		{
-			result.add(unitAwareValue.getValue());
-		}
-		return result;
 	}
 
 	@Override
@@ -602,21 +245,6 @@ public class SapClassificationAttributeAuthorTranslator
 	}
 
 	@Override
-	protected List splitValues(final ClassAttributeAssignment assignment, final String valueCollection)
-	{
-		if (assignment.isMultiValuedAsPrimitive())
-		{
-			return CSVUtils.splitAndUnescape(valueCollection, new char[]
-			{ this.collectionDelimiter }, false // escape by '\'
-			);
-		}
-		else
-		{
-			return Collections.singletonList(CSVUtils.unescapeString(valueCollection, TO_ESCAPE, false));
-		}
-	}
-
-	@Override
 	public void notifyTranslationEnd(final ValueLine line, final HeaderDescriptor header, final Item processedItem)
 			throws ImpExException
 	{
@@ -690,7 +318,6 @@ public class SapClassificationAttributeAuthorTranslator
 		}
 	}
 
-
 	private String getValueAuthor(final String singleStr)
 	{
 		if (singleStr != null)
@@ -735,13 +362,15 @@ public class SapClassificationAttributeAuthorTranslator
 
 		if (productFeature != null)
 		{
-			productFeature.forEach(p -> {
-				classificationAttributeAuthor.forEach(c -> {
-					if (p.getValue() instanceof String && c.getValue() instanceof String && p.getValue().equals(c.getValue())
-									|| (p.getValue() instanceof ClassificationAttributeValueModel
-											&& c.getValue() instanceof ClassificationAttributeValue
-											&& ((ClassificationAttributeValueModel) p.getValue()).getPk()
-													.equals(((ClassificationAttributeValue) c.getValue()).getPK())))
+			productFeature.forEach(p ->
+			{
+				classificationAttributeAuthor.forEach(c ->
+				{
+					if (p.getValue().equals(c.getValue())
+							|| (p.getValue() instanceof ClassificationAttributeValueModel
+									&& c.getValue() instanceof ClassificationAttributeValue
+									&& ((ClassificationAttributeValueModel) p.getValue()).getPk()
+											.equals(((ClassificationAttributeValue) c.getValue()).getPK())))
 					{
 						p.setAuthor(c.getValueAuthor());
 						this.modelService.save(p);
