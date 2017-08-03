@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.5.0.0-RC12</version>
+			<version>6.5.0.0-RC15</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>acceleratoraddons-module</artifactId>
-			<version>6.5.0.0-RC4</version>
+			<version>6.5.0.0-RC6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -66,31 +66,31 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>atdd-module</artifactId>
-			<version>6.5.0.0-RC2</version>
+			<version>6.5.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.5.0.0-RC3</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>de.hybris.platform</groupId>
-			<artifactId>b2bcommerce-module</artifactId>
-			<version>6.5.0.0-RC3</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>de.hybris.platform</groupId>
-			<artifactId>b2caccelerator-module</artifactId>
 			<version>6.5.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
+			<artifactId>b2bcommerce-module</artifactId>
+			<version>6.5.0.0-RC4</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>b2caccelerator-module</artifactId>
+			<version>6.5.0.0-RC7</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.5.0.0-RC6</version>
+			<version>6.5.0.0-RC7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -156,7 +156,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>6.5.0.0-RC6</version>
+			<version>6.5.0.0-RC7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
