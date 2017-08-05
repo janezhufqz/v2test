@@ -78,13 +78,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2bcommerce-module</artifactId>
-			<version>6.5.0.0-RC4</version>
+			<version>6.5.0.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.5.0.0-RC7</version>
+			<version>6.5.0.0-RC8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -138,13 +138,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>mdm-datahub-module</artifactId>
-			<version>6.5.0.0-RC3</version>
+			<version>6.5.0.0-RC5-SANPSHOT</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.5.0.0-RC7</version>
+			<version>6.5.0.0-RC10</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -180,7 +180,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>6.5.0.0-RC7</version>
+			<version>6.5.0.0-RC10</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
