@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.5.0.0-RC13</version>
+			<version>6.5.0.0-RC14</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
