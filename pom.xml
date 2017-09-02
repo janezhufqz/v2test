@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.6.0.0-M12</version>
+			<version>6.6.0.0-M14</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -90,7 +90,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.5.0.0-RC12</version>
+			<version>6.6.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -120,7 +120,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>6.5.0.0-RC7</version>
+			<version>6.6.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
