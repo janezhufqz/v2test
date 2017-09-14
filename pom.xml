@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.6.0.0-M23</version>
+			<version>6.6.0.0-M24</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
