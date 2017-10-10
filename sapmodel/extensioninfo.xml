@@ -19,6 +19,7 @@
         <requires-extension name="commerceservices"/>   
         <requires-extension name="sapcoreconfiguration" />
         <!-- This is a test to trigger sonarqube test to trigger on master -->
+        <!-- This is another test to trigger sonarqube test to trigger on master-->
 
       <coremodule generated="true" manager="de.hybris.platform.sap.sapmodel.jalo.SapmodelManager" packageroot="de.hybris.platform.sap.sapmodel"/>
 
