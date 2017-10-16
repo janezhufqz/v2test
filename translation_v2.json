@@ -1,0 +1,28 @@
+{  
+      "comment":"More information: https://jam4.sapjam.com/wiki/show/UFKzGv6i81yui7orPvmwtQ",
+      "collections":[  
+      {      
+         "collectionName":"sap.hybris.model",
+         "folders":[  
+            {  
+               "startingFolderPath":"[root]/",
+               "sourceFilters":[  
+                "**/*locales*_en.properties",
+                "**/labels_en.properties",
+                "**/labels.properties"
+               ],
+               "excludedSourceFilters":[
+                   "**/testsrc/**/*",
+                   "**/*backoffice/resources/*backoffice-backoffice-labels/labels.properties"
+               ]			   
+            }
+         ]
+      }],
+   "defaultConfiguration":{  
+      "xlfFolderPath":"/XLF/[FullPath]",
+      "targetFolderPath":".",
+      "pseudoLocFolderPath":".",
+	  "oneQFolderPath":".",
+	  "targetFileNamingConvention": "[filename]_[langCode].[extension]"
+   }
+}
