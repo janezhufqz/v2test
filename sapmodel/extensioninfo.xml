@@ -20,6 +20,7 @@
         <requires-extension name="sapcoreconfiguration" />
         <!-- This is a test to trigger sonarqube test to trigger on master and see if results will be posted in sonarqube EC IModule dashboard-->
         <!-- Testing -->
+        <!-- Testing again -->
 
 
       <coremodule generated="true" manager="de.hybris.platform.sap.sapmodel.jalo.SapmodelManager" packageroot="de.hybris.platform.sap.sapmodel"/>
