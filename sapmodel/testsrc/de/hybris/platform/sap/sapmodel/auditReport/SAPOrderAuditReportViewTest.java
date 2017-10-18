@@ -26,6 +26,7 @@ import de.hybris.platform.audit.internal.config.AuditReportConfig;
 import de.hybris.platform.audit.internal.config.ReferenceAttribute;
 import de.hybris.platform.audit.internal.config.ResolvesBy;
 import de.hybris.platform.audit.internal.config.Type;
+import de.hybris.platform.audit.internal.config.VirtualAttribute;
 import de.hybris.platform.audit.view.AuditViewService;
 import de.hybris.platform.audit.view.impl.ReportView;
 import de.hybris.platform.catalog.model.CatalogModel;
@@ -55,6 +56,8 @@ import javax.annotation.Resource;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.google.common.collect.Sets;
 
 @IntegrationTest
 public class SAPOrderAuditReportViewTest extends ServicelayerTransactionalBaseTest implements AuditableTest
@@ -116,16 +119,12 @@ public class SAPOrderAuditReportViewTest extends ServicelayerTransactionalBaseTe
 
 		modelService.saveAll(euroCurrency, plnCurrency, unit);
 
-		final SAPOrderModel sapOrder = modelService.create(SAPOrderModel.class);
-		sapOrder.setCode("sapOrderCode");
-
 		final OrderModel order = modelService.create(OrderModel.class);
 		order.setCode("orderTest");
 		order.setUser(user);
 		final Date firstDate = getDate(2012, 10, 1);
 		order.setDate(firstDate);
 		order.setCurrency(euroCurrency);
-
 		modelService.save(order);
 
 		final OrderEntryModel orderEntry = modelService.create(OrderEntryModel.class);
@@ -139,64 +138,61 @@ public class SAPOrderAuditReportViewTest extends ServicelayerTransactionalBaseTe
 		orderEntry.setQuantity(Long.valueOf(2L));
 		modelService.save(orderEntry);
 
-		final Date secondDate = getDate(2012, 10, 2);
-		order.setDate(secondDate);
-		order.setName("order");
+		final SAPOrderModel sapOrder1 = modelService.create(SAPOrderModel.class);
+		sapOrder1.setCode("sapOrderCode1");
+		sapOrder1.setSapOrderStatus(SAPOrderStatus.SENT_TO_ERP);
+
+		final SAPOrderModel sapOrder2 = modelService.create(SAPOrderModel.class);
+		sapOrder2.setCode("sapOrderCode2");
+		sapOrder2.setSapOrderStatus(SAPOrderStatus.CANCELLED_FROM_ERP);
+
+		sapOrder1.setOrder(order);
+		modelService.save(sapOrder1);
+
+		sapOrder2.setOrder(order);
+		modelService.save(sapOrder2);
+		order.setSapOrders(Sets.newHashSet(sapOrder1,sapOrder2));
+
 		modelService.save(order);
 
-		sapOrder.setOrder(order);
-		sapOrder.setSapOrderStatus(SAPOrderStatus.SENT_TO_ERP);
-
-		modelService.save(sapOrder);
-
 		final List<ReportView> reportViews = auditViewService
-				.getViewOn(TypeAuditReportConfig.builder().withConfig(createSAPOrderConfig()).withRootTypePk(sapOrder.getPk()).withFullReport().build())
+				.getViewOn(TypeAuditReportConfig.builder().withConfig(createSAPOrderConfig()).withRootTypePk(order.getPk()).withFullReport().build())
 				.collect(toList());
-		assertThat(reportViews).extracting(ReportView::getPayload).extracting("SAPOrder").extracting("code")
-				.contains("sapOrderCode");
 
-		assertThat(reportViews) //
-				.extracting(ReportView::getPayload) //
-				.has(noDuplicatedReportEntries()) //
-				.extracting("SAPOrder") //
-				.extracting(o1 -> extractDirectReference((Map<String, Object>) o1, "order")) //
-				.extracting("code") //
-				.contains("orderTest");
-
-		assertThat(reportViews) //
-				.extracting(ReportView::getPayload) //
-				.has(noDuplicatedReportEntries()) //
-				.extracting("SAPOrder") //
-				.extracting(o1 -> extractDirectReference((Map<String, Object>) o1, "order")) //
-				.extracting("name") //
-				.contains("order");
-
-		assertThat(reportViews).extracting(ReportView::getPayload).extracting("SAPOrder").extracting("sapOrderStatus")
-				.contains(SAPOrderStatus.SENT_TO_ERP.getCode());
+        
+		assertThat(reportViews).extracting(ReportView::getPayload).extracting("Order").flatExtracting("sapOrder").extracting("code")
+				.contains("sapOrderCode1", "sapOrderCode2");
+		assertThat(reportViews).extracting(ReportView::getPayload).extracting("Order").flatExtracting("sapOrder").extracting("sapOrderStatus")
+				.contains(SAPOrderStatus.SENT_TO_ERP.getCode(), SAPOrderStatus.CANCELLED_FROM_ERP.getCode());
 	}
 
 	private AuditReportConfig createSAPOrderConfig()
 	{
+		final Type sapOrder = Type.builder().withCode("SAPOrder") //
+				.withAtomicAttributes( //
+									   AtomicAttribute.builder().withQualifier("code").build(), //
+									   AtomicAttribute.builder().withQualifier("sapOrderStatus").build() //
+				).build();//
+
 		final Type order = Type.builder().withCode("Order") //
 				.withAtomicAttributes( //
 									   AtomicAttribute.builder().withQualifier("name").build(), //
 									   AtomicAttribute.builder().withQualifier("code").build() //
 				) //
+				.withVirtualAttributes( //
+										VirtualAttribute
+												.builder().withExpression("sapOrder").withMany(Boolean.TRUE).withType(sapOrder)
+												.withResolvesBy( //
+																 ResolvesBy.builder().withExpression("order").withResolverBeanId("virtualReferencesResolver").build() //
+												).build() //
+				)
 				.build();
-		final Type sapOrder = Type.builder().withCode("SAPOrder") //
-				.withAtomicAttributes( //
-									   AtomicAttribute.builder().withQualifier("code").build(), //
-									   AtomicAttribute.builder().withQualifier("sapOrderStatus").build() //
-				) //
-				.withReferenceAttributes( //
-										  ReferenceAttribute .builder().withQualifier("order").withType(order).withResolvesBy( //
-																															   ResolvesBy.builder().withExpression("order").withResolverBeanId("typeReferencesResolver").build()).build() //
-				).build();//
+
 
 		final AuditReportConfig reportConfig = AuditReportConfig.builder() //
-				.withGivenRootType(sapOrder) //
+				.withGivenRootType(order) //
 				.withName("PersonalDataReport") //
-				.withTypes(sapOrder,order) //
+				.withTypes(order,sapOrder) //
 				.build();
 
 		return reportConfig;
