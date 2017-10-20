@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>sap-frwcore-module</artifactId>
-			<version>6.6.0.0-M2</version>
+			<version>6.6.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.6.0.0-M56</version>
+			<version>6.6.0.0-M57</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
