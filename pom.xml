@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>sap-frwcore-module</artifactId>
-			<version>6.6.0.0-RC2</version>
+			<version>6.6.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.6.0.0-RC1</version>
+			<version>6.6.0.0-RC2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -49,7 +49,7 @@
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>6.6.0.0-RC1</version>
+			<version>6.6.0.0-RC2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -72,25 +72,25 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.6.0.0-M8</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>de.hybris.platform</groupId>
-			<artifactId>b2bcommerce-module</artifactId>
-			<version>6.6.0.0-M3</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>de.hybris.platform</groupId>
-			<artifactId>b2caccelerator-module</artifactId>
 			<version>6.6.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
+			<artifactId>b2bcommerce-module</artifactId>
+			<version>6.6.0.0-RC1</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>b2caccelerator-module</artifactId>
+			<version>6.6.0.0-RC2</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.6.0.0-M14</version>
+			<version>6.6.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -108,13 +108,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercesearch-module</artifactId>
-			<version>6.6.0.0-M3</version>
+			<version>6.6.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercewebservices-module</artifactId>
-			<version>6.6.0.0-RC1</version>
+			<version>6.6.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -156,7 +156,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>6.6.0.0-M14</version>
+			<version>6.6.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -174,7 +174,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>search-and-nav-module</artifactId>
-			<version>6.6.0.0-RC1</version>
+			<version>6.6.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
