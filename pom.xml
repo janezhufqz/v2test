@@ -25,13 +25,13 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>6.6.0.0-RC1</version>
+			<version>6.6.0.0-RC2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.6.0.0-RC9</version>
+			<version>6.6.0.0-RC14</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>advancedpersonalization-module</artifactId>
-			<version>6.6.0.0-RC3</version>
+			<version>6.6.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -90,19 +90,19 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.6.0.0-RC3</version>
+			<version>6.6.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-apps-module</artifactId>
-			<version>6.6.0.0-RC2</version>
+			<version>6.6.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-core-module</artifactId>
-			<version>6.6.0.0-RC2</version>
+			<version>6.6.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -150,25 +150,25 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>pcm-module</artifactId>
-			<version>6.6.0.0-RC2</version>
+			<version>6.6.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>6.6.0.0-RC3</version>
+			<version>6.6.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>6.6.0.0-RC3</version>
+			<version>6.6.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>6.6.0.0-RC4</version>
+			<version>6.6.0.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -186,7 +186,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>webservicescommons-module</artifactId>
-			<version>6.6.0.0-RC1</version>
+			<version>6.6.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
