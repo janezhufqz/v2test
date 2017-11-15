@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>sap-frwcore-module</artifactId>
-			<version>6.6.0.0-RC3</version>
+			<version>6.6.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.6.0.0-RC14</version>
+			<version>6.6.0.0-RC15</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>advancedpersonalization-module</artifactId>
-			<version>6.6.0.0-RC4</version>
+			<version>6.6.0.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -174,7 +174,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>search-and-nav-module</artifactId>
-			<version>6.6.0.0-RC4</version>
+			<version>6.6.0.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
