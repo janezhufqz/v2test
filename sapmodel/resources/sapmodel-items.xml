@@ -60,7 +60,7 @@
 				cardinality="many" collectiontype="set" ordered="false">
 				<description>SAP pricing conditions</description>
 				<modifiers read="true" write="true" search="true"
-					optional="true" partof="true" />
+					optional="true" />
 			</targetElement>
 
 		</relation>
@@ -170,7 +170,7 @@
 			<targetElement type="SAPOrder" cardinality="many"
 				collectiontype="set" qualifier="sapOrders" ordered="true">
 				<modifiers read="true" write="true" search="true"
-					optional="true" partof="true" />
+					optional="true" />
 			</targetElement>
 		</relation>
 
