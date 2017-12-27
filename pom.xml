@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>sap-frwcore-module</artifactId>
-			<version>6.6.0.0-RC4</version>
+			<version>6.7.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
