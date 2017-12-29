@@ -90,19 +90,19 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.7.0.0-M3</version>
+			<version>6.7.0.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-apps-module</artifactId>
-			<version>6.7.0.0-M1</version>
+			<version>6.7.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-core-module</artifactId>
-			<version>6.7.0.0-M1</version>
+			<version>6.7.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -150,13 +150,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>pcm-module</artifactId>
-			<version>6.7.0.0-M1</version>
+			<version>6.7.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>6.7.0.0-M3</version>
+			<version>6.7.0.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -168,7 +168,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>6.6.0.0-RC7</version>
+			<version>6.7.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
