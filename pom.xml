@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>acceleratoraddons-module</artifactId>
-			<version>6.6.0.0-RC3</version>
+			<version>6.7.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -78,7 +78,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2bcommerce-module</artifactId>
-			<version>6.6.0.0-RC3</version>
+			<version>6.7.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
