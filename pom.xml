@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.7.0.0-M29</version>
+			<version>6.7.0.0-M30</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.6.0.0-RC4</version>
+			<version>6.7.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
