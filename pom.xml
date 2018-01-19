@@ -25,13 +25,13 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>6.7.0.0-M3</version>
+			<version>6.7.0.0-M4</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.7.0.0-M40</version>
+			<version>6.7.0.0-M42</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -120,7 +120,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>6.7.0.0-M2</version>
+			<version>6.7.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
