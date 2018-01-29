@@ -8,8 +8,7 @@
                "startingFolderPath":"[root]/",
                "sourceFilters":[  
                 "**/*locales*_en.properties",
-                "**/labels_en.properties",
-                "**/labels.properties"
+                "**/labels_en.properties"
                ],
                "excludedSourceFilters":[
                    "**/testsrc/**/*",

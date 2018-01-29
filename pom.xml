@@ -11,27 +11,27 @@
 
 	<groupId>de.hybris.platform</groupId>
 	<artifactId>sap-model-module</artifactId>
-	<version>6.6.0.0-SNAPSHOT</version>
+	<version>6.7.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>sap-frwcore-module</artifactId>
-			<version>6.6.0.0-M2</version>
+			<version>6.7.0.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>6.6.0.0-M3</version>
+			<version>6.7.0.0-M4</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.6.0.0-M55</version>
+			<version>6.7.0.0-M54</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -42,85 +42,85 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>6.6.0.0-M7</version>
+			<version>6.7.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>6.6.0.0-M9</version>
+			<version>6.7.0.0-M6</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>acceleratoraddons-module</artifactId>
-			<version>6.6.0.0-M2</version>
+			<version>6.7.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>advancedpersonalization-module</artifactId>
-			<version>6.6.0.0-RC1</version>
+			<version>6.7.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>atdd-module</artifactId>
-			<version>6.6.0.0-RC1</version>
+			<version>6.6.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.6.0.0-M6</version>
+			<version>6.7.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2bcommerce-module</artifactId>
-			<version>6.6.0.0-M3</version>
+			<version>6.7.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.6.0.0-M9</version>
+			<version>6.7.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.6.0.0-M9</version>
+			<version>6.7.0.0-M7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-apps-module</artifactId>
-			<version>6.6.0.0-M4</version>
+			<version>6.7.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-core-module</artifactId>
-			<version>6.6.0.0-M4</version>
+			<version>6.7.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercesearch-module</artifactId>
-			<version>6.6.0.0-M2</version>
+			<version>6.7.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercewebservices-module</artifactId>
-			<version>6.6.0.0-M4</version>
+			<version>6.7.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>6.6.0.0-M7</version>
+			<version>6.7.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -132,61 +132,61 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>instore-module</artifactId>
-			<version>6.6.0.0-M1</version>
+			<version>6.7.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>mdm-datahub-module</artifactId>
-			<version>6.6.0.0-M4</version>
+			<version>6.7.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.6.0.0-M9</version>
+			<version>6.7.0.0-M6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>pcm-module</artifactId>
-			<version>6.6.0.0-M4</version>
+			<version>6.7.0.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>6.6.0.0-M8</version>
+			<version>6.7.0.0-M7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>6.6.0.0-M5</version>
+			<version>6.7.0.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>6.6.0.0-M9</version>
+			<version>6.7.0.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>search-and-nav-module</artifactId>
-			<version>6.6.0.0-M3</version>
+			<version>6.7.0.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>6.6.0.0-M9</version>
+			<version>6.7.0.0-M6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>webservicescommons-module</artifactId>
-			<version>6.6.0.0-M3</version>
+			<version>6.7.0.0-M6</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
