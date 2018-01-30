@@ -193,14 +193,13 @@
 
 	<properties>
 		<!-- Define extensions for delivery -->
-		<contained.extensions>sapmodel,sapmodelhmc,sapmodelbackoffice</contained.extensions>
+		<contained.extensions>sapmodel,sapmodelbackoffice</contained.extensions>
 		<platform.extensions>${contained.extensions}</platform.extensions>
 		<testclasses.extensions>${contained.extensions}</testclasses.extensions>
 		<codequality.extensions>${contained.extensions}</codequality.extensions>
 
 		<!-- Define location in Commerce Suite zip -->
 		<hybris.local.ext.sapmodel.package>ext-integration/sap/core</hybris.local.ext.sapmodel.package>
-		<hybris.local.ext.sapmodelhmc.package>ext-integration/sap/core</hybris.local.ext.sapmodelhmc.package>
 		<hybris.local.ext.sapmodelbackoffice.package>ext-integration/sap/core</hybris.local.ext.sapmodelbackoffice.package>
 
 		<!-- Define local properties -->
@@ -215,7 +214,6 @@
 		<!-- Define sonar scan properties -->
 		<sonar.extension.src>
 			sapmodel/src,
-			sapmodelhmc/src,
 			sapmodelbackoffice/src
 		</sonar.extension.src>
 	</properties>
