@@ -24,89 +24,112 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Required;
 
 
-public class SapClassificationAttributeHelperImpl implements SapClassificationAttributeHelper {
+public class SapClassificationAttributeHelperImpl implements SapClassificationAttributeHelper
+{
 
-    private static final Logger LOG = Logger.getLogger(SapClassificationAttributeHelperImpl.class.getName());
-    private ClassificationService classificationService;
-    private ModelService modelService;
-    private ProductService productService;
-    private CatalogVersionService catalogVersionService;
+	private static final Logger LOG = Logger.getLogger(SapClassificationAttributeHelperImpl.class.getName());
+	private ClassificationService classificationService;
+	private ModelService modelService;
+	private ProductService productService;
+	private CatalogVersionService catalogVersionService;
 
-    private boolean cleanCharacteristicsEnabled;
+	private boolean cleanCharacteristicsEnabled;
 
-    @Override
-    public void removeClassificationAttributeValues(String cellValue, Item processedItem) {
+	@Override
+	public void removeClassificationAttributeValues(String cellValue, Item processedItem)
+	{
 
-        if (isCleanCharacteristicsEnabled()) {
+		if (isCleanCharacteristicsEnabled())
+		{
 
-            String productCode = null;
+			String productCode = null;
 
-            try {
+			try
+			{
 
-                productCode = (String) processedItem.getAttribute("code");
-                CatalogVersion catalogVersion = (CatalogVersion) processedItem.getAttribute("catalogVersion");
-                CatalogVersionModel catalogVersionModel = modelService.get(catalogVersion.getPK());
-                modelService.remove(processedItem.getPK());
+				productCode = (String) processedItem.getAttribute("code");
+				CatalogVersion catalogVersion = (CatalogVersion) processedItem.getAttribute("catalogVersion");
+				CatalogVersionModel catalogVersionModel = modelService.get(catalogVersion.getPK());
+				modelService.remove(processedItem.getPK());
 
-                ProductModel productModel = productService.getProductForCode(catalogVersionModel, productCode);
-                FeatureList featureList = classificationService.getFeatures(productModel);
-                featureList.getFeatures().forEach(entry -> entry.removeAllValues());
-                classificationService.replaceFeatures(productModel, featureList);
+				ProductModel productModel = productService.getProductForCode(catalogVersionModel, productCode);
+				FeatureList featureList = classificationService.getFeatures(productModel);
+				featureList.getFeatures().forEach(entry -> entry.removeAllValues());
+				classificationService.replaceFeatures(productModel, featureList);
 
-                LOG.info(String.format("The current classification system attribute values for the product [%s] have been removed before importing the new ones.", productCode));
+				LOG.info(String.format(
+						"The current classification system attribute values for the product [%s] have been removed before importing the new ones.",
+						productCode));
 
-            } catch (UnknownIdentifierException ex) {
-                LOG.info("The product has not been imported yet!" + ex.getMessage());
-            } catch (Exception ex) {
-                LOG.error(String.format("Something went wrong while removing classification system attribute values for the product [%s]!", productCode) + ex.getMessage());
-            }
+			}
+			catch (UnknownIdentifierException ex)
+			{
+				LOG.info("The product has not been imported yet!" + ex.getMessage());
+			}
+			catch (Exception ex)
+			{
+				LOG.error(ex);
+				LOG.error(String.format(
+						"Something went wrong while removing classification system attribute values for the product [%s]!", productCode)
+						+ ex.getMessage());
+			}
 
-        }
+		}
 
-    }
+	}
 
-    protected boolean isCleanCharacteristicsEnabled() {
-        return cleanCharacteristicsEnabled;
-    }
+	protected boolean isCleanCharacteristicsEnabled()
+	{
+		return cleanCharacteristicsEnabled;
+	}
 
-    @Required
-    public void setCleanCharacteristicsEnabled(boolean cleanCharacteristicsEnabled) {
-        this.cleanCharacteristicsEnabled = cleanCharacteristicsEnabled;
-    }
+	@Required
+	public void setCleanCharacteristicsEnabled(boolean cleanCharacteristicsEnabled)
+	{
+		this.cleanCharacteristicsEnabled = cleanCharacteristicsEnabled;
+	}
 
-    protected ClassificationService getClassificationService() {
-        return classificationService;
-    }
+	protected ClassificationService getClassificationService()
+	{
+		return classificationService;
+	}
 
-    @Required
-    public void setClassificationService(ClassificationService classificationService) {
-        this.classificationService = classificationService;
-    }
+	@Required
+	public void setClassificationService(ClassificationService classificationService)
+	{
+		this.classificationService = classificationService;
+	}
 
-    protected ModelService getModelService() {
-        return modelService;
-    }
+	protected ModelService getModelService()
+	{
+		return modelService;
+	}
 
-    @Required
-    public void setModelService(ModelService modelService) {
-        this.modelService = modelService;
-    }
+	@Required
+	public void setModelService(ModelService modelService)
+	{
+		this.modelService = modelService;
+	}
 
-    protected ProductService getProductService() {
-        return productService;
-    }
+	protected ProductService getProductService()
+	{
+		return productService;
+	}
 
-    @Required
-    public void setProductService(ProductService productService) {
-        this.productService = productService;
-    }
+	@Required
+	public void setProductService(ProductService productService)
+	{
+		this.productService = productService;
+	}
 
-    protected CatalogVersionService getCatalogVersionService() {
-        return catalogVersionService;
-    }
+	protected CatalogVersionService getCatalogVersionService()
+	{
+		return catalogVersionService;
+	}
 
-    @Required
-    public void setCatalogVersionService(CatalogVersionService catalogVersionService) {
-        this.catalogVersionService = catalogVersionService;
-    }
+	@Required
+	public void setCatalogVersionService(CatalogVersionService catalogVersionService)
+	{
+		this.catalogVersionService = catalogVersionService;
+	}
 }
