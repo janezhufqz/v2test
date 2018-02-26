@@ -19,7 +19,7 @@ sapmodel*/resources/beans.xsd
 sapmodel*/resources/items.xsd
 sapmodel*/extensioninfo.xsd
 sapmodel*/build.xml
-sapmodel*/**/**/*-testclasses.xml
-sapmodel*/**/**/*-webtestclasses.xml
+*testclasses.xml
+*webtestclasses.xml
 
 *.bak
