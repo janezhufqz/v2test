@@ -26,7 +26,7 @@ import static de.hybris.platform.servicelayer.util.ServicesUtil.validateParamete
  */
 public class SAPDefaultUnitService extends DefaultUnitService implements SAPUnitService
 {
-	private SAPUnitDao sapUnitDao;
+	private transient SAPUnitDao sapUnitDao;
 
 	public UnitModel getUnitForSAPCode(final String code)
 	{
