@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.7.0.0-RC8</version>
+			<version>6.7.0.0-RC9</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -162,7 +162,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>6.7.0.0-M4</version>
+			<version>6.7.0.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
