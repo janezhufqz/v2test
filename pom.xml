@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>6.7.0.0-RC10</version>
+			<version>6.7.0.0-RC11</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -168,7 +168,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>6.7.0.0-RC7</version>
+			<version>6.7.0.0-RC8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
