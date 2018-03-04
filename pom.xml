@@ -90,19 +90,19 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.7.0.0-RC3</version>
+			<version>6.7.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-apps-module</artifactId>
-			<version>6.7.0.0-RC2</version>
+			<version>6.7.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-core-module</artifactId>
-			<version>6.7.0.0-RC2</version>
+			<version>6.7.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -144,19 +144,19 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>6.7.0.0-RC3</version>
+			<version>6.7.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>pcm-module</artifactId>
-			<version>6.7.0.0-RC2</version>
+			<version>6.7.0.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>6.7.0.0-RC3</version>
+			<version>6.7.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -180,7 +180,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>6.7.0.0-RC3</version>
+			<version>6.7.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
