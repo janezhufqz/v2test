@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>6.7.0.0-RC3</version>
+			<version>6.7.0.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -84,13 +84,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>6.7.0.0-RC5</version>
+			<version>6.7.0.0-RC6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>6.7.0.0-RC7</version>
+			<version>6.7.0.0-RC8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -156,7 +156,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>6.7.0.0-RC7</version>
+			<version>6.7.0.0-RC8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
