@@ -96,13 +96,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-apps-module</artifactId>
-			<version>6.7.0.0-RC4</version>
+			<version>6.7.0.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>cockpit-core-module</artifactId>
-			<version>6.7.0.0-RC4</version>
+			<version>6.7.0.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -150,7 +150,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>pcm-module</artifactId>
-			<version>6.7.0.0-RC4</version>
+			<version>6.7.0.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -174,7 +174,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>search-and-nav-module</artifactId>
-			<version>6.7.0.0-RC8</version>
+			<version>6.7.0.0-RC9</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
