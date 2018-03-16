@@ -186,7 +186,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>webservicescommons-module</artifactId>
-			<version>6.7.0.0-RC2</version>
+			<version>18.08.0-M1</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
