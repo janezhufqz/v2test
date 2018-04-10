@@ -11,7 +11,7 @@
 
 	<groupId>de.hybris.platform</groupId>
 	<artifactId>sap-model-module</artifactId>
-	<version>18.08.0-SNAPSHOT</version>
+	<version>18.08.0-M1</version>
 	<packaging>pom</packaging>
 
 	<dependencies>
