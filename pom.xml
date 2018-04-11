@@ -25,7 +25,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>18.08.0-M1</version>
+			<version>18.08.0-M2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>18.08.0-M2</version>
+			<version>18.08.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -168,7 +168,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>18.08.0-M1</version>
+			<version>18.08.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
