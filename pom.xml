@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>18.08.0-M14</version>
+			<version>18.08.0-M15</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>18.08.0-M3</version>
+			<version>18.08.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -162,7 +162,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>18.08.0-M1</version>
+			<version>18.08.0-M2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
