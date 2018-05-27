@@ -114,7 +114,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercewebservices-module</artifactId>
-			<version>18.08.0-M5</version>
+			<version>18.08.0-M6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
