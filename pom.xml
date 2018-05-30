@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>18.08.0-M39</version>
+			<version>18.08.0-M40</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -90,7 +90,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>18.08.0-M4</version>
+			<version>18.08.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -156,7 +156,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>18.08.0-M4</version>
+			<version>18.08.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
