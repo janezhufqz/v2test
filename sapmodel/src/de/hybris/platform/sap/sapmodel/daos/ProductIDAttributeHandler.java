@@ -28,14 +28,14 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 {
 	private static final Logger LOGGER = Logger.getLogger(ProductIDAttributeHandler.class.getName());
 	private static final long serialVersionUID = 1L;
-	
+
 	@Autowired
-	protected FlexibleSearchService flexibleSearchService; //NOPMD
+	protected transient FlexibleSearchService flexibleSearchService;
 
 	protected String convertID(final String productID)
 	{
 		SAPProductIDDataConversionModel customizing = null;
-		
+
 		final SAPProductIDDataConversionModel data = new SAPProductIDDataConversionModel();
 		data.setConversionID("MATCONV");
 		try
@@ -56,7 +56,7 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 			data.setMask("");
 			customizing = data;
 		}
-		
+
 		if (productID == null || productID.isEmpty() || customizing.getDisplayLexicographic())
 		{
 			return productID;
@@ -112,8 +112,9 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 
 			String workProductID = productID;
 			workProductID = workProductID.substring(0, Math.min(workProductID.length(), 18));
-			workProductID = isNumeric && !customizing.getDisplayLeadingZeros() ? workProductID.substring(Math.max(leadZeroCount,
-					nonMarkCount)) : workProductID;
+			workProductID = isNumeric && !customizing.getDisplayLeadingZeros()
+					? workProductID.substring(Math.max(leadZeroCount, nonMarkCount))
+					: workProductID;
 			if (leadZeroCount < nonMarkCount)
 			{
 				isNumeric = false;

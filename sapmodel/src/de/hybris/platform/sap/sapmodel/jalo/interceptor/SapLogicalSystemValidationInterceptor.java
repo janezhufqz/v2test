@@ -18,13 +18,14 @@ import de.hybris.platform.servicelayer.interceptor.InterceptorContext;
 import de.hybris.platform.servicelayer.interceptor.InterceptorException;
 import de.hybris.platform.servicelayer.interceptor.ValidateInterceptor;
 
-public class SapLogicalSystemValidationInterceptor implements
-		ValidateInterceptor<SAPLogicalSystemModel> {
+
+public class SapLogicalSystemValidationInterceptor implements ValidateInterceptor<SAPLogicalSystemModel>
+{
 
 	@Override
-	public void onValidate(SAPLogicalSystemModel sapLogicalSystemModel, InterceptorContext ctx)
-			throws InterceptorException {
-		
+	public void onValidate(SAPLogicalSystemModel sapLogicalSystemModel, InterceptorContext ctx) throws InterceptorException
+	{
+
 		SAPGlobalConfigurationModel sapGlobalConfiguration = sapLogicalSystemModel.getSapGlobalConfiguration();
 
 		if (sapGlobalConfiguration != null)
@@ -32,15 +33,16 @@ public class SapLogicalSystemValidationInterceptor implements
 
 			Set<SAPLogicalSystemModel> sapLogicalSystems = sapGlobalConfiguration.getSapLogicalSystemGlobalConfig();
 
-			if (sapLogicalSystems.stream().count() == 0L) {
+			if (sapLogicalSystems.stream().count() == 0L)
+			{
 
 				sapLogicalSystemModel.setDefaultLogicalSystem(true);
 
-			} else if (sapLogicalSystemModel.isDefaultLogicalSystem()) {
+			}
+			else if (sapLogicalSystemModel.isDefaultLogicalSystem())
+			{
 
-				sapLogicalSystems.stream()
-						.filter(entry -> entry != sapLogicalSystemModel &&
-								entry.isDefaultLogicalSystem())
+				sapLogicalSystems.stream().filter(entry -> !entry.equals(sapLogicalSystemModel) && entry.isDefaultLogicalSystem())
 						.forEach(entry -> {
 							entry.setDefaultLogicalSystem(false);
 							ctx.getModelService().save(entry);

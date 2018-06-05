@@ -188,6 +188,8 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 								LOG.debug("Fallback DISABLED. Marking line as unresolved. Will try to import value in another pass");
 							}
 							line.getValueEntry(this.columnDescriptor.getValuePosition()).markUnresolved(e.getMessage());
+							LOG.warn(e);
+							LOG.warn(e.getMessage());
 						}
 
 					}
@@ -274,6 +276,7 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 		}
 		catch (final Exception ex)
 		{
+			LOG.error(ex);
 			LOG.error(String.format(
 					"Something went wrong while importingg classification system attribute value/author for the product [%s]!",
 					productCode) + ex.getMessage());
@@ -314,6 +317,7 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 		}
 		catch (final JaloItemNotFoundException e)
 		{
+			LOG.warn(e);
 			LOG.warn("Classification attribute unit with code [" + unitName + "] not found in classification system [" + systemName
 					+ ":" + versionName + "].");
 			return null;
@@ -364,15 +368,11 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 
 		if (productFeature != null)
 		{
-			productFeature.forEach(p ->
-			{
-				classificationAttributeAuthor.forEach(c ->
-				{
-					if (p.getValue().equals(c.getValue())
-							|| (p.getValue() instanceof ClassificationAttributeValueModel
-									&& c.getValue() instanceof ClassificationAttributeValue
-									&& ((ClassificationAttributeValueModel) p.getValue()).getPk()
-											.equals(((ClassificationAttributeValue) c.getValue()).getPK())))
+			productFeature.forEach(p -> {
+				classificationAttributeAuthor.forEach(c -> {
+					if (p.getValue().equals(c.getValue()) || (p.getValue() instanceof ClassificationAttributeValueModel
+							&& c.getValue() instanceof ClassificationAttributeValue && ((ClassificationAttributeValueModel) p.getValue())
+									.getPk().equals(((ClassificationAttributeValue) c.getValue()).getPK())))
 					{
 						p.setAuthor(c.getValueAuthor());
 						this.modelService.save(p);

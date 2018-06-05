@@ -21,11 +21,10 @@ import com.hybris.cockpitng.util.DefaultWidgetController;
 
 public class SapmodelbackofficeController extends DefaultWidgetController
 {
-	private static final long serialVersionUID = 1L;
 	private Label label;
 
 	@WireVariable
-	private SapmodelbackofficeService sapmodelbackofficeService;
+	private transient SapmodelbackofficeService sapmodelbackofficeService;
 
 	@Override
 	public void initialize(final Component comp)
