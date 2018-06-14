@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>18.08.0-RC1</version>
+			<version>18.08.0-RC2</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>advancedpersonalization-module</artifactId>
-			<version>18.08.0-M4</version>
+			<version>18.08.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -90,7 +90,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>18.08.0-M7</version>
+			<version>18.08.0-M8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -120,7 +120,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>18.08.0-M3</version>
+			<version>18.08.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -138,7 +138,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>mdm-datahub-module</artifactId>
-			<version>18.08.0-RC1</version>
+			<version>18.08.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -156,7 +156,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>18.08.0-M7</version>
+			<version>18.08.0-M8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
