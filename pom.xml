@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>18.08.0-RC2</version>
+			<version>18.08.0-RC3</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>18.08.0-M8</version>
+			<version>18.08.0-M9</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -186,7 +186,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>webservicescommons-module</artifactId>
-			<version>18.08.0-M8</version>
+			<version>18.08.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
