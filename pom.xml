@@ -18,20 +18,20 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>sap-frwcore-module</artifactId>
-			<version>18.08.0-M2</version>
+			<version>18.08.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>basecommerce-module</artifactId>
 			<type>zip</type>
-			<version>18.08.0-M5</version>
+			<version>18.08.0-M6</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>18.08.0-M40</version>
+			<version>18.08.0-RC3</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -42,14 +42,14 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>18.08.0-M8</version>
+			<version>18.08.0-M9</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>18.08.0-M12</version>
+			<version>18.08.0-M14</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>advancedpersonalization-module</artifactId>
-			<version>18.08.0-M4</version>
+			<version>18.08.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -90,7 +90,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>18.08.0-M6</version>
+			<version>18.08.0-M8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -114,13 +114,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercewebservices-module</artifactId>
-			<version>18.08.0-M8</version>
+			<version>18.08.0-M9</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>18.08.0-M2</version>
+			<version>18.08.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -138,13 +138,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>mdm-datahub-module</artifactId>
-			<version>18.08.0-M1</version>
+			<version>18.08.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>18.08.0-M11</version>
+			<version>18.08.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -156,37 +156,37 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>18.08.0-M6</version>
+			<version>18.08.0-M8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>18.08.0-M5</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>de.hybris.platform</groupId>
-			<artifactId>ruleengine-module</artifactId>
-			<version>18.08.0-M4</version>
-			<type>zip</type>
-		</dependency>
-		<dependency>
-			<groupId>de.hybris.platform</groupId>
-			<artifactId>search-and-nav-module</artifactId>
 			<version>18.08.0-M6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
+			<artifactId>ruleengine-module</artifactId>
+			<version>18.08.0-M5</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
+			<artifactId>search-and-nav-module</artifactId>
+			<version>18.08.0-M7</version>
+			<type>zip</type>
+		</dependency>
+		<dependency>
+			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>18.08.0-M11</version>
+			<version>18.08.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>webservicescommons-module</artifactId>
-			<version>18.08.0-M7</version>
+			<version>18.08.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
