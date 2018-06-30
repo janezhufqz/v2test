@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>advancedpersonalization-module</artifactId>
-			<version>18.08.0-RC1</version>
+			<version>18.08.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>18.08.0-RC1</version>
+			<version>18.08.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -186,7 +186,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>webservicescommons-module</artifactId>
-			<version>18.08.0-RC2</version>
+			<version>18.08.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
