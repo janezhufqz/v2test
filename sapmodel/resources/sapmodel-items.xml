@@ -537,7 +537,7 @@
 				<attribute qualifier="conditionCounter" type="java.lang.String">
 					<description>ZAEHK - Condition counter</description>
 					<modifiers read="true" write="true" search="true"
-						optional="true" />
+						optional="true" unique="true" />
 					<persistence type="property" />
 				</attribute>
 				<attribute qualifier="currencyKey" type="java.lang.String">
