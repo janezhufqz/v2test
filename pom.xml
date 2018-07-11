@@ -90,7 +90,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>18.08.0-RC5</version>
+			<version>18.08.0-RC6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
