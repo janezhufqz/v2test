@@ -162,7 +162,7 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 
 						final String author = getValueAuthor(singleStr);
 
-						final ClassificationAttributeUnit classificationAttributeUnit = getUnit(assignment, singleValueString,
+						final ClassificationAttributeUnit classificationAttributeUnit = getAttributeUnit(assignment, singleValueString,
 								this.systemName, this.versionName);
 						//values.add(new UnitAwareValue(transValue, classificationAttributeUnit));
 						values.add(new UnitAwareValueAuthor(transValue, classificationAttributeUnit, author));
@@ -201,7 +201,7 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 		return values;
 	}
 
-	private String extractUnitName(final ClassAttributeAssignment assignment, final String singleStr)
+	private String attributeUnitName(final ClassAttributeAssignment assignment, final String singleStr)
 	{
 		final String unitName = null;
 		boolean warn = false;
@@ -283,10 +283,10 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 		}
 	}
 
-	private ClassificationAttributeUnit getUnit(final ClassAttributeAssignment assignment, final String singleStr,
-			final String systemName, final String versionName)
+	private ClassificationAttributeUnit getAttributeUnit(final ClassAttributeAssignment assignment, final String singleStr,
+														 final String systemName, final String versionName)
 	{
-		final String unitName = extractUnitName(assignment, singleStr);
+		final String unitName = attributeUnitName(assignment, singleStr);
 		if (unitName == null)
 		{
 			return null;
