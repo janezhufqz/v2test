@@ -213,7 +213,7 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 		}
 	}
 
-	private String attributeUnitName(final ClassAttributeAssignment assignment, final String singleStr)
+	private String extractAttributeUnitName(final ClassAttributeAssignment assignment, final String singleStr)
 	{
 		final String unitName = null;
 		boolean warn = false;
@@ -302,7 +302,7 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 	private ClassificationAttributeUnit getAttributeUnit(final ClassAttributeAssignment assignment, final String singleStr,
 														 final String systemName, final String versionName)
 	{
-		final String unitName = attributeUnitName(assignment, singleStr);
+		final String unitName = extractAttributeUnitName(assignment, singleStr);
 		if (unitName == null)
 		{
 			return null;
