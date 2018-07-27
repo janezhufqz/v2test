@@ -48,8 +48,10 @@ public class SapmodelbackofficeStandalone
 		Registry.activateMasterTenant();
 
 		final JaloSession jaloSession = JaloSession.getCurrentSession();
-		LOGGER.info("Session ID: " + jaloSession.getSessionID());
-		LOGGER.info("User: " + jaloSession.getUser());
+		final String sessionIDMessage = String.format("Session ID: %s", jaloSession.getSessionID());
+		final String userMessage = String.format("User: %s", jaloSession.getUser());
+		LOGGER.info(sessionIDMessage);
+        LOGGER.info(userMessage);
 		Utilities.printAppInfo();
 
 		RedeployUtilities.shutdown();
