@@ -192,6 +192,10 @@
 	</dependencies>
 
 	<properties>
+
+		<!-- Define encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
 		<!-- Define extensions for delivery -->
 		<contained.extensions>sapmodel,sapmodelbackoffice</contained.extensions>
 		<platform.extensions>${contained.extensions}</platform.extensions>
@@ -211,10 +215,5 @@
 		<dist.create.source.dist>true</dist.create.source.dist>
 		<dist.create.en.langpack>true</dist.create.en.langpack>
 
-		<!-- Define sonar scan properties -->
-		<sonar.extension.src>
-			sapmodel/src,
-			sapmodelbackoffice/src
-		</sonar.extension.src>
 	</properties>
 </project>
