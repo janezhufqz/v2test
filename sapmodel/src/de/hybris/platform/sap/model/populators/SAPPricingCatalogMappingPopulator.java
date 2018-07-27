@@ -29,16 +29,16 @@ public class SAPPricingCatalogMappingPopulator implements Populator<SAPPricingSa
 	
 	public void populate(final SAPPricingSalesAreaToCatalogModel source, final Map<String, Object> target) throws ConversionException
 	{
-		CatalogVersionModel catalogVersion = source.getCatalogVersion();
+		final CatalogVersionModel catalogVersion = source.getCatalogVersion();
 		if (catalogVersion == null)
 		{
 			LOGGER.error("Pricing Transfer: Catalog Version is not maintained");
 			return;
 		}
-		String version = catalogVersion.getVersion();
-		String catalogId = catalogVersion.getCatalog().getId();
+		final String version = catalogVersion.getVersion();
+		final String catalogId = catalogVersion.getCatalog().getId();
 		
-		StringBuffer sb = new StringBuffer(100);
+		final StringBuilder sb = new StringBuilder(100);
 		sb.append(catalogId);
 		sb.append(":");
 		sb.append(version);

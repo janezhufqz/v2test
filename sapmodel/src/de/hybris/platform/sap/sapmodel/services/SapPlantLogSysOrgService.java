@@ -15,7 +15,6 @@ import de.hybris.platform.sap.sapmodel.model.SAPPlantLogSysOrgModel;
 import de.hybris.platform.sap.sapmodel.model.SAPSalesOrganizationModel;
 import de.hybris.platform.store.BaseStoreModel;
 
-
 /**
  * Interface to provide access to Sap Logical system information for a given base store and plant combination
  */
@@ -23,22 +22,25 @@ public interface SapPlantLogSysOrgService
 {
 
 	/**
-	 * @param baseStoreModel
-	 * @param plantCode
+	 * Get SAPLogicalSystemModel for given BaseStoreModel and plant code
+	 * @param baseStoreModel a BaseStoreModel
+	 * @param plantCode the plant's code
 	 * @return SAP logical system for given base store and plant
 	 */
 	public SAPLogicalSystemModel getSapLogicalSystemForPlant(BaseStoreModel baseStoreModel, String plantCode);
 
 	/**
-	 * @param baseStoreModel
-	 * @param plantCode
+	 * Get SAPSalesOrganizationModel for a given BaseStoreModel and plant code
+	 * @param baseStoreModel a BaseStoreModel
+	 * @param plantCode the plant's code
 	 * @return SAP sales organization for given base store and plant
 	 */
 	public SAPSalesOrganizationModel getSapSalesOrganizationForPlant(BaseStoreModel baseStoreModel, String plantCode);
 
 	/**
-	 * @param baseStoreModel
-	 * @param plantCode
+	 * Get SAPPlantLogSysOrgModel for a given BaseStoreModel and plant code
+	 * @param baseStoreModel a BaseStoreModel
+	 * @param plantCode the plant's code
 	 * @return SAP logical system and sales organization for given base store and plant
 	 */
 	public SAPPlantLogSysOrgModel getSapPlantLogSysOrgForPlant(BaseStoreModel baseStoreModel, String plantCode);

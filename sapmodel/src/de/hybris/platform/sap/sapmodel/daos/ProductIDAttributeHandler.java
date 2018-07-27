@@ -94,7 +94,7 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 			if ((ch > '9' || ch < '0') && !symbols.contains(ch))
 			{
 				isNumeric = false;
-				i = size;
+				break;
 			}
 		}
 

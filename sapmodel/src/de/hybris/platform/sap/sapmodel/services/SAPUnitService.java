@@ -22,9 +22,8 @@ public interface SAPUnitService extends UnitService
 
 
 	/**
-	 * 
-	 * @param code
-	 *           String representation of SAPCode
+	 * Get UnitModel for a given product SAPCode
+	 * @param code String representation of SAPCode
 	 * @return Returns UnitModel object associated with provided SAPCode
 	 */
 	public UnitModel getUnitForSAPCode(final String code);
