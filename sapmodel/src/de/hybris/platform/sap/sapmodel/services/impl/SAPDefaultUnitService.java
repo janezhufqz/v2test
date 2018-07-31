@@ -32,7 +32,7 @@ public class SAPDefaultUnitService extends DefaultUnitService implements SAPUnit
 	{
 		validateParameterNotNull(code, "Parameter code was null");
 		final List<UnitModel> units = sapUnitDao.findUnitBySAPUnitCode(code);
-		if (units.size() > 0)
+		if (!units.isEmpty())
 		{
 			return units.get(0);
 		}
