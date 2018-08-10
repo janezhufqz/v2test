@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>18.11.0-M21</version>
+			<version>18.11.0-M22</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>acceleratoraddons-module</artifactId>
-			<version>18.08.0-RC2</version>
+			<version>18.11.0-M1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
