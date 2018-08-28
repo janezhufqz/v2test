@@ -42,14 +42,14 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>18.11.0-M4</version>
+			<version>18.11.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>18.11.0-M4</version>
+			<version>18.11.0-M5</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -186,7 +186,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>webservicescommons-module</artifactId>
-			<version>18.11.0-M2</version>
+			<version>18.11.0-M3</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
