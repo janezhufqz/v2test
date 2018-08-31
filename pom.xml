@@ -78,7 +78,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2bcommerce-module</artifactId>
-			<version>18.11.0-M3</version>
+			<version>18.11.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -114,7 +114,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercewebservices-module</artifactId>
-			<version>18.11.0-M2</version>
+			<version>18.11.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -186,7 +186,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>webservicescommons-module</artifactId>
-			<version>18.11.0-M3</version>
+			<version>18.11.0-M4</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
