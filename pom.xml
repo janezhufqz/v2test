@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>18.11.0-M41</version>
+			<version>18.11.0-M42</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>18.11.0-M7</version>
+			<version>18.11.0-M8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -90,7 +90,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>18.11.0-M5</version>
+			<version>18.11.0-M6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -144,7 +144,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>18.11.0-M9</version>
+			<version>18.11.0-M11</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -156,7 +156,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-backoffice-module</artifactId>
-			<version>18.11.0-M8</version>
+			<version>18.11.0-M9</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -174,13 +174,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>search-and-nav-module</artifactId>
-			<version>18.11.0-M4</version>
+			<version>18.11.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>18.11.0-M9</version>
+			<version>18.11.0-M11</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
