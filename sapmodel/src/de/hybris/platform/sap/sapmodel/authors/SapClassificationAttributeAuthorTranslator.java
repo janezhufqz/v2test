@@ -52,6 +52,7 @@ import de.hybris.platform.util.CSVUtils;
 import de.hybris.platform.util.Config;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -131,7 +132,7 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 	{
 		if (assignment == null)
 		{
-			return null;
+			return Collections.emptyList();
 		}
 
 		if (this.classAttrAssignment == null)
@@ -147,53 +148,7 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 			for (final Iterator iter = splitValues(assignment, currentCellValue).iterator(); iter.hasNext();)
 			{
 				final String singleStr = (String) iter.next();
-				if (singleStr != null && singleStr.length() > 0)
-				{
-					if (values == null)
-					{
-						values = new LinkedList();
-					}
-					Object transValue;
-					final String singleValueString = getValueWithoutAuthor(singleStr);
-
-					try
-					{
-						transValue = trans.importValue(CSVUtils.unescapeString(singleValueString, TO_ESCAPE, true), processedItem);
-
-						final String author = getValueAuthor(singleStr);
-
-						final ClassificationAttributeUnit classificationAttributeUnit = getUnit(assignment, singleValueString,
-								this.systemName, this.versionName);
-						//values.add(new UnitAwareValue(transValue, classificationAttributeUnit));
-						values.add(new UnitAwareValueAuthor(transValue, classificationAttributeUnit, author));
-					}
-					catch (final JaloInvalidParameterException e)
-					{
-						if (Config.getBoolean(IMPEX_NONEXISTEND_CLSATTRVALUE_FALLBACK_KEY, false))
-						{
-							if (LOG.isDebugEnabled())
-							{
-								LOG.debug("Fallback ENABLED");
-							}
-							LOG.warn("Value " + singleStr + " is not of type " + assignment.getAttributeType().getCode()
-									+ " will use type string as fallback (" + e.getMessage() + ")");
-							transValue = getFallbackValueTranslator()
-									.importValue(CSVUtils.unescapeString(singleValueString, TO_ESCAPE, true), processedItem);
-							values.add(new UnitAwareValue(transValue, null));
-						}
-						else
-						{
-							if (LOG.isDebugEnabled())
-							{
-								LOG.debug("Fallback DISABLED. Marking line as unresolved. Will try to import value in another pass");
-							}
-							line.getValueEntry(this.columnDescriptor.getValuePosition()).markUnresolved(e.getMessage());
-							LOG.warn(e);
-							LOG.warn(e.getMessage());
-						}
-
-					}
-				}
+				values = populateValues(line, assignment, processedItem, trans, values, singleStr);
 			}
 		}
 		this.classificationAttributeAuthor = values;
@@ -201,7 +156,64 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 		return values;
 	}
 
-	private String extractUnitName(final ClassAttributeAssignment assignment, final String singleStr)
+	private Collection populateValues(final ValueLine line, final ClassAttributeAssignment assignment,
+									  final Product processedItem, final AbstractValueTranslator trans,
+									  Collection values, final String singleStr) {
+		if (singleStr != null && singleStr.length() > 0)
+		{
+			if (values == null)
+			{
+				values = new LinkedList();
+			}
+
+			final String singleValueString = getValueWithoutAuthor(singleStr);
+
+			try
+			{
+				final Object transValue = trans.importValue(CSVUtils.unescapeString(singleValueString, TO_ESCAPE, true), processedItem);
+
+				final String author = getValueAuthor(singleStr);
+
+				final ClassificationAttributeUnit classificationAttributeUnit = getAttributeUnit(assignment, singleValueString,
+						this.systemName, this.versionName);
+				values.add(new UnitAwareValueAuthor(transValue, classificationAttributeUnit, author));
+			}
+			catch (final JaloInvalidParameterException e)
+			{
+				handleJaloInvalidParameterException(line, assignment, processedItem, values, singleStr, singleValueString, e);
+			}
+		}
+		return values;
+	}
+
+	private void handleJaloInvalidParameterException(final ValueLine line, final ClassAttributeAssignment assignment, final Product processedItem,
+													 final Collection values, final String singleStr, final String singleValueString,
+													 final JaloInvalidParameterException e) {
+		if (Config.getBoolean(IMPEX_NONEXISTEND_CLSATTRVALUE_FALLBACK_KEY, false))
+		{
+			if (LOG.isDebugEnabled())
+			{
+				LOG.debug("Fallback ENABLED");
+			}
+			LOG.warn("Value " + singleStr + " is not of type " + assignment.getAttributeType().getCode()
+					+ " will use type string as fallback (" + e.getMessage() + ")");
+			final Object transValue = getFallbackValueTranslator()
+					.importValue(CSVUtils.unescapeString(singleValueString, TO_ESCAPE, true), processedItem);
+			values.add(new UnitAwareValue(transValue, null));
+		}
+		else
+		{
+			if (LOG.isDebugEnabled())
+			{
+				LOG.debug("Fallback DISABLED. Marking line as unresolved. Will try to import value in another pass");
+			}
+			line.getValueEntry(this.columnDescriptor.getValuePosition()).markUnresolved(e.getMessage());
+			LOG.warn(e);
+			LOG.warn(e.getMessage());
+		}
+	}
+
+	private String extractAttributeUnitName(final ClassAttributeAssignment assignment, final String singleStr)
 	{
 		final String unitName = null;
 		boolean warn = false;
@@ -222,22 +234,11 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 
 		if (((ColumnParams) this.columnDescriptor.getDescriptorData()).hasItemPattern())
 		{
-			for (final List<ColumnParams> columnParamsList : ((ColumnParams) this.columnDescriptor.getDescriptorData())
-					.getItemPatternLists())
+			final String defaultAttributeUnitName = findDefaultAttributeUnitName(((ColumnParams) this.columnDescriptor.getDescriptorData()).getItemPatternLists());
+			if (defaultAttributeUnitName != null && warn)
 			{
-				for (final ColumnParams columnParams : columnParamsList)
-				{
-					if (columnParams.getQualifier().equals("unit")
-							&& columnParams.getModifier(ImpExConstants.Syntax.Modifier.DEFAULT) != null)
-					{
-						if (warn)
-						{
-							LOG.warn(msg + " Classification attribute unit from script header ["
-									+ columnParams.getModifier(ImpExConstants.Syntax.Modifier.DEFAULT) + "] will be used instead.");
-						}
-						return columnParams.getModifier(ImpExConstants.Syntax.Modifier.DEFAULT);
-					}
-				}
+				LOG.warn(msg + " Classification attribute unit from script header [" + defaultAttributeUnitName + "] will be used instead.");
+				return defaultAttributeUnitName;
 			}
 		}
 		if (warn && assignment.getUnit() != null)
@@ -246,6 +247,21 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 					+ "] will be used instead.");
 		}
 		return unitName;
+	}
+
+	private String findDefaultAttributeUnitName(final List<ColumnParams>[] itemPatternLists) {
+		for (final List<ColumnParams> columnParamsList : itemPatternLists)
+		{
+			for (final ColumnParams columnParams : columnParamsList)
+			{
+				if (("unit").equals(columnParams.getQualifier())
+						&& columnParams.getModifier(ImpExConstants.Syntax.Modifier.DEFAULT) != null)
+				{
+					return columnParams.getModifier(ImpExConstants.Syntax.Modifier.DEFAULT);
+				}
+			}
+		}
+		return null;
 	}
 
 	@Override
@@ -283,10 +299,10 @@ public class SapClassificationAttributeAuthorTranslator extends ClassificationAt
 		}
 	}
 
-	private ClassificationAttributeUnit getUnit(final ClassAttributeAssignment assignment, final String singleStr,
-			final String systemName, final String versionName)
+	private ClassificationAttributeUnit getAttributeUnit(final ClassAttributeAssignment assignment, final String singleStr,
+														 final String systemName, final String versionName)
 	{
-		final String unitName = extractUnitName(assignment, singleStr);
+		final String unitName = extractAttributeUnitName(assignment, singleStr);
 		if (unitName == null)
 		{
 			return null;

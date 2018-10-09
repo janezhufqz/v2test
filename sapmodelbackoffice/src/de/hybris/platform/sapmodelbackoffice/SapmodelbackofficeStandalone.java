@@ -14,7 +14,8 @@ import de.hybris.platform.core.Registry;
 import de.hybris.platform.jalo.JaloSession;
 import de.hybris.platform.util.RedeployUtilities;
 import de.hybris.platform.util.Utilities;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Demonstration of how to write a standalone application that can be run directly from within eclipse or from the
@@ -27,6 +28,9 @@ import de.hybris.platform.util.Utilities;
  */
 public class SapmodelbackofficeStandalone
 {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(SapmodelbackofficeStandalone.class);
+
 	/**
 	 * Main class to be able to run it directly as a java program.
 	 *
@@ -44,8 +48,10 @@ public class SapmodelbackofficeStandalone
 		Registry.activateMasterTenant();
 
 		final JaloSession jaloSession = JaloSession.getCurrentSession();
-		System.out.println("Session ID: " + jaloSession.getSessionID()); //NOPMD
-		System.out.println("User: " + jaloSession.getUser()); //NOPMD
+		final String sessionIDMessage = String.format("Session ID: %s", jaloSession.getSessionID());
+		final String userMessage = String.format("User: %s", jaloSession.getUser());
+		LOGGER.info(sessionIDMessage);
+        LOGGER.info(userMessage);
 		Utilities.printAppInfo();
 
 		RedeployUtilities.shutdown();

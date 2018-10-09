@@ -94,7 +94,7 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 			if ((ch > '9' || ch < '0') && !symbols.contains(ch))
 			{
 				isNumeric = false;
-				i = size;
+				break;
 			}
 		}
 
@@ -124,7 +124,8 @@ public class ProductIDAttributeHandler implements DynamicAttributeHandler<String
 			final int maskSize = mask.length();
 			final StringBuilder sb = new StringBuilder(mask);
 			int builtLength = 0;
-			for (int i = 1, j = 1; i <= maskSize && j <= workSize; i++)
+			int j = 1;
+			for (int i = 1; i <= maskSize && j <= workSize; i++)
 			{
 				final int maskIndex = isNumeric ? maskSize - i : i - 1;
 				if (sb.charAt(maskIndex) == '_')
