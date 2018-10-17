@@ -47,10 +47,11 @@ import de.hybris.platform.core.model.order.OrderModel;
 import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.core.model.product.UnitModel;
 import de.hybris.platform.core.model.user.UserModel;
-import de.hybris.platform.directpersistence.audit.internal.AuditEnablementService;
+import de.hybris.platform.persistence.audit.internal.AuditEnablementService;
 import de.hybris.platform.sap.sapmodel.enums.SAPOrderStatus;
 import de.hybris.platform.sap.sapmodel.model.SAPOrderModel;
 import de.hybris.platform.servicelayer.ServicelayerTransactionalBaseTest;
+import de.hybris.platform.servicelayer.config.ConfigurationService;
 import de.hybris.platform.servicelayer.model.ModelService;
 
 import java.time.LocalDate;
@@ -62,12 +63,14 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
 
+
 import javax.annotation.Resource;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import com.google.common.collect.Sets;
+import org.apache.commons.configuration.Configuration;
 
 @IntegrationTest
 public class SAPOrderAuditReportViewTest extends ServicelayerTransactionalBaseTest implements AuditableTest
@@ -87,11 +90,15 @@ public class SAPOrderAuditReportViewTest extends ServicelayerTransactionalBaseTe
 	@Resource
 	private AuditViewService auditViewService;
 
-	private AuditTestConfigManager auditTestConfigManager;
+
 	private CatalogModel catalog;
 	private CatalogVersionModel catalogVersion;
 
 	@Resource
+	private ConfigurationService configurationService;
+
+	private Configuration configuration;
+
 	private AuditEnablementService auditEnablementService;
 
 	private ProductModel product;
@@ -99,8 +106,15 @@ public class SAPOrderAuditReportViewTest extends ServicelayerTransactionalBaseTe
 	@Before
 	public void setUp() throws Exception
 	{
-		auditTestConfigManager = new AuditTestConfigManager(auditEnablementService);
-		auditTestConfigManager.enableAuditingForTypes("SAPOrder","Product", "Order", "OrderEntry", "Unit", "Currency");
+		auditEnablementService = new AuditEnablementService();
+		configuration = configurationService.getConfiguration();
+		configuration.addProperty("audit.saporder.enabled", "true");
+		configuration.addProperty("audit.product.enabled", "true");
+		configuration.addProperty("audit.order.enabled", "true");
+		configuration.addProperty("audit.orderentry.enabled", "true");
+		configuration.addProperty("audit.unit.enabled", "true");
+		configuration.addProperty("audit.currency.enabled", "true");
+		auditEnablementService.refreshConfiguredAuditTypes();
 		getOrCreateLanguage("en");
 		getOrCreateLanguage("de");
 
