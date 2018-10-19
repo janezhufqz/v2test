@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>18.11.0-RC2</version>
+			<version>18.11.0-RC3</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -66,7 +66,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>atdd-module</artifactId>
-			<version>18.08.0-RC1</version>
+			<version>18.11.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -90,7 +90,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>backoffice-module</artifactId>
-			<version>18.11.0-M7</version>
+			<version>18.11.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -120,7 +120,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>18.11.0-M6</version>
+			<version>18.11.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -138,13 +138,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>mdm-datahub-module</artifactId>
-			<version>18.11.0-M2</version>
+			<version>18.11.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>18.11.0-RC2</version>
+			<version>18.11.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -174,13 +174,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>search-and-nav-module</artifactId>
-			<version>18.11.0-RC2</version>
+			<version>18.11.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>18.11.0-RC2</version>
+			<version>18.11.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
