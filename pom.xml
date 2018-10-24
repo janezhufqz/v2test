@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>18.11.0-RC1</version>
+			<version>18.11.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -78,7 +78,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2bcommerce-module</artifactId>
-			<version>18.11.0-RC1</version>
+			<version>18.11.0-RC2</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -114,13 +114,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercewebservices-module</artifactId>
-			<version>18.11.0-M4</version>
+			<version>18.11.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>18.11.0-RC2</version>
+			<version>18.11.0-RC4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -192,7 +192,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>apiregistry-module</artifactId>
-			<version>18.11.0-M4</version>
+			<version>18.11.0-RC1</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
