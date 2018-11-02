@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>sap-frwcore-module</artifactId>
-			<version>18.11.0-RC2</version>
+			<version>18.11.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -120,7 +120,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>18.11.0-RC4</version>
+			<version>18.11.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
