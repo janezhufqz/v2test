@@ -168,7 +168,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>18.11.0-RC4</version>
+			<version>18.11.0-RC6</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
