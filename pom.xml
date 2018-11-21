@@ -120,7 +120,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>18.11.0-RC6</version>
+			<version>18.11.0-RC7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
