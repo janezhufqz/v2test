@@ -138,7 +138,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>mdm-datahub-module</artifactId>
-			<version>18.11.0-RC2</version>
+			<version>18.11.0-RC3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -162,13 +162,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>promotionengine-module</artifactId>
-			<version>18.11.0-RC4</version>
+			<version>18.11.0-RC5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>ruleengine-module</artifactId>
-			<version>18.11.0-RC7</version>
+			<version>18.11.0-RC8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
