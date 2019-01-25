@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2caccelerator-module</artifactId>
-			<version>19.05.0-M3</version>
+			<version>19.05.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -144,7 +144,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>19.05.0-M11</version>
+			<version>19.05.0-M12</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
