@@ -49,12 +49,12 @@
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>19.05.0-M6</version>
+			<version>19.05.0-M7</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>acceleratoraddons-module</artifactId>
-			<version>19.05.0-M2</version>
+			<version>19.05.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>b2b-accelerator-module</artifactId>
-			<version>19.05.0-M2</version>
+			<version>19.05.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -144,7 +144,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>19.05.0-M12</version>
+			<version>19.05.0-M13</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -180,7 +180,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>19.05.0-M12</version>
+			<version>19.05.0-M13</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
