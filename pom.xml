@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>19.05.0-M45</version>
+			<version>19.05.0-M48</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -49,7 +49,7 @@
 			<artifactId>commerceservices-module</artifactId>
 			<groupId>de.hybris.platform</groupId>
 			<type>zip</type>
-			<version>19.05.0-M7</version>
+			<version>19.05.0-M8</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -114,13 +114,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercewebservices-module</artifactId>
-			<version>19.05.0-M4</version>
+			<version>19.05.0-M5</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>customerservice-module</artifactId>
-			<version>19.05.0-M3</version>
+			<version>19.05.0-M4</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -192,7 +192,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>apiregistry-module</artifactId>
-			<version>19.05.0-M3</version>
+			<version>19.05.0-M4</version>
 			<type>zip</type>
 		</dependency>
 	</dependencies>
