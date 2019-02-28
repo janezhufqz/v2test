@@ -185,9 +185,8 @@
 					search="true" optional="true" />
 			</targetElement>
 		</relation>
-		
-		<relation code="SAPPlantLogSysOrg2WarehouseRelation" autocreate="true"
-				  generate="true" localized="false">
+
+		<relation code="SAPPlantLogSysOrg2WarehouseRelation" autocreate="true" localized="false">
 			<sourceElement type="SAPPlantLogSysOrg" qualifier="sapPlantLogSysOrg" cardinality="one"/>
 			<targetElement type="Warehouse" qualifier="warehouses" cardinality="many"/>
 		</relation>
