@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>19.05.0-M61</version>
+			<version>19.05.0-M62</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -114,7 +114,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>commercewebservices-module</artifactId>
-			<version>19.05.0-M6</version>
+			<version>19.05.0-M7</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
