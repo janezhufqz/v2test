@@ -174,7 +174,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>search-and-nav-module</artifactId>
-			<version>19.05.0-M7</version>
+			<version>19.05.0-M8</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
