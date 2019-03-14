@@ -104,6 +104,7 @@
                     <editorArea:attribute qualifier="plant"/>
                     <editorArea:attribute qualifier="logSys"/>
                     <editorArea:attribute qualifier="salesOrg"/>
+	                <editorArea:attribute qualifier="warehouses"/>
               </editorArea:section>              
               </editorArea:tab>
         </editorArea:editorArea>
