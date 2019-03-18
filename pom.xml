@@ -144,7 +144,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>19.05.0-M22</version>
+			<version>19.05.0-M23</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -180,7 +180,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>19.05.0-M22</version>
+			<version>19.05.0-M23</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
