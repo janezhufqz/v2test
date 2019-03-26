@@ -31,7 +31,7 @@
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>platform-module</artifactId>
 			<type>zip</type>
-			<version>19.05.0-M74</version>
+			<version>19.05.0-M76</version>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
@@ -138,13 +138,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>mdm-datahub-module</artifactId>
-			<version>19.05.0-M2</version>
+			<version>19.05.0-M3</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>npm-ancillary-module</artifactId>
-			<version>19.05.0-M23</version>
+			<version>19.05.0-M24</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
@@ -174,13 +174,13 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>search-and-nav-module</artifactId>
-			<version>19.05.0-M8</version>
+			<version>19.05.0-M9</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>wcms-module</artifactId>
-			<version>19.05.0-M23</version>
+			<version>19.05.0-M24</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
