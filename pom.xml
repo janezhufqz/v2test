@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>de.hybris.platform</groupId>
 			<artifactId>coreaccelerator-module</artifactId>
-			<version>19.05.0-M12</version>
+			<version>19.05.0-M13</version>
 			<type>zip</type>
 		</dependency>
 		<dependency>
