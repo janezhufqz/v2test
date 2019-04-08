@@ -186,6 +186,11 @@
 			</targetElement>
 		</relation>
 
+		<relation code="SAPPlantLogSysOrg2WarehouseRelation" autocreate="true" localized="false">
+			<sourceElement type="SAPPlantLogSysOrg" qualifier="sapPlantLogSysOrg" cardinality="one"/>
+			<targetElement type="Warehouse" qualifier="warehouses" cardinality="many"/>
+		</relation>
+
 	</relations>
 
 	<itemtypes>
