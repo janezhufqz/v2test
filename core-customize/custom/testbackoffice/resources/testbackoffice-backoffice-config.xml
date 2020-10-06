@@ -9,7 +9,7 @@
     <!--<context component="component-code" module="testbackoffice">-->
     <!--Please check documentation for code snippets for specific components-->
     <!--</context>-->
-    <context merge-by="module" parent="couponbackoffice" type="SingleCodeCoupon" component="editor-area">
+    <context merge-by="module" type="SingleCodeCoupon" component="editor-area">
         <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea" xmlns:y="http://www.hybris.com/cockpit/config/hybris">
             <editorArea:essentials>
                 <editorArea:essentialSection description="hmc.text.singlecodecoupon.common" name="text.couponcode.label">
