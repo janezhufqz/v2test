@@ -9,7 +9,7 @@
     <!--<context component="component-code" module="testbackoffice">-->
     <!--Please check documentation for code snippets for specific components-->
     <!--</context>-->
-    <context merge-by="module" type="SingleCodeCoupon" component="editor-area">
+     <context merge-by="type" parent="AbstractCoupon" type="SingleCodeCoupon" component="editor-area">
         <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea" xmlns:y="http://www.hybris.com/cockpit/config/hybris">
             <editorArea:essentials>
                 <editorArea:essentialSection description="hmc.text.singlecodecoupon.common" name="text.couponcode.label">
@@ -75,6 +75,101 @@
                 <editorArea:section name="hmc.section.copies">
                     <editorArea:attribute qualifier="synchronizedCopies" />
                     <editorArea:attribute qualifier="synchronizationSources" />
+                </editorArea:section>
+            </editorArea:tab>
+        </editorArea:editorArea>
+    </context>
+
+    <context merge-by="module" parent="AbstractCoupon" type="MultiCodeCoupon" component="editor-area">
+        <editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea" xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+            <editorArea:essentials>
+                <editorArea:essentialSection description="hmc.text.multicodecoupon.common" name="text.couponcode.label">
+                    <editorArea:attribute qualifier="couponId" />
+                    <editorArea:attribute qualifier="name" />
+                    <editorArea:attribute qualifier="codeGenerationConfiguration" />
+                </editorArea:essentialSection>
+            </editorArea:essentials>
+            <editorArea:tab name="tab.configuration.coupon">
+                <editorArea:section name="sec.configuration.coupon.validity" position="0">
+                    <editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="startDate">
+                        <editorArea:editor-parameter>
+                            <editorArea:name>timeZoneReadOnly</editorArea:name>
+                            <editorArea:value>false</editorArea:value>
+                        </editorArea:editor-parameter>
+                        <editorArea:editor-parameter>
+                            <editorArea:name>selectedTimeZone</editorArea:name>
+                            <editorArea:value>GMT-7</editorArea:value>
+                        </editorArea:editor-parameter>
+                        <editorArea:editor-parameter>
+                            <editorArea:name>displayedTimeZones</editorArea:name>
+                            <editorArea:value>GMT-7,GMT-8</editorArea:value>
+                        </editorArea:editor-parameter>
+                        <editorArea:editor-parameter>
+                            <name>dateFormat</name>
+                            <value>MMM dd, yyyy h:mm a</value>
+                        </editorArea:editor-parameter>
+                    </editorArea:attribute>
+                    <editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="endDate">
+                        <editorArea:editor-parameter>
+                            <editorArea:name>timeZoneReadOnly</editorArea:name>
+                            <editorArea:value>false</editorArea:value>
+                        </editorArea:editor-parameter>
+                        <editorArea:editor-parameter>
+                            <editorArea:name>selectedTimeZone</editorArea:name>
+                            <editorArea:value>GMT-7</editorArea:value>
+                        </editorArea:editor-parameter>
+                        <editorArea:editor-parameter>
+                            <editorArea:name>displayedTimeZones</editorArea:name>
+                            <editorArea:value>GMT-7,GMT-8</editorArea:value>
+                        </editorArea:editor-parameter>
+                        <editorArea:editor-parameter>
+                            <name>dateFormat</name>
+                            <value>MMM dd, yyyy h:mm a</value>
+                        </editorArea:editor-parameter>
+                    </editorArea:attribute>
+                    <editorArea:attribute qualifier="active" />
+                </editorArea:section>
+                <editorArea:section name="text.generatedcouponcode.label" position="1">
+                    <editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="generatedCodes" editor="de.hybris.platform.coupon.backoffice.cockpitng.editor.defaultinseteditor" readonly="true">
+                        <editorArea:editor-parameter>
+                            <editorArea:name>editor</editorArea:name>
+                            <editorArea:value>com.hybris.cockpitng.editor.couponcodelisteditor</editorArea:value>
+                        </editorArea:editor-parameter>
+                        <editorArea:editor-parameter>
+                            <editorArea:name>insetBean</editorArea:name>
+                            <editorArea:value>multiCodeCouponGeneratorInset</editorArea:value>
+                        </editorArea:editor-parameter>
+                        <editorArea:editor-parameter>
+                            <editorArea:name>insertMode</editorArea:name>
+                            <editorArea:value>after</editorArea:value>
+                        </editorArea:editor-parameter>
+                        <editorArea:editor-parameter>
+                            <editorArea:name>isNestedObjectCreationDisabled</editorArea:name>
+                            <editorArea:value>true</editorArea:value>
+                        </editorArea:editor-parameter>
+                    </editorArea:attribute>
+                </editorArea:section>
+            </editorArea:tab>
+            <editorArea:tab name="hmc.administration" position="99">
+                <editorArea:section name="hmc.section.metadata">
+                    <editorArea:attribute qualifier="pk" />
+                    <editorArea:attribute qualifier="itemtype" />
+                    <editorArea:attribute qualifier="creationtime" />
+                    <editorArea:attribute qualifier="modifiedtime" />
+                    <editorArea:attribute qualifier="owner" />
+                </editorArea:section>
+                <editorArea:section name="hmc.section.saved.values">
+                    <editorArea:attribute qualifier="savedValues" />
+                </editorArea:section>
+                <editorArea:customSection name="hmc.unbound" spring-bean="unboundSectionRenderer" />
+                <editorArea:section name="hmc.section.copies">
+                    <editorArea:attribute qualifier="synchronizedCopies" />
+                    <editorArea:attribute qualifier="synchronizationSources" />
+                </editorArea:section>
+                <editorArea:section name="hmc_typenode_coupon_code_generation_config">
+                    <editorArea:attribute qualifier="alphabet" readonly="true" />
+                    <editorArea:attribute qualifier="signature" readonly="true" />
+                    <editorArea:attribute qualifier="couponCodeNumber" readonly="true" />
                 </editorArea:section>
             </editorArea:tab>
         </editorArea:editorArea>
