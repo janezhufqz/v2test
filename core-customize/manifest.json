@@ -153,6 +153,10 @@
         {
             "key": "log4j2.logger.sapcpicustomerexchange.appenderRef.stdout.ref",
             "value": "STDOUT"
+        },
+        {
+            "key":"sapcpiproductexchange.sapCpiProductFeaturePersistenceHook.collectionDelimiter",
+            "value":","
         }
     ],
     "storefrontAddons": [
