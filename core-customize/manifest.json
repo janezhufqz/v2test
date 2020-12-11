@@ -158,6 +158,10 @@
         {
             "key":"sapcpiproductexchange.sapCpiProductFeaturePersistenceHook.collectionDelimiter",
             "value":","
+        },
+        {
+            "key":"initialpassword.admin",
+            "value":"nimda"
         }
     ],
     "storefrontAddons": [
