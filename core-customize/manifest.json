@@ -4,7 +4,7 @@
 "enableImageProcessingService": true,
     "extensions": [
          "cloudmediaconversion",
-        "mediaconversionbackoffice"
+        "mediaconversionbackoffice",
         "acceleratorservices",
         "ordermanagementaddon",
         "orderselfserviceaddon",
