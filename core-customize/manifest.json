@@ -72,7 +72,8 @@
         "sapcoretest",
         "sapcustomerb2b",
         "sapcustomerb2c",
-        "payment"
+        "payment",
+        "mediaconversion"
     ],
     "properties": [
         {
@@ -162,6 +163,10 @@
         {
             "key":"initialpassword.admin",
             "value":"nimda"
+        },
+        {
+            "key":"media.legacy.prettyURL"
+            "value":"true"
         }
     ],
     "storefrontAddons": [
