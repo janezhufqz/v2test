@@ -141,8 +141,7 @@
                 "sapcoreaddon",
                 "customerticketingaddon",
                 "hybrisanalyticsaddon",
-                "eventtrackingwsaddon",
-                "easypay4addon"
+                "eventtrackingwsaddon"
             ],
             "storefronts": ["yacceleratorstorefront", "yb2bacceleratorstorefront"],
             "template": "yacceleratorstorefront"
