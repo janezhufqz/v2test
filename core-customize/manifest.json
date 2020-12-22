@@ -168,7 +168,7 @@
             "value":"nimda"
         },
         {
-            "key":"media.legacy.prettyURL"
+            "key":"media.legacy.prettyURL",
             "value":"true"
         }
     ],
