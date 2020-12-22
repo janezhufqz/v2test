@@ -1,7 +1,10 @@
 {
     "commerceSuiteVersion": "1905",
     "useCloudExtensionPack": true,
+"enableImageProcessingService": true,
     "extensions": [
+         "cloudmediaconversion",
+        "mediaconversionbackoffice"
         "acceleratorservices",
         "ordermanagementaddon",
         "orderselfserviceaddon",
