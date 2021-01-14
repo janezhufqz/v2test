@@ -1,10 +1,7 @@
 {
     "commerceSuiteVersion": "1905",
     "useCloudExtensionPack": true,
-"enableImageProcessingService": true,
     "extensions": [
-         "cloudmediaconversion",
-        "mediaconversionbackoffice",
         "acceleratorservices",
         "ordermanagementaddon",
         "orderselfserviceaddon",
@@ -75,8 +72,7 @@
         "sapcoretest",
         "sapcustomerb2b",
         "sapcustomerb2c",
-        "payment",
-        "mediaconversion"
+        "payment"
     ],
     "properties": [
         {
@@ -166,10 +162,6 @@
         {
             "key":"initialpassword.admin",
             "value":"nimda"
-        },
-        {
-            "key":"media.legacy.prettyURL",
-            "value":"true"
         }
     ],
     "storefrontAddons": [
