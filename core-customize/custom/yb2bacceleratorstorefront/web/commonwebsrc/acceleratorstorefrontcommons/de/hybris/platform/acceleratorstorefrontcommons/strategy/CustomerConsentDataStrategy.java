@@ -8,7 +8,7 @@ package de.hybris.platform.acceleratorstorefrontcommons.strategy;
  *
  * Deprecated since 2005, please use {@link de.hybris.platform.commercefacades.consent.CustomerConsentDataStrategy}
  */
-@Deprecated(since = "1905")
+@Deprecated(since = "2005")
 public interface CustomerConsentDataStrategy extends de.hybris.platform.commercefacades.consent.CustomerConsentDataStrategy
 {
 }

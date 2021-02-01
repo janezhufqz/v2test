@@ -55,7 +55,7 @@
 	</security:http>
 
 	<!-- Ignores url(s) that match paths specified in the set -->
-	<bean id="excludeUrlRequestMatcher" class="de.hybris.platform.yb2bacceleratorstorefront.security.ExcludeUrlRequestMatcher">
+	<bean id="excludeUrlRequestMatcher" class="de.hybris.com.yb2bacceleratorstorefront.security.ExcludeUrlRequestMatcher">
 		<property name="excludeUrlSet" ref="excludeUrlSet"/>
 		<property name="pathMatcher" ref="defaultPathMatcher"/>
 	</bean>
@@ -118,19 +118,19 @@
 	</security:authentication-manager>
 
 	<bean id="acceleratorAuthenticationProvider" parent="abstractAcceleratorAuthenticationProvider" 
-			class="de.hybris.platform.yb2bacceleratorstorefront.security.AcceleratorAuthenticationProvider">
+			class="de.hybris.com.yb2bacceleratorstorefront.security.AcceleratorAuthenticationProvider">
 		<property name="adminGroup" value="ROLE_ADMINGROUP"/>
 	</bean>
 
 	<bean id="coreUserDetailsService" class="de.hybris.platform.spring.security.CoreUserDetailsService"  />
 
-	<bean id="guidCookieStrategy" class="de.hybris.platform.yb2bacceleratorstorefront.security.impl.DefaultGUIDCookieStrategy"
+	<bean id="guidCookieStrategy" class="de.hybris.com.yb2bacceleratorstorefront.security.impl.DefaultGUIDCookieStrategy"
 	      >
 		<property name="cookieGenerator" ref="guidCookieGenerator" />
 	</bean>
 	
 	<alias name="defaultGuestCheckoutCartCleanStrategy" alias="guestCheckoutCartCleanStrategy"/>
-	<bean id="defaultGuestCheckoutCartCleanStrategy" class="de.hybris.platform.yb2bacceleratorstorefront.security.impl.DefaultGuestCheckoutCartCleanStrategy">
+	<bean id="defaultGuestCheckoutCartCleanStrategy" class="de.hybris.com.yb2bacceleratorstorefront.security.impl.DefaultGuestCheckoutCartCleanStrategy">
 		<property name="skipPatterns">
 			<list>
 				<value>#{configurationService.configuration.getProperty('yb2bacceleratorstorefront.checkout.url.pattern')}</value>
@@ -144,27 +144,27 @@
 	</bean>
 
 	<alias name="defaultGuidCookieGenerator" alias="guidCookieGenerator"/>
-	<bean id="defaultGuidCookieGenerator" class="de.hybris.platform.yb2bacceleratorstorefront.security.cookie.EnhancedCookieGenerator" >
+	<bean id="defaultGuidCookieGenerator" class="de.hybris.com.yb2bacceleratorstorefront.security.cookie.EnhancedCookieGenerator" >
 		<property name="cookieSecure" value="true" />
 		<property name="cookieName" value="acceleratorSecureGUID" />
 		<property name="httpOnly" value="true"/>
 	</bean>
 
     <alias name="defaultAutoLoginStrategy" alias="autoLoginStrategy"/>
-    <bean id="defaultAutoLoginStrategy" class="de.hybris.platform.yb2bacceleratorstorefront.security.impl.DefaultAutoLoginStrategy" >
+    <bean id="defaultAutoLoginStrategy" class="de.hybris.com.yb2bacceleratorstorefront.security.impl.DefaultAutoLoginStrategy" >
 		<property name="authenticationManager" ref="authenticationManager" />
 		<property name="customerFacade" ref="customerFacade" />
 		<property name="guidCookieStrategy" ref="guidCookieStrategy"/>
 		<property name="rememberMeServices" ref="rememberMeServices"/>
 	</bean>
 
-	<bean id="httpSessionRequestCache" class="de.hybris.platform.yb2bacceleratorstorefront.security.impl.WebHttpSessionRequestCache">
+	<bean id="httpSessionRequestCache" class="de.hybris.com.yb2bacceleratorstorefront.security.impl.WebHttpSessionRequestCache">
         <property name="requestMatcher" ref="excludeRedirectUrlRequestMatcher" />
 		<property name="sessionService" ref="sessionService"/>
 	</bean>
 
 	<!-- Ignores url(s) that match paths specified in the set -->
-	<bean id="excludeRedirectUrlRequestMatcher" class="de.hybris.platform.yb2bacceleratorstorefront.security.ExcludeUrlRequestMatcher">
+	<bean id="excludeRedirectUrlRequestMatcher" class="de.hybris.com.yb2bacceleratorstorefront.security.ExcludeUrlRequestMatcher">
 	<property name="excludeUrlSet">
 		<set>
 			<value>/guest/*</value>
@@ -180,7 +180,7 @@
 
 	<!-- Login Success Handlers -->
 
-	<bean id="loginGuidAuthenticationSuccessHandler" class="de.hybris.platform.yb2bacceleratorstorefront.security.GUIDAuthenticationSuccessHandler" >
+	<bean id="loginGuidAuthenticationSuccessHandler" class="de.hybris.com.yb2bacceleratorstorefront.security.GUIDAuthenticationSuccessHandler" >
 		<property name="authenticationSuccessHandler" ref="loginAuthenticationSuccessHandler" />
 		<property name="guidCookieStrategy" ref="guidCookieStrategy" />
 	</bean>
@@ -212,7 +212,7 @@
 		</property>
 	</bean>
 
-	<bean id="loginCheckoutGuidAuthenticationSuccessHandler" class="de.hybris.platform.yb2bacceleratorstorefront.security.GUIDAuthenticationSuccessHandler" >
+	<bean id="loginCheckoutGuidAuthenticationSuccessHandler" class="de.hybris.com.yb2bacceleratorstorefront.security.GUIDAuthenticationSuccessHandler" >
 		<property name="authenticationSuccessHandler" ref="loginCheckoutAuthenticationSuccessHandler" />
 		<property name="guidCookieStrategy" ref="guidCookieStrategy" />
 	</bean>
@@ -244,17 +244,17 @@
 	</bean>
 
 	<alias name="defaultCommerceRedirectStrategy" alias="commerceRedirectStrategy"/>
-	<bean name="defaultCommerceRedirectStrategy" class="de.hybris.platform.yb2bacceleratorstorefront.security.impl.DefaultCommerceRedirectStrategy" parent="redirectStrategy">
+	<bean name="defaultCommerceRedirectStrategy" class="de.hybris.com.yb2bacceleratorstorefront.security.impl.DefaultCommerceRedirectStrategy" parent="redirectStrategy">
 		<property name="checkoutFlowFacade" ref="checkoutFlowFacade"/>
 		<property name="expressTargetUrl" value="/checkout/multi/express"/>
    </bean>
 
-	<bean id="loginAuthenticationFailureHandler" class="de.hybris.platform.yb2bacceleratorstorefront.security.LoginAuthenticationFailureHandler" >
+	<bean id="loginAuthenticationFailureHandler" class="de.hybris.com.yb2bacceleratorstorefront.security.LoginAuthenticationFailureHandler" >
         <property name="bruteForceAttackCounter" ref="bruteForceAttackCounter" />
 		<property name="defaultFailureUrl" value="/login?error=true"/>
 	</bean>
 
-	<bean id="loginCheckoutAuthenticationFailureHandler" class="de.hybris.platform.yb2bacceleratorstorefront.security.LoginAuthenticationFailureHandler" >
+	<bean id="loginCheckoutAuthenticationFailureHandler" class="de.hybris.com.yb2bacceleratorstorefront.security.LoginAuthenticationFailureHandler" >
         <property name="bruteForceAttackCounter" ref="bruteForceAttackCounter" />
 		<property name="defaultFailureUrl" value="/login/checkout?error=true"/>
 	</bean>
@@ -296,7 +296,7 @@
 
 	
 	<alias name="defaultRememberMeServices" alias="rememberMeServices"/>
-	<bean id="defaultRememberMeServices" class="de.hybris.platform.yb2bacceleratorstorefront.security.AcceleratorRememberMeServices" >
+	<bean id="defaultRememberMeServices" class="de.hybris.com.yb2bacceleratorstorefront.security.AcceleratorRememberMeServices" >
 		<constructor-arg name="key" value="yb2bacceleratorstorefront" />
 		<constructor-arg name="userDetailsService" ref="originalUidUserDetailsService" />
 		<property name="cookieName" value="yb2bacceleratorstorefrontRememberMe" />
@@ -324,7 +324,7 @@
 	<util:list id="csrfAllowedUrlPatternsList" />
 	
 	<alias name="defaultCsrfProtectionMatcher" alias="csrfProtectionMatcher"/>
-	<bean id="defaultCsrfProtectionMatcher" class="de.hybris.platform.yb2bacceleratorstorefront.security.CsrfProtectionMatcher">
+	<bean id="defaultCsrfProtectionMatcher" class="de.hybris.com.yb2bacceleratorstorefront.security.CsrfProtectionMatcher">
 		<property name="csrfAllowedUrlPatterns" ref="csrfAllowedUrlPatternsList"/>
 	</bean>
 

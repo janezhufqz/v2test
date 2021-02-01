@@ -22,7 +22,7 @@
 	<bean id="defaultRequestContextData" class="de.hybris.platform.acceleratorservices.data.RequestContextData" scope="request"/>
 
 	<!-- Converter that creates the CMS Restriction Data -->
-	<bean id="requestContextRestrictionConverter" class="de.hybris.platform.yb2bacceleratorstorefront.util.RequestContextRestrictionConverter" >
+	<bean id="requestContextRestrictionConverter" class="de.hybris.com.yb2bacceleratorstorefront.util.RequestContextRestrictionConverter" >
 		<property name="cmsDataFactory" ref="cmsDataFactory"/>
 	</bean>
 
@@ -30,13 +30,13 @@
 	<!-- CMS Component Renderers -->
 
 	<alias name="defaultCMSLinkComponentRenderer" alias="cmsLinkComponentRenderer"/>
-	<bean id="defaultCMSLinkComponentRenderer" class="de.hybris.platform.yb2bacceleratorstorefront.renderer.CMSLinkComponentRenderer" >
+	<bean id="defaultCMSLinkComponentRenderer" class="de.hybris.com.yb2bacceleratorstorefront.renderer.CMSLinkComponentRenderer" >
 		<property name="categoryUrlConverter" ref="categoryUrlConverter"/>
 		<property name="productUrlConverter" ref="productUrlConverter"/>
 	</bean>
 
 	<alias name="defaultImageMapComponentRenderer" alias="imageMapComponentRenderer"/>
-	<bean id="defaultImageMapComponentRenderer" class="de.hybris.platform.yb2bacceleratorstorefront.renderer.ImageMapComponentRenderer" />
+	<bean id="defaultImageMapComponentRenderer" class="de.hybris.com.yb2bacceleratorstorefront.renderer.ImageMapComponentRenderer" />
 
 
 	<alias alias="cmsComponentRendererRegistry" name="acceleratorCMSComponentRendererRegistry" />

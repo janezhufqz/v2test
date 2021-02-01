@@ -80,11 +80,11 @@
                                             <c:choose>
                                                 <c:when test="${not empty customer.profilePicture}">
                                                     <a href="<c:out value='${emulateCustomerUrl}${customer.uid}'/>" class="responsive-table-link">
-                                                        <img src="<c:out value='${customer.profilePicture.url}'/>" class="img-circle img-profile-thumbnail" title="<spring:theme code="text.asm.customerList.picture.alt" />"/>
+                                                        <img src="<c:out value='${customer.profilePicture.url}'/>" class="img-circle img-profile-thumbnail" title="<spring:theme code="text.asm.customerList.picture.alt" />" alt="<spring:theme code="text.asm.customerList.picture.alt"/>" />
                                                     </a>
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <a href="<c:out value='${emulateCustomerUrl}${customer.uid}'/>" class="responsive-table-link default-pic" title="<spring:theme code="text.asm.customerList.picture.alt"/>">
+                                                    <a href="<c:out value='${emulateCustomerUrl}${customer.uid}'/>" class="responsive-table-link default-pic" title="<spring:theme code="text.asm.customerList.picture.alt"/>" alt="<spring:theme code="text.asm.customerList.picture.alt"/>" >
                                                     </a>
                                                 </c:otherwise>
                                             </c:choose>

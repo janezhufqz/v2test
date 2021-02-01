@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testclasses><customoutboundservices><testclass>com.customoutboundservices.jalo.CustomoutboundservicesTest</testclass><testclass>com.customoutboundservices.service.impl.DefaultCustomoutboundservicesServiceIntegrationTest</testclass></customoutboundservices></testclasses>

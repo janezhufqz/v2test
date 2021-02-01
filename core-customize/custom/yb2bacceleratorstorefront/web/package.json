@@ -1,5 +1,5 @@
 {
-  "name": "yb2bacceleratorstorefront",
+  "name": "yb2bacceleratorstorefront-web",
   "version": "0.0.0",
   "description": "grunt config for the accelerator",
   "private": true,

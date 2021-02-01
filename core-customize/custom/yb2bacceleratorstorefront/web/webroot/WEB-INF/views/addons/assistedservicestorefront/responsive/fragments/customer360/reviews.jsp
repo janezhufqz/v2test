@@ -32,7 +32,7 @@
                     <c:url value="${reviewData.productUrl}" var="productUrl" />
                     <tr>
                         <td data-th="Item"><a title="<c:out value='${reviewData.productName}'/>" href="${productUrl}" class="responsive-table-link text-nowrap"><c:out value="${reviewData.productName}, SKU: ${reviewData.SKUNumber}" /></a></td>
-                        <td data-th="Date / Status" class="break-word"><span><fmt:formatDate value="${reviewData.created}" pattern="dd-MM-YYYY" />&nbsp;</span>/&nbsp;<spring:theme code="${reviewData.reviewStatus}" htmlEscape="true"/> </td>
+                        <td data-th="Date / Status" class="break-word"><span><fmt:formatDate value="${reviewData.created}" pattern="dd-MM-yyyy" />&nbsp;</span>/&nbsp;<spring:theme code="${reviewData.reviewStatus}" htmlEscape="true"/> </td>
                         <td data-th="Rate" data-text="${reviewData.rating}" style="min-width: 130px;">
                             <div class="rating">
                                 <div class="rating-stars pull-left js-ratingCalc " data-rating='{"rating":"${reviewData.rating}","total":5}' >

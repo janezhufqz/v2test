@@ -31,6 +31,7 @@ import de.hybris.platform.customerticketingfacades.data.TicketData;
 import de.hybris.platform.ticket.service.TicketException;
 import de.hybris.platform.ticket.service.UnsupportedAttachmentException;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -270,7 +271,7 @@ public class AccountSupportTicketsPageController extends AbstractSearchPageContr
 
 			model.addAttribute(CustomerticketingaddonConstants.SUPPORT_TICKET_DATA, ticketData);
 		}
-		catch (final Exception e)
+		catch (final TicketException | UnsupportedEncodingException e)
 		{
 			LOG.error("Attempted to load ticket details that does not exist or is not visible", e);
 			GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.ERROR_MESSAGES_HOLDER,

@@ -14,20 +14,19 @@ import de.hybris.platform.assistedservicefacades.AssistedServiceFacade;
 import de.hybris.platform.assistedservicefacades.customer360.AdditionalInformationFrameworkFacade;
 import de.hybris.platform.assistedservicefacades.customer360.Fragment;
 import de.hybris.platform.assistedservicestorefront.constants.AssistedservicestorefrontConstants;
+import de.hybris.platform.util.Config;
 
 import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
-import de.hybris.platform.util.Config;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import org.apache.commons.lang.StringUtils;
 
 
 
@@ -84,7 +83,8 @@ public class AdditionalInformationController
 	 */
 	@RequestMapping(value = "/customer360section", method = RequestMethod.GET)
 	public String getCustomer360Section(final Model model,
-		@RequestParam("sectionId") final String sectionId, final HttpServletResponse response)
+			@RequestParam("sectionId")
+			final String sectionId, final HttpServletResponse response)
 	{
 		if (!assistedServiceFacade.isAssistedServiceAgentLoggedIn())
 		{
@@ -101,16 +101,47 @@ public class AdditionalInformationController
 	}
 
 	/**
-	 * Method for getting fragment's details, data and JSP renderer as response on GET or POSTs request
+	 * Method for getting fragment's details, data and JSP renderer as response on GET request
 	 *
 	 * @param model
 	 * @param allRequestParams
 	 *           all request parameters
 	 * @return fragment with populated data and renderer
 	 */
-	@RequestMapping(value = "/customer360Fragment", method = { RequestMethod.POST, RequestMethod.GET })
+	@RequestMapping(value = "/customer360Fragment", method =
+	{ RequestMethod.GET })
 	public String getCustomer360Fragment(final Model model,
-		 @RequestParam final Map<String, String> allRequestParams, final HttpServletResponse response)
+			@RequestParam
+			final Map<String, String> allRequestParams, final HttpServletResponse response)
+	{
+		return customer360Fragment(model, allRequestParams, response);
+	}
+
+	/**
+	 * Method for getting fragment's details, data and JSP renderer as response on POSTs request
+	 *
+	 * @param model
+	 * @param allRequestParams
+	 *           all request parameters
+	 * @return fragment with populated data and renderer
+	 */
+	@RequestMapping(value = "/customer360Fragment", method =
+	{ RequestMethod.POST })
+	public String customer360FragmentPost(final Model model,
+			@RequestParam
+			final Map<String, String> allRequestParams, final HttpServletResponse response)
+	{
+		return customer360Fragment(model, allRequestParams, response);
+	}
+
+	/**
+	 * @param model
+	 * @param allRequestParams
+	 * @param response
+	 * @return
+	 */
+	private String customer360Fragment(final Model model, final Map<String, String> allRequestParams,
+			final HttpServletResponse response)
 	{
 		if (!assistedServiceFacade.isAssistedServiceAgentLoggedIn())
 		{

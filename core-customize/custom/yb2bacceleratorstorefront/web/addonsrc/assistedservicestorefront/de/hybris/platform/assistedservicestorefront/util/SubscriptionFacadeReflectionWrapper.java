@@ -10,10 +10,11 @@
  */
 package de.hybris.platform.assistedservicestorefront.util;
 
+import de.hybris.platform.assistedserviceservices.exception.AssistedServiceException;
+
 import java.lang.reflect.Method;
 import java.util.Map;
 
-import de.hybris.platform.assistedserviceservices.exception.AssistedServiceException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,15 +40,10 @@ public class SubscriptionFacadeReflectionWrapper
 	{
 		try
 		{
-			Object subscriptionFacadeObject = null;
-
-			subscriptionFacadeObject = applicationContext.getBean(SUBSCRIPTION_FACADE_BEAN_NAME);
-			if (subscriptionFacadeObject != null)
-			{
-				final Class<?> c = Class.forName(SUBSCRIPTION_FACADE_CLASS_NAME);
-				final Method updateProfileMethod = c.getDeclaredMethod(SUBSCRIPTION_FACADE_UPDATEPROFILE_METHOD, Map.class);
-				updateProfileMethod.invoke(subscriptionFacadeObject, paramMap);
-			}
+			final Object subscriptionFacadeObject = applicationContext.getBean(SUBSCRIPTION_FACADE_BEAN_NAME);
+			final Class<?> c = Class.forName(SUBSCRIPTION_FACADE_CLASS_NAME);
+			final Method updateProfileMethod = c.getDeclaredMethod(SUBSCRIPTION_FACADE_UPDATEPROFILE_METHOD, Map.class);
+			updateProfileMethod.invoke(subscriptionFacadeObject, paramMap);
 		}
 		catch (final BeansException e)
 		{

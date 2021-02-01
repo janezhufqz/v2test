@@ -1715,9 +1715,9 @@ select[multiple]#_asm .ASM-input {
 }
 .asmAutoComplete .ui-state-active {
     background: none;
-    color: #000;
-    margin: 0;
-    border: 0;
+    color: #007fff !important;
+    margin: 0 !important;
+    border: 0 !important;
 }
 #_asm .asmAutoComplete .ui-autocomplete .ui-menu-item a, .asmAutoComplete .ui-autocomplete .ui-menu-item a:hover {
     border-bottom: 1px solid #fff;

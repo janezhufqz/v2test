@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Required;
  *
  * Deprecated, please use {@link de.hybris.platform.commercefacades.consent.impl.DefaultCustomerConsentDataStrategy}
  */
-@Deprecated(since = "1905")
+@Deprecated(since = "2005")
 public class DefaultCustomerConsentDataStrategy implements CustomerConsentDataStrategy
 {
     private de.hybris.platform.commercefacades.consent.CustomerConsentDataStrategy customerConsentDataStrategy;

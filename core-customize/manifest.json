@@ -1,6 +1,11 @@
 {
-    "commerceSuiteVersion": "1905",
-    "useCloudExtensionPack": true,
+    "commerceSuiteVersion": "2005",
+    "extensionPacks": [
+        {
+            "name": "hybris-commerce-integrations",
+            "version": "2005.2"
+        }
+    ],
     "extensions": [
         "acceleratorservices",
         "ordermanagementaddon",
@@ -72,7 +77,8 @@
         "sapcoretest",
         "sapcustomerb2b",
         "sapcustomerb2c",
-        "payment"
+        "payment",
+        "customoutboundservices"
     ],
     "properties": [
         {
@@ -156,12 +162,16 @@
             "value": "STDOUT"
         },
         {
-            "key":"sapcpiproductexchange.sapCpiProductFeaturePersistenceHook.collectionDelimiter",
-            "value":","
+            "key": "log4j2.logger.customoutboundservices.name",
+            "value": "com.customoutboundservices"
         },
         {
-            "key":"initialpassword.admin",
-            "value":"nimda"
+            "key": "log4j2.logger.customoutboundservices.level",
+            "value": "DEBUG"
+        },
+        {
+            "key": "log4j2.logger.customoutboundservices.appenderRef.stdout.ref",
+            "value": "STDOUT"
         }
     ],
     "storefrontAddons": [

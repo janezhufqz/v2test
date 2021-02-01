@@ -127,6 +127,7 @@ public class AssistedServiceFilter extends OncePerRequestFilter
 
 		buf.append("; Secure");
 		buf.append("; HttpOnly");
+		buf.append("; SameSite=Lax");
 		return buf.toString();
 	}
 

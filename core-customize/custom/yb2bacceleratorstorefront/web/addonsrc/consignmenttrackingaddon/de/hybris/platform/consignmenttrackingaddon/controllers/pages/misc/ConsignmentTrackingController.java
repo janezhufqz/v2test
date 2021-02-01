@@ -34,6 +34,9 @@ public class ConsignmentTrackingController
 	private static final String CONSIGNMENT_CODE_PATH_VARIABLE_PATTERN = "/{consignmentCode:.*}";
 	private static final String ORDER_CODE_PATH_VARIABLE_PATTERN = "/{orderCode:.*}";
 
+	private static final int STATUS_ARRIVED = 100;
+	private static final int STATUS_SHIPPED = 50;
+
 	@Resource(name = "consignmentTrackingFacade")
 	private ConsignmentTrackingFacade consignmentTrackingFacade;
 
@@ -66,7 +69,7 @@ public class ConsignmentTrackingController
 		{ ConsignmentStatus.CANCELLED, ConsignmentStatus.DELIVERY_COMPLETED, ConsignmentStatus.DELIVERY_REJECTED };
 		if (ArrayUtils.contains(endStatuses, consignment.getStatus()))
 		{
-			return 100;
+			return STATUS_ARRIVED;
 		}
 
 		// statuses during shipped to finished
@@ -74,7 +77,7 @@ public class ConsignmentTrackingController
 		{ ConsignmentStatus.SHIPPED, ConsignmentStatus.IN_TRANSIT, ConsignmentStatus.DELIVERING };
 		if (ArrayUtils.contains(deliveringStatuses, consignment.getStatus()))
 		{
-			return 50;
+			return STATUS_SHIPPED;
 		}
 
 		// between ordered and shipped
