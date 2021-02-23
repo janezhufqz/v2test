@@ -1,0 +1,24 @@
+{
+    "dataHubVersion" : "2005.8",
+    "extensions" : [
+        "sapcoreconfiguration",
+        "sapidocintegration",
+        "sapidocoutboundadapter",
+
+        "sapcustomer-canonical",
+        "sapcustomer-raw",
+        "sapcustomer-target",
+
+        "party-canonical",
+
+        "saperpproduct-canonical",
+        "saperpproduct-raw",
+        "saperpproduct-target",
+
+        "product-canonical",
+
+        "saporder-canonical",
+        "saporder-raw",
+        "saporder-target"
+    ]
+}
