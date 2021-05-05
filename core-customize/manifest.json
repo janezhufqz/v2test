@@ -72,6 +72,8 @@
         "sapcpicustomerexchangeb2b",
         "saporderexchangebackoffice",
         "sapcpiproductexchange",
+        "sapcpiorderexchange",
+        "sapcpiorderexchangeb2b",
         "sapcoretest",
         "sapcustomerb2b",
         "sapcustomerb2c",
