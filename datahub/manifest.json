@@ -1,5 +1,11 @@
 {
     "dataHubVersion": "2011.8",
+    "extensionPacks" : [
+	{
+		"name" : "hybris-datahub-integration-suite",
+		"version" : "2102.0"
+	}
+	],
     "extensions": [
         "sapcoreconfiguration",
         "sapidocintegration",
