@@ -3,7 +3,7 @@
     "extensionPacks": [
         {
             "name": "hybris-commerce-integrations",
-            "version": "2005.3"
+            "version": "2005.4"
         }
     ],
     "extensions": [
@@ -77,8 +77,7 @@
         "sapcoretest",
         "sapcustomerb2b",
         "sapcustomerb2c",
-        "payment",
-        "customoutboundservices"
+        "payment"
     ],
     "properties": [
         {
