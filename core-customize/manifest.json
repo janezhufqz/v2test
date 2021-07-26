@@ -1,5 +1,6 @@
 {
-    "commerceSuiteVersion": "2011",
+    //"commerceSuiteVersion": "2011",
+    "commerceSuiteArtifact": "de.hybris.maintenance:patch-RC:2011-20210715.143003-393",
     "extensionPacks": [
         {
             "name": "hybris-commerce-integrations",
@@ -82,7 +83,16 @@
         "datahubadapter",
         "datahubclient",
         "datahubbackoffice",
-        "dataimportcommons"
+        "dataimportcommons",
+        "merchandisingsmartedit",
+        "personalizationsmartedit",
+        "personalizationpromotionssmartedit",
+        "personalizationsearchsmartedit",
+        "cmssmartedit",
+        "cmssmarteditwebservices",
+        "smartedit",
+        "smarteditaddon",
+        "smarteditwebservices",
     ],
     "properties": [
         {
@@ -176,11 +186,20 @@
         {
             "key": "log4j2.logger.sapcpicustomerexchange.appenderRef.stdout.ref",
             "value": "STDOUT"
-        }
+        },
+        {
+    "key": "npmancillary.run.npminstall",
+    "value": "true"
+}
     ],
     "storefrontAddons": [
         {
             "addon": "commerceorgsamplesaddon",
+            "storefront": "yacceleratorstorefront",
+            "template": "yacceleratorstorefront"
+        },
+        {
+            "addon":"smarteditaddon",
             "storefront": "yacceleratorstorefront",
             "template": "yacceleratorstorefront"
         },
@@ -300,7 +319,39 @@
                 {
                     "name": "odata2webservices",
                     "contextPath": "/odata2webservices"
-                }
+                },
+                {
+          "name": "smartedit",
+          "contextPath": "/smartedit"
+        },
+        {
+          "name": "cmssmartedit",
+          "contextPath": "/cmssmartedit"
+        },
+        {
+          "name": "smarteditwebservices",
+          "contextPath": "/smarteditwebservices"
+        },
+        {
+          "name": "cmssmarteditwebservices",
+          "contextPath": "/cmssmarteditwebservices"
+        },
+        {
+          "name": "personalizationsmartedit",
+          "contextPath": "/personalizationsmartedit"
+        },
+        {
+          "name": "personalizationpromotionssmartedit",
+          "contextPath": "/personalizationpromotionssmartedit"
+        },
+                        {
+          "name": "personalizationsearchsmartedit",
+          "contextPath": "/personalizationsearchsmartedit"
+        },
+                        {
+          "name": "merchandisingsmartedit",
+          "contextPath": "/merchandisingsmartedit"
+        }
             ]
         },
         {
