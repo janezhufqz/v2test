@@ -91,7 +91,7 @@
         "cmssmarteditwebservices",
         "smartedit",
         "smarteditaddon",
-        "smarteditwebservices",
+        "smarteditwebservices"
     ],
     "properties": [
         {
