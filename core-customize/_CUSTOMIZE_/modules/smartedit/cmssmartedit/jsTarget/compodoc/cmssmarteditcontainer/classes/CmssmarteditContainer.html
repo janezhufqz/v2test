@@ -1,0 +1,652 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Cms Smartedit Container Docs</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Cms Smartedit Container Docs</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>CmssmarteditContainer</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>compodocs/cmssmarteditContainer/legacyCmssmarteditcontainer.ts</code>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { doImport as forImports } from &#x27;./forcedImports&#x27;;
+forImports();
+import { deprecate } from &#x27;./deprecate&#x27;;
+deprecate();
+
+import {
+    moduleUtils,
+    CATALOG_DETAILS_COLUMNS,
+    InViewElementObserver,
+    IFeatureService,
+    IPerspectiveService,
+    IToolbarServiceFactory,
+    SeModule,
+    SeRouteService,
+    SystemEventService,
+    ToolbarDropDownPosition,
+    ToolbarItemType,
+    ToolbarSection
+} from &#x27;smarteditcommons&#x27;;
+
+import {
+    AssetsService,
+    CmsResourceLocationsModule,
+    ComponentService,
+    CMSModesService
+} from &#x27;cmscommons&#x27;;
+import {
+    trashedPageListControllerModule,
+    TrashedPageListController
+} from &#x27;cmssmarteditcontainer/components/pages/trashedPageList/TrashedPageListController&#x27;;
+import { CmsSmarteditComponentsModule } from &#x27;cmssmarteditcontainer/components/cmsSmarteditComponentsModule&#x27;;
+import { CmsSmarteditServicesModule } from &#x27;cmssmarteditcontainer/services/cmsSmarteditServicesModule&#x27;;
+import { NavigationManagementPageController } from &#x27;cmssmarteditcontainer/components/navigation/NavigationManagementPageController&#x27;;
+import { ManagePageVersionService } from &#x27;./components/versioning/services/ManagePageVersionService&#x27;;
+import { RollbackPageVersionService } from &#x27;./components/versioning/services/RollbackPageVersionService&#x27;;
+import { WorkflowFacade } from &#x27;./components/workflow/facades/WorkflowFacade&#x27;;
+import { CmsDragAndDropService, CmsDragAndDropServiceModule } from &#x27;./components/dragAndDrop&#x27;;
+import {
+    PRODUCT_CATEGORY_RESOURCE_BASE_URI,
+    PRODUCT_CATEGORY_RESOURCE_URI,
+    PRODUCT_CATEGORY_SEARCH_RESOURCE_URI
+} from &#x27;./services/ProductCategoryService&#x27;;
+import { CmsGenericEditorConfigurationServiceModule } from &#x27;./components/genericEditor/config/CmsGenericEditorConfigurationServiceModule&#x27;;
+import { ClonePageWizardServiceModule } from &#x27;./services/clonePage/clonePageWizardServiceModule&#x27;;
+
+@SeModule({
+    imports: [
+        CmsSmarteditServicesModule,
+        CmsSmarteditComponentsModule,
+        CmsResourceLocationsModule,
+        &#x27;legacyCatalogDetailsModule&#x27;,
+        &#x27;resourceLocationsModule&#x27;,
+        &#x27;cmssmarteditContainerTemplates&#x27;,
+        &#x27;componentMenuModule&#x27;,
+        &#x27;cmscommonsTemplates&#x27;,
+        &#x27;genericEditorModule&#x27;,
+        &#x27;synchronizeCatalogModule&#x27;,
+        &#x27;pageListLinkModule&#x27;,
+        &#x27;pageListControllerModule&#x27;,
+        &#x27;slotRestrictionsServiceModule&#x27;,
+        CmsDragAndDropServiceModule,
+        &#x27;seMediaFieldModule&#x27;,
+        &#x27;seMediaContainerFieldModule&#x27;,
+        &#x27;restrictionsEditorModule&#x27;,
+        &#x27;seNavigationNodeSelector&#x27;,
+        &#x27;pageSyncMenuToolbarItemModule&#x27;,
+        &#x27;productSelectorModule&#x27;,
+        &#x27;categorySelectorModule&#x27;,
+        ClonePageWizardServiceModule,
+        &#x27;cmsLinkToSelectModule&#x27;,
+        &#x27;rulesAndPermissionsRegistrationModule&#x27;,
+        &#x27;smarteditServicesModule&#x27;,
+        &#x27;singleActiveCatalogAwareItemSelectorModule&#x27;,
+        &#x27;productCatalogDropdownPopulatorModule&#x27;,
+        &#x27;productDropdownPopulatorModule&#x27;,
+        &#x27;categoryDropdownPopulatorModule&#x27;,
+        &#x27;cmsItemDropdownModule&#x27;,
+        &#x27;catalogAwareRouteResolverModule&#x27;,
+        &#x27;componentRestrictionsEditorModule&#x27;,
+        &#x27;pageRestrictionsEditorModule&#x27;,
+        &#x27;pageVersionsModule&#x27;,
+        &#x27;displayConditionsEditorModule&#x27;,
+        &#x27;linkToggleModule&#x27;,
+        &#x27;functionsModule&#x27;,
+        &#x27;componentVisibilityAlertServiceModule&#x27;,
+        CmsGenericEditorConfigurationServiceModule,
+        &#x27;deletePageToolbarItemModule&#x27;,
+        &#x27;workflowModule&#x27;,
+        trashedPageListControllerModule.name
+    ],
+    providers: [
+        ...moduleUtils.provideValues({
+            PRODUCT_CATEGORY_RESOURCE_URI,
+            PRODUCT_CATEGORY_RESOURCE_BASE_URI,
+            PRODUCT_CATEGORY_SEARCH_RESOURCE_URI
+        })
+    ],
+    config: (
+        PAGE_LIST_PATH: string,
+        TRASHED_PAGE_LIST_PATH: string,
+        NAVIGATION_MANAGEMENT_PAGE_PATH: string,
+        $routeProvider: ng.route.IRouteProvider,
+        catalogAwareRouteResolverFunctions: any
+    ) &#x3D;&gt; {
+        &#x27;ngInject&#x27;;
+        SeRouteService.init($routeProvider);
+
+        SeRouteService.provideLegacyRoute({
+            path: PAGE_LIST_PATH,
+            route: {
+                templateUrl: &#x27;pageListTemplate.html&#x27;,
+                controller: &#x27;pageListController&#x27;,
+                controllerAs: &#x27;pageListCtl&#x27;,
+                resolve: {
+                    experienceFromPathResolve:
+                        catalogAwareRouteResolverFunctions.experienceFromPathResolve
+                }
+            },
+            titleI18nKey: &#x27;se.cms.pagelist.title&#x27;,
+            priority: 20
+        });
+
+        SeRouteService.provideLegacyRoute({
+            path: TRASHED_PAGE_LIST_PATH,
+            route: {
+                templateUrl: &#x27;trashedpageListTemplate.html&#x27;,
+                controller: TrashedPageListController,
+                controllerAs: &#x27;trashedPageListCtl&#x27;,
+                resolve: {
+                    experienceFromPathResolve:
+                        catalogAwareRouteResolverFunctions.experienceFromPathResolve
+                }
+            }
+        });
+
+        SeRouteService.provideLegacyRoute({
+            path: NAVIGATION_MANAGEMENT_PAGE_PATH,
+            route: {
+                templateUrl: &#x27;navigationManagementPageTemplate.html&#x27;,
+                controller: NavigationManagementPageController,
+                controllerAs: &#x27;nav&#x27;,
+                resolve: {
+                    experienceFromPathResolve:
+                        catalogAwareRouteResolverFunctions.experienceFromPathResolve
+                }
+            },
+            titleI18nKey: &#x27;se.cms.toolbaritem.navigationmenu.name&#x27;,
+            priority: 10
+        });
+    },
+    initialize:
+        /* jshint -W098*/
+        /*need to inject for gatewayProxy initialization of componentVisibilityAlertService*/
+        (
+            $log: angular.ILogService,
+            $rootScope: angular.IRootScopeService,
+            $routeParams: any,
+            $route: angular.route.IRouteService,
+            NAVIGATION_MANAGEMENT_PAGE_PATH: string,
+            toolbarServiceFactory: IToolbarServiceFactory,
+            componentService: ComponentService,
+            systemEventService: SystemEventService,
+            catalogDetailsService: any,
+            featureService: IFeatureService,
+            perspectiveService: IPerspectiveService,
+            assetsService: AssetsService,
+            editorFieldMappingService: any,
+            genericEditorTabService: any,
+            cmsDragAndDropService: CmsDragAndDropService,
+            editorModalService: any,
+            clonePageWizardService: any,
+            componentVisibilityAlertService: any,
+            cmsGenericEditorConfigurationService: any,
+            managePageVersionService: ManagePageVersionService,
+            rollbackPageVersionService: RollbackPageVersionService,
+            workflowFacade: WorkflowFacade,
+            inViewElementObserver: InViewElementObserver,
+            COMPONENT_CLASS: string
+        ) &#x3D;&gt; {
+            &#x27;ngInject&#x27;;
+            // Configure generic editor
+            cmsGenericEditorConfigurationService.setDefaultEditorFieldMappings();
+            cmsGenericEditorConfigurationService.setDefaultTabFieldMappings();
+            cmsGenericEditorConfigurationService.setDefaultTabsConfiguration();
+
+            featureService.addToolbarItem({
+                toolbarId: &#x27;smartEditPerspectiveToolbar&#x27;,
+                key: &#x27;se.cms.componentMenuTemplate&#x27;,
+                type: &#x27;HYBRID_ACTION&#x27;,
+                nameI18nKey: &#x27;se.cms.componentmenu.btn.label.addcomponent&#x27;,
+                descriptionI18nKey: &#x27;cms.toolbaritem.componentmenutemplate.description&#x27;,
+                priority: 100,
+                section: &#x27;left&#x27;,
+                dropdownPosition: &#x27;left&#x27;,
+                iconClassName: &#x27;icon-add se-toolbar-menu-ddlb--button__icon&#x27;,
+                callback: () &#x3D;&gt; {
+                    systemEventService.publish(&#x27;ySEComponentMenuOpen&#x27;, {});
+                },
+                include: &#x27;componentMenuWrapperTemplate.html&#x27;,
+                permissions: [&#x27;se.add.component&#x27;],
+                keepAliveOnClose: true
+            });
+
+            featureService.addToolbarItem({
+                toolbarId: &#x27;smartEditPerspectiveToolbar&#x27;,
+                key: &#x27;se.cms.pageInfoMenu&#x27;,
+                type: &#x27;TEMPLATE&#x27;,
+                nameI18nKey: &#x27;se.cms.pageinfo.menu.btn.label&#x27;,
+                priority: 140,
+                section: &#x27;left&#x27;,
+                include: &#x27;pageInfoMenuWrapperTemplate.html&#x27;,
+                permissions: [&#x27;se.read.page&#x27;]
+            });
+
+            featureService.addToolbarItem({
+                toolbarId: &#x27;smartEditPerspectiveToolbar&#x27;,
+                key: &#x27;se.cms.clonePageMenu&#x27;,
+                type: &#x27;ACTION&#x27;,
+                nameI18nKey: &#x27;se.cms.clonepage.menu.btn.label&#x27;,
+                iconClassName: &#x27;icon-duplicate se-toolbar-menu-ddlb--button__icon&#x27;,
+                callback: () &#x3D;&gt; {
+                    clonePageWizardService.openClonePageWizard();
+                },
+                priority: 130,
+                section: &#x27;left&#x27;,
+                permissions: [&#x27;se.clone.page&#x27;]
+            });
+
+            // sync 120
+            featureService.addToolbarItem({
+                toolbarId: &#x27;smartEditPerspectiveToolbar&#x27;,
+                key: &#x27;se.cms.pageSyncMenu&#x27;,
+                nameI18nKey: &#x27;se.cms.toolbaritem.pagesyncmenu.name&#x27;,
+                type: &#x27;TEMPLATE&#x27;,
+                include: &#x27;pageSyncMenuToolbarItemWrapperTemplate.html&#x27;,
+                priority: 102,
+                section: &#x27;left&#x27;,
+                permissions: [&#x27;se.sync.page&#x27;]
+            });
+
+            featureService.addToolbarItem({
+                toolbarId: &#x27;smartEditPerspectiveToolbar&#x27;,
+                key: &#x27;deletePageMenu&#x27;,
+                nameI18nKey: &#x27;se.cms.actionitem.page.trash&#x27;,
+                type: &#x27;TEMPLATE&#x27;,
+                include: &#x27;deletePageToolbarItemWrapperTemplate.html&#x27;,
+                priority: 150,
+                section: &#x27;left&#x27;,
+                permissions: [&#x27;se.delete.page.menu&#x27;]
+            });
+
+            // versions 102
+            featureService.addToolbarItem({
+                toolbarId: &#x27;smartEditPerspectiveToolbar&#x27;,
+                key: &#x27;se.cms.pageVersionsMenu&#x27;,
+                type: &#x27;HYBRID_ACTION&#x27;,
+                nameI18nKey: &#x27;se.cms.actionitem.page.versions&#x27;,
+                priority: 104,
+                section: &#x27;left&#x27;,
+                iconClassName: &#x27;icon-timesheet se-toolbar-menu-ddlb--button__icon&#x27;,
+                include: &#x27;pageVersionsMenuWrapperTemplate.html&#x27;,
+                contextTemplateUrl: &#x27;versionItemContextWrapperTemplate.html&#x27;,
+                permissions: [&#x27;se.version.page&#x27;],
+                keepAliveOnClose: true
+            });
+
+            featureService.addToolbarItem({
+                toolbarId: &#x27;smartEditPerspectiveToolbar&#x27;,
+                key: &#x27;se.cms.createVersionMenu&#x27;,
+                type: &#x27;ACTION&#x27;,
+                nameI18nKey: &#x27;se.cms.actionitem.page.versions.create&#x27;,
+                iconClassName: &#x27;icon-add se-toolbar-menu-ddlb--button__icon&#x27;,
+                callback: () &#x3D;&gt; {
+                    managePageVersionService.createPageVersion();
+                },
+                priority: 120,
+                section: &#x27;left&#x27;,
+                permissions: [&#x27;se.version.page&#x27;, &#x27;se.create.version.page&#x27;]
+            });
+
+            featureService.addToolbarItem({
+                toolbarId: &#x27;smartEditPerspectiveToolbar&#x27;,
+                key: &#x27;se.cms.rollbackVersionMenu&#x27;,
+                type: &#x27;ACTION&#x27;,
+                nameI18nKey: &#x27;se.cms.actionitem.page.versions.rollback&#x27;,
+                iconClassName: &#x27;hyicon hyicon-rollback se-toolbar-menu-ddlb--button__icon&#x27;,
+                callback: () &#x3D;&gt; {
+                    rollbackPageVersionService.rollbackPageVersion();
+                },
+                priority: 120,
+                section: &#x27;left&#x27;,
+                permissions: [&#x27;se.version.page&#x27;, &#x27;se.rollback.version.page&#x27;]
+            });
+
+            featureService.addToolbarItem({
+                toolbarId: &#x27;smartEditPerspectiveToolbar&#x27;,
+                key: &#x27;se.cms.pageWorkflowMenu&#x27;,
+                type: &#x27;TEMPLATE&#x27;,
+                nameI18nKey: &#x27;se.cms.workflow.toolbar.view.workflow.menu&#x27;,
+                include: &#x27;pageWorkflowMenuWrapperTemplate.html&#x27;,
+                priority: 110,
+                section: &#x27;right&#x27;
+            });
+
+            featureService.addToolbarItem({
+                toolbarId: &#x27;smartEditPerspectiveToolbar&#x27;,
+                key: &#x27;se.cms.pageDisplayStatus&#x27;,
+                type: &#x27;TEMPLATE&#x27;,
+                nameI18nKey: &#x27;se.cms.page.display.status&#x27;,
+                include: &#x27;pageDisplayStatusWrapperTemplate.html&#x27;,
+                priority: 120,
+                section: &#x27;right&#x27;,
+                permissions: [&#x27;se.show.page.status&#x27;]
+            });
+
+            featureService.addToolbarItem({
+                toolbarId: &#x27;smartEditPerspectiveToolbar&#x27;,
+                key: &#x27;se.cms.pageApprovalSelector&#x27;,
+                type: &#x27;TEMPLATE&#x27;,
+                nameI18nKey: &#x27;se.cms.page.approval.selector&#x27;,
+                include: &#x27;pageApprovalSelectorWrapperTemplate.html&#x27;,
+                priority: 165,
+                section: &#x27;right&#x27;,
+                permissions: [&#x27;se.force.page.approval&#x27;]
+            });
+
+            const smartEditHeaderToolbarService &#x3D; toolbarServiceFactory.getToolbarService(
+                &#x27;smartEditHeaderToolbar&#x27;
+            );
+            smartEditHeaderToolbarService.addItems([
+                {
+                    key: &#x27;se.cms.workflowInbox&#x27;,
+                    type: ToolbarItemType.TEMPLATE,
+                    include: &#x27;headerToolbarInboxTemplate.html&#x27;,
+                    priority: 4,
+                    section: ToolbarSection.right,
+                    dropdownPosition: ToolbarDropDownPosition.right
+                }
+            ]);
+
+            const smartEditNavigationToolbarService &#x3D; toolbarServiceFactory.getToolbarService(
+                &#x27;smartEditNavigationToolbar&#x27;
+            );
+            smartEditNavigationToolbarService.addItems([
+                {
+                    key: &#x27;se.cms.shortcut&#x27;,
+                    type: ToolbarItemType.TEMPLATE,
+                    include: &#x27;ShortcutLinkWrapperTemplate.html&#x27;,
+                    priority: 1,
+                    section: ToolbarSection.left
+                }
+            ]);
+
+            const smartEditPagesToolbarService &#x3D; toolbarServiceFactory.getToolbarService(
+                &#x27;smartEditPagesToolbar&#x27;
+            );
+            smartEditPagesToolbarService.addItems([
+                {
+                    key: &#x27;se.cms.shortcut&#x27;,
+                    type: ToolbarItemType.TEMPLATE,
+                    include: &#x27;ShortcutLinkWrapperTemplate.html&#x27;,
+                    priority: 1,
+                    section: ToolbarSection.left
+                },
+                {
+                    key: &#x27;se.cms.trash.page.link&#x27;,
+                    type: ToolbarItemType.TEMPLATE,
+                    include: &#x27;trashLinkWrapperTemplate.html&#x27;,
+                    priority: 1,
+                    section: ToolbarSection.right
+                }
+            ]);
+
+            const smartEditTrashPageToolbarService &#x3D; toolbarServiceFactory.getToolbarService(
+                &#x27;smartEditTrashPageToolbar&#x27;
+            );
+            smartEditTrashPageToolbarService.addItems([
+                {
+                    key: &#x27;se.cms.pages.list.link&#x27;,
+                    type: ToolbarItemType.TEMPLATE,
+                    include: &#x27;pagesLinkWrapperTemplate.html&#x27;,
+                    priority: 1,
+                    section: ToolbarSection.left
+                }
+            ]);
+
+            catalogDetailsService.addItems([
+                {
+                    include: &#x27;pageListLinkTemplate.html&#x27;
+                },
+                {
+                    include: &#x27;navigationEditorLinkTemplate.html&#x27;
+                }
+            ]);
+
+            catalogDetailsService.addItems(
+                [
+                    {
+                        include: &#x27;catalogDetailsSyncTemplate.html&#x27;
+                    }
+                ],
+                CATALOG_DETAILS_COLUMNS.RIGHT
+            );
+
+            featureService.register({
+                key: &#x27;se.cms.html5DragAndDrop.outer&#x27;,
+                nameI18nKey: &#x27;se.cms.dragAndDrop.name&#x27;,
+                descriptionI18nKey: &#x27;se.cms.dragAndDrop.description&#x27;,
+                enablingCallback: () &#x3D;&gt; {
+                    cmsDragAndDropService.register();
+                    cmsDragAndDropService.apply();
+                },
+                disablingCallback: () &#x3D;&gt; {
+                    cmsDragAndDropService.unregister();
+                }
+            });
+
+            perspectiveService.register({
+                key: CMSModesService.BASIC_PERSPECTIVE_KEY,
+                nameI18nKey: &#x27;se.cms.perspective.basic.name&#x27;,
+                descriptionI18nKey: &#x27;se.hotkey.tooltip&#x27;,
+                features: [
+                    &#x27;se.contextualMenu&#x27;,
+                    &#x27;se.cms.dragandropbutton&#x27;,
+                    &#x27;se.cms.remove&#x27;,
+                    &#x27;se.cms.edit&#x27;,
+                    &#x27;se.cms.componentMenuTemplate&#x27;,
+                    &#x27;se.cms.clonePageMenu&#x27;,
+                    &#x27;se.cms.pageInfoMenu&#x27;,
+                    &#x27;se.emptySlotFix&#x27;,
+                    &#x27;se.cms.html5DragAndDrop&#x27;,
+                    &#x27;disableSharedSlotEditing&#x27;,
+                    &#x27;sharedSlotDisabledDecorator&#x27;,
+                    &#x27;se.cms.html5DragAndDrop.outer&#x27;,
+                    &#x27;externalComponentDecorator&#x27;,
+                    &#x27;externalcomponentbutton&#x27;,
+                    &#x27;externalSlotDisabledDecorator&#x27;,
+                    &#x27;clonecomponentbutton&#x27;,
+                    &#x27;deletePageMenu&#x27;,
+                    &#x27;se.cms.pageWorkflowMenu&#x27;,
+                    &#x27;se.cms.pageDisplayStatus&#x27;,
+                    &#x27;se.cms.pageApprovalSelector&#x27;,
+                    &#x27;se.cms.sharedcomponentbutton&#x27;
+                ],
+                perspectives: []
+            });
+
+            /* Note: For advance edit mode, the ordering of the entries in the features list will determine the order the buttons will show in the slot contextual menu */
+            perspectiveService.register({
+                key: CMSModesService.ADVANCED_PERSPECTIVE_KEY,
+                nameI18nKey: &#x27;se.cms.perspective.advanced.name&#x27;,
+                descriptionI18nKey: &#x27;se.hotkey.tooltip&#x27;,
+                features: [
+                    &#x27;se.slotContextualMenu&#x27;,
+                    &#x27;se.slotSyncButton&#x27;,
+                    &#x27;se.slotSharedButton&#x27;,
+                    &#x27;se.slotContextualMenuVisibility&#x27;,
+                    &#x27;se.contextualMenu&#x27;,
+                    &#x27;se.cms.dragandropbutton&#x27;,
+                    &#x27;se.cms.remove&#x27;,
+                    &#x27;se.cms.edit&#x27;,
+                    &#x27;se.cms.componentMenuTemplate&#x27;,
+                    &#x27;se.cms.clonePageMenu&#x27;,
+                    &#x27;se.cms.pageInfoMenu&#x27;,
+                    &#x27;se.cms.pageSyncMenu&#x27;,
+                    &#x27;se.emptySlotFix&#x27;,
+                    &#x27;se.cms.html5DragAndDrop&#x27;,
+                    &#x27;se.cms.html5DragAndDrop.outer&#x27;,
+                    &#x27;syncIndicator&#x27;,
+                    &#x27;externalSlotDisabledDecorator&#x27;,
+                    &#x27;externalComponentDecorator&#x27;,
+                    &#x27;externalcomponentbutton&#x27;,
+                    &#x27;clonecomponentbutton&#x27;,
+                    &#x27;slotUnsharedButton&#x27;,
+                    &#x27;deletePageMenu&#x27;,
+                    &#x27;se.cms.pageVersionsMenu&#x27;,
+                    &#x27;se.cms.pageWorkflowMenu&#x27;,
+                    &#x27;se.cms.pageDisplayStatus&#x27;,
+                    &#x27;se.cms.pageApprovalSelector&#x27;,
+                    &#x27;se.cms.sharedcomponentbutton&#x27;
+                ],
+                perspectives: []
+            });
+
+            perspectiveService.register({
+                key: CMSModesService.VERSIONING_PERSPECTIVE_KEY,
+                nameI18nKey: &#x27;se.cms.perspective.versioning.name&#x27;,
+                descriptionI18nKey: &#x27;se.cms.perspective.versioning.description&#x27;,
+                features: [
+                    &#x27;se.cms.pageVersionsMenu&#x27;,
+                    &#x27;se.cms.createVersionMenu&#x27;,
+                    &#x27;se.cms.rollbackVersionMenu&#x27;,
+                    &#x27;se.cms.pageInfoMenu&#x27;,
+                    &#x27;disableSharedSlotEditing&#x27;,
+                    &#x27;sharedSlotDisabledDecorator&#x27;,
+                    &#x27;externalSlotDisabledDecorator&#x27;,
+                    &#x27;externalComponentDecorator&#x27;
+                ],
+                perspectives: [],
+                permissions: [&#x27;se.version.page&#x27;],
+                isHotkeyDisabled: true
+            });
+
+            inViewElementObserver.addSelector(&#x60;.${COMPONENT_CLASS}&#x60;, () &#x3D;&gt; {
+                cmsDragAndDropService.update();
+            });
+        }
+})
+export class CmssmarteditContainer {}
+</code></pre>
+    </div>
+</div>
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'CmssmarteditContainer.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

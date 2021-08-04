@@ -1,0 +1,1604 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Cms Smartedit Commons Docs</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Cms Smartedit Commons Docs</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>IPageService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>compodocs/cmscommons/services/pages/IPageService.ts</code>
+        </p>
+
+
+
+
+            <p class="comment">
+                <h3>Example</h3>
+            </p>
+            <div class="io-description">
+            </div>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#buildUriContextForCurrentPage">buildUriContextForCurrentPage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#forcePageApprovalStatus">forcePageApprovalStatus</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getCurrentPageInfo">getCurrentPageInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getCurrentPageInfoByVersion">getCurrentPageInfoByVersion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getPageById">getPageById</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getPageByUuid">getPageByUuid</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getPaginatedPrimaryPagesForPageType">getPaginatedPrimaryPagesForPageType</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getPrimaryPage">getPrimaryPage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getVariationPages">getVariationPages</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isPageApproved">isPageApproved</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isPagePrimary">isPagePrimary</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isPagePrimaryWithContext">isPagePrimaryWithContext</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#primaryPageForPageTypeExists">primaryPageForPageTypeExists</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updatePageById">updatePageById</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildUriContextForCurrentPage"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            buildUriContextForCurrentPage
+                        </b>
+                        <a href="#buildUriContextForCurrentPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>buildUriContextForCurrentPage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="271"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:271</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;IUriContext&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>promise resolve to the uri context</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="forcePageApprovalStatus"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            forcePageApprovalStatus
+                        </b>
+                        <a href="#forcePageApprovalStatus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>forcePageApprovalStatus(newPageStatus: <a href="../undefineds/CmsApprovalStatus.html">CmsApprovalStatus</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="237"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:237</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>newPageStatus</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#CmsApprovalStatus" target="_self" >CmsApprovalStatus</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;ICMSPage&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>If request is successful, it returns a promise that resolves with the updated CMS Item object. If the
+request fails, it resolves with errors from the backend.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCurrentPageInfo"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getCurrentPageInfo
+                        </b>
+                        <a href="#getCurrentPageInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCurrentPageInfo()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;ICMSPage&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves to a CMS Item object containing
+information related to the current page</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCurrentPageInfoByVersion"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getCurrentPageInfoByVersion
+                        </b>
+                        <a href="#getCurrentPageInfoByVersion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCurrentPageInfoByVersion(versionId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>versionId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The ID of the page version to load.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;ICMSPage&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves to a CMS Item object containing
+information related to the version selected of the current page</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPageById"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getPageById
+                        </b>
+                        <a href="#getPageById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPageById(pageUid: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageUid</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The identifier of the page</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;ICMSPage&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves to the page corresponding to this uid.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPageByUuid"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getPageByUuid
+                        </b>
+                        <a href="#getPageByUuid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPageByUuid(uuid: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>uuid</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The unique identifier of the page</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;ICMSPage&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves to the page corresponding to the given uuid.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPaginatedPrimaryPagesForPageType"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getPaginatedPrimaryPagesForPageType
+                        </b>
+                        <a href="#getPaginatedPrimaryPagesForPageType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPaginatedPrimaryPagesForPageType(pageTypeCode: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, uriParams?: IUriContext, fetchPageParams?: literal type)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="177"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:177</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageTypeCode</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>A page type code to filter pages by</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>uriParams</td>
+                                    <td>
+                                            <code>IUriContext</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>An optional {</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>fetchPageParams</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>An optional Fetch Page strategy parameters. If not provided it will return results for the first page only.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;Page&lt;CMSItem&gt;&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves to pagination with array of pages</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPrimaryPage"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getPrimaryPage
+                        </b>
+                        <a href="#getPrimaryPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPrimaryPage(variationPageUid: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="134"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:134</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>variationPageUid</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;ICMSPage&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves to the page object or undefined if no primary page was found.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getVariationPages"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getVariationPages
+                        </b>
+                        <a href="#getVariationPages"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getVariationPages(primaryPageUid: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:202</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>primaryPageUid</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;ICMSPage[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves an array of variation pages or an empty list if none are found.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isPageApproved"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            isPageApproved
+                        </b>
+                        <a href="#isPageApproved"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isPageApproved(pageParam: string | ICMSPage)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="255"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:255</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageParam</td>
+                                    <td>
+                                            <code>string | ICMSPage</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The page to check.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves to a boolean. If the page is already approved it will return true.
+False, otherwise.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isPagePrimary"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            isPagePrimary
+                        </b>
+                        <a href="#isPagePrimary"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isPagePrimary(pageUid: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageUid</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The UID of the page.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves to true if the page is primary, false otherwise.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isPagePrimaryWithContext"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            isPagePrimaryWithContext
+                        </b>
+                        <a href="#isPagePrimaryWithContext"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isPagePrimaryWithContext(pageUid: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, uriContext: IUriContext)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:117</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageUid</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The UID of the page.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>uriContext</td>
+                                    <td>
+                                            <code>IUriContext</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The uriContext for the pageId</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves to true if the page is primary, false otherwise.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="primaryPageForPageTypeExists"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            primaryPageForPageTypeExists
+                        </b>
+                        <a href="#primaryPageForPageTypeExists"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>primaryPageForPageTypeExists(pageTypeCode: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, uriParams?: IUriContext)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="153"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:153</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageTypeCode</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>A page type code to filter pages by</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>uriParams</td>
+                                    <td>
+                                            <code>IUriContext</code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>An optional {</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves to true if the page exists, false otherwise.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updatePageById"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            updatePageById
+                        </b>
+                        <a href="#updatePageById"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updatePageById(pageUid: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, payload: <a href="../interfaces/ICMSPage.html">ICMSPage</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="220"
+                            class="link-to-prism">compodocs/cmscommons/services/pages/IPageService.ts:220</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageUid</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The UID of the page</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>payload</td>
+                                    <td>
+                                                <code><a href="../interfaces/ICMSPage.html" target="_self" >ICMSPage</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The information to update the page with.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;ICMSPage&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise that resolves to the JSON page object as it now exists in the backend</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IUriContext } from &#x27;smarteditcommons&#x27;;
+import { CmsApprovalStatus, CMSItem, ICMSPage } from &#x27;../../dtos&#x27;;
+import { Page } from &#x27;../../dao&#x27;;
+
+/**
+ * @ngdoc service
+ * @name cmsSmarteditServicesModule.service:PageService
+ *
+ * @description
+ * The pageServiceModule provides services for dealing with CMS page objects
+ *
+ */
+export abstract class IPageService {
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#getPageById
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Retrieves the page corresponding to the given page UID in the current contextual
+     * site + catalog + catalog version.
+     *
+     * @param {String} pageUid The identifier of the page
+     *
+     * @returns {Promise&lt;ICMSPage&gt;} A promise that resolves to the page corresponding to this uid.
+     */
+    public getPageById(pageUid: string): Promise&lt;ICMSPage&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#getCurrentPageInfo
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Retrieves the page information of the page identified by the given uuid.
+     *
+     * @param {String} uuid The unique identifier of the page
+     *
+     * @returns {Promise&lt;ICMSPage&gt;} A promise that resolves to the page corresponding to the given uuid.
+     *
+     */
+    public getPageByUuid(uuid: string): Promise&lt;ICMSPage&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#getCurrentPageInfo
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Retrieves the page information of the page that is currently loaded.
+     *
+     * @returns {Promise&lt;ICMSPage&gt;} A promise that resolves to a CMS Item object containing
+     * information related to the current page
+     */
+    public getCurrentPageInfo(): Promise&lt;ICMSPage&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#getCurrentPageInfoByVersion
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Retrieves a version, as identified by the provided version id, of the page information that is currently loaded.
+     *
+     * @param {String} versionId The ID of the page version to load.
+     *
+     * @returns {Promise&lt;ICMSPage&gt;} A promise that resolves to a CMS Item object containing
+     * information related to the version selected of the current page
+     */
+    public getCurrentPageInfoByVersion(versionId: string): Promise&lt;ICMSPage&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#isPagePrimary
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Determines if a page belonging to the current contextual site+catalog+catalogversion is primary.
+     *
+     * @param {String} pageUid The UID of the page.
+     *
+     * @returns {Promise&lt;boolean&gt;} A promise that resolves to true if the page is primary, false otherwise.
+     */
+    public isPagePrimary(pageUid: string): Promise&lt;boolean&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#isPagePrimaryWithContext
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Determines if a page belonging to the provided contextual site+catalog+catalogversion is primary.
+     *
+     * @param {String} pageUid The UID of the page.
+     * @param {IUriContext} uriContext The uriContext for the pageId
+     *
+     * @returns {Promise&lt;boolean&gt;} A promise that resolves to true if the page is primary, false otherwise.
+     */
+    public isPagePrimaryWithContext(pageUid: string, uriContext: IUriContext): Promise&lt;boolean&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#getPrimaryPage
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Retrieves the primary page of the given variation page in the current site+catalog+catalogversion.
+     *
+     * @param {String} variationPageId The UID of the variation page for which to find its primary page.
+     *
+     * @returns {Promise&lt;ICMSPage&gt;} A promise that resolves to the page object or undefined if no primary page was found.
+     */
+    public getPrimaryPage(variationPageUid: string): Promise&lt;ICMSPage&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#primaryPageForPageTypeExists
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Returns true if primary page exists for a given page type
+     *
+     * @param {String} pageTypeCode A page type code to filter pages by
+     * @param {Object} uriParams An optional {@link resourceLocationsModule.object:UriContext UriContext}
+     *
+     * @returns {Promise&lt;boolean&gt;} A promise that resolves to true if the page exists, false otherwise.
+     */
+
+    public primaryPageForPageTypeExists(
+        pageTypeCode: string,
+        uriParams?: IUriContext
+    ): Promise&lt;boolean&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#getPaginatedPrimaryPagesForPageType
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Fetches a pagination page for list of pages for a given site+catalog+catalogversion and page
+     *
+     * @param {String} pageTypeCode A page type code to filter pages by
+     * @param {Object} [uriParams] An optional {@link resourceLocationsModule.object:UriContext UriContext}
+     * @param {Object} [fetchPageParams] An optional Fetch Page strategy parameters. If not provided it will return results for the first page only.
+     * @param {Object} [fetchPageParams.currentPage&#x3D;0]
+     * @param {Object} [fetchPageParams.pageSize&#x3D;10]
+     *
+     * @returns {Promise&lt;Page&lt;ICMSPage&gt;&gt;} A promise that resolves to pagination with array of pages
+     */
+    public getPaginatedPrimaryPagesForPageType(
+        pageTypeCode: string,
+        uriParams?: IUriContext,
+        fetchPageParams?: {
+            search: string;
+            pageSize: number;
+            currentPage: number;
+        }
+    ): Promise&lt;Page&lt;CMSItem&gt;&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#getVariationPages
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Retrieves the variation pages of the given primary page in the current site+catalog+catalogversion.
+     *
+     * @param {String} primaryPageId The UID of the primary page.
+     *
+     * @returns {Promise&lt;ICMSPage[]&gt;} A promise that resolves an array of variation pages or an empty list if none are found.
+     */
+    public getVariationPages(primaryPageUid: string): Promise&lt;ICMSPage[]&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#updatePageById
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Updates the page corresponding to the given page UID with the payload provided for the current site+catalog+catalogversion.
+     *
+     * @param {String} pageUid The UID of the page
+     * @param {ICMSPage} payload The information to update the page with.
+     *
+     * @returns {Promise&lt;ICMSPage&gt;} A promise that resolves to the JSON page object as it now exists in the backend
+     */
+    public updatePageById(pageUid: string, payload: ICMSPage): Promise&lt;ICMSPage&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#forcePageApprovalStatus
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * This method will forcefully update the page approval status (as long as the current user has the right permissions) of the page loaded
+     * in the current context to the given status.
+     *
+     * @returns {Promise&lt;ICMSPage&gt;} If request is successful, it returns a promise that resolves with the updated CMS Item object. If the
+     * request fails, it resolves with errors from the backend.
+     */
+    public forcePageApprovalStatus(newPageStatus: CmsApprovalStatus): Promise&lt;ICMSPage&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#isPageApproved
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * This method is used to determine whether the given page is approved (and can be synched).
+     *
+     * @param {string|ICMSPage} pageParam The page to check.
+     *
+     * @returns {Promise&lt;boolean&gt;} A promise that resolves to a boolean. If the page is already approved it will return true.
+     * False, otherwise.
+     */
+    public isPageApproved(pageParam: string | ICMSPage): Promise&lt;boolean&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+
+    /**
+     * @ngdoc method
+     * @name cmsSmarteditServicesModule.service:PageService#buildUriContextForCurrentPage
+     * @methodOf cmsSmarteditServicesModule.service:PageService
+     *
+     * @description
+     * Returns the uriContext populated with the siteId, catalogId and catalogVersion taken from $routeParams and fallback to the currentExperience
+     * Note: From the page list, $routeParams are defined. From the storefront, $routeParams are undefined.
+     *
+     * @return {Promise&lt;IUriContext&gt;} promise resolve to the uri context
+     */
+    public buildUriContextForCurrentPage(): Promise&lt;IUriContext&gt; {
+        &#x27;proxyFunction&#x27;;
+        return null;
+    }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'IPageService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

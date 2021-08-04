@@ -1,0 +1,27 @@
+<h1><code ng:non-bindable="">seCategorySelector</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">categorySelectorModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="categoryselectormodule-directive-page categoryselectormodule-directive-secategoryselector-page"><p>A component that allows users to select categories from one or more catalogs. This component is catalog aware; the list of categories displayed is dependent on
+the product catalog and catalog version selected by the user within the component.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;se-category-selector
+       id="{@String}"
+       model="{&lt;Object}"
+       qualifier="{&lt;String}"
+       [editable="{&lt;Boolean}"]&gt;
+&lt;/se-category-selector&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-object">@String</a></td><td><div class="categoryselectormodule-directive-page categoryselectormodule-directive-secategoryselector-page"><p>An identifier used to track down the component in the page.</p>
+</div></td></tr><tr><td>model</td><td><a href="" class="label type-hint type-hint-object">&lt;Object</a></td><td><div class="categoryselectormodule-directive-page categoryselectormodule-directive-secategoryselector-page"><p>The object where the list of selected categories will be stored. The model must contain a property with the same name as the qualifier. That property must be
+of type array and is used to store the UIDs of the categories selected.</p>
+</div></td></tr><tr><td>qualifier</td><td><a href="" class="label type-hint type-hint-object">&lt;String</a></td><td><div class="categoryselectormodule-directive-page categoryselectormodule-directive-secategoryselector-page"><p>The key of the property in the model that will hold the list of categories selected.</p>
+</div></td></tr><tr><td>editable <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&lt;Boolean</a></td><td><div class="categoryselectormodule-directive-page categoryselectormodule-directive-secategoryselector-page"><p>A flag that specifies whether the component can be modified or not. If the component cannot be modified, then the categories selected are read-only. Optional, default value is true.</p>
+</div></td></tr></tbody></table></div>
+</div>

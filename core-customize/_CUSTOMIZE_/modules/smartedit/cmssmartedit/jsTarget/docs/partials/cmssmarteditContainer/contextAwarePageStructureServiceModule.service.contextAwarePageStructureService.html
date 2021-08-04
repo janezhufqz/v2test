@@ -1,0 +1,40 @@
+<h1><code ng:non-bindable="">contextAwarePageStructureService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">contextAwarePageStructureServiceModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-page"><p>The contextAwarePageStructureServiceModule is a layer on top of the
+<a href="#/cmssmarteditContainer/typeStructureRestServiceModule.service:typeStructureRestService">typeStructureRestService</a>
+that allows for modifying the structure for front-end needs, such as disabling fields or changing field order.</p>
+<p>Note: The field order is defined by <a href="#/cmssmarteditContainer/contextAwarePageStructureServiceModule.object:PAGE_STRUCTURE_POST_ORDER">PAGE_STRUCTURE_POST_ORDER</a>
+and <a href="#/cmssmarteditContainer/contextAwarePageStructureServiceModule.object:PAGE_STRUCTURE_POST_ORDER">PAGE_STRUCTURE_POST_ORDER</a>, and can
+be replaced/overriden.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getpagestructurefornewpage">getPageStructureForNewPage(pageTypeCode, isPrimary)</h3>
+<div class="getpagestructurefornewpage"><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-getpagestructurefornewpage-page"><p>Return the CMS page structure with some modifications for the context of creating a new page.
+The field order is modified, the created/modified time fields are removed, and the label field for variation content pages is disabled.</p>
+</div><h5 id="methods_getpagestructurefornewpage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageTypeCode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-getpagestructurefornewpage-page"><p>The page type of the new page to be created</p>
+</div></td></tr><tr><td>isPrimary</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-getpagestructurefornewpage-page"><p>Flag indicating if the new page will be a primary or variation page</p>
+</div></td></tr></tbody></table><h5 id="methods_getpagestructurefornewpage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-getpagestructurefornewpage-page"><p>A modified page structure</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getpagestructureforpageediting">getPageStructureForPageEditing(pageTypeCode, pageId)</h3>
+<div class="getpagestructureforpageediting"><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-getpagestructureforpageediting-page"><p>Return the CMS page structure with some modifications for the context of editing the info of an existing page.
+The field order is modified, and the label field for variation content pages is disabled.</p>
+</div><h5 id="methods_getpagestructureforpageediting_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageTypeCode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-getpagestructureforpageediting-page"><p>The page type of the page to be edited</p>
+</div></td></tr><tr><td>pageId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-getpagestructureforpageediting-page"><p>The ID of the existing page to be modified</p>
+</div></td></tr></tbody></table><h5 id="methods_getpagestructureforpageediting_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-getpagestructureforpageediting-page"><p>A modified page structure</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getpagestructureforviewing">getPageStructureForViewing(pageTypeCode)</h3>
+<div class="getpagestructureforviewing"><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-getpagestructureforviewing-page"><p>Return the CMS page structure with some modifications for the context of viewing the info of an existing page.
+The field order is modified, and the label field for variation content pages is disabled.</p>
+</div><h5 id="methods_getpagestructureforviewing_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageTypeCode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-getpagestructureforviewing-page"><p>The page type of the existing page</p>
+</div></td></tr></tbody></table><h5 id="methods_getpagestructureforviewing_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="contextawarepagestructureservicemodule-service-page contextawarepagestructureservicemodule-service-contextawarepagestructureservice-getpagestructureforviewing-page"><p>A modified page structure</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

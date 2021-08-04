@@ -1,0 +1,50 @@
+<h1><code ng:non-bindable="">restrictionPickerConfig</code>
+<div><span class="hint">service in module <code ng:non-bindable="">restrictionPickerModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-page"><p>The Generic Editor Modal Service is used to open an editor modal window that contains a tabset.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/cmssmarteditContainer/lodash">lodash</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getconfigforediting">getConfigForEditing(existingRestriction, getSupportedRestrictionTypesFn)</h3>
+<div class="getconfigforediting"><h5 id="methods_getconfigforediting_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>existingRestriction</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-getconfigforediting-page"><p>The restriction to be edited.</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>uuid</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-getconfigforediting-page"><p>The UUID of the restriction to be edited.</p>
+</div></td></tr><tr><td>$restrictionIndex</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-getconfigforediting-page"><p>The index of the restriction in restrictions list.</p>
+</div></td></tr></tbody></table></td></tr><tr><td>getSupportedRestrictionTypesFn</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-getconfigforediting-page"><p>A function that returns list of restriction types that are supported for editing for a given item.</p>
+</div></td></tr></tbody></table><h5 id="methods_getconfigforediting_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-getconfigforediting-page"><p>A config object to used with the <a href="#/cmssmarteditContainer/restrictionPickerModule.directive:restrictionManagement">restrictionManagement</a>
+component in edit mode.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getconfigforselecting">getConfigForSelecting(existingRestrictions, getRestrictionTypesFn, getSupportedRestrictionTypesFn)</h3>
+<div class="getconfigforselecting"><h5 id="methods_getconfigforselecting_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>existingRestrictions <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-getconfigforselecting-page"><p>An array of existing restrictions, that will be not be selectable.</p>
+</div></td></tr><tr><td>getRestrictionTypesFn</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-getconfigforselecting-page"><p>A function that returns list of restriction types for a given item.</p>
+</div></td></tr><tr><td>getSupportedRestrictionTypesFn</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-getconfigforselecting-page"><p>A function that returns list of restriction types that are supported for editing for a given item.</p>
+</div></td></tr></tbody></table><h5 id="methods_getconfigforselecting_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-getconfigforselecting-page"><p>A config object to used with the <a href="#/cmssmarteditContainer/restrictionPickerModule.directive:restrictionManagement">restrictionManagement</a>
+component in select/create mode.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_iseditingmode">isEditingMode(config)</h3>
+<div class="iseditingmode"><h5 id="methods_iseditingmode_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-iseditingmode-page"><p>A config to check.</p>
+</div></td></tr></tbody></table><h5 id="methods_iseditingmode_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-iseditingmode-page"><p>True if the config param is a config object created with
+<a href="#/cmssmarteditContainer/restrictionPickerModule.service:restrictionPickerConfig#methods_getconfigforediting">getConfigForEditing()</a>.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isselectmode">isSelectMode(config)</h3>
+<div class="isselectmode"><h5 id="methods_isselectmode_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-isselectmode-page"><p>A config to check.</p>
+</div></td></tr></tbody></table><h5 id="methods_isselectmode_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-isselectmode-page"><p>True if the config param is a config object created with
+<a href="#/cmssmarteditContainer/restrictionPickerModule.service:restrictionPickerConfig#methods_getconfigforselecting">getConfigForSelecting()</a>.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isvalidconfig">isValidConfig(config)</h3>
+<div class="isvalidconfig"><h5 id="methods_isvalidconfig_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-isvalidconfig-page"><p>A config to check.</p>
+</div></td></tr></tbody></table><h5 id="methods_isvalidconfig_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="restrictionpickermodule-service-page restrictionpickermodule-service-restrictionpickerconfig-isvalidconfig-page"><p>True if the config object was created with proper params.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

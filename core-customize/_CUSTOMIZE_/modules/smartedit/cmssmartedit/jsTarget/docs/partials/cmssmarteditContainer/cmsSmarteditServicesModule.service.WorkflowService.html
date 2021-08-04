@@ -1,0 +1,111 @@
+<h1><code ng:non-bindable="">WorkflowService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">cmsSmarteditServicesModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-page"><p>This service is used to manage workflows</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_areworkflowsenabledoncurrentcatalogversion">areWorkflowsEnabledOnCurrentCatalogVersion()</h3>
+<div class="areworkflowsenabledoncurrentcatalogversion"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-areworkflowsenabledoncurrentcatalogversion-page"><p>This method determines whether the current catalog version (the one in the current experience) has workflows
+enabled. A catalog version has workflows enabled if it has at least one workflow template assigned to it.</p>
+</div><h5 id="methods_areworkflowsenabledoncurrentcatalogversion_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;boolean&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-areworkflowsenabledoncurrentcatalogversion-page"><p>A promise that resolves to a boolean. It will be true, if the workflow is
+enabled for the current catalog version. False, otherwise.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_cancelworflow">cancelWorflow(workflow)</h3>
+<div class="cancelworflow"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-cancelworflow-page"><p>Cancels the workflow. Shows the confirmation message before sending the request.</p>
+</div><h5 id="methods_cancelworflow_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>workflow</td><td><a href="" class="label type-hint type-hint-iworkflow">IWorkflow</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-cancelworflow-page"><p>The workflow to cancel.</p>
+</div></td></tr></tbody></table><h5 id="methods_cancelworflow_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;void&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-cancelworflow-page"><p>A promise that resolves to void.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getactiveactionsforworkflowcode">getActiveActionsForWorkflowCode(workflowCode)</h3>
+<div class="getactiveactionsforworkflowcode"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getactiveactionsforworkflowcode-page"><p>Fetch all active actions for a given workflow code and for the current user.</p>
+</div><h5 id="methods_getactiveactionsforworkflowcode_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>workflowCode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getactiveactionsforworkflowcode-page"><p>The code of the workflow.</p>
+</div></td></tr></tbody></table><h5 id="methods_getactiveactionsforworkflowcode_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getactiveactionsforworkflowcode-page"><p>If request is successful, it returns a promise that resolves to list of active actions. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getactiveworkflowforpageuuid">getActiveWorkflowForPageUuid(pageUuid)</h3>
+<div class="getactiveworkflowforpageuuid"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getactiveworkflowforpageuuid-page"><p>Fetch an active workflow for a page uuid.</p>
+</div><h5 id="methods_getactiveworkflowforpageuuid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageUuid</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getactiveworkflowforpageuuid-page"><p>the page uuid</p>
+</div></td></tr></tbody></table><h5 id="methods_getactiveworkflowforpageuuid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getactiveworkflowforpageuuid-page"><p>If request is successful, it returns a promise that resolves with the workflow object
+or null if there is no active workflow for provided page uuid. If the request fails, it resolves with errors
+from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getallactionsforworkflowcode">getAllActionsForWorkflowCode(workflowCode)</h3>
+<div class="getallactionsforworkflowcode"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getallactionsforworkflowcode-page"><p>Fetch all actions for a given workflow code.</p>
+</div><h5 id="methods_getallactionsforworkflowcode_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>workflowCode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getallactionsforworkflowcode-page"><p>The code of the workflow.</p>
+</div></td></tr></tbody></table><h5 id="methods_getallactionsforworkflowcode_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getallactionsforworkflowcode-page"><p>If request is successful, it returns a promise that resolves to list of available actions. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcommentsforworkflowaction">getCommentsForWorkflowAction(workflowCode, workflowActionCode, payload)</h3>
+<div class="getcommentsforworkflowaction"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getcommentsforworkflowaction-page"><p>Fetch a page of comments for a given workflow action and some pageable data.</p>
+</div><h5 id="methods_getcommentsforworkflowaction_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>workflowCode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getcommentsforworkflowaction-page"><p>The code of the workflow.</p>
+</div></td></tr><tr><td>workflowActionCode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getcommentsforworkflowaction-page"><p>The code of the workflow action.</p>
+</div></td></tr><tr><td>payload</td><td><a href="" class="label type-hint type-hint-pageable">Pageable</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getcommentsforworkflowaction-page"><p>The pageable information.</p>
+</div></td></tr></tbody></table><h5 id="methods_getcommentsforworkflowaction_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getcommentsforworkflowaction-page"><p>If request is successful, it returns a promise that resolves to list of available comments for a given workflow and workflow action. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettotalnumberofactiveworkflowtasks">getTotalNumberOfActiveWorkflowTasks()</h3>
+<div class="gettotalnumberofactiveworkflowtasks"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-gettotalnumberofactiveworkflowtasks-page"><p>Returns the total number of active workflow tasks for a given user.</p>
+</div><h5 id="methods_gettotalnumberofactiveworkflowtasks_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-gettotalnumberofactiveworkflowtasks-page"><p>The total number of active workflow tasks.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getworkfloweditableitems">getWorkflowEditableItems(itemUids)</h3>
+<div class="getworkfloweditableitems"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkfloweditableitems-page"><p>Returns information about whether each item is editable or not. It also returns a workflow code where item is editable.</p>
+</div><h5 id="methods_getworkfloweditableitems_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>itemUids</td><td><a href="" class="label type-hint type-hint-string">string[]</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkfloweditableitems-page"><p>The list of uids</p>
+</div></td></tr></tbody></table><h5 id="methods_getworkfloweditableitems_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkfloweditableitems-page"><p>If request is successful, it returns a promise that resolves to a list of objects where each object
+contains information about whether each item is editable or not. If the request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getworkflowinboxtasks">getWorkflowInboxTasks(payload)</h3>
+<div class="getworkflowinboxtasks"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflowinboxtasks-page"><p>Fetches a page of workflow inbox tasks active for a given user.</p>
+</div><h5 id="methods_getworkflowinboxtasks_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>payload</td><td><a href="" class="label type-hint type-hint-pageable">Pageable</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflowinboxtasks-page"><p>The pageable information.</p>
+</div></td></tr></tbody></table><h5 id="methods_getworkflowinboxtasks_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflowinboxtasks-page"><p>If request is successful, it returns a promise that resolves to a page of workflow inbox tasks for a given user. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getworkflowtemplates">getWorkflowTemplates(queryParams)</h3>
+<div class="getworkflowtemplates"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflowtemplates-page"><p>Fetch workflow templates search result by making a REST call to the workflow API.</p>
+</div><h5 id="methods_getworkflowtemplates_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>queryParams</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflowtemplates-page"><p>The object representing the query params</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>catalogId <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String </a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflowtemplates-page"><p>the catalog to search items in. If empty, the current context catalog will be used.</p>
+</div></td></tr><tr><td>catalogVersion <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String </a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflowtemplates-page"><p>the catalog version to search items in. If empty, the current context catalog version will be used.</p>
+</div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_getworkflowtemplates_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflowtemplates-page"><p>If request is successful, it returns a promise that resolves with the workflow template search result. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getworkflows">getWorkflows(queryParams)</h3>
+<div class="getworkflows"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflows-page"><p>Fetch workflow search result by making a REST call to the workflow API.</p>
+</div><h5 id="methods_getworkflows_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>queryParams</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflows-page"><p>The object representing the query params</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageSize</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflows-page"><p>number of items in the page</p>
+</div></td></tr><tr><td>currentPage</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflows-page"><p>current page number</p>
+</div></td></tr><tr><td>attachments</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflows-page"><p>comma separated list of attachment id</p>
+</div></td></tr><tr><td>status</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflows-page"><p>comma separated list of workflow status</p>
+</div></td></tr><tr><td>catalogId <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String </a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflows-page"><p>the catalog to search items in. If empty, the current context catalog will be used.</p>
+</div></td></tr><tr><td>catalogVersion <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String </a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflows-page"><p>the catalog version to search items in. If empty, the current context catalog version will be used.</p>
+</div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_getworkflows_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-getworkflows-page"><p>If request is successful, it returns a promise that resolves with the workflow search result. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ispageinworkflow">isPageInWorkflow(page)</h3>
+<div class="ispageinworkflow"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-ispageinworkflow-page"><p>Verifies whether the page is in a workflow or not.</p>
+</div><h5 id="methods_ispageinworkflow_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>page</td><td><a href="" class="label type-hint type-hint-icmspage">ICMSPage</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-ispageinworkflow-page"><p>the page to verify</p>
+</div></td></tr></tbody></table><h5 id="methods_ispageinworkflow_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-ispageinworkflow-page"><p>If request is successful, it returns a promise that resolves with boolean value.
+If the request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isuserparticipaninactiveaction">isUserParticipanInActiveAction(workflowCode)</h3>
+<div class="isuserparticipaninactiveaction"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-isuserparticipaninactiveaction-page"><p>Verifies whether the use is a participant of a current active action.</p>
+</div><h5 id="methods_isuserparticipaninactiveaction_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>workflowCode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-isuserparticipaninactiveaction-page"><p>The code of the workflow.</p>
+</div></td></tr></tbody></table><h5 id="methods_isuserparticipaninactiveaction_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowservice-isuserparticipaninactiveaction-page"><p>If request is successful, it returns a promise that resolves to a boolean. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

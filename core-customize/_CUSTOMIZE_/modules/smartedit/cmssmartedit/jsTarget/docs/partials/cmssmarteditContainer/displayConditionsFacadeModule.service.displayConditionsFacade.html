@@ -1,0 +1,30 @@
+<h1><code ng:non-bindable="">displayConditionsFacade</code>
+<div><span class="hint">service in module <code ng:non-bindable="">displayConditionsFacadeModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="displayconditionsfacademodule-service-page displayconditionsfacademodule-service-displayconditionsfacade-page"><p>Service defined to retrieve information related to the display conditions of a given page:</p>
+<ul>
+<li>Whether the page is either of &#39;primary&#39; or &#39;variation&#39; display type.</li>
+<li>The name of the primary page associated to a variation one.</li>
+<li>The name of the display type of a given page (&quot;primary&quot; or &quot;variant&quot;).</li>
+<li>The description of the display type of a given page (&quot;primary&quot; or &quot;variant&quot;).</li>
+</ul>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getprimarypageforvariationpage">getPrimaryPageForVariationPage(The)</h3>
+<div class="getprimarypageforvariationpage"><div class="displayconditionsfacademodule-service-page displayconditionsfacademodule-service-displayconditionsfacade-getprimarypageforvariationpage-page"><p>Returns data related to the &#39;primary&#39; page associated with the tested &#39;variation&#39; page.</p>
+</div><h5 id="methods_getprimarypageforvariationpage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>The</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="displayconditionsfacademodule-service-page displayconditionsfacademodule-service-displayconditionsfacade-getprimarypageforvariationpage-page"><p>identifier of the tested &#39;variation&#39; page</p>
+</div></td></tr></tbody></table><h5 id="methods_getprimarypageforvariationpage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="displayconditionsfacademodule-service-page displayconditionsfacademodule-service-displayconditionsfacade-getprimarypageforvariationpage-page"><p>Promise resolving in an object containing uid, name and label of the associated primary page</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isprimarypage">isPrimaryPage(The)</h3>
+<div class="isprimarypage"><div class="displayconditionsfacademodule-service-page displayconditionsfacademodule-service-displayconditionsfacade-isprimarypage-page"><p>Check whether the tested page is of type &#39;primary&#39;.</p>
+</div><h5 id="methods_isprimarypage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>The</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="displayconditionsfacademodule-service-page displayconditionsfacademodule-service-displayconditionsfacade-isprimarypage-page"><p>identifier of the tested page</p>
+</div></td></tr></tbody></table><h5 id="methods_isprimarypage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="displayconditionsfacademodule-service-page displayconditionsfacademodule-service-displayconditionsfacade-isprimarypage-page"><p>Promise resolving in a boolean indicated whether the tested page is of type &#39;primary&#39;</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

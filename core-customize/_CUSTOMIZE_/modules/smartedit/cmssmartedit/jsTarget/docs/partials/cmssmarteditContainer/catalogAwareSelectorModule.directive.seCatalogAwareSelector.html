@@ -1,0 +1,45 @@
+<h1><code ng:non-bindable="">seCatalogAwareSelector</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">catalogAwareSelectorModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="catalogawareselectormodule-directive-page catalogawareselectormodule-directive-secatalogawareselector-page"><p>A component that allows users to select items from one or more catalogs. This component is catalog aware; the list
+of items displayed is dependent on the catalog and catalog version selected by the user within the component.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;se-catalog-aware-selector
+       id="{@String}"
+       get-catalogs="{&lt;Function}"
+       items-fetch-strategy="{&lt;Object}"
+       [item-template="{&lt;String}"]
+       [catalog-item-type-key="{@String}"]
+       [editable="{&lt;Boolean}"]
+       [max-num-items="{&lt;maxNumItems}"]&gt;
+&lt;/se-catalog-aware-selector&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-object">@String</a></td><td><div class="catalogawareselectormodule-directive-page catalogawareselectormodule-directive-secatalogawareselector-page"><p>Identifier used to track the component in the page.</p>
+</div></td></tr><tr><td>getCatalogs</td><td><a href="" class="label type-hint type-hint-object">&lt;Function</a></td><td><div class="catalogawareselectormodule-directive-page catalogawareselectormodule-directive-secatalogawareselector-page"><p>Function called with no arguments by the component to retrieve the list of catalogs
+where the items to select reside.</p>
+</div></td></tr><tr><td>itemsFetchStrategy</td><td><a href="" class="label type-hint type-hint-object">&lt;Object</a></td><td><div class="catalogawareselectormodule-directive-page catalogawareselectormodule-directive-secatalogawareselector-page"><p>Object that defines the strategies necessary to retrieve the items from a
+particular catalog. There are three possible scenarios:</p>
+<ul>
+<li>Provide a fetchAll function in the itemsFetchStrategy. This function must retrieve all items from the catalog
+at once. No pagination is performed.</li>
+<li>Provide fetchPage + fetchEntity functions in the itemsFetchStrategy. Information about items already selected
+are retrieved one by one with fetchEntity. Items to choose from, on the other hand, are retrieved in a page fashion.</li>
+<li>Provide fetchPage + fetchEntities Information about items already selected are retrieved in one call with
+fetchEntities. Items to choose from, on the other hand, are retrieved in a page fashion.</li>
+</ul>
+</div></td></tr><tr><td>itemTemplate <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&lt;String</a></td><td><div class="catalogawareselectormodule-directive-page catalogawareselectormodule-directive-secatalogawareselector-page"><p>The URL of the template used to display the items in the selector. If none is chosen
+a default one is used (it shows the property name of each item).</p>
+</div></td></tr><tr><td>catalogItemTypeKey <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">@String</a></td><td><div class="catalogawareselectormodule-directive-page catalogawareselectormodule-directive-secatalogawareselector-page"><p>This property is a localized key. It is used to display the type of item being
+selected in the component. If no key is provided, the type defaults to item.</p>
+</div></td></tr><tr><td>editable <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&lt;Boolean</a></td><td><div class="catalogawareselectormodule-directive-page catalogawareselectormodule-directive-secatalogawareselector-page"><p>This property specifies whether the selector can be edited or not. If this flag is false,
+then the selector is treated as read-only; the selection cannot be modified in any way.</p>
+</div></td></tr><tr><td>maxNumItems <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&lt;maxNumItems</a></td><td><div class="catalogawareselectormodule-directive-page catalogawareselectormodule-directive-secatalogawareselector-page"><p>The maximum number of items that can be selected in the control.</p>
+</div></td></tr></tbody></table></div>
+</div>

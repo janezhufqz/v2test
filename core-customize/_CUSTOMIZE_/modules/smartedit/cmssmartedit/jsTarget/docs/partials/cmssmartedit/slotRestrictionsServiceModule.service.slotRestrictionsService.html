@@ -1,0 +1,43 @@
+<h1><code ng:non-bindable="">slotRestrictionsService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">slotRestrictionsServiceModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-page"><p>This service provides methods that cache and return the restrictions of a slot in a page. This restrictions determine
+whether a component of a certain type is allowed or forbidden in a particular slot.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getallcomponenttypessupportedonpage">getAllComponentTypesSupportedOnPage()</h3>
+<div class="getallcomponenttypessupportedonpage"><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-getallcomponenttypessupportedonpage-page"><p>This methods retrieves the list of component types droppable in at least one of the slots of the current page</p>
+</div><h5 id="methods_getallcomponenttypessupportedonpage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-getallcomponenttypessupportedonpage-page"><p>A promise containing an array with the component types droppable on the current page</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getslotrestrictions">getSlotRestrictions(slotId)</h3>
+<div class="getslotrestrictions"><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-getslotrestrictions-page"><p>This methods retrieves the list of restrictions applied to the slot identified by the provided ID.</p>
+</div><h5 id="methods_getslotrestrictions_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>slotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-getslotrestrictions-page"><p>The ID of the slot whose restrictions to retrieve.</p>
+</div></td></tr></tbody></table><h5 id="methods_getslotrestrictions_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-getslotrestrictions-page"><p>A promise containing an array with the restrictions applied to the slot.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_iscomponentallowedinslot">isComponentAllowedInSlot(slot, dragInfo)</h3>
+<div class="iscomponentallowedinslot"><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-iscomponentallowedinslot-page"><p>This methods determines whether a component of the provided type is allowed in the slot.</p>
+</div><h5 id="methods_iscomponentallowedinslot_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>slot</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-iscomponentallowedinslot-page"><p>the slot for which to verify if it allows a component of the provided type.</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-iscomponentallowedinslot-page"><p>The ID of the slot.</p>
+</div></td></tr><tr><td>components</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-iscomponentallowedinslot-page"><p>the list of components contained in the slot, they must contain an &quot;id&quot; property.</p>
+</div></td></tr></tbody></table></td></tr><tr><td>dragInfo</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-iscomponentallowedinslot-page"><p>contains the dragged object information</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>componentType</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-iscomponentallowedinslot-page"><p>The smartedit type of the component being checked.</p>
+</div></td></tr><tr><td>componentId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-iscomponentallowedinslot-page"><p>The smartedit id of the component being checked.</p>
+</div></td></tr><tr><td>slotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-iscomponentallowedinslot-page"><p>The smartedit id of the slot from which the component originates</p>
+</div></td></tr><tr><td>cloneOnDrop</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-iscomponentallowedinslot-page"><p>The boolean that determines if the component should be cloned or not</p>
+</div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_iscomponentallowedinslot_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-iscomponentallowedinslot-page"><p>A promise containing COMPONENT_IN_SLOT_STATUS (ALLOWED, DISALLOWED, MAYBEALLOWED) string that determines whether a component of the provided type is allowed in the slot.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_issloteditable">isSlotEditable(slotId)</h3>
+<div class="issloteditable"><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-issloteditable-page"><p>This method determines whether slot is editable or not.</p>
+</div><h5 id="methods_issloteditable_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>slotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-issloteditable-page"><p>The ID of the slot.</p>
+</div></td></tr></tbody></table><h5 id="methods_issloteditable_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="slotrestrictionsservicemodule-service-page slotrestrictionsservicemodule-service-slotrestrictionsservice-issloteditable-page"><p>A promise containing a boolean flag that shows whether if the slot is editable or not.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

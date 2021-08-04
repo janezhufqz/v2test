@@ -1,0 +1,25 @@
+<h1><code ng:non-bindable="">navigationEditorNodeService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">navigationEditorNodeServiceModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="navigationeditornodeservicemodule-service-page navigationeditornodeservicemodule-service-navigationeditornodeservice-page"><p>This service updates the navigation node by making REST call to the cmswebservices navigations API.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getnavigationnodeancestry">getNavigationNodeAncestry(node, uriParams)</h3>
+<div class="getnavigationnodeancestry"><div class="navigationeditornodeservicemodule-service-page navigationeditornodeservicemodule-service-navigationeditornodeservice-getnavigationnodeancestry-page"><p>Returns the list of nodes belonging to the ancestry of the node identified by its uid. This list includes the queried node as well.</p>
+</div><h5 id="methods_getnavigationnodeancestry_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>node</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="navigationeditornodeservicemodule-service-page navigationeditornodeservicemodule-service-navigationeditornodeservice-getnavigationnodeancestry-page"><p>The navigation node that needs to be updated.</p>
+</div></td></tr><tr><td>uriParams</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="navigationeditornodeservicemodule-service-page navigationeditornodeservicemodule-service-navigationeditornodeservice-getnavigationnodeancestry-page"><p>the <a href="#/cmssmarteditContainer/resourceLocationsModule.object:UriContext">UriContext</a> necessary to perform operations</p>
+</div></td></tr></tbody></table><h5 id="methods_getnavigationnodeancestry_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="navigationeditornodeservicemodule-service-page navigationeditornodeservicemodule-service-navigationeditornodeservice-getnavigationnodeancestry-page"><p>an array of <a href="#/cmssmarteditContainer/treeModule.object:Node">nodes</a></p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_updatenavigationnodeposition">updateNavigationNodePosition(node)</h3>
+<div class="updatenavigationnodeposition"><div class="navigationeditornodeservicemodule-service-page navigationeditornodeservicemodule-service-navigationeditornodeservice-updatenavigationnodeposition-page"><p>Updates the position of the navigation node within the children collection of its parent.
+Fetches the parent node, and reorders the children, then updates the parent with the new child order.</p>
+</div><h5 id="methods_updatenavigationnodeposition_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>node</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="navigationeditornodeservicemodule-service-page navigationeditornodeservicemodule-service-navigationeditornodeservice-updatenavigationnodeposition-page"><p>The navigation node that needs to be updated.</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

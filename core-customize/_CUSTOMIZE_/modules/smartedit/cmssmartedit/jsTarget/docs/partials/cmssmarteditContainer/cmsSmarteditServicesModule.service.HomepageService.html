@@ -1,0 +1,56 @@
+<h1><code ng:non-bindable="">HomepageService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">cmsSmarteditServicesModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-page"><p>This service is used to determine if a cms page is a current, a previous homepage, or neither.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_cansynchomepage">canSyncHomepage(cmsPage, uriContext)</h3>
+<div class="cansynchomepage"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-cansynchomepage-page"><p>Returns true if the page can be synced</p>
+</div><h5 id="methods_cansynchomepage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsPage</td><td><a href="" class="label type-hint type-hint-icmspage">ICMSPage</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-cansynchomepage-page"><p>The cms page.</p>
+</div></td></tr><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-iuricontext">IUriContext</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-cansynchomepage-page"><p>The uriContext.</p>
+</div></td></tr></tbody></table><h5 id="methods_cansynchomepage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-cansynchomepage-page"><p>A promise resolved to true when the page can be synced.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gethomepagetype">getHomepageType(cmsPage, uriContext)</h3>
+<div class="gethomepagetype"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-gethomepagetype-page"><p>This method returns the homepage type of a cms page.</p>
+</div><h5 id="methods_gethomepagetype_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsPage</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-gethomepagetype-page"><p>The cms page.</p>
+</div></td></tr><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-gethomepagetype-page"><p>The uriContext.</p>
+</div></td></tr></tbody></table><h5 id="methods_gethomepagetype_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-gethomepagetype-page"><p>A promise resolved with a enum type indicating whether the cms page is a current, previous homepage or  null if neither.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_hasfallbackhomepage">hasFallbackHomePage(uriContext)</h3>
+<div class="hasfallbackhomepage"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-hasfallbackhomepage-page"><p>Returns true if the catalog has a fallback homepage.</p>
+</div><h5 id="methods_hasfallbackhomepage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-hasfallbackhomepage-page"><p>The uriContext.</p>
+</div></td></tr></tbody></table><h5 id="methods_hasfallbackhomepage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-hasfallbackhomepage-page"><p>A promise resolved to true when the catalog has a fallback homepage.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_iscurrenthomepage">isCurrentHomepage(cmsPage, uriContext)</h3>
+<div class="iscurrenthomepage"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-iscurrenthomepage-page"><p>This method checks if the cms page is a current homepage.</p>
+</div><h5 id="methods_iscurrenthomepage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsPage</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-iscurrenthomepage-page"><p>The cms page.</p>
+</div></td></tr><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-iscurrenthomepage-page"><p>The uriContext.</p>
+</div></td></tr></tbody></table><h5 id="methods_iscurrenthomepage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-iscurrenthomepage-page"><p>A promise resolved with a boolean indicating whether the cms page is the current homepage.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isoldhomepage">isOldHomepage(cmsPage, uriContext)</h3>
+<div class="isoldhomepage"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-isoldhomepage-page"><p>This method checks if the cms page is a current homepage.</p>
+</div><h5 id="methods_isoldhomepage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsPage</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-isoldhomepage-page"><p>The cms page.</p>
+</div></td></tr><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-isoldhomepage-page"><p>The uriContext.</p>
+</div></td></tr></tbody></table><h5 id="methods_isoldhomepage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-isoldhomepage-page"><p>A promise resolved with a boolean indicating whether the cms page is a previous homepage.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_sendeventhidereplaceparenthomepageinfo">sendEventHideReplaceParentHomePageInfo(data)</h3>
+<div class="sendeventhidereplaceparenthomepageinfo"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-sendeventhidereplaceparenthomepageinfo-page"><p>Send an event to show info to the user about replacing a homepage from a parent catalog.</p>
+</div><h5 id="methods_sendeventhidereplaceparenthomepageinfo_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-iyeventmessagedata">IYEventMessageData</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-sendeventhidereplaceparenthomepageinfo-page"><p>A IYEventMessageData object</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_sendeventshowreplaceparenthomepageinfo">sendEventShowReplaceParentHomePageInfo(data)</h3>
+<div class="sendeventshowreplaceparenthomepageinfo"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-sendeventshowreplaceparenthomepageinfo-page"><p>Send an event to hide the info to the user about replacing a homepage from a parent catalog.</p>
+</div><h5 id="methods_sendeventshowreplaceparenthomepageinfo_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-iyeventmessagedata">IYEventMessageData</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-homepageservice-sendeventshowreplaceparenthomepageinfo-page"><p>A IYEventMessageData object</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,40 @@
+<h1><code ng:non-bindable="">hiddenComponentMenuService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">cmsSmarteditServicesModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-hiddencomponentmenuservice-page"><p>This service is used to retrieve menu items that are available to be used with hidden components.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_allowitemsinhiddencomponentmenu">allowItemsInHiddenComponentMenu(itemsToAllow)</h3>
+<div class="allowitemsinhiddencomponentmenu"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-hiddencomponentmenuservice-allowitemsinhiddencomponentmenu-page"><p>This method is used to set the list of items that can be used with hidden components.</p>
+</div><h5 id="methods_allowitemsinhiddencomponentmenu_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>itemsToAllow</td><td><a href="" class="label type-hint type-hint-string">String[]</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-hiddencomponentmenuservice-allowitemsinhiddencomponentmenu-page"><p>The ID of the menu items that can be used with hidden components.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_getitemsforhiddencomponent">getItemsForHiddenComponent(component, slotId)</h3>
+<div class="getitemsforhiddencomponent"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-hiddencomponentmenuservice-getitemsforhiddencomponent-page"><p>This method is used to retrieve the menu items available to be used in the provided component. To do so,
+this method retrieves contextual menu items available for the provided component and filters out the ones that cannot
+be used in hidden components. For example, assuming that a visible component has &#39;drag and drop&#39; and &#39;remove&#39;
+contextual menu items, if the component is hidden it should only have the remove button available, since the
+drag and drop operation is meaningless if the component is hidden. Hence, this service will retrieve only
+the remove item.</p>
+</div><h5 id="methods_getitemsforhiddencomponent_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>component</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-hiddencomponentmenuservice-getitemsforhiddencomponent-page"><p>The hidden component for which to retrieve its menu items.</p>
+</div></td></tr><tr><td>slotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-hiddencomponentmenuservice-getitemsforhiddencomponent-page"><p>The SmartEdit id of the slot where the component is located.</p>
+</div></td></tr></tbody></table><h5 id="methods_getitemsforhiddencomponent_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;ContextualMenuItem[]&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-hiddencomponentmenuservice-getitemsforhiddencomponent-page"><p>Promise that resolves to an array of contextual menu items available for the component
+provided.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_removealloweditemsinhiddencomponentmenu">removeAllowedItemsInHiddenComponentMenu(itemsToAllow)</h3>
+<div class="removealloweditemsinhiddencomponentmenu"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-hiddencomponentmenuservice-removealloweditemsinhiddencomponentmenu-page"><p>This method removes a provided set of allowed menu items if previously allowed.</p>
+</div><h5 id="methods_removealloweditemsinhiddencomponentmenu_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>itemsToAllow</td><td><a href="" class="label type-hint type-hint-string">String[]</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-hiddencomponentmenuservice-removealloweditemsinhiddencomponentmenu-page"><p>An array containing the ID&#39;s of the menu items that cannot be used any longer with hidden components.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_removealloweditemsinhiddencomponentmenu">removeAllowedItemsInHiddenComponentMenu()</h3>
+<div class="removealloweditemsinhiddencomponentmenu"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-hiddencomponentmenuservice-removealloweditemsinhiddencomponentmenu-page"><p>This method retrieves the list of IDs of the menu items that can be used with hidden components.</p>
+</div><h5 id="methods_removealloweditemsinhiddencomponentmenu_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String[]</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-hiddencomponentmenuservice-removealloweditemsinhiddencomponentmenu-page"><p>The list of IDs of the menu items that can be used with hidden components.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

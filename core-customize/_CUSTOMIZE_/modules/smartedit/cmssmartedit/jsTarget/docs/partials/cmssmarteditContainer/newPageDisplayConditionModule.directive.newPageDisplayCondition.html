@@ -1,0 +1,38 @@
+<h1><code ng:non-bindable="">newPageDisplayCondition</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">newPageDisplayConditionModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="newpagedisplayconditionmodule-directive-page newpagedisplayconditionmodule-directive-newpagedisplaycondition-page"><p>Component for selecting the page condition that can be applied to a new page.
+The component takes a page type and some URI params that it needs to load the necessary information, and outputs
+a display condition result. See below</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;new-page-display-condition
+       page-type-code="{&lt; String}"
+       uri-context="{&lt; Object}"
+       [result-fn="{&lt; Function }"]
+       [initial-primary-page-selected="{&lt; String }"]
+       [initial-condition-selected="{&lt; String }"]
+       [target-catalog-version="{&lt; String }"]&gt;
+&lt;/new-page-display-condition&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageTypeCode</td><td><a href="" class="label type-hint type-hint-object">&lt; String</a></td><td><div class="newpagedisplayconditionmodule-directive-page newpagedisplayconditionmodule-directive-newpagedisplaycondition-page"><p>The page typeCode of a potential new page</p>
+</div></td></tr><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-object">&lt; Object</a></td><td><div class="newpagedisplayconditionmodule-directive-page newpagedisplayconditionmodule-directive-newpagedisplaycondition-page"><p>The uri context containing site/catalog information. This is necessary for the
+component to determine which display conditions can be applied.</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>siteUID</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="newpagedisplayconditionmodule-directive-page newpagedisplayconditionmodule-directive-newpagedisplaycondition-page"><p>The site ID for the new page</p>
+</div></td></tr><tr><td>catalogId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="newpagedisplayconditionmodule-directive-page newpagedisplayconditionmodule-directive-newpagedisplaycondition-page"><p>The catalog ID for the new page</p>
+</div></td></tr><tr><td>catalogVersion</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="newpagedisplayconditionmodule-directive-page newpagedisplayconditionmodule-directive-newpagedisplaycondition-page"><p>The catalog version for the new page</p>
+</div></td></tr></tbody></table></td></tr><tr><td>resultFn <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&lt; Function </a></td><td><div class="newpagedisplayconditionmodule-directive-page newpagedisplayconditionmodule-directive-newpagedisplaycondition-page"><p>An optional output function binding. Every time there is a change to the output,
+or resulting display condition, this function (if it exists) will get executed with a
+<a href="#/cmssmarteditContainer/newPageDisplayConditionModule.object:newPageDisplayConditionResult">newPageDisplayConditionResult</a> as the single
+parameter.</p>
+</div></td></tr><tr><td>initialPrimaryPageSelected <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&lt; String </a></td><td><div class="newpagedisplayconditionmodule-directive-page newpagedisplayconditionmodule-directive-newpagedisplaycondition-page"><p>A page label if primary page associated to the variation must be selected by default.</p>
+</div></td></tr><tr><td>initialConditionSelected <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&lt; String </a></td><td><div class="newpagedisplayconditionmodule-directive-page newpagedisplayconditionmodule-directive-newpagedisplaycondition-page"><p>An optional string to provide if any display condition must be selected by default.</p>
+</div></td></tr><tr><td>targetCatalogVersion <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&lt; String </a></td><td><div class="newpagedisplayconditionmodule-directive-page newpagedisplayconditionmodule-directive-newpagedisplaycondition-page"><p>An optional string to provide if the target catalog version is selected</p>
+</div></td></tr></tbody></table></div>
+</div>

@@ -1,0 +1,73 @@
+<h1><code ng:non-bindable="">ComponentService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">componentMenuModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="componentmenumodule-componentservice-page"><p>Service which manages component types and items</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addexistingcomponent">addExistingComponent(pageId, componentId, slotId, position)</h3>
+<div class="addexistingcomponent"><div class="componentmenumodule-componentservice-addexistingcomponent-page"><p>add an existing component item to a slot</p>
+</div><h5 id="methods_addexistingcomponent_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-addexistingcomponent-page"><p>used to identify the page containing the slot in the current template.</p>
+</div></td></tr><tr><td>componentId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-addexistingcomponent-page"><p>used to identify the existing component which will be added to the slot.</p>
+</div></td></tr><tr><td>slotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-addexistingcomponent-page"><p>used to identify the slot in the current template.</p>
+</div></td></tr><tr><td>position</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-addexistingcomponent-page"><p>used to identify the position in the slot in the current template.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_createnewcomponent">createNewComponent(componentInfo, componentPayload)</h3>
+<div class="createnewcomponent"><div class="componentmenumodule-componentservice-createnewcomponent-page"><p>given a component info and the component payload, a new componentItem is created and added to a slot</p>
+</div><h5 id="methods_createnewcomponent_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>componentInfo</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="componentmenumodule-componentservice-createnewcomponent-page"><p>The basic information of the ComponentType to be created and added to the slot.</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>componenCode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-createnewcomponent-page"><p>componenCode of the ComponentType to be created and added to the slot.</p>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-createnewcomponent-page"><p>name of the new component to be created.</p>
+</div></td></tr><tr><td>pageId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-createnewcomponent-page"><p>pageId used to identify the current page template.</p>
+</div></td></tr><tr><td>slotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-createnewcomponent-page"><p>slotId used to identify the slot in the current template.</p>
+</div></td></tr><tr><td>position</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-createnewcomponent-page"><p>position used to identify the position in the slot in the current template.</p>
+</div></td></tr><tr><td>type</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-createnewcomponent-page"><p>type of the component being created.</p>
+</div></td></tr></tbody></table></td></tr><tr><td>componentPayload</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="componentmenumodule-componentservice-createnewcomponent-page"><p>payload of the new component to be created.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_getsupportedcomponenttypesforcurrentpage">getSupportedComponentTypesForCurrentPage(payload)</h3>
+<div class="getsupportedcomponenttypesforcurrentpage"><div class="componentmenumodule-componentservice-getsupportedcomponenttypesforcurrentpage-page"><p>Fetches all component types that are applicable to the current page.</p>
+</div><h5 id="methods_getsupportedcomponenttypesforcurrentpage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>payload</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="componentmenumodule-componentservice-getsupportedcomponenttypesforcurrentpage-page"><p>The payload that contains the information of the component types to load</p>
+</div></td></tr></tbody></table><h5 id="methods_getsupportedcomponenttypesforcurrentpage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="componentmenumodule-componentservice-getsupportedcomponenttypesforcurrentpage-page"><p>A promise resolving to a page of component types applicable to the current page.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_loadcomponentitem">loadComponentItem()</h3>
+<div class="loadcomponentitem"><div class="componentmenumodule-componentservice-loadcomponentitem-page"><p>load a component identified by its id</p>
+</div></div>
+</li>
+<li><h3 id="methods_loadpagedcomponentitems">loadPagedComponentItems(mask, pageSize, page)</h3>
+<div class="loadpagedcomponentitems"><div class="componentmenumodule-componentservice-loadpagedcomponentitems-page"><p>all existing component items for the current catalog are retrieved in the form of pages
+used for pagination especially when the result set is very large.</p>
+</div><h5 id="methods_loadpagedcomponentitems_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>mask</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-loadpagedcomponentitems-page"><p>the search string to filter the results.</p>
+</div></td></tr><tr><td>pageSize</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-loadpagedcomponentitems-page"><p>the number of elements that a page can contain.</p>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-loadpagedcomponentitems-page"><p>the current page number.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_loadpagedcomponentitemsbycatalogversion">loadPagedComponentItemsByCatalogVersion(payload)</h3>
+<div class="loadpagedcomponentitemsbycatalogversion"><div class="componentmenumodule-componentservice-loadpagedcomponentitemsbycatalogversion-page"><p>all existing component items for the provided content catalog are retrieved in the form of pages
+used for pagination especially when the result set is very large.</p>
+</div><h5 id="methods_loadpagedcomponentitemsbycatalogversion_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>payload</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="componentmenumodule-componentservice-loadpagedcomponentitemsbycatalogversion-page"><p>The payload that contains the information of the page of components to load</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>catalogId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-loadpagedcomponentitemsbycatalogversion-page"><p>the id of the catalog for which to retrieve the component items.</p>
+</div></td></tr><tr><td>catalogVersion</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-loadpagedcomponentitemsbycatalogversion-page"><p>the id of the catalog version for which to retrieve the component items.</p>
+</div></td></tr><tr><td>mask</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-loadpagedcomponentitemsbycatalogversion-page"><p>the search string to filter the results.</p>
+</div></td></tr><tr><td>pageSize</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-loadpagedcomponentitemsbycatalogversion-page"><p>the number of elements that a page can contain.</p>
+</div></td></tr><tr><td>page</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-loadpagedcomponentitemsbycatalogversion-page"><p>the current page number.</p>
+</div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_loadpagedcomponentitemsbycatalogversion_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="componentmenumodule-componentservice-loadpagedcomponentitemsbycatalogversion-page"><p>A promise resolving to a page of component items retrieved from the provided catalog version.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_updatecomponent">updateComponent(componentPayload)</h3>
+<div class="updatecomponent"><div class="componentmenumodule-componentservice-updatecomponent-page"><p>Given a component info and the payload related to an existing component, the latter will be updated with the new supplied values.</p>
+</div><h5 id="methods_updatecomponent_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>componentPayload</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="componentmenumodule-componentservice-updatecomponent-page"><p>of the new component to be created, including the info.</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>componenCode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-updatecomponent-page"><p>of the ComponentType to be created and added to the slot.</p>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-updatecomponent-page"><p>of the new component to be created.</p>
+</div></td></tr><tr><td>pageId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-updatecomponent-page"><p>used to identify the current page template.</p>
+</div></td></tr><tr><td>slotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-updatecomponent-page"><p>used to identify the slot in the current template.</p>
+</div></td></tr><tr><td>position</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-updatecomponent-page"><p>used to identify the position in the slot in the current template.</p>
+</div></td></tr><tr><td>type</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentmenumodule-componentservice-updatecomponent-page"><p>of the component being created.</p>
+</div></td></tr></tbody></table></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

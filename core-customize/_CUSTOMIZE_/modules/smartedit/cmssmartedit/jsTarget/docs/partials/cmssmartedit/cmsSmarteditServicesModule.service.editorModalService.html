@@ -1,0 +1,44 @@
+<h1><code ng:non-bindable="">editorModalService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">cmsSmarteditServicesModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-page"><p>Convenience service to open an editor modal window for a given component type and component ID.</p>
+<p>Example:
+We pass information about component to open method, and the component editor in form of modal appears.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_open">open(componentAttributes, targetSlotId, position, targetedQualifier, saveCallback, editorStackId)</h3>
+<div class="open"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>Proxy function which delegates opening an editor modal for a given component type and component ID to the
+SmartEdit container.</p>
+</div><h5 id="methods_open_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>componentAttributes</td><td><a href="" class="label type-hint type-hint-icomponent">IComponent</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The details of the component to be created/edited</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>smarteditComponentUuid</td><td><a href="" class="label type-hint type-hint-string">string?</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>An optional universally unique UUID of the component if the component is being edited.</p>
+</div></td></tr><tr><td>smarteditComponentId</td><td><a href="" class="label type-hint type-hint-string">string?</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>An optional universally unique ID of the component if the component is being edited.</p>
+</div></td></tr><tr><td>smarteditComponentType</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The component type</p>
+</div></td></tr><tr><td>smarteditCatalogVersionUuid</td><td><a href="" class="label type-hint type-hint-string">string?</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The smartedit catalog version UUID to add the component to.</p>
+</div></td></tr><tr><td>catalogVersionUuid</td><td><a href="" class="label type-hint type-hint-string">string?</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The catalog version UUID to add the component to.</p>
+</div></td></tr><tr><td>initialDirty</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>Is the component dirty.</p>
+</div></td></tr><tr><td>content</td><td><a href="" class="label type-hint type-hint-payload">Payload?</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>An optional content for create operation. It&#39;s ignored if componentAttributes.smarteditComponentUuid is defined.</p>
+</div></td></tr></tbody></table></td></tr><tr><td>targetSlotId</td><td><a href="" class="label type-hint type-hint-string">string?</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The ID of the slot in which the component is placed.</p>
+</div></td></tr><tr><td>position</td><td><a href="" class="label type-hint type-hint-string">string?</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The position in a given slot where the component should be placed.</p>
+</div></td></tr><tr><td>targetedQualifier</td><td><a href="" class="label type-hint type-hint-string">string?</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>Causes the genericEditor to switch to the tab containing a qualifier of the given name.</p>
+</div></td></tr><tr><td>saveCallback</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The optional function that is executed if the user clicks the Save button and the modal closes successfully. The function provides one parameter: item that has been saved.</p>
+</div></td></tr><tr><td>editorStackId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The string that identifies the stack of editors being edited together.</p>
+</div></td></tr></tbody></table><h5 id="methods_open_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>A promise that resolves to the data returned by the modal when it is closed.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_open">open(componentType, componentUuid, targetedQualifier, saveCallback, editorStackId)</h3>
+<div class="open"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>Proxy function which delegates opening an editor modal for a given component type and component ID to the
+SmartEdit container.</p>
+</div><h5 id="methods_open_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>componentType</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The type of component as defined in the platform.</p>
+</div></td></tr><tr><td>componentUuid</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The UUID of the component as defined in the database.</p>
+</div></td></tr><tr><td>targetedQualifier</td><td><a href="" class="label type-hint type-hint-string">string?</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>Causes the genericEditor to switch to the tab containing a qualifier of the given name.</p>
+</div></td></tr><tr><td>saveCallback</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The optional function that is executed if the user clicks the Save button and the modal closes successfully. The function provides one parameter: item that has been saved.</p>
+</div></td></tr><tr><td>editorStackId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>The string that identifies the stack of editors being edited together.</p>
+</div></td></tr></tbody></table><h5 id="methods_open_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-editormodalservice-open-page"><p>A promise that resolves to the data returned by the modal when it is closed.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

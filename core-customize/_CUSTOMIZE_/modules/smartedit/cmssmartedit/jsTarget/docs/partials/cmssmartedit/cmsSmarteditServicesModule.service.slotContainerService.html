@@ -1,0 +1,21 @@
+<h1><code ng:non-bindable="">slotContainerService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">cmsSmarteditServicesModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-slotcontainerservice-page"><p>This service allows retrieving information about the containers found in a given page.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getcomponentcontainer">getComponentContainer(slotId, componentUuid)</h3>
+<div class="getcomponentcontainer"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-slotcontainerservice-getcomponentcontainer-page"><p>This method is used to retrieve the information about the container holding the provided component.
+If the component is not inside a container, the method returns null.</p>
+</div><h5 id="methods_getcomponentcontainer_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>slotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-slotcontainerservice-getcomponentcontainer-page"><p>The SmartEdit id of the slot where the component in question is located.</p>
+</div></td></tr><tr><td>componentUuid</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-slotcontainerservice-getcomponentcontainer-page"><p>The UUID of the component as defined in the database.</p>
+</div></td></tr></tbody></table><h5 id="methods_getcomponentcontainer_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;ContainerInfo&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-slotcontainerservice-getcomponentcontainer-page"><p>A promise that resolves to the information of the container of the component provided.
+Will be null if the component is not inside a container.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

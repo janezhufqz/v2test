@@ -1,0 +1,33 @@
+<h1><code ng:non-bindable="">itemManager</code>
+<div><span class="hint">service in module <code ng:non-bindable="">itemManagementModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="itemmanagementmodule-itemmanager-page"><p>The purpose of this component is handle the logic of displaying the fields and PUT/POST logic
+to add, edit or create CMS Items</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY item-manager
+     item="{Object}"
+     uri-context="{Object}"
+     mode="{String}"
+     content-api="{String}"
+     structure-api="{String}"
+     component-type="{String}"
+     is-dirty="{Function}"
+     submit-function="{Function}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>item</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="itemmanagementmodule-itemmanager-page"><p>An item to use as preset fields in the editor</p>
+</div></td></tr><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="itemmanagementmodule-itemmanager-page"><p>A <a href="#/cmssmarteditContainer/resourceLocationsModule.object:UriContext">UriContext</a></p>
+</div></td></tr><tr><td>mode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="itemmanagementmodule-itemmanager-page"><p>Either &#39;edit&#39;, &#39;add&#39;, or &#39;create&#39;</p>
+</div></td></tr><tr><td>contentApi</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="itemmanagementmodule-itemmanager-page"><p>A URI for GET/PUT/POST of Item content</p>
+</div></td></tr><tr><td>structureApi</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="itemmanagementmodule-itemmanager-page"><p>A URI for fetching the structure of the editor</p>
+</div></td></tr><tr><td>componentType</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="itemmanagementmodule-itemmanager-page"><p>Component type code for the underlying generic editor</p>
+</div></td></tr><tr><td>isDirty</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="itemmanagementmodule-itemmanager-page"><p>A function defined within itemManager. Returns true when editing an Item, creating a new
+non-empty Item, or adding an existing Item.</p>
+</div></td></tr><tr><td>submitFunction</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="itemmanagementmodule-itemmanager-page"><p>A function defined within itemManager. Call this function to invoke submit,
+triggering any PUT/POST operations and returning the item created/edited, wrapped in a promise.</p>
+</div></td></tr></tbody></table></div>
+</div>

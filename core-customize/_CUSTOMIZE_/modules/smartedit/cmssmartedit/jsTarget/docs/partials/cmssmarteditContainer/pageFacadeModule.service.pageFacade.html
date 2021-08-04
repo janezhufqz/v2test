@@ -1,0 +1,44 @@
+<h1><code ng:non-bindable="">pageFacade</code>
+<div><span class="hint">service in module <code ng:non-bindable="">pageFacadeModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-page"><p>A facade that exposes only the business logic necessary for features that need to work with pages</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/cmssmarteditContainer/cmsitemsRestService">cmsitemsRestService</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_contentpagewithlabelexists">contentPageWithLabelExists(label, catalogId, catalogVersion)</h3>
+<div class="contentpagewithlabelexists"><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-contentpagewithlabelexists-page"><p>Determines if a ContentPage with a given label exists in the given catalog and catalog version</p>
+</div><h5 id="methods_contentpagewithlabelexists_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>label</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-contentpagewithlabelexists-page"><p>The label to search for</p>
+</div></td></tr><tr><td>catalogId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-contentpagewithlabelexists-page"><p>The catalog ID to search in for the ContentPage</p>
+</div></td></tr><tr><td>catalogVersion</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-contentpagewithlabelexists-page"><p>The catalog version to search in for the ContentPage</p>
+</div></td></tr></tbody></table><h5 id="methods_contentpagewithlabelexists_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-contentpagewithlabelexists-page"><p>Promise resolving to a boolean determining if the ContentPage exists</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_createpage">createPage(page))</h3>
+<div class="createpage"><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-createpage-page"><p>Creates a new CMS page item</p>
+</div><h5 id="methods_createpage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>page)</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-createpage-page"><p>The object representing the CMS page item to create</p>
+</div></td></tr></tbody></table><h5 id="methods_createpage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-createpage-page"><p>If request is successful, it returns a promise that resolves with the CMS page item object. If
+the request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_createpageforsite">createPageForSite(page, siteUid)</h3>
+<div class="createpageforsite"><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-createpageforsite-page"><p>Creates a new CMS page item for a given site.</p>
+</div><h5 id="methods_createpageforsite_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>page</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-createpageforsite-page"><p>The object representing the CMS page item to create</p>
+</div></td></tr><tr><td>siteUid</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-createpageforsite-page"><p>The uid of the target site.</p>
+</div></td></tr></tbody></table><h5 id="methods_createpageforsite_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-createpageforsite-page"><p>If request is successful, it returns a promise that resolves with the CMS page item object. If
+the request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_retrievepageuricontext">retrievePageUriContext()</h3>
+<div class="retrievepageuricontext"><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-retrievepageuricontext-page"><p>Retrieves the experience and builds a uri context based on its page context</p>
+</div><h5 id="methods_retrievepageuricontext_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="pagefacademodule-service-page pagefacademodule-service-pagefacade-retrievepageuricontext-page"><p>the page uriContext A <a href="#/cmssmarteditContainer/resourceLocationsModule.object:UriContext">UriContext</a></p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

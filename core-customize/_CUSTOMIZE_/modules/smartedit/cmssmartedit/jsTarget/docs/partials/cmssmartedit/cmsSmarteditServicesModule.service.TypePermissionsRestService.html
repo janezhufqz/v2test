@@ -1,0 +1,51 @@
+<h1><code ng:non-bindable="">TypePermissionsRestService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">cmsSmarteditServicesModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-page"><p>Rest Service to retrieve the type permissions.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_hasallpermissionsfortypes">hasAllPermissionsForTypes(types)</h3>
+<div class="hasallpermissionsfortypes"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasallpermissionsfortypes-page"><p>Determines if the current user has READ, CREATE, CHANGE, REMOVE access to the given types.</p>
+</div><h5 id="methods_hasallpermissionsfortypes_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>types</td><td><a href="" class="label type-hint type-hint-string">String[]</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasallpermissionsfortypes-page"><p>The codes of all types.</p>
+</div></td></tr></tbody></table><h5 id="methods_hasallpermissionsfortypes_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;TypedMap&lt;TypedMap&lt;boolean&gt;&gt;&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasallpermissionsfortypes-page"><p>A promise that resolves to a TypedMap of TypedMap object with key (the code) and
+value (true if the user has corresponding access to the type or false otherwise).
+{
+ &quot;typeA&quot;: {&quot;read&quot;: true, &quot;change&quot;: false, &quot;create&quot;: true, &quot;remove&quot;: true},
+ &quot;typeB&quot;: {&quot;read&quot;: true, &quot;change&quot;: false, &quot;create&quot;: true, &quot;remove&quot;: false}
+}</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_hascreatepermissionfortypes">hasCreatePermissionForTypes(types)</h3>
+<div class="hascreatepermissionfortypes"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hascreatepermissionfortypes-page"><p>Determines if the current user has CREATE access to the given types.</p>
+</div><h5 id="methods_hascreatepermissionfortypes_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>types</td><td><a href="" class="label type-hint type-hint-string">String[]</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hascreatepermissionfortypes-page"><p>The codes of all types.</p>
+</div></td></tr></tbody></table><h5 id="methods_hascreatepermissionfortypes_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;TypedMap&lt;boolean&gt;&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hascreatepermissionfortypes-page"><p>A promise that resolves to a TypedMap object with key (the code) and
+value (true if the user has CREATE access to the type or false otherwise).</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_hasdeletepermissionfortypes">hasDeletePermissionForTypes(types)</h3>
+<div class="hasdeletepermissionfortypes"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasdeletepermissionfortypes-page"><p>Determines if the current user has REMOVE access to the given types.</p>
+</div><h5 id="methods_hasdeletepermissionfortypes_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>types</td><td><a href="" class="label type-hint type-hint-string">String[]</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasdeletepermissionfortypes-page"><p>The codes of all types.</p>
+</div></td></tr></tbody></table><h5 id="methods_hasdeletepermissionfortypes_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;TypedMap&lt;boolean&gt;&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasdeletepermissionfortypes-page"><p>A promise that resolves to a TypedMap object with key (the code) and
+value (true if the user has REMOVE access to the type or false otherwise).</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_hasreadpermissionfortypes">hasReadPermissionForTypes(types)</h3>
+<div class="hasreadpermissionfortypes"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasreadpermissionfortypes-page"><p>Determines if the current user has READ access to the given types.</p>
+</div><h5 id="methods_hasreadpermissionfortypes_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>types</td><td><a href="" class="label type-hint type-hint-string">String[]</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasreadpermissionfortypes-page"><p>The codes of all types.</p>
+</div></td></tr></tbody></table><h5 id="methods_hasreadpermissionfortypes_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;TypedMap&lt;boolean&gt;&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasreadpermissionfortypes-page"><p>A promise that resolves to a TypedMap object with key (the code) and
+value (true if the user has READ access to the type or false otherwise).</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_hasupdatepermissionfortypes">hasUpdatePermissionForTypes(types)</h3>
+<div class="hasupdatepermissionfortypes"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasupdatepermissionfortypes-page"><p>Determines if the current user has CHANGE access to the given types.</p>
+</div><h5 id="methods_hasupdatepermissionfortypes_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>types</td><td><a href="" class="label type-hint type-hint-string">String[]</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasupdatepermissionfortypes-page"><p>The codes of all types.</p>
+</div></td></tr></tbody></table><h5 id="methods_hasupdatepermissionfortypes_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;TypedMap&lt;boolean&gt;&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-typepermissionsrestservice-hasupdatepermissionfortypes-page"><p>A promise that resolves to a TypedMap object with key (the code) and
+value (true if the user has CHANGE access to the type or false otherwise).</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

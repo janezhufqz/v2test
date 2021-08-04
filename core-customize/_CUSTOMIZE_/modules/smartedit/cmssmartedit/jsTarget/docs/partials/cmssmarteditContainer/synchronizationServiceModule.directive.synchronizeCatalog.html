@@ -1,0 +1,22 @@
+<h1><code ng:non-bindable="">synchronizeCatalog</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">synchronizationServiceModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="synchronizationservicemodule-directive-page synchronizationservicemodule-directive-synchronizecatalog-page"><p>The synchronize catalog directive is used to display catalog synchronization information in the landing page.</p>
+<p>For the active-catalog version, this directive displays the information of the last sync job affecting that catalog version.</p>
+<p>For non-active catalog versions it provides information about the last sync job from that catalog version towards the catalog&#39;s active version.
+Also, it displays a button to trigger a new synchronization job, going from the current catalog version to the catalog&#39;s active version.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;synchronize-catalog
+       catalog="{Object}"
+       catalog-version="{Object}"
+       active-catalog-version="{Object}"&gt;
+&lt;/synchronize-catalog&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>catalog</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="synchronizationservicemodule-directive-page synchronizationservicemodule-directive-synchronizecatalog-page"><p>An object that contains the catalog details.</p>
+</div></td></tr><tr><td>catalogVersion</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="synchronizationservicemodule-directive-page synchronizationservicemodule-directive-synchronizecatalog-page"><p>An object representing the current catalog version.</p>
+</div></td></tr><tr><td>activeCatalogVersion</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="synchronizationservicemodule-directive-page synchronizationservicemodule-directive-synchronizecatalog-page"><p>An object representing the active catalog version of the provided catalog.</p>
+</div></td></tr></tbody></table></div>
+</div>

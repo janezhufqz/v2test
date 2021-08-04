@@ -1,0 +1,55 @@
+<h1><code ng:non-bindable="">pagesRestService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">pagesRestServiceModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-page"><p>The pagesRestService provides core REST functionality for the CMS pages rest endpoint</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_get">get(params)</h3>
+<div class="get"><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-get-page"><p>Fetches a list of pages for a given site, catalog, and catalog version. If the site, catalog, or catalog version
+is not defined, those used contextually in the session will be used instead.</p>
+</div><h5 id="methods_get_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>params</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-get-page"><p>A JSON object containing catalog context and/or any additional request parameters</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>siteUID</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-get-page"><p>A side ID</p>
+</div></td></tr><tr><td>catalogId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-get-page"><p>A catalog ID</p>
+</div></td></tr><tr><td>catalogVersion</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-get-page"><p>A catalog version ID</p>
+<p>Example:</p>
+<pre><code>{
+     siteUID: &#39;supershoes&#39;,
+     catalogId: &#39;shoes&#39;,
+     catalogVersion: &#39;online&#39;,
+     anOptionalQueryParamName: &#39;paramValue&#39;
+}
+</code></pre></div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_get_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;Array&gt;</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-get-page"><p>A promise resolving to a list of pages, or an empty list.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getbyid">getById(pageUid, params)</h3>
+<div class="getbyid"><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-getbyid-page"><p>Fetches a page for a given site, catalog, and catalog version. If the site, catalog, or catalog version is not
+defined, those used contextually in the session will be used instead.</p>
+</div><h5 id="methods_getbyid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageUid</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-getbyid-page"><p>A page UID of the page to fetch</p>
+</div></td></tr><tr><td>params</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-getbyid-page"><p>A JSON object containing catalog context and/or any additional request parameters</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>siteUID</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-getbyid-page"><p>A side ID</p>
+</div></td></tr><tr><td>catalogId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-getbyid-page"><p>A catalog ID</p>
+</div></td></tr><tr><td>catalogVersion</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-getbyid-page"><p>A catalog version ID</p>
+<p>Example:</p>
+<pre><code>{
+     siteUID: &#39;supershoes&#39;,
+     catalogId: &#39;shoes&#39;,
+     catalogVersion: &#39;online&#39;,
+     anOptionalQueryParamName: &#39;paramValue&#39;
+}
+</code></pre></div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_getbyid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;Object&gt;</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-getbyid-page"><p>A promise that resolves to a JSON object representing the page.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_update">update(pageUid, payload)</h3>
+<div class="update"><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-update-page"><p>Updates a page for a given site, catalog, and catalog version. If the site, catalog, or catalog version is not
+defined, those used contextually in the session will be used instead.</p>
+</div><h5 id="methods_update_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageUid</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-update-page"><p>The page UID of the page to update</p>
+</div></td></tr><tr><td>payload</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-update-page"><p>The page object to be applied to the page resource as it exists on the backend</p>
+</div></td></tr></tbody></table><h5 id="methods_update_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;Object&gt;</a></td><td><div class="pagesrestservicemodule-service-page pagesrestservicemodule-service-pagesrestservice-update-page"><p>A promise that resolves to a JSON object representing the updated page.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

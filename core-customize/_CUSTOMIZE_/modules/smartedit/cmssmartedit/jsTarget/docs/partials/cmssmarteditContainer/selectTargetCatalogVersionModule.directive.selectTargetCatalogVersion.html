@@ -1,0 +1,30 @@
+<h1><code ng:non-bindable="">selectTargetCatalogVersion</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">selectTargetCatalogVersionModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="selecttargetcatalogversionmodule-directive-page selecttargetcatalogversionmodule-directive-selecttargetcatalogversion-page"><p>Displays a list of catalog versions used for selecting the target catalog version that will be applied to the cloned page</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;select-target-catalog-version
+       uri-context="{&lt; Object}"
+       page-type-code="{&lt; String}"
+       page-label="{&lt; String}"
+       [on-target-catalog-version-selected="{&lt; Function }"]&gt;
+&lt;/select-target-catalog-version&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-object">&lt; Object</a></td><td><div class="selecttargetcatalogversionmodule-directive-page selecttargetcatalogversionmodule-directive-selecttargetcatalogversion-page"><p>The uri context containing site/catalog information. This is necessary for the
+component to determine the list of catalog versions to display</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>siteUID</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="selecttargetcatalogversionmodule-directive-page selecttargetcatalogversionmodule-directive-selecttargetcatalogversion-page"><p>The site ID for the new page</p>
+</div></td></tr><tr><td>catalogId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="selecttargetcatalogversionmodule-directive-page selecttargetcatalogversionmodule-directive-selecttargetcatalogversion-page"><p>The catalog ID for the new page</p>
+</div></td></tr><tr><td>catalogVersion</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="selecttargetcatalogversionmodule-directive-page selecttargetcatalogversionmodule-directive-selecttargetcatalogversion-page"><p>The catalog version for the new page</p>
+</div></td></tr></tbody></table></td></tr><tr><td>pageTypeCode</td><td><a href="" class="label type-hint type-hint-object">&lt; String</a></td><td><div class="selecttargetcatalogversionmodule-directive-page selecttargetcatalogversionmodule-directive-selecttargetcatalogversion-page"><p>The page typeCode of a potential new page</p>
+</div></td></tr><tr><td>pageLabel</td><td><a href="" class="label type-hint type-hint-object">&lt; String</a></td><td><div class="selecttargetcatalogversionmodule-directive-page selecttargetcatalogversionmodule-directive-selecttargetcatalogversion-page"><p>The page label of a potential new page</p>
+</div></td></tr><tr><td>onTargetCatalogVersionSelected <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&lt; Function </a></td><td><div class="selecttargetcatalogversionmodule-directive-page selecttargetcatalogversionmodule-directive-selecttargetcatalogversion-page"><p>An optional output function binding. Every time there is a change to the catalogVersion selection,
+or resulting target catalog version, this function (if it exists) will get executed</p>
+</div></td></tr></tbody></table></div>
+</div>

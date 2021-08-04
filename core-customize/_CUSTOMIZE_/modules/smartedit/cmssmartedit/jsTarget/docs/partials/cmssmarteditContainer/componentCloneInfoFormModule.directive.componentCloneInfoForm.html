@@ -1,0 +1,44 @@
+<h1><code ng:non-bindable="">componentCloneInfoForm</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">componentCloneInfoFormModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>Component for the clone page info form</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;component-clone-info-form
+       structure="{&lt;Object}"
+       content="{&lt;Object}"
+       submit="{Function}"
+       reset="{Function}"
+       is-dirty="{Function}"
+       is-valid="{Function}"
+       page-template="{&lt;String}"
+       page-type-code="{&lt;String}"
+       uri-context="{&lt;Object}"
+       target-catalog-version="{&lt;Object}"&gt;
+&lt;/component-clone-info-form&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>structure</td><td><a href="" class="label type-hint type-hint-object">&lt;Object</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The structure that is passed on to the generic editor</p>
+</div></td></tr><tr><td>content</td><td><a href="" class="label type-hint type-hint-object">&lt;Object</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The model that is passed on to the generic editor</p>
+</div></td></tr><tr><td>submit</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>Function defined in outer scope for saving the form fields</p>
+</div></td></tr><tr><td>reset</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>Function defined in outer scope for reseting all fields in the form</p>
+</div></td></tr><tr><td>isDirty</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>Function defined in outer scope returning if the form is in pristine state or not (e.g., have been modified).</p>
+</div></td></tr><tr><td>isValid</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>Function defined in outer scope returning if all fields in the form are valid</p>
+</div></td></tr><tr><td>pageTemplate</td><td><a href="" class="label type-hint type-hint-object">&lt;String</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The pageTemplate property of the cloned page</p>
+</div></td></tr><tr><td>pageTypeCode</td><td><a href="" class="label type-hint type-hint-object">&lt;String</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The typeCode property of the cloned page</p>
+</div></td></tr><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-object">&lt;Object</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The uri context containing site/catalog information. This is necessary for the
+component to determine if the selected target catalog version is different then the current page context</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>siteUID</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The site ID of the current page</p>
+</div></td></tr><tr><td>catalogId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The catalog ID of the current page</p>
+</div></td></tr><tr><td>catalogVersion</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The catalog version of the current page</p>
+</div></td></tr></tbody></table></td></tr><tr><td>targetCatalogVersion</td><td><a href="" class="label type-hint type-hint-object">&lt;Object</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The selected catalogVersion containing the catalogId, version, and siteId</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>siteId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The selected site ID</p>
+</div></td></tr><tr><td>catalogId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The selected catalog ID</p>
+</div></td></tr><tr><td>version</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componentcloneinfoformmodule-directive-page componentcloneinfoformmodule-directive-componentcloneinfoform-page"><p>The selected catalog version</p>
+</div></td></tr></tbody></table></td></tr></tbody></table></div>
+</div>

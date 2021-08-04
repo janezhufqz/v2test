@@ -179,18 +179,6 @@
         {
             "key": "log4j2.logger.sapcpicustomerexchange.appenderRef.stdout.ref",
             "value": "STDOUT"
-        },
-        {
-            "key": "log4j2.logger.customoutboundservices.name",
-            "value": "com.customoutboundservices"
-        },
-        {
-            "key": "log4j2.logger.customoutboundservices.level",
-            "value": "DEBUG"
-        },
-        {
-            "key": "log4j2.logger.customoutboundservices.appenderRef.stdout.ref",
-            "value": "STDOUT"
         }
     ],
     "storefrontAddons": [
@@ -295,14 +283,14 @@
             "template": "ycommercewebservices"
         },
         {
-	    "addon": "smarteditaddon",
-	    "storefront": "yacceleratorstorefront",
-	    "template": "yacceleratorstorefront"
+            "addon": "smarteditaddon",
+            "storefront": "yacceleratorstorefront",
+            "template": "yacceleratorstorefront"
 	},
-	{
-		 "addon": "personalizationaddon",
-		 "storefront": "yacceleratorstorefront",
-		 "template": "yacceleratorstorefront"
+        {
+            "addon": "personalizationaddon",
+            "storefront": "yacceleratorstorefront",
+            "template": "yacceleratorstorefront"
 	 }
 
     ],
@@ -326,61 +314,61 @@
                     "name": "odata2webservices",
                     "contextPath": "/odata2webservices"
                 },
-		{
-		 "name": "smartedit",
-		 "contextPath": "/smartedit"
+                {
+                    "name": "smartedit",
+                    "contextPath": "/smartedit"
 		 },
 
-		 {
-		 "name": "cmssmartedit",
-		 "contextPath": "/cmssmartedit"
+                {
+                    "name": "cmssmartedit",
+                    "contextPath": "/cmssmartedit"
 		 },
 
-		 {
-		 "name": "smarteditwebservices",
-		 "contextPath": "/smarteditwebservices"
+                {
+                    "name": "smarteditwebservices",
+                    "contextPath": "/smarteditwebservices"
 		 },
 
-		 {
-		 "name": "cmssmarteditwebservices",
-		 "contextPath": "/cmssmarteditwebservices"
+                {
+                    "name": "cmssmarteditwebservices",
+                    "contextPath": "/cmssmarteditwebservices"
 		 },
-		{
-		 "name": "oauth2",
-		 "contextPath": "/authorizationserver"
+                {
+                    "name": "oauth2",
+                    "contextPath": "/authorizationserver"
 		 },
-		 {
-		 "name": "cmswebservices",
-		 "contextPath": "/cmswebservices"
-		 },
-
-		 {
-		 "name": "permissionswebservices",
-		 "contextPath": "/permissionswebservices"
+                {
+                    "name": "cmswebservices",
+                    "contextPath": "/cmswebservices"
 		 },
 
-		 {
-		 "name": "previewwebservices",
-		 "contextPath": "/previewwebservices"
-		 },
-		{
-		 "name": "personalizationsmartedit",
-		 "contextPath": "/personalizationsmartedit"
+                {
+                    "name": "permissionswebservices",
+                    "contextPath": "/permissionswebservices"
 		 },
 
-		 {
-		 "name": "personalizationpromotionssmartedit",
-		 "contextPath": "/personalizationpromotionssmartedit"
+                {
+                    "name": "previewwebservices",
+                    "contextPath": "/previewwebservices"
+		 },
+                {
+                    "name": "personalizationsmartedit",
+                    "contextPath": "/personalizationsmartedit"
 		 },
 
-		{
-		 "name": "personalizationwebservices",
-		 "contextPath": "/personalizationwebservices"
+                {
+                    "name": "personalizationpromotionssmartedit",
+                    "contextPath": "/personalizationpromotionssmartedit"
 		 },
 
-		{
-		 "name": "personalizationsearchsmartedit",
-		 "contextPath": "/personalizationsearchsmartedit"
+                {
+                    "name": "personalizationwebservices",
+                    "contextPath": "/personalizationwebservices"
+		 },
+
+                {
+                    "name": "personalizationsearchsmartedit",
+                    "contextPath": "/personalizationsearchsmartedit"
 		 }
             ]
         },

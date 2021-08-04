@@ -1,0 +1,64 @@
+<h1><code ng:non-bindable="">WorkflowFacade</code>
+<div><span class="hint">service in module <code ng:non-bindable="">cmsSmarteditServicesModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-page"><p>This facade is used to manage workflows</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_cancelworflow">cancelWorflow(workflow)</h3>
+<div class="cancelworflow"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-cancelworflow-page"><p>Cancels the workflow. Shows the confirmation message before sending the request.</p>
+</div><h5 id="methods_cancelworflow_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>workflow</td><td><a href="" class="label type-hint type-hint-iworkflow">IWorkflow</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-cancelworflow-page"><p>The workflow to cancel.</p>
+</div></td></tr></tbody></table><h5 id="methods_cancelworflow_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;void&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-cancelworflow-page"><p>A promise that resolves to void.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_editworkflow">editWorkflow(workflow)</h3>
+<div class="editworkflow"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-editworkflow-page"><p>Edit the workflow.</p>
+</div><h5 id="methods_editworkflow_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>workflow</td><td><a href="" class="label type-hint type-hint-workflow">Workflow</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-editworkflow-page"><p>The workflow to cancel.</p>
+</div></td></tr></tbody></table><h5 id="methods_editworkflow_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;Workflow&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-editworkflow-page"><p>A promise that resolves to void.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getallactionsforworkflow">getAllActionsForWorkflow(workflowCode)</h3>
+<div class="getallactionsforworkflow"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getallactionsforworkflow-page"><p>Return all actions for a given workflow code.</p>
+</div><h5 id="methods_getallactionsforworkflow_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>workflowCode</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getallactionsforworkflow-page"><p>The code of the workflow.</p>
+</div></td></tr></tbody></table><h5 id="methods_getallactionsforworkflow_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;WorkflowAction[]&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getallactionsforworkflow-page"><p>A promise that resolves to list of available actions.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getallactionsforworkflow">getAllActionsForWorkflow(workflowCode)</h3>
+<div class="getallactionsforworkflow"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getallactionsforworkflow-page"><p>Return all active actions for a given workflow code and for the current user.</p>
+</div><h5 id="methods_getallactionsforworkflow_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>workflowCode</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getallactionsforworkflow-page"><p>The code of the workflow.</p>
+</div></td></tr></tbody></table><h5 id="methods_getallactionsforworkflow_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;WorkflowAction[]&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getallactionsforworkflow-page"><p>A promise that resolves to list of available actions.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcommentsforworkflowaction">getCommentsForworkflowAction(workflowCode, workflowActionCode, payload)</h3>
+<div class="getcommentsforworkflowaction"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getcommentsforworkflowaction-page"><p>Return a paged list of comments for a given workflow action.
+Since the result is paginated and used by the yInfiniteScrollingTemplate, the list of components are populated in the results property.</p>
+</div><h5 id="methods_getcommentsforworkflowaction_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>workflowCode</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getcommentsforworkflowaction-page"><p>The code of the workflow.</p>
+</div></td></tr><tr><td>workflowActionCode</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getcommentsforworkflowaction-page"><p>The code of the workflow action.</p>
+</div></td></tr><tr><td>payload</td><td><a href="" class="label type-hint type-hint-pageable">Pageable</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getcommentsforworkflowaction-page"><p>The pageable information.</p>
+</div></td></tr></tbody></table><h5 id="methods_getcommentsforworkflowaction_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;WorkflowActionComment&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getcommentsforworkflowaction-page"><p>A promise that resolves to list of available comments for a given workflow and workflow action.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getworkflowinboxtasks">getWorkflowInboxTasks(payload)</h3>
+<div class="getworkflowinboxtasks"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getworkflowinboxtasks-page"><p>Returns a paged list of workflow inbox tasks active for a given user.</p>
+</div><h5 id="methods_getworkflowinboxtasks_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>payload</td><td><a href="" class="label type-hint type-hint-pageable">Pageable</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getworkflowinboxtasks-page"><p>The pageable information.</p>
+</div></td></tr></tbody></table><h5 id="methods_getworkflowinboxtasks_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;Page&lt;WorkflowTask&gt;&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-getworkflowinboxtasks-page"><p>A promise that resolves to a page of workflow inbox tasks for a given user.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_makedecision">makeDecision(workflowCode, workflowAction, decision)</h3>
+<div class="makedecision"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-makedecision-page"><p>Makes a decision for a given workflow action and workflow decision.</p>
+</div><h5 id="methods_makedecision_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>workflowCode</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-makedecision-page"><p>The code of the workflow.</p>
+</div></td></tr><tr><td>workflowAction</td><td><a href="" class="label type-hint type-hint-workflowaction">WorkflowAction</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-makedecision-page"><p>The workflow action object.</p>
+</div></td></tr><tr><td>decision</td><td><a href="" class="label type-hint type-hint-workflowdecision">WorkflowDecision</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-makedecision-page"><p>The workflow decision object.</p>
+</div></td></tr></tbody></table><h5 id="methods_makedecision_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;void&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-makedecision-page"><p>A promise that resolves to void.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_startworkflow">startWorkflow()</h3>
+<div class="startworkflow"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-startworkflow-page"><p>Opens the generic editor form that is used to start a workflow.</p>
+</div><h5 id="methods_startworkflow_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;IWorkflow&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-workflowfacade-startworkflow-page"><p>A promise that resolves to a workflow instance.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

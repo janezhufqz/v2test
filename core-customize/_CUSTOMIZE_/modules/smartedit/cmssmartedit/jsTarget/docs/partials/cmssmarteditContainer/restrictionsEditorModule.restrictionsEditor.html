@@ -1,0 +1,39 @@
+<h1><code ng:non-bindable="">restrictionsEditor</code>
+<div><span class="hint">service in module <code ng:non-bindable="">restrictionsEditorModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="restrictionseditormodule-restrictionseditor-page"><p>The purpose of this directive is to allow the user to manage the restrictions for a given item. The restrictionsEditor has an editable and non-editable mode.
+It uses the restrictionsTable to display the list of restrictions and it uses the restrictionsPicker to add or remove the restrictions.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;restrictions-editor
+       item="{= Object}"
+       editable="{= Boolean}"
+       [restrictions="{&lt; Array}"]
+       [reset-fn="{= Function}"]
+       [cancel-fn="{= Function}"]
+       [is-dirty-fn="{= Function}"]
+       [on-restrictions-changed="{&amp; Expression}"]
+       get-restriction-types="{&amp; Expression}"
+       [get-supported-restriction-types="{&amp; Expression}"]&gt;
+&lt;/restrictions-editor&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>item</td><td><a href="" class="label type-hint type-hint-object">= Object</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>The object for the item you want to manage restrictions.</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>onlyOneRestrictionMustApply</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>The restriction criteria for the item.</p>
+</div></td></tr><tr><td>uuid</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>The uuid of the item. Required if not passing initialRestrictions. Used to fetch and update restrictions for the item.</p>
+</div></td></tr><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>the <a href="#/cmssmarteditContainer/resourceLocationsModule.object:UriContext">uriContext</a></p>
+</div></td></tr></tbody></table></td></tr><tr><td>editable</td><td><a href="" class="label type-hint type-hint-object">= Boolean</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>Boolean to determine whether the editor is enabled.</p>
+</div></td></tr><tr><td>restrictions <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&lt; Array</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>An array of initial restriction objects to be loaded in the restrictions editor. If restrictions is not provided, it is used else it is assumed that there are no restrictions.</p>
+</div></td></tr><tr><td>resetFn <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">= Function</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>Function that returns true. This function is defined in the restrictionsEditor controller and exists only to provide an external callback.</p>
+</div></td></tr><tr><td>cancelFn <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">= Function</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>Function that returns a promise. This function is defined in the restrictionsEditor controller and exists only to provide an external callback.</p>
+</div></td></tr><tr><td>isDirtyFn <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">= Function</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>Function that returns a boolean. This function is defined in the restrictionsEditor controller and exists only to provide an external callback.</p>
+</div></td></tr><tr><td>onRestrictionsChanged <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&amp; Expression</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>Function that passes &#39;$onlyOneRestrictionMustApply&#39; boolean and an array of &#39;$restrictions&#39; as arguments. The invoker can bind this to a custom function to fetch these values and perform other operations.</p>
+</div></td></tr><tr><td>getRestrictionTypes</td><td><a href="" class="label type-hint type-hint-object">&amp; Expression</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>Function that return list of restriction types. The invoker can bind this to a custom function to fetch a list of restriction types.</p>
+</div></td></tr><tr><td>getSupportedRestrictionTypes <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&amp; Expression</a></td><td><div class="restrictionseditormodule-restrictionseditor-page"><p>Function that returns an arry of supported restriction types. The invoker can bind this to a custom function to fetch these values and perform other operations. If not provide, all types are assumed to be supported.</p>
+</div></td></tr></tbody></table></div>
+</div>

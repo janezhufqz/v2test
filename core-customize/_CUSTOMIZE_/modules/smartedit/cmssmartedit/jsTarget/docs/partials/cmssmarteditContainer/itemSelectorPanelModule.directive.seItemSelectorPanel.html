@@ -1,0 +1,49 @@
+<h1><code ng:non-bindable="">seItemSelectorPanel</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">itemSelectorPanelModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="itemselectorpanelmodule-directive-page itemselectorpanelmodule-directive-seitemselectorpanel-page"><p>Directive used to create a panel where a user can add items from one or more catalogs. Note that this directive is intended to be used within a
+<a href="#/cmssmarteditContainer/catalogAwareSelectorModule.directive:seCatalogAwareSelector">seCatalogAwareSelector</a>; it is not designed to work alone.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;se-item-selector-panel
+       panel-title="{&lt;String}"
+       items-selected="{=Array}"
+       item-template="{&lt;String}"
+       get-catalogs="{&lt;Function}"
+       items-fetch-strategy="{&lt;Object}"
+       on-change="{=Function}"
+       show-panel="{=Function}"
+       [hide-panel="{=Function}"]
+       catalog-item-type="{&lt;String}"
+       [max-num-items="{&lt;Number}"]&gt;
+&lt;/se-item-selector-panel&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>panelTitle</td><td><a href="" class="label type-hint type-hint-object">&lt;String</a></td><td><div class="itemselectorpanelmodule-directive-page itemselectorpanelmodule-directive-seitemselectorpanel-page"><p>The title displayed at the top of the panel.</p>
+</div></td></tr><tr><td>itemsSelected</td><td><a href="" class="label type-hint type-hint-object">=Array</a></td><td><div class="itemselectorpanelmodule-directive-page itemselectorpanelmodule-directive-seitemselectorpanel-page"><p>Array containing the UIDs of the items selected. There&#39;s a double binding, which
+means that the panel will show items already selected and will update back whenever the user changes the
+selection.</p>
+</div></td></tr><tr><td>itemTemplate</td><td><a href="" class="label type-hint type-hint-object">&lt;String</a></td><td><div class="itemselectorpanelmodule-directive-page itemselectorpanelmodule-directive-seitemselectorpanel-page"><p>The URL of the template used to display items in the component.</p>
+</div></td></tr><tr><td>getCatalogs</td><td><a href="" class="label type-hint type-hint-object">&lt;Function</a></td><td><div class="itemselectorpanelmodule-directive-page itemselectorpanelmodule-directive-seitemselectorpanel-page"><p>Function called by the component to retrieve the catalogs from which to select
+items from.</p>
+</div></td></tr><tr><td>itemsFetchStrategy</td><td><a href="" class="label type-hint type-hint-object">&lt;Object</a></td><td><div class="itemselectorpanelmodule-directive-page itemselectorpanelmodule-directive-seitemselectorpanel-page"><p>Object containing the strategy to retrieve items from the catalogs. There are three possible scenarios:</p>
+<ul>
+<li>Provide a fetchAll function in the itemsFetchStrategy. This function must retrieve all items from the catalog
+at once. No pagination is performed.</li>
+<li>Provide fetchPage + fetchEntity functions in the itemsFetchStrategy. Information about items already selected
+are retrieved one by one with fetchEntity. Items to choose from, on the other hand, are retrieved in a page fashion.</li>
+<li>Provide fetchPage + fetchEntities Information about items already selected are retrieved in one call with
+fetchEntities. Items to choose from, on the other hand, are retrieved in a page fashion.</li>
+</ul>
+</div></td></tr><tr><td>onChange</td><td><a href="" class="label type-hint type-hint-object">=Function</a></td><td><div class="itemselectorpanelmodule-directive-page itemselectorpanelmodule-directive-seitemselectorpanel-page"><p>Function executed whenever the selection of items change in the panel.</p>
+</div></td></tr><tr><td>showPanel</td><td><a href="" class="label type-hint type-hint-object">=Function</a></td><td><div class="itemselectorpanelmodule-directive-page itemselectorpanelmodule-directive-seitemselectorpanel-page"><p>Function passed to the parent to be executed whenever the panel is opened.</p>
+</div></td></tr><tr><td>hidePanel <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">=Function</a></td><td><div class="itemselectorpanelmodule-directive-page itemselectorpanelmodule-directive-seitemselectorpanel-page"><p>Function passed to the parent to be executed whenever the panel is hid.</p>
+</div></td></tr><tr><td>catalogItemType</td><td><a href="" class="label type-hint type-hint-object">&lt;String</a></td><td><div class="itemselectorpanelmodule-directive-page itemselectorpanelmodule-directive-seitemselectorpanel-page"><p>String specifying the type of elements being selected in the panel. This string is used only for localization purposes.</p>
+</div></td></tr><tr><td>maxNumItems <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">&lt;Number</a></td><td><div class="itemselectorpanelmodule-directive-page itemselectorpanelmodule-directive-seitemselectorpanel-page"><p>The maximum number of items that a user can select within the component.</p>
+</div></td></tr></tbody></table></div>
+</div>

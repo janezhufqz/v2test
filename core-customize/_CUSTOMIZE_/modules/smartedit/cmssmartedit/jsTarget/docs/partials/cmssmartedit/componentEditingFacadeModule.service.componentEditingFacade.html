@@ -1,0 +1,45 @@
+<h1><code ng:non-bindable="">componentEditingFacade</code>
+<div><span class="hint">service in module <code ng:non-bindable="">componentEditingFacadeModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-page"><p>This service provides methods that allow adding or removing components in the page.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addexistingcomponenttoslot">addExistingComponentToSlot(targetSlotId, dragInfo, position)</h3>
+<div class="addexistingcomponenttoslot"><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-addexistingcomponenttoslot-page"><p>This methods adds an existing component to the slot and display an Alert whenever the component is either hidden or restricted.</p>
+</div><h5 id="methods_addexistingcomponenttoslot_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>targetSlotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-addexistingcomponenttoslot-page"><p>The ID of the slot where to drop the component.</p>
+</div></td></tr><tr><td>dragInfo</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-addexistingcomponenttoslot-page"><p>The dragInfo object containing the componentId, componentUuid and componentType.</p>
+</div></td></tr><tr><td>position</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-addexistingcomponenttoslot-page"><p>The position in the slot where to add the component.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_addnewcomponenttoslot">addNewComponentToSlot(slotInfo, catalogVersionUuid, componentType, position)</h3>
+<div class="addnewcomponenttoslot"><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-addnewcomponenttoslot-page"><p>This methods adds a new component to the slot and opens a component modal to edit its properties.</p>
+</div><h5 id="methods_addnewcomponenttoslot_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>slotInfo</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-addnewcomponenttoslot-page"><p>The target slot for the new component</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>targetSlotId</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-addnewcomponenttoslot-page"><p>The Uid of the slot where to drop the new component.</p>
+</div></td></tr><tr><td>targetSlotUUId</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-addnewcomponenttoslot-page"><p>The UUid of the slot where to drop the new component.</p>
+</div></td></tr></tbody></table></td></tr><tr><td>catalogVersionUuid</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-addnewcomponenttoslot-page"><p>The catalog version on which to create the new component</p>
+</div></td></tr><tr><td>componentType</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-addnewcomponenttoslot-page"><p>The type of the new component to add.</p>
+</div></td></tr><tr><td>position</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-addnewcomponenttoslot-page"><p>The position in the slot where to add the new component.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_cloneexistingcomponenttoslot">cloneExistingComponentToSlot(componentProperties)</h3>
+<div class="cloneexistingcomponenttoslot"><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-cloneexistingcomponenttoslot-page"><p>This methods clones an existing component to the slot by opening a component modal to edit its properties.</p>
+</div><h5 id="methods_cloneexistingcomponenttoslot_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>componentProperties</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-cloneexistingcomponenttoslot-page"><p>The properties of the component required to create a clone</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>targetSlotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-cloneexistingcomponenttoslot-page"><p>The ID of the slot where to drop the component.</p>
+</div></td></tr><tr><td>dragInfo</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-cloneexistingcomponenttoslot-page"><p>The dragInfo object containing the componentId, componentUuid and componentType.</p>
+</div></td></tr><tr><td>position</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-cloneexistingcomponenttoslot-page"><p>The position in the slot where to add the component.</p>
+</div></td></tr></tbody></table></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_movecomponent">moveComponent(sourceSlotId, targetSlotId, componentId, position)</h3>
+<div class="movecomponent"><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-movecomponent-page"><p>This methods moves a component from two slots in a page.</p>
+</div><h5 id="methods_movecomponent_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>sourceSlotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-movecomponent-page"><p>The ID of the slot where the component is initially located.</p>
+</div></td></tr><tr><td>targetSlotId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-movecomponent-page"><p>The ID of the slot where to drop the component.</p>
+</div></td></tr><tr><td>componentId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-movecomponent-page"><p>The ID of the component to add into the slot.</p>
+</div></td></tr><tr><td>position</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="componenteditingfacademodule-service-page componenteditingfacademodule-service-componenteditingfacade-movecomponent-page"><p>The position in the slot where to add the component.</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

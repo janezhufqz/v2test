@@ -1,0 +1,43 @@
+<h1><code ng:non-bindable="">PageVersioningService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">cmsSmarteditServicesModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-page"><p>This service is used to manage versions in a page.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_deletepageversion">deletePageVersion(pageUuid, versionId)</h3>
+<div class="deletepageversion"><h5 id="methods_deletepageversion_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageUuid</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-deletepageversion-page"><p>The uuid of the page.</p>
+</div></td></tr><tr><td>versionId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-deletepageversion-page"><p>The uid of the version.</p>
+</div></td></tr></tbody></table><h5 id="methods_deletepageversion_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;void&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-deletepageversion-page"><p>an empty promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_findpageversions">findPageVersions(payload)</h3>
+<div class="findpageversions"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-findpageversions-page"><p>Retrieves the list of versions found for the page identified by the provided id. This method is paged.</p>
+</div><h5 id="methods_findpageversions_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>payload</td><td><a href="" class="label type-hint type-hint-pageversionsearchpayload">PageVersionSearchPayload</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-findpageversions-page"><p>The payload containing search query params, including the pageable information.</p>
+</div></td></tr></tbody></table><h5 id="methods_findpageversions_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;Page&lt;IPageVersion&gt;&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-findpageversions-page"><p>A promise that resolves to a paged list of versions.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getpageversionforid">getPageVersionForId(pageUuid, versionId)</h3>
+<div class="getpageversionforid"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-getpageversionforid-page"><p>Retrieves the page version information for the provided versionId.</p>
+</div><h5 id="methods_getpageversionforid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageUuid</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-getpageversionforid-page"><p>The uuid of the page.</p>
+</div></td></tr><tr><td>versionId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-getpageversionforid-page"><p>The uid of the version.</p>
+</div></td></tr></tbody></table><h5 id="methods_getpageversionforid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;IPageVersion&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-getpageversionforid-page"><p>A promise that resolves to a page version information.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getresourceuri">getResourceURI()</h3>
+<div class="getresourceuri"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-getresourceuri-page"><p>Retrieves the resource URI to manage page versions.</p>
+</div><h5 id="methods_getresourceuri_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-getresourceuri-page"><p>the resource URI</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_rollbackpageversion">rollbackPageVersion(pageUuid, versionId)</h3>
+<div class="rollbackpageversion"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-rollbackpageversion-page"><p>Will rollback the page to the provided version. This process will automatically create a version of the current page.</p>
+</div><h5 id="methods_rollbackpageversion_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageUuid</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-rollbackpageversion-page"><p>The uuid of the page.</p>
+</div></td></tr><tr><td>versionId</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-rollbackpageversion-page"><p>The uid of the version.</p>
+</div></td></tr></tbody></table><h5 id="methods_rollbackpageversion_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-angular">angular.IPromise&lt;void&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-pageversioningservice-rollbackpageversion-page"><p>an empty promise</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

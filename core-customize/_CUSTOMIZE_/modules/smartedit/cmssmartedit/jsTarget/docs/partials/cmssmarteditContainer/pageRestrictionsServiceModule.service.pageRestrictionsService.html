@@ -1,0 +1,46 @@
+<h1><code ng:non-bindable="">pageRestrictionsService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">pageRestrictionsServiceModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="pagerestrictionsservicemodule-service-page pagerestrictionsservicemodule-service-pagerestrictionsservice-page"><p>Service that concerns business logic tasks related to CMS restrictions for CMS pages.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/cmssmarteditContainer/ng.$q">$q</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/cmssmarteditContainer/yLoDashModule">yLoDashModule</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/cmssmarteditContainer/pageRestrictionsRestService">pageRestrictionsRestService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/cmssmarteditContainer/restrictionsService">restrictionsService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/cmssmarteditContainer/typeStructureRestService">typeStructureRestService</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getpagerestrictionscountforpageuid">getPageRestrictionsCountForPageUID(pageUID)</h3>
+<div class="getpagerestrictionscountforpageuid"><h5 id="methods_getpagerestrictionscountforpageuid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageUID</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagerestrictionsservicemodule-service-page pagerestrictionsservicemodule-service-pagerestrictionsservice-getpagerestrictionscountforpageuid-page"><p>The page Id.</p>
+</div></td></tr></tbody></table><h5 id="methods_getpagerestrictionscountforpageuid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="pagerestrictionsservicemodule-service-page pagerestrictionsservicemodule-service-pagerestrictionsservice-getpagerestrictionscountforpageuid-page"><p>The number of restrictions applied to the page with the give page UID.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getpagerestrictionscountmapforcatalogversion">getPageRestrictionsCountMapForCatalogVersion(siteUID, catalogUID, catalogVersionUID)</h3>
+<div class="getpagerestrictionscountmapforcatalogversion"><h5 id="methods_getpagerestrictionscountmapforcatalogversion_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>siteUID</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagerestrictionsservicemodule-service-page pagerestrictionsservicemodule-service-pagerestrictionsservice-getpagerestrictionscountmapforcatalogversion-page"><p>The site Id.</p>
+</div></td></tr><tr><td>catalogUID</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagerestrictionsservicemodule-service-page pagerestrictionsservicemodule-service-pagerestrictionsservice-getpagerestrictionscountmapforcatalogversion-page"><p>The catalog Id.</p>
+</div></td></tr><tr><td>catalogVersionUID</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagerestrictionsservicemodule-service-page pagerestrictionsservicemodule-service-pagerestrictionsservice-getpagerestrictionscountmapforcatalogversion-page"><p>The catalog version.</p>
+</div></td></tr></tbody></table><h5 id="methods_getpagerestrictionscountmapforcatalogversion_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="pagerestrictionsservicemodule-service-page pagerestrictionsservicemodule-service-pagerestrictionsservice-getpagerestrictionscountmapforcatalogversion-page"><p>A map of all pageId as keys, and the number of restrictions applied to that page as the values.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getrestrictionsbypageuid">getRestrictionsByPageUID(pageUuid)</h3>
+<div class="getrestrictionsbypageuid"><h5 id="methods_getrestrictionsbypageuid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageUuid</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagerestrictionsservicemodule-service-page pagerestrictionsservicemodule-service-pagerestrictionsservice-getrestrictionsbypageuid-page"><p>The uuid of the page for which to fetch the restrictions.</p>
+</div></td></tr></tbody></table><h5 id="methods_getrestrictionsbypageuid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="pagerestrictionsservicemodule-service-page pagerestrictionsservicemodule-service-pagerestrictionsservice-getrestrictionsbypageuid-page"><p>An array of all restrictions applied to the page with the given page ID</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isrestrictiontypesupported">isRestrictionTypeSupported(restrictionTypeCode)</h3>
+<div class="isrestrictiontypesupported"><h5 id="methods_isrestrictiontypesupported_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>restrictionTypeCode</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="pagerestrictionsservicemodule-service-page pagerestrictionsservicemodule-service-pagerestrictionsservice-isrestrictiontypesupported-page"><p>Code for the restriction type.</p>
+</div></td></tr></tbody></table><h5 id="methods_isrestrictiontypesupported_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="pagerestrictionsservicemodule-service-page pagerestrictionsservicemodule-service-pagerestrictionsservice-isrestrictiontypesupported-page"><p>True if smartedit supports editing or creating restrictions of this type.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

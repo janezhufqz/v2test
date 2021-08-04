@@ -1,0 +1,72 @@
+<h1><code ng:non-bindable="">cmsitemsRestService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">cmsitemsRestService</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="cmsitemsrestservice-cmsitemsrestservice-page"><p>Service to deal with CMS Items related CRUD operations.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_create">create(cmsitem)</h3>
+<div class="create"><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-create-page"><p>Create a new CMS Item.</p>
+</div><h5 id="methods_create_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsitem</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-create-page"><p>The object representing the CMS Item to create</p>
+</div></td></tr></tbody></table><h5 id="methods_create_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;CMSItem&gt;</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-create-page"><p>If request is successful, it returns a promise that resolves with the CMS Item object. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_delete">delete(cmsitemUuid)</h3>
+<div class="delete"><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-delete-page"><p>Remove a CMS Item.</p>
+</div><h5 id="methods_delete_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsitemUuid</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-delete-page"><p>The CMS Item uuid</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_get">get(queryParams)</h3>
+<div class="get"><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-get-page"><p>Fetch CMS Items search result by making a REST call to the CMS Items API.
+A search can be performed by a typeCode (optionnaly in combination of a mask parameter), or by providing a list of cms items uuid.</p>
+</div><h5 id="methods_get_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>queryParams</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-get-page"><p>The object representing the query params</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageSize</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-get-page"><p>number of items in the page</p>
+</div></td></tr><tr><td>currentPage</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-get-page"><p>current page number</p>
+</div></td></tr><tr><td>typeCode <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String </a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-get-page"><p>for filtering on the cms item typeCode</p>
+</div></td></tr><tr><td>mask <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String </a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-get-page"><p>for filtering the search</p>
+</div></td></tr><tr><td>itemSearchParams <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String </a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-get-page"><p>search on additional fields using a comma separated list of field name and value
+pairs which are separated by a colon. Exact matches only.</p>
+</div></td></tr><tr><td>catalogId <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String </a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-get-page"><p>the catalog to search items in. If empty, the current context catalog will be used.</p>
+</div></td></tr><tr><td>catalogVersion <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String </a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-get-page"><p>the catalog version to search items in. If empty, the current context catalog version will be used.</p>
+</div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_get_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;CMSItem&gt;</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-get-page"><p>If request is successful, it returns a promise that resolves with the paged search result. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getbyid">getById(cmsitemUuid)</h3>
+<div class="getbyid"><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-getbyid-page"><p>Get the CMS Item that matches the given item uuid (Universally Unique Identifier).</p>
+</div><h5 id="methods_getbyid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsitemUuid</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-getbyid-page"><p>The CMS Item uuid</p>
+</div></td></tr></tbody></table><h5 id="methods_getbyid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;CMSItem&gt;</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-getbyid-page"><p>If request is successful, it returns a promise that resolves with the CMS Item object. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getbyidandversion">getByIdAndVersion(cmsitemUuid, versionId)</h3>
+<div class="getbyidandversion"><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-getbyidandversion-page"><p>Get the CMS Item that matches the given item uuid (Universally Unique Identifier) for a given version.</p>
+</div><h5 id="methods_getbyidandversion_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsitemUuid</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-getbyidandversion-page"><p>The CMS Item uuid</p>
+</div></td></tr><tr><td>versionId</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-getbyidandversion-page"><p>The uid of the version to be retrieved.</p>
+</div></td></tr></tbody></table><h5 id="methods_getbyidandversion_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;CMSItem&gt;</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-getbyidandversion-page"><p>If request is successful, it returns a promise that resolves with the CMS Item object. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getbyids">getByIds(uuids)</h3>
+<div class="getbyids"><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-getbyids-page"><p>Fetch CMS Items by uuids, making a POST call to the CMS Items API.
+A search can be performed by providing a list of cms items uuid.</p>
+</div><h5 id="methods_getbyids_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>uuids <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string[] </a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-getbyids-page"><p>list of cms item uuids</p>
+</div></td></tr></tbody></table><h5 id="methods_getbyids_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;CMSItem[]&gt;</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-getbyids-page"><p>If request is successful, it returns a promise that resolves to the result. If the
+request fails, it resolves with errors from the backend. Be mindful that the response payload size could
+increase dramatically depending on the number of uuids that you send on the request.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_update">update(cmsitem)</h3>
+<div class="update"><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-update-page"><p>Update a CMS Item.</p>
+</div><h5 id="methods_update_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsitem</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-update-page"><p>The object representing the CMS Item to update</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>identifier</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-update-page"><p>The cms item identifier (uuid)</p>
+</div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_update_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;CMSItem&gt;</a></td><td><div class="cmsitemsrestservice-service-page cmsitemsrestservice-service-cmsitemsrestservice-update-page"><p>If request is successful, it returns a promise that resolves with the updated CMS Item object. If the
+request fails, it resolves with errors from the backend.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

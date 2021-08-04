@@ -1,0 +1,613 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Cms Smartedit Docs</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Cms Smartedit Docs</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li>Cmssmartedit</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>compodocs/cmssmartedit/legacyCmssmartedit.ts</code>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { doImport as doImport1 } from &#x27;./forcedImports&#x27;;
+doImport1();
+
+import * as angular from &#x27;angular&#x27;;
+import {
+    ComponentUpdatedEventInfo,
+    CrossFrameEventService,
+    IContextualMenuButton,
+    IContextualMenuConfiguration,
+    IFeatureService,
+    IPageInfoService,
+    SeModule,
+    TypedMap
+} from &#x27;smarteditcommons&#x27;;
+import { ComponentHandlerService, ContextualMenuService } from &#x27;smartedit&#x27;;
+import { AssetsService, CmsResourceLocationsModule } from &#x27;cmscommons&#x27;;
+import { CmsSmarteditServicesModule, ComponentSharedService } from &#x27;cmssmartedit/services&#x27;;
+import { CmsComponentsModule } from &#x27;cmssmartedit/components&#x27;;
+import { TypePermissionsRestService } from &#x27;cmscommons/services/TypePermissionsRestService&#x27;;
+import &#x27;./components/slotSharedDisabled/popovers.scss&#x27;;
+import { CmsDragAndDropService, CmsDragAndDropServiceModule } from &#x27;./services/dragAndDrop&#x27;;
+
+@SeModule({
+    imports: [
+        CmsSmarteditServicesModule,
+        CmsComponentsModule,
+        CmsResourceLocationsModule,
+        &#x27;resourceLocationsModule&#x27;,
+        &#x27;decoratorServiceModule&#x27;,
+        &#x27;removeComponentServiceModule&#x27;,
+        &#x27;editorEnablerServiceModule&#x27;,
+        &#x27;alertServiceModule&#x27;,
+        &#x27;translationServiceModule&#x27;,
+        &#x27;slotVisibilityButtonModule&#x27;,
+        &#x27;slotVisibilityServiceModule&#x27;,
+        &#x27;cmssmarteditTemplates&#x27;,
+        &#x27;cmscommonsTemplates&#x27;,
+        &#x27;smarteditServicesModule&#x27;,
+        &#x27;slotSharedButtonModule&#x27;,
+        CmsDragAndDropServiceModule,
+        &#x27;slotSyncButtonModule&#x27;,
+        &#x27;confirmationModalServiceModule&#x27;,
+        &#x27;sharedSlotDisabledDecoratorModule&#x27;,
+        &#x27;externalSlotDisabledDecoratorModule&#x27;,
+        &#x27;slotRestrictionsServiceModule&#x27;,
+        &#x27;slotSharedServiceModule&#x27;,
+        &#x27;contextualMenuDropdownServiceModule&#x27;,
+        &#x27;externalComponentDecoratorModule&#x27;,
+        &#x27;externalComponentButtonModule&#x27;,
+        &#x27;componentEditingFacadeModule&#x27;,
+        &#x27;slotUnsharedButtonModule&#x27;,
+        &#x27;componentInfoServiceModule&#x27;
+    ],
+    initialize: (
+        $rootScope: angular.IRootScopeService,
+        $q: angular.IQService,
+        $translate: angular.translate.ITranslateService,
+        alertService: any,
+        assetsService: AssetsService,
+        cmsDragAndDropService: CmsDragAndDropService,
+        componentHandlerService: ComponentHandlerService,
+        pageInfoService: IPageInfoService,
+        confirmationModalService: any,
+        contextualMenuService: ContextualMenuService,
+        decoratorService: any,
+        editorEnablerService: any,
+        featureService: IFeatureService,
+        removeComponentService: any,
+        slotRestrictionsService: any,
+        slotSharedService: any,
+        slotVisibilityService: any,
+        componentEditingFacade: any,
+        cmsitemsRestService: any,
+        componentInfoService: any,
+        componentSharedService: ComponentSharedService,
+        crossFrameEventService: CrossFrameEventService,
+        EVENT_SMARTEDIT_COMPONENT_UPDATED: string,
+        typePermissionsRestService: TypePermissionsRestService
+    ) &#x3D;&gt; {
+        &#x27;ngInject&#x27;;
+        editorEnablerService.enableForComponents([&#x27;^((?!Slot).)*$&#x27;]);
+
+        decoratorService.addMappings({
+            &#x27;^((?!Slot).)*$&#x27;: [&#x27;se.contextualMenu&#x27;, &#x27;externalComponentDecorator&#x27;],
+            &#x27;^.*Slot$&#x27;: [
+                &#x27;se.slotContextualMenu&#x27;,
+                &#x27;se.basicSlotContextualMenu&#x27;,
+                &#x27;syncIndicator&#x27;,
+                &#x27;sharedSlotDisabledDecorator&#x27;,
+                &#x27;externalSlotDisabledDecorator&#x27;
+            ]
+        });
+
+        featureService.addContextualMenuButton({
+            key: &#x27;externalcomponentbutton&#x27;,
+            priority: 100,
+            nameI18nKey: &#x27;se.cms.contextmenu.title.externalcomponent&#x27;,
+            i18nKey: &#x27;se.cms.contextmenu.title.externalcomponentbutton&#x27;,
+            regexpKeys: [&#x27;^((?!Slot).)*$&#x27;],
+            condition: (configuration: IContextualMenuConfiguration) &#x3D;&gt; {
+                const slotId: string &#x3D; componentHandlerService.getParentSlotForComponent(
+                    configuration.element
+                );
+
+                return slotRestrictionsService
+                    .isSlotEditable(slotId)
+                    .then((isSlotEditable: boolean) &#x3D;&gt; {
+                        if (!isSlotEditable) {
+                            return false;
+                        }
+
+                        const smarteditCatalogVersionUuid &#x3D;
+                            configuration.componentAttributes &amp;&amp;
+                            configuration.componentAttributes.smarteditCatalogVersionUuid;
+                        if (smarteditCatalogVersionUuid) {
+                            return pageInfoService
+                                .getCatalogVersionUUIDFromPage()
+                                .then((uuid: string) &#x3D;&gt; {
+                                    return smarteditCatalogVersionUuid !&#x3D;&#x3D; uuid;
+                                });
+                        }
+
+                        return componentHandlerService.isExternalComponent(
+                            configuration.componentId,
+                            configuration.componentType
+                        );
+                    });
+            },
+            action: {
+                template:
+                    &#x27;&lt;external-component-button data-catalog-version-uuid&#x3D;&quot;ctrl.componentAttributes.smarteditCatalogVersionUuid&quot;&gt;&lt;/external-component-button&gt;&#x27;
+            },
+            displayClass: &#x27;externalcomponentbutton&#x27;,
+            displayIconClass: &#x27;hyicon hyicon-globe&#x27;,
+            displaySmallIconClass: &#x27;hyicon hyicon-globe&#x27;
+        } as IContextualMenuButton);
+
+        featureService.addContextualMenuButton({
+            key: &#x27;se.cms.dragandropbutton&#x27;,
+            priority: 200,
+            nameI18nKey: &#x27;se.cms.contextmenu.title.dragndrop&#x27;,
+            i18nKey: &#x27;se.cms.contextmenu.title.dragndrop&#x27;,
+            regexpKeys: [&#x27;^((?!Slot).)*$&#x27;],
+            condition: (configuration: IContextualMenuConfiguration) &#x3D;&gt; {
+                const slotId &#x3D; componentHandlerService.getParentSlotForComponent(
+                    configuration.element
+                );
+                return slotRestrictionsService
+                    .isSlotEditable(slotId)
+                    .then(function(slotEditable: boolean) {
+                        if (slotEditable) {
+                            return typePermissionsRestService
+                                .hasUpdatePermissionForTypes([configuration.componentType])
+                                .then(function(hasUpdatePermission: TypedMap&lt;boolean&gt;) {
+                                    return hasUpdatePermission[configuration.componentType];
+                                });
+                        }
+                        return false;
+                    });
+            },
+            action: {
+                callbacks: {
+                    mousedown: () &#x3D;&gt; {
+                        cmsDragAndDropService.update();
+                    }
+                }
+            },
+            displayClass: &#x27;movebutton&#x27;,
+            displayIconClass: &#x27;sap-icon--move&#x27;,
+            displaySmallIconClass: &#x27;sap-icon--move&#x27;,
+            permissions: [&#x27;se.context.menu.drag.and.drop.component&#x27;]
+        });
+
+        featureService.register({
+            key: &#x27;se.cms.html5DragAndDrop&#x27;,
+            nameI18nKey: &#x27;se.cms.dragAndDrop.name&#x27;,
+            descriptionI18nKey: &#x27;se.cms.dragAndDrop.description&#x27;,
+            enablingCallback: () &#x3D;&gt; {
+                cmsDragAndDropService.register();
+                cmsDragAndDropService.apply();
+            },
+            disablingCallback: () &#x3D;&gt; {
+                cmsDragAndDropService.unregister();
+            }
+        });
+
+        featureService.addContextualMenuButton({
+            key: &#x27;se.cms.sharedcomponentbutton&#x27;,
+            priority: 300,
+            nameI18nKey: &#x27;se.cms.contextmenu.title.shared.component&#x27;,
+            i18nKey: &#x27;se.cms.contextmenu.title.shared.component&#x27;,
+            regexpKeys: [&#x27;^((?!Slot).)*$&#x27;],
+            condition: (configuration: IContextualMenuConfiguration) &#x3D;&gt; {
+                const slotId &#x3D; componentHandlerService.getParentSlotForComponent(
+                    configuration.element
+                );
+
+                return Promise.all([
+                    componentHandlerService.isExternalComponent(
+                        configuration.componentId,
+                        configuration.componentType
+                    ),
+                    slotRestrictionsService.isSlotEditable(slotId)
+                ]).then(function(response: boolean[]) {
+                    if (response[0] || !response[1]) {
+                        return false;
+                    }
+
+                    return componentSharedService.isComponentShared(
+                        configuration.componentAttributes.smarteditComponentUuid
+                    );
+                });
+            },
+            action: {
+                template: &#x60;&lt;shared-component-button data-smartedit-component-id&#x3D;&quot;ctrl.componentAttributes.smarteditComponentId&quot;&gt;&lt;/shared-component-button&gt;&#x60;
+            },
+            displayClass: &#x27;shared-component-button&#x27;,
+            displayIconClass: &#x27;sap-icon--chain-link&#x27;,
+            displaySmallIconClass: &#x27;sap-icon--chain-link&#x27;,
+            permissions: []
+        });
+
+        featureService.addContextualMenuButton({
+            key: &#x27;se.cms.remove&#x27;,
+            priority: 500,
+            customCss: &#x27;se-contextual-more-menu__item--delete&#x27;,
+            i18nKey: &#x27;se.cms.contextmenu.title.remove&#x27;,
+            nameI18nKey: &#x27;se.cms.contextmenu.title.remove&#x27;,
+            regexpKeys: [&#x27;^((?!Slot).)*$&#x27;],
+            condition: (configuration: IContextualMenuConfiguration) &#x3D;&gt; {
+                if (!configuration.isComponentHidden) {
+                    const slotId: string &#x3D; componentHandlerService.getParentSlotForComponent(
+                        configuration.element
+                    );
+                    return slotRestrictionsService
+                        .isSlotEditable(slotId)
+                        .then(function(slotEditable: boolean) {
+                            if (slotEditable) {
+                                return typePermissionsRestService
+                                    .hasDeletePermissionForTypes([configuration.componentType])
+                                    .then(function(hasDeletePermission: TypedMap&lt;boolean&gt;) {
+                                        return hasDeletePermission[configuration.componentType];
+                                    });
+                            }
+                            return false;
+                        });
+                }
+
+                return typePermissionsRestService
+                    .hasDeletePermissionForTypes([configuration.componentType])
+                    .then(function(hasDeletePermission: TypedMap&lt;boolean&gt;) {
+                        return hasDeletePermission[configuration.componentType];
+                    });
+            },
+            action: {
+                callback: (configuration: IContextualMenuConfiguration, $event: Event) &#x3D;&gt; {
+                    let slotOperationRelatedId: string;
+                    let slotOperationRelatedType: string;
+
+                    if (configuration.element) {
+                        slotOperationRelatedId &#x3D; componentHandlerService.getSlotOperationRelatedId(
+                            configuration.element
+                        );
+                        slotOperationRelatedType &#x3D; componentHandlerService.getSlotOperationRelatedType(
+                            configuration.element
+                        );
+                    } else {
+                        slotOperationRelatedId &#x3D; configuration.containerId
+                            ? configuration.containerId
+                            : configuration.componentId;
+                        slotOperationRelatedType &#x3D;
+                            configuration.containerId &amp;&amp; configuration.containerType
+                                ? configuration.containerType
+                                : configuration.componentType;
+                    }
+
+                    const message: any &#x3D; {};
+                    message.description &#x3D; &#x27;se.cms.contextmenu.removecomponent.confirmation.message&#x27;;
+                    message.title &#x3D; &#x27;se.cms.contextmenu.removecomponent.confirmation.title&#x27;;
+
+                    confirmationModalService.confirm(message).then(() &#x3D;&gt; {
+                        removeComponentService
+                            .removeComponent({
+                                slotId: configuration.slotId,
+                                slotUuid: configuration.slotUuid,
+                                componentId: configuration.componentId,
+                                componentType: configuration.componentType,
+                                componentUuid:
+                                    configuration.componentAttributes.smarteditComponentUuid,
+                                slotOperationRelatedId,
+                                slotOperationRelatedType
+                            })
+                            .then(function() {
+                                slotVisibilityService.reloadSlotsInfo();
+
+                                // This is necessary in case the component was used more than once in the page. If so, those instances need to be updated.
+                                crossFrameEventService.publish(EVENT_SMARTEDIT_COMPONENT_UPDATED, {
+                                    componentId: configuration.componentId,
+                                    componentType: configuration.componentType,
+                                    requiresReplayingDecorators: true
+                                } as ComponentUpdatedEventInfo);
+
+                                $translate(&#x27;se.cms.alert.component.removed.from.slot&#x27;, {
+                                    componentID: slotOperationRelatedId,
+                                    slotID: configuration.slotId
+                                }).then(function(translation: string) {
+                                    alertService.showSuccess({
+                                        message: translation
+                                    });
+                                    $event.preventDefault();
+                                    $event.stopPropagation();
+                                });
+                            });
+                    });
+                }
+            },
+            displayClass: &#x27;removebutton&#x27;,
+            displayIconClass: &#x27;sap-icon--decline&#x27;,
+            displaySmallIconClass: &#x27;sap-icon--decline&#x27;,
+            permissions: [&#x27;se.context.menu.remove.component&#x27;]
+        });
+
+        featureService.addContextualMenuButton({
+            key: &#x27;se.slotContextualMenuVisibility&#x27;,
+            nameI18nKey: &#x27;slotcontextmenu.title.visibility&#x27;,
+            regexpKeys: [&#x27;^.*ContentSlot$&#x27;],
+            action: { templateUrl: &#x27;slotVisibilityWidgetTemplate.html&#x27; },
+            permissions: [&#x27;se.slot.context.menu.visibility&#x27;]
+        });
+
+        featureService.addContextualMenuButton({
+            key: &#x27;se.slotSharedButton&#x27;,
+            nameI18nKey: &#x27;slotcontextmenu.title.shared.button&#x27;,
+            regexpKeys: [&#x27;^.*Slot$&#x27;],
+            action: { templateUrl: &#x27;slotSharedTemplate.html&#x27; },
+            permissions: [&#x27;se.slot.context.menu.shared.icon&#x27;]
+        });
+
+        featureService.addContextualMenuButton({
+            key: &#x27;slotUnsharedButton&#x27;,
+            nameI18nKey: &#x27;slotcontextmenu.title.unshared.button&#x27;,
+            regexpKeys: [&#x27;^.*Slot$&#x27;],
+            action: { templateUrl: &#x27;slotUnsharedButtonWrapperTemplate.html&#x27; },
+            permissions: [&#x27;se.slot.context.menu.unshared.icon&#x27;]
+        });
+
+        featureService.addContextualMenuButton({
+            key: &#x27;se.slotSyncButton&#x27;,
+            nameI18nKey: &#x27;slotcontextmenu.title.sync.button&#x27;,
+            regexpKeys: [&#x27;^.*Slot$&#x27;],
+            action: { templateUrl: &#x27;slotSyncTemplate.html&#x27; },
+            permissions: [&#x27;se.sync.slot.context.menu&#x27;]
+        });
+
+        featureService.addDecorator({
+            key: &#x27;syncIndicator&#x27;,
+            nameI18nKey: &#x27;syncIndicator&#x27;,
+            permissions: [&#x27;se.sync.slot.indicator&#x27;]
+        });
+
+        featureService.register({
+            key: &#x27;disableSharedSlotEditing&#x27;,
+            nameI18nKey: &#x27;se.cms.disableSharedSlotEditing&#x27;,
+            descriptionI18nKey: &#x27;se.cms.disableSharedSlotEditing.description&#x27;,
+            enablingCallback: () &#x3D;&gt; {
+                slotSharedService.setSharedSlotEnablementStatus(true);
+            },
+            disablingCallback: () &#x3D;&gt; {
+                slotSharedService.setSharedSlotEnablementStatus(false);
+            }
+        });
+
+        featureService.addDecorator({
+            key: &#x27;sharedSlotDisabledDecorator&#x27;,
+            nameI18nKey: &#x27;se.cms.shared.slot.disabled.decorator&#x27;,
+            // only show that the slot is shared if it is not already external
+            displayCondition: (componentType: string, componentId: string) &#x3D;&gt; {
+                return Promise.all([
+                    slotRestrictionsService.isSlotEditable(componentId),
+                    componentHandlerService.isExternalComponent(componentId, componentType),
+                    slotSharedService.isSlotShared(componentId)
+                ]).then(function(response: boolean[]) {
+                    return !response[0] &amp;&amp; !response[1] &amp;&amp; response[2];
+                });
+            }
+        });
+
+        featureService.addDecorator({
+            key: &#x27;externalSlotDisabledDecorator&#x27;,
+            nameI18nKey: &#x27;se.cms.external.slot.disabled.decorator&#x27;,
+            displayCondition: (componentType: string, componentId: string) &#x3D;&gt; {
+                return Promise.resolve(
+                    componentHandlerService.isExternalComponent(componentId, componentType)
+                );
+            }
+        });
+
+        featureService.addDecorator({
+            key: &#x27;externalComponentDecorator&#x27;,
+            nameI18nKey: &#x27;se.cms.external.component.decorator&#x27;,
+            displayCondition: (componentType: string, componentId: string) &#x3D;&gt; {
+                return Promise.resolve(
+                    componentHandlerService.isExternalComponent(componentId, componentType)
+                );
+            }
+        });
+
+        featureService.addContextualMenuButton({
+            key: &#x27;clonecomponentbutton&#x27;,
+            priority: 600,
+            nameI18nKey: &#x27;se.cms.contextmenu.title.clone.component&#x27;,
+            i18nKey: &#x27;se.cms.contextmenu.title.clone.component&#x27;,
+            regexpKeys: [&#x27;^((?!Slot).)*$&#x27;],
+            condition: (configuration: IContextualMenuConfiguration) &#x3D;&gt; {
+                const componentUuid &#x3D; configuration.componentAttributes.smarteditComponentUuid;
+
+                if (!configuration.isComponentHidden) {
+                    const slotId: string &#x3D; componentHandlerService.getParentSlotForComponent(
+                        configuration.element
+                    );
+                    return slotRestrictionsService
+                        .isSlotEditable(slotId)
+                        .then(function(slotEditable: boolean) {
+                            if (slotEditable) {
+                                return typePermissionsRestService
+                                    .hasCreatePermissionForTypes([configuration.componentType])
+                                    .then(function(hasCreatePermission: TypedMap&lt;boolean&gt;) {
+                                        if (hasCreatePermission[configuration.componentType]) {
+                                            return componentInfoService
+                                                .getById(componentUuid)
+                                                .then((component: any) &#x3D;&gt; {
+                                                    return component.cloneable;
+                                                });
+                                        } else {
+                                            return $q.when(false);
+                                        }
+                                    });
+                            }
+                            return false;
+                        });
+                }
+                return cmsitemsRestService.getById(componentUuid).then((component: any) &#x3D;&gt; {
+                    return component.cloneable;
+                });
+            },
+            action: {
+                callback: (configuration: IContextualMenuConfiguration) &#x3D;&gt; {
+                    const sourcePosition &#x3D; componentHandlerService.getComponentPositionInSlot(
+                        configuration.slotId,
+                        configuration.componentAttributes.smarteditComponentId
+                    );
+                    componentEditingFacade.cloneExistingComponentToSlot({
+                        targetSlotId: configuration.slotId,
+                        dragInfo: {
+                            componentId: configuration.componentAttributes.smarteditComponentId,
+                            componentType: configuration.componentType,
+                            componentUuid: configuration.componentAttributes.smarteditComponentUuid
+                        },
+                        position: sourcePosition + 1
+                    });
+                }
+            },
+            displayClass: &#x27;clonebutton&#x27;,
+            displayIconClass: &#x27;sap-icon--duplicate&#x27;,
+            displaySmallIconClass: &#x27;sap-icon--duplicate&#x27;,
+            permissions: [&#x27;se.clone.component&#x27;]
+        });
+    }
+})
+export class Cmssmartedit {}
+</code></pre>
+    </div>
+</div>
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'Cmssmartedit.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

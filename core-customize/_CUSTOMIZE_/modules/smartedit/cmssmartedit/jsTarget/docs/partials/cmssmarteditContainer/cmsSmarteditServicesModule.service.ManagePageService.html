@@ -1,0 +1,58 @@
+<h1><code ng:non-bindable="">ManagePageService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">cmsSmarteditServicesModule</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-page"><p>This service is used to manage a page.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getdisabledtrashtooltipmessage">getDisabledTrashTooltipMessage(cmsPage)</h3>
+<div class="getdisabledtrashtooltipmessage"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-getdisabledtrashtooltipmessage-page"><p>Get the disabled trash tooltip message.</p>
+</div><h5 id="methods_getdisabledtrashtooltipmessage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsPage</td><td><a href="" class="label type-hint type-hint-icmspage">ICMSPage</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-getdisabledtrashtooltipmessage-page"><p>The page content</p>
+</div></td></tr></tbody></table><h5 id="methods_getdisabledtrashtooltipmessage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-getdisabledtrashtooltipmessage-page"><p>A promise resolved with the disabled trash tooltip message</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getsoftdeletedpagescount">getSoftDeletedPagesCount(uriContext)</h3>
+<div class="getsoftdeletedpagescount"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-getsoftdeletedpagescount-page"><p>Get the number of soft deleted pages for the provided context.</p>
+</div><h5 id="methods_getsoftdeletedpagescount_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-getsoftdeletedpagescount-page"><p>A  <a href="#/cmssmarteditContainer/resourceLocationsModule.object:UriContext">uriContext</a></p>
+</div></td></tr></tbody></table><h5 id="methods_getsoftdeletedpagescount_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-getsoftdeletedpagescount-page"><p>containing the total number of soft deleted pages</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_harddeletepage">hardDeletePage(pageInfo)</h3>
+<div class="harddeletepage"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-harddeletepage-page"><p>This method triggers the permanent deletion of a CMS page.</p>
+</div><h5 id="methods_harddeletepage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageInfo</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-harddeletepage-page"><p>The page object containing the uuid and the name of the page to be deleted.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_ispagetrashable">isPageTrashable(cmsPage)</h3>
+<div class="ispagetrashable"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-ispagetrashable-page"><p>This method indicates whether the given page can be soft deleted.
+Only the following pages are eligible for soft deletion:</p>
+<ol>
+<li>the variation pages</li>
+<li>the primary pages associated with no variation pages</li>
+<li>the page is not in a workflow</li>
+</ol>
+</div><h5 id="methods_ispagetrashable_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsPage</td><td><a href="" class="label type-hint type-hint-icmspage">ICMSPage</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-ispagetrashable-page"><p>The page content</p>
+</div></td></tr></tbody></table><h5 id="methods_ispagetrashable_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-ispagetrashable-page"><p>A promise resolved with a boolean indicating whether the selected page can be soft deleted.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_restorepage">restorePage(pageInfo)</h3>
+<div class="restorepage"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-restorepage-page"><p>This method triggers the restoration a CMS page.</p>
+</div><h5 id="methods_restorepage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageInfo</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-restorepage-page"><p>The page object containing the uuid and the name of the page to be restored.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_softdeletepage">softDeletePage(pageInfo, uriContext)</h3>
+<div class="softdeletepage"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-softdeletepage-page"><p>This method triggers the soft deletion of a CMS page.</p>
+</div><h5 id="methods_softdeletepage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>pageInfo</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-softdeletepage-page"><p>The page object containing the uuid and the name of the page to be deleted.</p>
+</div></td></tr><tr><td>uriContext</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-softdeletepage-page"><p>A <a href="#/cmssmarteditContainer/resourceLocationsModule.object:UriContext">uriContext</a></p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_trashpageinactivecatalogversion">trashPageInActiveCatalogVersion(cmsPage)</h3>
+<div class="trashpageinactivecatalogversion"><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-trashpageinactivecatalogversion-page"><p>Will trash the given page in the corresponding active catalog version.</p>
+</div><h5 id="methods_trashpageinactivecatalogversion_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>cmsPage</td><td><a href="" class="label type-hint type-hint-icmspage">ICMSPage</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-trashpageinactivecatalogversion-page"><p>The page content</p>
+</div></td></tr></tbody></table><h5 id="methods_trashpageinactivecatalogversion_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise&lt;void&gt;</a></td><td><div class="cmssmarteditservicesmodule-service-page cmssmarteditservicesmodule-service-managepageservice-trashpageinactivecatalogversion-page"><p>A promise resolved with the disabled trash tooltip message</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>
