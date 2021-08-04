@@ -191,10 +191,6 @@
         {
             "key": "log4j2.logger.customoutboundservices.appenderRef.stdout.ref",
             "value": "STDOUT"
-        },
-        {
-            "key": "npmancillary.run.npminstall",
-            "value": "false"
         }
     ],
     "storefrontAddons": [
