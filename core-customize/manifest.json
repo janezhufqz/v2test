@@ -77,7 +77,25 @@
         "sapcoretest",
         "sapcustomerb2b",
         "sapcustomerb2c",
-        "payment"
+        "payment",
+        "smarteditwebservices",
+		"cmssmarteditwebservices",
+		"smarteditaddon",
+		"smartedit",
+		"cmssmartedit",
+        "previewwebservices",
+		"previewpersonalizationweb",
+        "personalizationcmsweb",
+        "personalizationsmartedit",
+        "personalizationpromotionssmartedit",
+        "personalizationsampledataaddon",
+        "personalizationpromotions",
+        "personalizationpromotionsweb",
+        "personalizationservicesbackoffice",
+        "personalizationpromotionsbackoffice",
+        "personalizationcmsbackoffice",
+        "personalizationsearchbackoffice",
+        "personalizationsearchsmartedit"
     ],
     "properties": [
         {
@@ -171,6 +189,10 @@
         {
             "key": "log4j2.logger.customoutboundservices.appenderRef.stdout.ref",
             "value": "STDOUT"
+        },
+        {
+            "key": "npmancillary.run.npminstall",
+            "value": "true"
         }
     ],
     "storefrontAddons": [
@@ -273,7 +295,12 @@
             "addon": "acceleratorwebservicesaddon",
             "storefront": "ycommercewebservices",
             "template": "ycommercewebservices"
-        }
+        },
+        {
+		    "addon": "smarteditaddon",
+		    "storefront": "yacceleratorstorefront",
+		    "template": "yacceleratorstorefront"
+		}
 
     ],
     "aspects": [
@@ -295,7 +322,55 @@
                 {
                     "name": "odata2webservices",
                     "contextPath": "/odata2webservices"
-                }
+                },
+                {
+				    "name": "smartedit",
+				    "contextPath": "/smartedit"
+				},
+				{
+				    "name": "cmssmartedit",
+				    "contextPath": "/cmssmartedit"
+				},
+				{
+				    "name": "smarteditwebservices",
+				    "contextPath": "/smarteditwebservices"
+				},
+				{
+				    "name": "cmssmarteditwebservices",
+				    "contextPath": "/cmssmarteditwebservices"
+				},
+				{
+				    "name": "personalizationsmartedit",
+				    "contextPath": "/personalizationsmartedit"
+				},
+				{
+				    "name": "personalizationpromotionssmartedit",
+				    "contextPath": "/personalizationpromotionssmartedit"
+				},
+				{
+				    "name": "oauth2",
+				    "contextPath": "/authorizationserver"
+				},
+				{
+				    "name": "cmswebservices",
+				    "contextPath": "/cmswebservices"
+				},
+				{
+				    "name": "permissionswebservices",
+				    "contextPath": "/permissionswebservices"
+				},
+				{
+				    "name": "previewwebservices",
+				    "contextPath": "/previewwebservices"
+				},
+				{
+				    "name": "personalizationwebservices",
+				    "contextPath": "/personalizationwebservices"
+				},
+				{
+				    "name": "personalizationsearchsmartedit",
+				    "contextPath": "/personalizationsearchsmartedit"
+				}
             ]
         },
         {
