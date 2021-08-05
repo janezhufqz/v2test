@@ -104,19 +104,19 @@
     "properties": [
         {
             "key": "website.electronics.http",
-            "value": "http://accstorefront.cq70mn4ku3-forcloude1-d6-public.model-t.cc.commerce.ondemand.com/electronics"
+            "value": "http://accstorefront.cp96avkh5f-customers1-d1-public.model-t.cc.commerce.ondemand.com/electronics"
         },
         {
             "key": "website.electronics.https",
-            "value": "https://accstorefront.cq70mn4ku3-forcloude1-d6-public.model-t.cc.commerce.ondemand.com/electronics"
+            "value": "https://accstorefront.cp96avkh5f-customers1-d1-public.model-t.cc.commerce.ondemand.com/electronics"
         },
         {
             "key": "website.powertools.http",
-            "value": "http://accstorefront.cq70mn4ku3-forcloude1-d6-public.model-t.cc.commerce.ondemand.com/yb2bacceleratorstorefront"
+            "value": "http://accstorefront.cp96avkh5f-customers1-d1-public.model-t.cc.commerce.ondemand.com/yb2bacceleratorstorefront"
         },
         {
             "key": "website.powertools.https",
-            "value": "https://accstorefront.cq70mn4ku3-forcloude1-d6-public.model-t.cc.commerce.ondemand.com/yb2bacceleratorstorefront"
+            "value": "https://accstorefront.cp96avkh5f-customers1-d1-public.model-t.cc.commerce.ondemand.com/yb2bacceleratorstorefront"
         },
         {
             "key": "keygen.customer.sap_customer_id.start",
@@ -181,7 +181,11 @@
         {
             "key": "log4j2.logger.sapcpicustomerexchange.appenderRef.stdout.ref",
             "value": "STDOUT"
-        }
+        },
+	    {
+		    "key":"smartedit.validImageMimeTypeCodes",
+		    "value":"FFD8FFDB, FFD8FFE0, FFD8FFE1, FFD8FFED, 474946383761, 474946383961, 424D, 49492A00, 4D4D002A, 89504E470D0A1A0A, 25504446, 504B0304,504B0506,504B0708"
+	    }
     ],
     "storefrontAddons": [
         {
@@ -299,6 +303,12 @@
     "aspects": [
         {
             "name": "backoffice",
+		            "properties": [
+	                {
+	                    "key":"storefrontContextRoot",
+	                    "value":"/yacceleratorstorefront"
+	                }
+            ],
             "webapps": [
                 {
                     "name": "hac",
@@ -312,6 +322,18 @@
                     "name": "backoffice",
                     "contextPath": "/backoffice"
                 },
+		    {
+				    "name": "yacceleratorstorefront",
+				    "contextPath": "/yacceleratorstorefront"
+				},
+		    {
+				    "name": "yb2bacceleratorstorefront",
+				    "contextPath": "/yb2bacceleratorstorefront"
+				},
+				{
+				    "name": "acceleratorservices",
+				    "contextPath": "/acceleratorservices"
+				},
                 {
                     "name": "odata2webservices",
                     "contextPath": "/odata2webservices"
