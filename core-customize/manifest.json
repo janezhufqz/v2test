@@ -98,7 +98,8 @@
         "personalizationcmsbackoffice",
         "personalizationsearchbackoffice",
         "personalizationsearchsmartedit",
-	"smarteditaddon"
+	"smarteditaddon",
+	"personalizationaddon"
     ],
     "properties": [
         {
