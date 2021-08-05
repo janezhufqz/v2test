@@ -97,7 +97,8 @@
         "personalizationpromotionsbackoffice",
         "personalizationcmsbackoffice",
         "personalizationsearchbackoffice",
-        "personalizationsearchsmartedit"
+        "personalizationsearchsmartedit",
+	"smarteditaddon"
     ],
     "properties": [
         {
