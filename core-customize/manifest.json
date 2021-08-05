@@ -297,6 +297,16 @@
             "addon": "personalizationaddon",
             "storefront": "yacceleratorstorefront",
             "template": "yacceleratorstorefront"
+	 },
+	            {
+            "addon": "smarteditaddon",
+            "storefront": "yb2bacceleratorstorefront",
+            "template": "yacceleratorstorefront"
+	},
+        {
+            "addon": "personalizationaddon",
+            "storefront": "yb2bacceleratorstorefront",
+            "template": "yacceleratorstorefront"
 	 }
 
     ],
