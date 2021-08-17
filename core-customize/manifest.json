@@ -3,7 +3,7 @@
     "extensionPacks": [
         {
             "name": "hybris-commerce-integrations",
-            "version": "2005.4"
+            "version": "2005.5"
         }
     ],
     "extensions": [
@@ -99,7 +99,8 @@
         "personalizationsearchbackoffice",
         "personalizationsearchsmartedit",
 	"smarteditaddon",
-	"personalizationaddon"
+	"personalizationaddon",
+	"sapproductconfigcpiorderexchange"
     ],
     "properties": [
         {
